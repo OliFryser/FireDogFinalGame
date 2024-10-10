@@ -7,6 +7,16 @@ jobs:
     name: Run tests
     runs-on: ubuntu-latest
     steps:
+      - name: Clear cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            Library
+            Temp
+            Obj
+            Build
+            Logs
+          key: ${{ runner.os }}-unity-${{ hashFiles('**/ProjectSettings/ProjectVersion.txt') }}
       # Test
       - name: Run tests
         uses: game-ci/unity-test-runner@v4.3.1
@@ -16,4 +26,4 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          projectPath: /
+          projectPath: .
