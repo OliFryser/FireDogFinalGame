@@ -1,0 +1,47 @@
+name: Test and Build
+
+on: [push]
+
+jobs:
+  build:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Clear cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            Library
+            Temp
+            Obj
+            Build
+            Logs
+          key: ${{ runner.os }}-unity-${{ hashFiles('**/ProjectSettings/ProjectVersion.txt') }}-${{ github.sha }}
+
+      # # Test
+      # - name: Run tests
+      #   uses: game-ci/unity-test-runner@v4
+      #   env:
+      #     UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+      #     UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+      #     UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+      #   with:
+      #     githubToken: ${{ secrets.GITHUB_TOKEN }}
+      #     unityVersion: 2022.3.50f1
+      #     projectPath: .
+
+      - name: Build for WebGL
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          targetPlatform: WebGL
+          unityVersion: 2022.3.50f1
