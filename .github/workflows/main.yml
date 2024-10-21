@@ -16,7 +16,8 @@ jobs:
             Obj
             Build
             Logs
-          key: ${{ runner.os }}-unity-${{ hashFiles('**/ProjectSettings/ProjectVersion.txt') }}
+          key: ${{ runner.os }}-unity-${{ hashFiles('**/ProjectSettings/ProjectVersion.txt') }}-${{ github.sha }}
+
       # Test
       - name: Run tests
         uses: game-ci/unity-test-runner@v4.3.1
@@ -27,4 +28,4 @@ jobs:
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           unityVersion: 2022.3.50f1
-          projectPath: .
+          projectPath: ${{ github.workspace }}
