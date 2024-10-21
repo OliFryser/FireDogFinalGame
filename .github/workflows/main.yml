@@ -27,3 +27,4 @@ jobs:
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           unityVersion: 2022.3.50f1
+          projectPath: .
