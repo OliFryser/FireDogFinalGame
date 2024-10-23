@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-    name: Run tests
+    name: Build for windows
     runs-on: ubuntu-latest
     steps:
       # Checkout (without LFS)
