@@ -56,4 +56,4 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: WebGL
-          unityVersion: 6000.0.23f1-3.1.0
+          unityVersion: 6000.0.23f1
