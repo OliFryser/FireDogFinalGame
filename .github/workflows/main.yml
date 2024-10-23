@@ -48,12 +48,12 @@ jobs:
       #     unityVersion: 2022.3.50f1
       #     projectPath: .
 
-      - name: Build for WebGL
+      - name: Build for StandaloneWindows
         uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          targetPlatform: WebGL
+          targetPlatform: StandaloneWindows
           unityVersion: 6000.0.23f1
