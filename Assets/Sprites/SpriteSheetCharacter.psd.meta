@@ -196,7 +196,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -210,7 +210,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -1459,7 +1459,61 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SpriteSheetCharacter_0: 3928668594518261497
+      SpriteSheetCharacter_1: -636769124794932317
+      SpriteSheetCharacter_10: -5878026629291813000
+      SpriteSheetCharacter_11: 4272224656131975940
+      SpriteSheetCharacter_12: -6336670670351380143
+      SpriteSheetCharacter_13: -1624274344443088935
+      SpriteSheetCharacter_14: -8646832547430008681
+      SpriteSheetCharacter_15: -6542137466532782772
+      SpriteSheetCharacter_16: 7954029779334788623
+      SpriteSheetCharacter_17: -3198905102233871370
+      SpriteSheetCharacter_18: -354716527448723514
+      SpriteSheetCharacter_19: -2035157280340645755
+      SpriteSheetCharacter_2: 6828183711999382512
+      SpriteSheetCharacter_20: -4922100634318344190
+      SpriteSheetCharacter_21: 4802255183609034815
+      SpriteSheetCharacter_22: -2051288844442605011
+      SpriteSheetCharacter_23: 7288395919156330618
+      SpriteSheetCharacter_24: 2828530509724230646
+      SpriteSheetCharacter_25: -9159289114464066679
+      SpriteSheetCharacter_26: 7433212311078385741
+      SpriteSheetCharacter_27: -3817702180845670358
+      SpriteSheetCharacter_28: 2641311883076174376
+      SpriteSheetCharacter_29: -320413855935452278
+      SpriteSheetCharacter_3: -8825584192093646768
+      SpriteSheetCharacter_30: 8912429173171526839
+      SpriteSheetCharacter_31: -8695312568179121485
+      SpriteSheetCharacter_32: -7740840161133685084
+      SpriteSheetCharacter_33: 4844174835700394682
+      SpriteSheetCharacter_34: -4857588074724749423
+      SpriteSheetCharacter_35: 1330813577055682912
+      SpriteSheetCharacter_36: 6834338219053953889
+      SpriteSheetCharacter_37: 6909079258740041139
+      SpriteSheetCharacter_38: 8072347607091227346
+      SpriteSheetCharacter_39: -3398016886878343274
+      SpriteSheetCharacter_4: 6439416670206202831
+      SpriteSheetCharacter_40: 2367611308592809896
+      SpriteSheetCharacter_41: 5091825880577036895
+      SpriteSheetCharacter_42: 4659049999840601724
+      SpriteSheetCharacter_43: 6275296888252896293
+      SpriteSheetCharacter_44: 3635912244822698470
+      SpriteSheetCharacter_45: -8254071302657562179
+      SpriteSheetCharacter_46: -1734428279860318309
+      SpriteSheetCharacter_47: -7866408806495182674
+      SpriteSheetCharacter_48: 4728395614951446199
+      SpriteSheetCharacter_49: 5575780083998451808
+      SpriteSheetCharacter_5: 1883923794958710611
+      SpriteSheetCharacter_50: 6390791120439643977
+      SpriteSheetCharacter_51: 5545181650496250194
+      SpriteSheetCharacter_52: 3233488391559402775
+      SpriteSheetCharacter_53: -8877826337805074567
+      SpriteSheetCharacter_6: -3085918350200594722
+      SpriteSheetCharacter_7: -4192787228494232386
+      SpriteSheetCharacter_8: -3951650043231501194
+      SpriteSheetCharacter_9: 225715607954119669
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

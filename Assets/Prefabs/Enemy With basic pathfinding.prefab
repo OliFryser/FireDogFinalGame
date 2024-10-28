@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_Name
-      value: Enemy Variant
+      value: Enemy With basic pathfinding
       objectReference: {fileID: 0}
     - target: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_Layer
@@ -90,4 +90,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e155dd291e76d41438f67ce9921dd738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 2
+  _movementSpeed: 2
+  _sightDistance: 5
