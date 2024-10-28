@@ -262,12 +262,12 @@ TextureImporter:
       name: SpriteSheetCharacter_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 199
-        width: 26
-        height: 34
+        x: 0
+        y: 200
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -284,12 +284,12 @@ TextureImporter:
       name: SpriteSheetCharacter_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 199
-        width: 26
-        height: 35
+        x: 40
+        y: 200
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -306,12 +306,12 @@ TextureImporter:
       name: SpriteSheetCharacter_2
       rect:
         serializedVersion: 2
-        x: 88
-        y: 199
-        width: 26
-        height: 36
+        x: 80
+        y: 200
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -328,12 +328,12 @@ TextureImporter:
       name: SpriteSheetCharacter_3
       rect:
         serializedVersion: 2
-        x: 128
-        y: 199
-        width: 26
-        height: 36
+        x: 120
+        y: 200
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -350,12 +350,12 @@ TextureImporter:
       name: SpriteSheetCharacter_4
       rect:
         serializedVersion: 2
-        x: 168
-        y: 199
-        width: 26
-        height: 36
+        x: 160
+        y: 200
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -372,12 +372,12 @@ TextureImporter:
       name: SpriteSheetCharacter_5
       rect:
         serializedVersion: 2
-        x: 208
-        y: 199
-        width: 26
-        height: 35
+        x: 200
+        y: 200
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -394,12 +394,12 @@ TextureImporter:
       name: SpriteSheetCharacter_6
       rect:
         serializedVersion: 2
-        x: 7
-        y: 159
-        width: 27
-        height: 33
+        x: 0
+        y: 160
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -416,12 +416,12 @@ TextureImporter:
       name: SpriteSheetCharacter_7
       rect:
         serializedVersion: 2
-        x: 47
-        y: 159
-        width: 29
-        height: 33
+        x: 40
+        y: 160
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -438,12 +438,12 @@ TextureImporter:
       name: SpriteSheetCharacter_8
       rect:
         serializedVersion: 2
-        x: 87
+        x: 80
         y: 160
-        width: 31
-        height: 34
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -460,12 +460,12 @@ TextureImporter:
       name: SpriteSheetCharacter_9
       rect:
         serializedVersion: 2
-        x: 127
-        y: 161
-        width: 32
-        height: 33
+        x: 120
+        y: 160
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -482,12 +482,12 @@ TextureImporter:
       name: SpriteSheetCharacter_10
       rect:
         serializedVersion: 2
-        x: 167
-        y: 159
-        width: 28
-        height: 34
+        x: 160
+        y: 160
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -504,12 +504,12 @@ TextureImporter:
       name: SpriteSheetCharacter_11
       rect:
         serializedVersion: 2
-        x: 207
-        y: 159
-        width: 28
-        height: 32
+        x: 200
+        y: 160
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -526,12 +526,12 @@ TextureImporter:
       name: SpriteSheetCharacter_12
       rect:
         serializedVersion: 2
-        x: 247
-        y: 159
-        width: 29
-        height: 32
+        x: 240
+        y: 160
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -548,12 +548,12 @@ TextureImporter:
       name: SpriteSheetCharacter_13
       rect:
         serializedVersion: 2
-        x: 287
-        y: 159
-        width: 29
-        height: 32
+        x: 280
+        y: 160
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -570,12 +570,12 @@ TextureImporter:
       name: SpriteSheetCharacter_14
       rect:
         serializedVersion: 2
-        x: 327
-        y: 159
-        width: 28
-        height: 33
+        x: 320
+        y: 160
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -592,12 +592,12 @@ TextureImporter:
       name: SpriteSheetCharacter_15
       rect:
         serializedVersion: 2
-        x: 367
+        x: 360
         y: 160
-        width: 27
-        height: 33
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -614,12 +614,12 @@ TextureImporter:
       name: SpriteSheetCharacter_16
       rect:
         serializedVersion: 2
-        x: 407
-        y: 159
-        width: 28
-        height: 33
+        x: 400
+        y: 160
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -636,12 +636,12 @@ TextureImporter:
       name: SpriteSheetCharacter_17
       rect:
         serializedVersion: 2
-        x: 447
-        y: 159
-        width: 27
-        height: 32
+        x: 440
+        y: 160
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -658,12 +658,12 @@ TextureImporter:
       name: SpriteSheetCharacter_18
       rect:
         serializedVersion: 2
-        x: 8
-        y: 119
-        width: 24
-        height: 34
+        x: 0
+        y: 120
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -680,12 +680,12 @@ TextureImporter:
       name: SpriteSheetCharacter_19
       rect:
         serializedVersion: 2
-        x: 48
-        y: 119
-        width: 24
-        height: 35
+        x: 40
+        y: 120
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -702,12 +702,12 @@ TextureImporter:
       name: SpriteSheetCharacter_20
       rect:
         serializedVersion: 2
-        x: 88
-        y: 119
-        width: 24
-        height: 36
+        x: 80
+        y: 120
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -724,12 +724,12 @@ TextureImporter:
       name: SpriteSheetCharacter_21
       rect:
         serializedVersion: 2
-        x: 128
-        y: 119
-        width: 24
-        height: 36
+        x: 120
+        y: 120
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -746,12 +746,12 @@ TextureImporter:
       name: SpriteSheetCharacter_22
       rect:
         serializedVersion: 2
-        x: 168
-        y: 119
-        width: 24
-        height: 36
+        x: 160
+        y: 120
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -768,12 +768,12 @@ TextureImporter:
       name: SpriteSheetCharacter_23
       rect:
         serializedVersion: 2
-        x: 208
-        y: 119
-        width: 24
-        height: 35
+        x: 200
+        y: 120
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -790,12 +790,12 @@ TextureImporter:
       name: SpriteSheetCharacter_24
       rect:
         serializedVersion: 2
-        x: 8
-        y: 79
-        width: 24
-        height: 33
+        x: 0
+        y: 80
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -812,12 +812,12 @@ TextureImporter:
       name: SpriteSheetCharacter_25
       rect:
         serializedVersion: 2
-        x: 48
-        y: 79
-        width: 25
-        height: 33
+        x: 40
+        y: 80
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -834,12 +834,12 @@ TextureImporter:
       name: SpriteSheetCharacter_26
       rect:
         serializedVersion: 2
-        x: 88
+        x: 80
         y: 80
-        width: 24
-        height: 34
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -856,12 +856,12 @@ TextureImporter:
       name: SpriteSheetCharacter_27
       rect:
         serializedVersion: 2
-        x: 128
-        y: 81
-        width: 24
-        height: 33
+        x: 120
+        y: 80
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -878,12 +878,12 @@ TextureImporter:
       name: SpriteSheetCharacter_28
       rect:
         serializedVersion: 2
-        x: 168
-        y: 79
-        width: 25
-        height: 34
+        x: 160
+        y: 80
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -900,12 +900,12 @@ TextureImporter:
       name: SpriteSheetCharacter_29
       rect:
         serializedVersion: 2
-        x: 208
-        y: 79
-        width: 24
-        height: 32
+        x: 200
+        y: 80
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -922,12 +922,12 @@ TextureImporter:
       name: SpriteSheetCharacter_30
       rect:
         serializedVersion: 2
-        x: 248
-        y: 79
-        width: 24
-        height: 32
+        x: 240
+        y: 80
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -944,12 +944,12 @@ TextureImporter:
       name: SpriteSheetCharacter_31
       rect:
         serializedVersion: 2
-        x: 288
-        y: 79
-        width: 24
-        height: 32
+        x: 280
+        y: 80
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -966,12 +966,12 @@ TextureImporter:
       name: SpriteSheetCharacter_32
       rect:
         serializedVersion: 2
-        x: 328
-        y: 79
-        width: 24
-        height: 33
+        x: 320
+        y: 80
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -988,12 +988,12 @@ TextureImporter:
       name: SpriteSheetCharacter_33
       rect:
         serializedVersion: 2
-        x: 368
+        x: 360
         y: 80
-        width: 24
-        height: 33
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1010,12 +1010,12 @@ TextureImporter:
       name: SpriteSheetCharacter_34
       rect:
         serializedVersion: 2
-        x: 407
-        y: 79
-        width: 25
-        height: 33
+        x: 400
+        y: 80
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1032,12 +1032,12 @@ TextureImporter:
       name: SpriteSheetCharacter_35
       rect:
         serializedVersion: 2
-        x: 448
-        y: 79
-        width: 24
-        height: 32
+        x: 440
+        y: 80
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1054,12 +1054,12 @@ TextureImporter:
       name: SpriteSheetCharacter_36
       rect:
         serializedVersion: 2
-        x: 8
-        y: 39
-        width: 24
-        height: 33
+        x: 0
+        y: 40
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1076,12 +1076,12 @@ TextureImporter:
       name: SpriteSheetCharacter_37
       rect:
         serializedVersion: 2
-        x: 47
-        y: 39
-        width: 25
-        height: 33
+        x: 40
+        y: 40
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1098,12 +1098,12 @@ TextureImporter:
       name: SpriteSheetCharacter_38
       rect:
         serializedVersion: 2
-        x: 88
+        x: 80
         y: 40
-        width: 24
-        height: 34
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1120,12 +1120,12 @@ TextureImporter:
       name: SpriteSheetCharacter_39
       rect:
         serializedVersion: 2
-        x: 128
-        y: 41
-        width: 24
-        height: 33
+        x: 120
+        y: 40
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1142,12 +1142,12 @@ TextureImporter:
       name: SpriteSheetCharacter_40
       rect:
         serializedVersion: 2
-        x: 168
-        y: 39
-        width: 24
-        height: 34
+        x: 160
+        y: 40
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1164,12 +1164,12 @@ TextureImporter:
       name: SpriteSheetCharacter_41
       rect:
         serializedVersion: 2
-        x: 208
-        y: 39
-        width: 24
-        height: 33
+        x: 200
+        y: 40
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1186,12 +1186,12 @@ TextureImporter:
       name: SpriteSheetCharacter_42
       rect:
         serializedVersion: 2
-        x: 248
-        y: 39
-        width: 24
-        height: 33
+        x: 240
+        y: 40
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1208,12 +1208,12 @@ TextureImporter:
       name: SpriteSheetCharacter_43
       rect:
         serializedVersion: 2
-        x: 289
-        y: 39
-        width: 24
-        height: 34
+        x: 280
+        y: 40
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1230,12 +1230,12 @@ TextureImporter:
       name: SpriteSheetCharacter_44
       rect:
         serializedVersion: 2
-        x: 328
+        x: 320
         y: 40
-        width: 24
-        height: 33
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1252,12 +1252,12 @@ TextureImporter:
       name: SpriteSheetCharacter_45
       rect:
         serializedVersion: 2
-        x: 368
+        x: 360
         y: 40
-        width: 24
-        height: 34
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1274,12 +1274,12 @@ TextureImporter:
       name: SpriteSheetCharacter_46
       rect:
         serializedVersion: 2
-        x: 408
-        y: 39
-        width: 24
-        height: 35
+        x: 400
+        y: 40
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1296,12 +1296,12 @@ TextureImporter:
       name: SpriteSheetCharacter_47
       rect:
         serializedVersion: 2
-        x: 448
-        y: 39
-        width: 24
-        height: 33
+        x: 440
+        y: 40
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1318,12 +1318,12 @@ TextureImporter:
       name: SpriteSheetCharacter_48
       rect:
         serializedVersion: 2
-        x: 8
+        x: 0
         y: 0
-        width: 24
-        height: 33
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1340,12 +1340,12 @@ TextureImporter:
       name: SpriteSheetCharacter_49
       rect:
         serializedVersion: 2
-        x: 48
+        x: 40
         y: 0
-        width: 24
-        height: 34
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1362,12 +1362,12 @@ TextureImporter:
       name: SpriteSheetCharacter_50
       rect:
         serializedVersion: 2
-        x: 88
+        x: 80
         y: 0
-        width: 24
-        height: 35
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1384,12 +1384,12 @@ TextureImporter:
       name: SpriteSheetCharacter_51
       rect:
         serializedVersion: 2
-        x: 128
+        x: 120
         y: 0
-        width: 24
-        height: 35
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1406,12 +1406,12 @@ TextureImporter:
       name: SpriteSheetCharacter_52
       rect:
         serializedVersion: 2
-        x: 168
+        x: 160
         y: 0
-        width: 24
-        height: 35
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1428,12 +1428,12 @@ TextureImporter:
       name: SpriteSheetCharacter_53
       rect:
         serializedVersion: 2
-        x: 208
+        x: 200
         y: 0
-        width: 24
-        height: 34
+        width: 40
+        height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1450,7 +1450,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 30b7e412e4420134dbddf0bf255d09f8
     internalID: 0
     vertices: []
     indices: 

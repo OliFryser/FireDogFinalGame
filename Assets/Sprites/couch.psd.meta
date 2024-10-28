@@ -177,7 +177,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -229,20 +229,20 @@ TextureImporter:
       name: couch_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 141
-        width: 39
-        height: 60
+        x: 0
+        y: 140
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0e2e8a1fc1f4b6e00800000000000000
-      internalID: 1039011124771087072
+      spriteID: 310088e753b34204ab49e8195e5254b3
+      internalID: -1816838523
       vertices: []
       indices: 
       edges: []
@@ -251,20 +251,20 @@ TextureImporter:
       name: couch_1
       rect:
         serializedVersion: 2
-        x: 83
-        y: 141
-        width: 41
-        height: 60
+        x: 70
+        y: 140
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 075d55699e13bbd40800000000000000
-      internalID: 5601125440884692336
+      spriteID: 3142e66a94ebfd74b8b518303aca4e31
+      internalID: -203699990
       vertices: []
       indices: 
       edges: []
@@ -273,20 +273,20 @@ TextureImporter:
       name: couch_2
       rect:
         serializedVersion: 2
-        x: 145
-        y: 141
-        width: 44
-        height: 61
+        x: 140
+        y: 140
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d063be350377ad530800000000000000
-      internalID: 3880545078383162893
+      spriteID: c9a326fdd7a033d438bb0414709bef67
+      internalID: 1703116481
       vertices: []
       indices: 
       edges: []
@@ -295,20 +295,20 @@ TextureImporter:
       name: couch_3
       rect:
         serializedVersion: 2
-        x: 213
-        y: 141
-        width: 46
-        height: 63
+        x: 210
+        y: 140
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1876ddbe45f7c29c0800000000000000
-      internalID: -3950642770399631487
+      spriteID: b82889fcb0fc49147a188719db1e5d0a
+      internalID: 147068362
       vertices: []
       indices: 
       edges: []
@@ -317,20 +317,20 @@ TextureImporter:
       name: couch_4
       rect:
         serializedVersion: 2
-        x: 282
-        y: 145
-        width: 50
-        height: 57
+        x: 280
+        y: 140
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7d353bab5ceeb3910800000000000000
-      internalID: 1818309407582409687
+      spriteID: b8c7f1e407a42724584534fb9af2fdd3
+      internalID: -1355804969
       vertices: []
       indices: 
       edges: []
@@ -339,20 +339,20 @@ TextureImporter:
       name: couch_5
       rect:
         serializedVersion: 2
-        x: 313
-        y: 141
-        width: 9
-        height: 6
+        x: 350
+        y: 140
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0707cdf8918d1c8d0800000000000000
-      internalID: -2827741486712590224
+      spriteID: ce7624511c01cc545af60a4932c621cf
+      internalID: 783683119
       vertices: []
       indices: 
       edges: []
@@ -361,20 +361,20 @@ TextureImporter:
       name: couch_6
       rect:
         serializedVersion: 2
-        x: 354
-        y: 147
-        width: 49
-        height: 61
+        x: 420
+        y: 140
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e3935a67a4a916c60800000000000000
-      internalID: 7809692873445947710
+      spriteID: b8e9de59332e91d4b9f42a101e13277f
+      internalID: 1968331082
       vertices: []
       indices: 
       edges: []
@@ -383,20 +383,20 @@ TextureImporter:
       name: couch_7
       rect:
         serializedVersion: 2
-        x: 390
-        y: 141
-        width: 13
-        height: 8
+        x: 490
+        y: 140
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bc4d4db84566922a0800000000000000
-      internalID: -6761760852210821941
+      spriteID: 832b781353824bc49aa6b9a851530598
+      internalID: 469843893
       vertices: []
       indices: 
       edges: []
@@ -405,20 +405,20 @@ TextureImporter:
       name: couch_8
       rect:
         serializedVersion: 2
-        x: 419
-        y: 146
-        width: 48
-        height: 61
+        x: 560
+        y: 140
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8809d00dac22bb960800000000000000
-      internalID: 7618721449096614024
+      spriteID: 4c59bd4cc30f7c5409b9999464417dd9
+      internalID: -1306385890
       vertices: []
       indices: 
       edges: []
@@ -427,20 +427,20 @@ TextureImporter:
       name: couch_9
       rect:
         serializedVersion: 2
-        x: 457
-        y: 141
-        width: 10
-        height: 6
+        x: 630
+        y: 140
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1f65af321d08a5f50800000000000000
-      internalID: 6870945817247241969
+      spriteID: 478b5b2b45a62dc47838f62c121cda32
+      internalID: -716152918
       vertices: []
       indices: 
       edges: []
@@ -449,20 +449,20 @@ TextureImporter:
       name: couch_10
       rect:
         serializedVersion: 2
-        x: 489
-        y: 141
-        width: 47
-        height: 62
+        x: 700
+        y: 140
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a2285ba331a2ae270800000000000000
-      internalID: 8280477126951797290
+      spriteID: 10b768749a264df40a2288381537b3d8
+      internalID: -956622411
       vertices: []
       indices: 
       edges: []
@@ -471,20 +471,20 @@ TextureImporter:
       name: couch_11
       rect:
         serializedVersion: 2
-        x: 559
-        y: 141
-        width: 47
-        height: 60
+        x: 770
+        y: 140
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 518388078ae41bd10800000000000000
-      internalID: 2139577783327143957
+      spriteID: 7a9ccf9a3ad0cb5448cef1c491e5e4b6
+      internalID: 1519450837
       vertices: []
       indices: 
       edges: []
@@ -493,20 +493,20 @@ TextureImporter:
       name: couch_12
       rect:
         serializedVersion: 2
-        x: 631
-        y: 141
-        width: 45
-        height: 58
+        x: 0
+        y: 70
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 57998ed9ab89a7e60800000000000000
-      internalID: 7960843218611378549
+      spriteID: d17c0835a6d5a8c44a2d18a20f614d78
+      internalID: -1259328185
       vertices: []
       indices: 
       edges: []
@@ -515,20 +515,20 @@ TextureImporter:
       name: couch_13
       rect:
         serializedVersion: 2
-        x: 710
-        y: 141
-        width: 45
-        height: 59
+        x: 70
+        y: 70
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 691bc896629176500800000000000000
-      internalID: 389307545561117078
+      spriteID: cc7356bb51423ae43b80d4de6a7fa8da
+      internalID: -630339480
       vertices: []
       indices: 
       edges: []
@@ -537,20 +537,20 @@ TextureImporter:
       name: couch_14
       rect:
         serializedVersion: 2
-        x: 777
-        y: 141
-        width: 42
-        height: 60
+        x: 140
+        y: 70
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 10501f4dda237ac30800000000000000
-      internalID: 4370517685569651969
+      spriteID: 054f6df561fc24e4a80e2218f5dec9ab
+      internalID: -352901461
       vertices: []
       indices: 
       edges: []
@@ -559,20 +559,20 @@ TextureImporter:
       name: couch_15
       rect:
         serializedVersion: 2
-        x: 4
-        y: 77
-        width: 62
-        height: 40
+        x: 210
+        y: 70
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2e87c240e8717bf60800000000000000
-      internalID: 8049928757670869218
+      spriteID: aaa2ef0a62c14fd4b81b6b0d88a8e882
+      internalID: 1578153787
       vertices: []
       indices: 
       edges: []
@@ -581,20 +581,20 @@ TextureImporter:
       name: couch_16
       rect:
         serializedVersion: 2
-        x: 74
-        y: 77
-        width: 62
-        height: 41
+        x: 280
+        y: 70
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c284b02c071f87e70800000000000000
-      internalID: 9113299312578349100
+      spriteID: 500d24aa64071644a8f4f058f9bafb00
+      internalID: -858554238
       vertices: []
       indices: 
       edges: []
@@ -603,20 +603,20 @@ TextureImporter:
       name: couch_17
       rect:
         serializedVersion: 2
-        x: 143
-        y: 79
-        width: 64
-        height: 44
+        x: 350
+        y: 70
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c0183caa3150f9480800000000000000
-      internalID: -8890381557378612980
+      spriteID: e42f9daf1227dd64e901b140a5ff5912
+      internalID: 344898475
       vertices: []
       indices: 
       edges: []
@@ -625,20 +625,20 @@ TextureImporter:
       name: couch_18
       rect:
         serializedVersion: 2
-        x: 212
-        y: 77
-        width: 66
-        height: 49
+        x: 420
+        y: 70
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 64d9d4ce6705beda0800000000000000
-      internalID: -5914545213920142010
+      spriteID: df44ccf8368a6d84b88dbd8ccaf3f2c6
+      internalID: 2093974281
       vertices: []
       indices: 
       edges: []
@@ -647,20 +647,20 @@ TextureImporter:
       name: couch_19
       rect:
         serializedVersion: 2
-        x: 281
-        y: 77
-        width: 68
-        height: 57
+        x: 490
+        y: 70
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 66c4a8817a483dce0800000000000000
-      internalID: -1381614807466488730
+      spriteID: 051550514caa10043b8473e23d8d5e58
+      internalID: -1139000488
       vertices: []
       indices: 
       edges: []
@@ -669,20 +669,20 @@ TextureImporter:
       name: couch_20
       rect:
         serializedVersion: 2
-        x: 349
-        y: 77
-        width: 72
-        height: 62
+        x: 560
+        y: 70
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: adc9ed0b04824d400800000000000000
-      internalID: 347947329524767962
+      spriteID: 074c7d5fddd84b642b0b5ea582a6563b
+      internalID: -499410729
       vertices: []
       indices: 
       edges: []
@@ -691,20 +691,20 @@ TextureImporter:
       name: couch_21
       rect:
         serializedVersion: 2
-        x: 419
-        y: 79
-        width: 72
-        height: 53
+        x: 630
+        y: 70
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3e8a8280e457f9ab0800000000000000
-      internalID: -4999148083353179933
+      spriteID: 295cf2e5da803194b8243e1ab1e094d2
+      internalID: -1459778613
       vertices: []
       indices: 
       edges: []
@@ -713,20 +713,20 @@ TextureImporter:
       name: couch_22
       rect:
         serializedVersion: 2
-        x: 424
-        y: 77
-        width: 11
-        height: 6
+        x: 700
+        y: 70
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: eec20b0a18ebe07f0800000000000000
-      internalID: -644368232711443218
+      spriteID: 1ee5f96d0e8f60a44b8c891c9fe5fd72
+      internalID: -32811136
       vertices: []
       indices: 
       edges: []
@@ -735,20 +735,20 @@ TextureImporter:
       name: couch_23
       rect:
         serializedVersion: 2
-        x: 476
-        y: 77
-        width: 10
-        height: 6
+        x: 770
+        y: 70
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9aeb16675a750f0d0800000000000000
-      internalID: -3391114151242645847
+      spriteID: 353489929a4eaaa42b23a44977eeb065
+      internalID: -1729042989
       vertices: []
       indices: 
       edges: []
@@ -757,20 +757,20 @@ TextureImporter:
       name: couch_24
       rect:
         serializedVersion: 2
-        x: 492
-        y: 77
-        width: 68
-        height: 50
+        x: 0
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5e8b8dc78c6534da0800000000000000
-      internalID: -5961826062620378907
+      spriteID: 9ef4e8c9ee4d943429cada7d8529a567
+      internalID: 679798865
       vertices: []
       indices: 
       edges: []
@@ -779,20 +779,20 @@ TextureImporter:
       name: couch_25
       rect:
         serializedVersion: 2
-        x: 562
-        y: 77
-        width: 66
-        height: 46
+        x: 70
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f57984a72db33b350800000000000000
-      internalID: 6031230101159974751
+      spriteID: 55a78a7179ee1a442ae01adbc17556d8
+      internalID: 187421216
       vertices: []
       indices: 
       edges: []
@@ -801,20 +801,20 @@ TextureImporter:
       name: couch_26
       rect:
         serializedVersion: 2
-        x: 633
-        y: 77
-        width: 64
-        height: 44
+        x: 140
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c205a7690fe56aae0800000000000000
-      internalID: -1538437835290685396
+      spriteID: dee50b64a1d9dc74989a826326969fca
+      internalID: -811731964
       vertices: []
       indices: 
       edges: []
@@ -823,20 +823,20 @@ TextureImporter:
       name: couch_27
       rect:
         serializedVersion: 2
-        x: 704
-        y: 77
-        width: 62
-        height: 41
+        x: 210
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6cbc2debf11bf98f0800000000000000
-      internalID: -531511481102840890
+      spriteID: aee5f6c4628c63a498fe3db43a66f682
+      internalID: -1299730566
       vertices: []
       indices: 
       edges: []
@@ -845,20 +845,20 @@ TextureImporter:
       name: couch_28
       rect:
         serializedVersion: 2
-        x: 774
-        y: 77
-        width: 62
-        height: 40
+        x: 280
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a4dd576478e0fadd0800000000000000
-      internalID: -2472741696237609654
+      spriteID: b56a411dbe216b149834b53b0e0ea0ac
+      internalID: -697930903
       vertices: []
       indices: 
       edges: []
@@ -867,20 +867,20 @@ TextureImporter:
       name: couch_29
       rect:
         serializedVersion: 2
-        x: 4
-        y: 7
-        width: 62
-        height: 40
+        x: 350
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 21607905c702e6e20800000000000000
-      internalID: 3345647291482965522
+      spriteID: 8d5aa3cc11834574ab8064f090d3c4f2
+      internalID: -1911102550
       vertices: []
       indices: 
       edges: []
@@ -889,20 +889,20 @@ TextureImporter:
       name: couch_30
       rect:
         serializedVersion: 2
-        x: 74
-        y: 7
-        width: 62
-        height: 41
+        x: 420
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2af8ec96b919c0240800000000000000
-      internalID: 4759339002904874914
+      spriteID: 5c0fd96b0859e0240af124d5d4788a00
+      internalID: -1981943676
       vertices: []
       indices: 
       edges: []
@@ -911,20 +911,20 @@ TextureImporter:
       name: couch_31
       rect:
         serializedVersion: 2
-        x: 143
-        y: 9
-        width: 64
-        height: 44
+        x: 490
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f5bbcdfe63ef469c0800000000000000
-      internalID: -3934740662509061281
+      spriteID: 214a8f80a6e2de14ba34e8557990f55c
+      internalID: 935058232
       vertices: []
       indices: 
       edges: []
@@ -933,20 +933,20 @@ TextureImporter:
       name: couch_32
       rect:
         serializedVersion: 2
-        x: 212
-        y: 7
-        width: 66
-        height: 49
+        x: 560
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b19b79e86f1cb7ab0800000000000000
-      internalID: -5009196895821121253
+      spriteID: 37bf9e3bb4bb97d4f8499f30741a4332
+      internalID: 524919872
       vertices: []
       indices: 
       edges: []
@@ -955,20 +955,20 @@ TextureImporter:
       name: couch_33
       rect:
         serializedVersion: 2
-        x: 281
-        y: 7
-        width: 68
-        height: 57
+        x: 630
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cb738681fc7b083b0800000000000000
-      internalID: -5512203843805890628
+      spriteID: c5d279a64a5b1b84eaaf67c21a57cbb5
+      internalID: -1565193553
       vertices: []
       indices: 
       edges: []
@@ -977,20 +977,20 @@ TextureImporter:
       name: couch_34
       rect:
         serializedVersion: 2
-        x: 349
-        y: 7
-        width: 72
-        height: 62
+        x: 700
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: aa70df6e2e4434fe0800000000000000
-      internalID: -1206044533876521046
+      spriteID: eacbb8eacb894dd41ac4719c0376dd2b
+      internalID: -1715969961
       vertices: []
       indices: 
       edges: []
@@ -999,174 +999,20 @@ TextureImporter:
       name: couch_35
       rect:
         serializedVersion: 2
-        x: 419
-        y: 9
-        width: 72
-        height: 53
+        x: 770
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3083386ac37a85840800000000000000
-      internalID: 5213100447614842883
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: couch_36
-      rect:
-        serializedVersion: 2
-        x: 424
-        y: 7
-        width: 11
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fe742741a86064d70800000000000000
-      internalID: 9026909693229025263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: couch_37
-      rect:
-        serializedVersion: 2
-        x: 476
-        y: 7
-        width: 10
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 17dd8bc1b36a94300800000000000000
-      internalID: 236903228228820337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: couch_38
-      rect:
-        serializedVersion: 2
-        x: 492
-        y: 7
-        width: 68
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b95f8d6214ed71250800000000000000
-      internalID: 5915441006980429211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: couch_39
-      rect:
-        serializedVersion: 2
-        x: 562
-        y: 7
-        width: 66
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b9be2091b2adc970800000000000000
-      internalID: 8776850132326857137
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: couch_40
-      rect:
-        serializedVersion: 2
-        x: 633
-        y: 7
-        width: 64
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5322694c3a206e7e0800000000000000
-      internalID: -1736697703903649227
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: couch_41
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 7
-        width: 62
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c880954ad43a16aa0800000000000000
-      internalID: -6169470460655761268
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: couch_42
-      rect:
-        serializedVersion: 2
-        x: 774
-        y: 7
-        width: 62
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 98a101ff6ee1a26a0800000000000000
-      internalID: -6473327536921109879
+      spriteID: ca6970f880dd01e42ae6a01956c51a16
+      internalID: 1186210219
       vertices: []
       indices: 
       edges: []
@@ -1175,7 +1021,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 14b05413c3aca2e4482dd00f3aa8d309
     internalID: 0
     vertices: []
     indices: 
@@ -1184,7 +1030,43 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      couch_0: -1816838523
+      couch_1: -203699990
+      couch_10: -956622411
+      couch_11: 1519450837
+      couch_12: -1259328185
+      couch_13: -630339480
+      couch_14: -352901461
+      couch_15: 1578153787
+      couch_16: -858554238
+      couch_17: 344898475
+      couch_18: 2093974281
+      couch_19: -1139000488
+      couch_2: 1703116481
+      couch_20: -499410729
+      couch_21: -1459778613
+      couch_22: -32811136
+      couch_23: -1729042989
+      couch_24: 679798865
+      couch_25: 187421216
+      couch_26: -811731964
+      couch_27: -1299730566
+      couch_28: -697930903
+      couch_29: -1911102550
+      couch_3: 147068362
+      couch_30: -1981943676
+      couch_31: 935058232
+      couch_32: 524919872
+      couch_33: -1565193553
+      couch_34: -1715969961
+      couch_35: 1186210219
+      couch_4: -1355804969
+      couch_5: 783683119
+      couch_6: 1968331082
+      couch_7: 469843893
+      couch_8: -1306385890
+      couch_9: -716152918
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
