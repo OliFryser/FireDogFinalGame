@@ -39,7 +39,6 @@ public class WeaponScript : MonoBehaviour
 
     void OnHeavyHit (InputValue z) {
         _heavy = true;
-        Debug.Log("This happens?");
         GameObject hitBox;
         if (_movementScript.FacingRight)
         {

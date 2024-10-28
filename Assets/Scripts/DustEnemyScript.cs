@@ -49,7 +49,6 @@ public class DustEnemy : MonoBehaviour
     {   
 
         
-        //Debug.Log("Dust hit");
         if (weapon._heavy) {
             getPushedBack();
         } else 
