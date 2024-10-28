@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     [SerializeField]
     private float _movementSpeed = 50.0f;
-    private Vector2 _direction;
+    public Vector2 _direction;
     private Rigidbody2D _rigidBody2D;
 
     public bool FacingRight;
