@@ -5,7 +5,7 @@ public class SFX_Footsteps : MonoBehaviour
 {
     public EventReference footstepEvent;
 
-    public void PlayFootstep()
+    public void footstep()
     {
         // Create an instance of the footstep event
         FMOD.Studio.EventInstance footstepInstance = RuntimeManager.CreateInstance(footstepEvent);
