@@ -104,14 +104,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.25
-    functionName: footstep
+    functionName: PlayFootstep
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: f21d81b59dcac7347a12dab4e21aa52c, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.75
-    functionName: footstep
+    functionName: PlayFootstep
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: f21d81b59dcac7347a12dab4e21aa52c, type: 3}
     floatParameter: 0
