@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2e1f667a48cf485409cb4af7636dc7b6
+guid: b0b290a0a37ed924aae8e83fc608c2dc
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -88,7 +88,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -102,7 +102,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,7 +126,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -154,10 +154,10 @@ TextureImporter:
       name: Mop_0
       rect:
         serializedVersion: 2
-        x: 28
+        x: 0
         y: 0
-        width: 26
-        height: 32
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +176,10 @@ TextureImporter:
       name: Mop_1
       rect:
         serializedVersion: 2
-        x: 108
+        x: 80
         y: 0
-        width: 23
-        height: 34
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,10 +198,10 @@ TextureImporter:
       name: Mop_2
       rect:
         serializedVersion: 2
-        x: 186
+        x: 160
         y: 0
-        width: 29
-        height: 34
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,10 +220,10 @@ TextureImporter:
       name: Mop_3
       rect:
         serializedVersion: 2
-        x: 267
+        x: 240
         y: 0
-        width: 32
-        height: 33
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,10 +242,10 @@ TextureImporter:
       name: Mop_4
       rect:
         serializedVersion: 2
-        x: 324
+        x: 320
         y: 0
-        width: 48
-        height: 35
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,10 +264,10 @@ TextureImporter:
       name: Mop_5
       rect:
         serializedVersion: 2
-        x: 399
+        x: 400
         y: 0
-        width: 53
-        height: 38
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +286,10 @@ TextureImporter:
       name: Mop_6
       rect:
         serializedVersion: 2
-        x: 486
+        x: 480
         y: 0
-        width: 45
-        height: 48
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,10 +308,10 @@ TextureImporter:
       name: Mop_7
       rect:
         serializedVersion: 2
-        x: 578
+        x: 560
         y: 0
-        width: 34
-        height: 48
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,10 +330,10 @@ TextureImporter:
       name: Mop_8
       rect:
         serializedVersion: 2
-        x: 645
+        x: 640
         y: 0
-        width: 51
-        height: 42
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,10 +352,10 @@ TextureImporter:
       name: Mop_9
       rect:
         serializedVersion: 2
-        x: 725
+        x: 720
         y: 0
-        width: 53
-        height: 46
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -374,10 +374,10 @@ TextureImporter:
       name: Mop_10
       rect:
         serializedVersion: 2
-        x: 806
+        x: 800
         y: 0
-        width: 52
-        height: 44
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,10 +396,10 @@ TextureImporter:
       name: Mop_11
       rect:
         serializedVersion: 2
-        x: 887
+        x: 880
         y: 0
-        width: 51
-        height: 55
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,10 +418,10 @@ TextureImporter:
       name: Mop_12
       rect:
         serializedVersion: 2
-        x: 969
+        x: 960
         y: 0
-        width: 49
-        height: 55
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -440,10 +440,10 @@ TextureImporter:
       name: Mop_13
       rect:
         serializedVersion: 2
-        x: 1047
+        x: 1040
         y: 0
-        width: 51
-        height: 57
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,10 +462,10 @@ TextureImporter:
       name: Mop_14
       rect:
         serializedVersion: 2
-        x: 1129
+        x: 1120
         y: 0
-        width: 49
-        height: 55
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,10 +484,10 @@ TextureImporter:
       name: Mop_15
       rect:
         serializedVersion: 2
-        x: 1207
+        x: 1200
         y: 0
-        width: 51
-        height: 57
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -506,10 +506,10 @@ TextureImporter:
       name: Mop_16
       rect:
         serializedVersion: 2
-        x: 1289
+        x: 1280
         y: 0
-        width: 49
-        height: 55
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -528,10 +528,10 @@ TextureImporter:
       name: Mop_17
       rect:
         serializedVersion: 2
-        x: 1367
+        x: 1360
         y: 0
-        width: 51
-        height: 57
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -550,7 +550,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: aea3eba9ee6d3ee48b60c3b25632fa73
     internalID: 0
     vertices: []
     indices: 
@@ -559,7 +559,25 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mop_0: 4964869317685371108
+      Mop_1: 4037327196094692953
+      Mop_10: -454944134108221172
+      Mop_11: 1838769079573241569
+      Mop_12: 1101465466006385059
+      Mop_13: 1195492262866449158
+      Mop_14: -2584508944742341094
+      Mop_15: 8866383529354729181
+      Mop_16: -3454708152317722074
+      Mop_17: -3937427884593250598
+      Mop_2: -3581274381861345472
+      Mop_3: -4157019308764707836
+      Mop_4: 589283443394437085
+      Mop_5: 8122237864397254284
+      Mop_6: -2740016869221741867
+      Mop_7: 1014988670006147165
+      Mop_8: 5820730087737309340
+      Mop_9: -5102533381107815002
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
