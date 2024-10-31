@@ -1,18 +1,16 @@
 using UnityEngine;
-
+//TODO rewrite when needed
 public class DustEnemy : MonoBehaviour
 {
-    private Transform _playerRef;
+    private Transform _playerTransform;
 
-    private Movement _movementScript;
-
-    private WeaponScript weapon;
+    private Weapon _weapon;
 
     public float MovementSpeed = 0.75f;
 
-    private bool isPushed = false;
+    private bool _isPushed = false;
 
-    private float pushDistance = 0f;
+    private float _pushDistance = 0f;
 
     public float pushSpeed = 10f;
 
@@ -20,40 +18,45 @@ public class DustEnemy : MonoBehaviour
 
     void Start()
     {
-        _playerRef = FindAnyObjectByType<Movement>().transform;
-        weapon = FindAnyObjectByType<WeaponScript>();
+        _playerTransform = FindAnyObjectByType<Movement>().transform;
+        _weapon = FindAnyObjectByType<Weapon>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isPushed) {
-            if (pushDistance < 1.5f) {
+        if (_isPushed)
+        {
+            if (_pushDistance < 1.5f)
+            {
                 transform.Translate(direction * pushSpeed * Time.deltaTime);
-                pushDistance += Time.deltaTime;
+                _pushDistance += Time.deltaTime;
             }
-            else {
-                isPushed = false;
-                pushDistance = 0f;
+            else
+            {
+                _isPushed = false;
+                _pushDistance = 0f;
             }
         }
-        else {
-        direction = _playerRef.transform.position - gameObject.transform.position;
-        direction.Normalize();
-
-        transform.Translate(direction * MovementSpeed * Time.deltaTime);
+        else
+        {
+            direction = _playerTransform.transform.position - gameObject.transform.position;
+            direction.Normalize();
+            transform.Translate(MovementSpeed * Time.deltaTime * direction);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
-    {   
+    {
 
-        
-        if (weapon._heavy) {
-            getPushedBack();
-        } else 
+
+        if (_weapon._heavyAttack)
         {
-        Destroy(gameObject);
+            GetPushedBack();
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 
@@ -63,13 +66,15 @@ public class DustEnemy : MonoBehaviour
             other.gameObject.SendMessage("OnEnemyHit");
     }
 
-    public void getPushedBack () {
-        isPushed = true;
-        direction = gameObject.transform.position - _playerRef.transform.position;
+    public void GetPushedBack()
+    {
+        _isPushed = true;
+        direction = gameObject.transform.position - _playerTransform.transform.position;
         direction.Normalize();
     }
 
-    public void StopPush() {
-        isPushed = false;
+    public void StopPush()
+    {
+        _isPushed = false;
     }
 }
