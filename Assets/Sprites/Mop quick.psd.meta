@@ -150,6 +150,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -584,7 +597,26 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mop quick_0: 4381407608726303794
+      Mop quick_1: -424471365371849657
+      Mop quick_10: 2945136094795140387
+      Mop quick_11: 7334620331320350560
+      Mop quick_12: 2498949134364012647
+      Mop quick_13: -1751580562595040178
+      Mop quick_14: -2722693967707470519
+      Mop quick_15: 7886011833499433851
+      Mop quick_16: 5956147819294299769
+      Mop quick_17: -3128627824381754556
+      Mop quick_18: 4360017236938722250
+      Mop quick_2: -4901087260998592831
+      Mop quick_3: 7632674869329855418
+      Mop quick_4: 5376119350557266399
+      Mop quick_5: 3474932919516291066
+      Mop quick_6: 2691591415859355819
+      Mop quick_7: 5841062507908300392
+      Mop quick_8: 1417318197898012785
+      Mop quick_9: -5078321319422067952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
