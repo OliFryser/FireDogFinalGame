@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
+
     [SerializeField]
     private float _movementSpeed = 50.0f;
     private Vector2 _direction;
@@ -16,9 +17,7 @@ public class Movement : MonoBehaviour
 
     public bool FacingRight;
 
-    public bool FacingUp;
-
-    private bool _isMoving => _direction.sqrMagnitude > 0.01f;
+    private bool IsMoving => _direction.sqrMagnitude > 0.01f;
 
     void Start()
     {
@@ -29,14 +28,11 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (_isMoving) 
+        if (IsMoving)
             PreviousDirection = _direction;
 
-        
         _rigidBody2D.AddForce(_direction * _movementSpeed);
 
-        IsFacingUp();
-        Debug.Log("Facing up?: " + FacingUp.ToString());
         FlipSprite();
         UpdateAnimator();
     }
@@ -44,7 +40,7 @@ public class Movement : MonoBehaviour
     private void UpdateAnimator()
     {
         _animator.SetFloat("Speed", _direction.sqrMagnitude);
-        if (_isMoving)
+        if (IsMoving)
         {
             _animator.SetFloat("Horizontal", _direction.x);
             _animator.SetFloat("Vertical", _direction.y);
@@ -55,8 +51,6 @@ public class Movement : MonoBehaviour
     {
         if (Math.Abs(_direction.x) < 0.01f) return;
         FacingRight = _direction.x > 0;
-        //Debug.Log ("Direction x: " + _direction.x.ToString());
-        //Debug.Log("Direction y: " + _direction.y.ToString());
         _spriteRenderer.flipX = FacingRight;
     }
 
@@ -64,17 +58,5 @@ public class Movement : MonoBehaviour
     void OnMove(InputValue input)
     {
         _direction = input.Get<Vector2>();
-        //Debug.Log ("Direction: " + _direction.ToString());
-        //Debug.Log ("Direction x: " + _direction.x.ToString());
-        //Debug.Log("Direction y: " + _direction.y.ToString());
-    }
-
-    void IsFacingUp() {
-        if (_direction.y > 0) {
-            FacingUp = true;
-        } 
-        else if (_direction.y < 0 ) {
-            FacingUp = false;
-        }
     }
 }
