@@ -90,5 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e155dd291e76d41438f67ce9921dd738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 0}
   _movementSpeed: 2
   _sightDistance: 5
+  FacingRight: 0

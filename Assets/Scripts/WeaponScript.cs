@@ -26,13 +26,22 @@ public class WeaponScript : MonoBehaviour
     void OnFire (InputValue x)
     {
         GameObject hitBox;
+        Debug.Log("Facing up?: " + _movementScript.FacingUp.ToString());
         if (_movementScript.FacingRight)
         {
             hitBox = Instantiate(_hitBoxPrefab, transform.position + Vector3.right * _hitBoxOffset, quaternion.identity);
         }
-        else
+        else if (!_movementScript.FacingRight)
         {
             hitBox = Instantiate(_hitBoxPrefab, transform.position + Vector3.left * _hitBoxOffset, quaternion.identity);
+        }
+        else if (_movementScript.FacingUp) {
+            Debug.Log("This happens?");
+            hitBox = Instantiate(_hitBoxPrefab, transform.position + Vector3.up * _hitBoxOffset, quaternion.identity);
+        }
+        else {
+            Debug.Log("Or This happens?");
+            hitBox = Instantiate(_hitBoxPrefab, transform.position + Vector3.down * _hitBoxOffset, quaternion.identity);
         }
         StartCoroutine(DestroyAfterDelay(hitBox));
     }
