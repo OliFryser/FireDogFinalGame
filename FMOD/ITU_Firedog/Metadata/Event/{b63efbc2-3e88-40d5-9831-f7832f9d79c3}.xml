@@ -36,6 +36,9 @@
 		<relationship name="parameters">
 			<destination>{a7ed8a0e-0b0d-48d5-a0e6-81057ff171c6}</destination>
 		</relationship>
+		<relationship name="banks">
+			<destination>{48cc651a-4d5b-400f-a6ce-d40dc23be3e6}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{e350bcdb-dadf-467f-98bf-50183a18184b}">
 		<relationship name="masterBus">
@@ -114,6 +117,9 @@
 		<property name="length">
 			<value>91.862063492063498</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{e2900d15-e21e-4e5c-8b55-97f3633c34da}</destination>
+		</relationship>
 		<relationship name="event">
 			<destination>{c4b8842f-8035-4aa9-aa5d-28530e3eccd8}</destination>
 		</relationship>
@@ -122,6 +128,9 @@
 		<property name="length">
 			<value>44.803265306122448</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{1a19a5aa-43ca-4b9a-8803-0b604a343285}</destination>
+		</relationship>
 		<relationship name="event">
 			<destination>{057f0e6e-5f53-44df-a0a7-4b5d0e22b357}</destination>
 		</relationship>
@@ -130,9 +139,6 @@
 		<property name="name">
 			<value>GameMusic</value>
 		</property>
-		<relationship name="modulators">
-			<destination>{99d1b803-5b98-43c1-a0b8-666f101f96e8}</destination>
-		</relationship>
 		<relationship name="effectChain">
 			<destination>{7674ed7f-2a9e-4d7f-ab7b-2b2982e77c75}</destination>
 		</relationship>
@@ -246,7 +252,18 @@
 	</object>
 	<object class="MixerBusPanner" id="{f9547aef-cbdd-4347-b2e9-aa392557a95c}" />
 	<object class="MixerBusFader" id="{1356458a-0345-4ec8-b6ef-078e70773c71}" />
-	<object class="ADSRModulator" id="{99d1b803-5b98-43c1-a0b8-666f101f96e8}">
+	<object class="ADSRModulator" id="{e2900d15-e21e-4e5c-8b55-97f3633c34da}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="ADSRModulator" id="{1a19a5aa-43ca-4b9a-8803-0b604a343285}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
 		</property>
