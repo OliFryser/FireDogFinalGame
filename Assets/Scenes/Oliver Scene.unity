@@ -277,10 +277,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4326332961272460970, guid: cec5ff131d980e44d8ee1296d635e653, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1507034936}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cec5ff131d980e44d8ee1296d635e653, type: 3}
 --- !u!1 &557659721
 GameObject:
@@ -1529,30 +1526,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1507034932 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4326332961272460970, guid: cec5ff131d980e44d8ee1296d635e653, type: 3}
-  m_PrefabInstance: {fileID: 545368054}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1507034936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507034932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f21d81b59dcac7347a12dab4e21aa52c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  footstepEvent:
-    Guid:
-      Data1: 1543300721
-      Data2: 1228222807
-      Data3: 1227649468
-      Data4: -516844252
-    Path: event:/Player/Footsteps
 --- !u!1 &1832792332
 GameObject:
   m_ObjectHideFlags: 0
