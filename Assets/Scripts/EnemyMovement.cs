@@ -15,7 +15,7 @@ public class EnemyMovement : MonoBehaviour
 
     private Animator _animator;
 
-    private Vector2 _playerDirection;
+    private Vector2 _directionToPlayer;
 
     private Vector2 _enemyDirection;
 
@@ -34,7 +34,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        _playerDirection = (_playerTransform.position - transform.position).normalized;
+        _directionToPlayer = (_playerTransform.position - transform.position).normalized;
 
         if (!PlayerIsInLineOfSight())
         {
@@ -43,7 +43,7 @@ public class EnemyMovement : MonoBehaviour
             return;
         }
 
-        _enemyDirection = _playerDirection;
+        _enemyDirection = _directionToPlayer;
 
         transform.Translate(_movementSpeed * Time.deltaTime * _enemyDirection);
         FlipSprite();
@@ -53,11 +53,12 @@ public class EnemyMovement : MonoBehaviour
 
     bool PlayerIsInLineOfSight()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, _playerDirection);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, _directionToPlayer);
         if (!hit)
             return false;
 
-        Debug.DrawRay(transform.position, _playerDirection);
+        Debug.DrawRay(transform.position, _directionToPlayer);
+        Debug.Log($"Hit: Tag = {hit.collider.tag}, Distance = {hit.distance}");
         return hit.collider.CompareTag("Player") && hit.distance < _sightDistance;
     }
 
@@ -74,8 +75,8 @@ public class EnemyMovement : MonoBehaviour
 
     private void FlipSprite()
     {
-        if (Math.Abs(_playerDirection.x) < 0.01f) return;
-        FacingRight = _playerDirection.x > 0;
+        if (Math.Abs(_directionToPlayer.x) < 0.01f) return;
+        FacingRight = _directionToPlayer.x > 0;
         _spriteRenderer.flipX = FacingRight;
     }
 }

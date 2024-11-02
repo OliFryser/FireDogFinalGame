@@ -34,7 +34,6 @@ public class Weapon : MonoBehaviour
         }
         if (_heavyAttack)
         {
-            Debug.Log("Heavy Attack");
             _heavyAttack = false;
         }
     }
@@ -42,7 +41,6 @@ public class Weapon : MonoBehaviour
     private void SpawnAttackHitBox(GameObject hitBoxPrefab, bool isLight)
     {
         Vector3 direction;
-        Debug.Log($"Player direction: ({_playerMovement.PreviousDirection.x}, {_playerMovement.PreviousDirection.y})");
         if (Math.Abs(_playerMovement.PreviousDirection.x) >= Math.Abs(_playerMovement.PreviousDirection.y))
         {
             // facing either left or right
