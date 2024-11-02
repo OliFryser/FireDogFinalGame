@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4235337815908874810}
   - component: {fileID: 6852765771199375981}
   - component: {fileID: 6668341829138600721}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hit Box
   m_TagString: Light Weapon Hit Box
   m_Icon: {fileID: 0}
