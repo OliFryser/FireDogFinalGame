@@ -3,6 +3,7 @@ using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 public class Weapon : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private float _hitBoxDestroyDelay = 0.25f;
     private bool _lightAttack = false;
+
+    [SerializeField]
+    EventReference MeleeLightSwing;
 
     void Start()
     {
@@ -64,6 +68,7 @@ public class Weapon : MonoBehaviour
     void OnLightAttack(InputValue _)
     {
         _lightAttack = true;
+        RuntimeManager.PlayOneShot(MeleeLightSwing);
     }
 
     void OnHeavyAttack(InputValue _)
