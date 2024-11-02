@@ -174,6 +174,13 @@ MonoBehaviour:
   _lightHitBoxPrefab: {fileID: 8749505882203051888, guid: 75410b609bd430d40bc7a0965e7fd859, type: 3}
   _hitBoxOffset: 0.75
   _hitBoxDestroyDelay: 0.25
+  MeleeLightSwing:
+    Guid:
+      Data1: 2001040250
+      Data2: 1189558471
+      Data3: 1058723770
+      Data4: -1310575020
+    Path: event:/Player/Attack_melee
 --- !u!212 &4907875650609213731
 SpriteRenderer:
   m_ObjectHideFlags: 0
