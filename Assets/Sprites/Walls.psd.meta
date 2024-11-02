@@ -102,6 +102,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -109,7 +122,7 @@ TextureImporter:
       name: Walls_0
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 224
         width: 32
         height: 32
@@ -131,7 +144,7 @@ TextureImporter:
       name: Walls_1
       rect:
         serializedVersion: 2
-        x: 192
+        x: 96
         y: 224
         width: 32
         height: 32
@@ -153,8 +166,8 @@ TextureImporter:
       name: Walls_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
+        x: 192
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -175,8 +188,8 @@ TextureImporter:
       name: Walls_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 192
+        x: 288
+        y: 224
         width: 32
         height: 32
       alignment: 0
@@ -194,32 +207,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7e4130672bd17e4ba026bdf87759b26
-      internalID: -2022011119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Walls_5
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 192
         width: 32
         height: 32
@@ -241,7 +232,7 @@ TextureImporter:
       name: Walls_6
       rect:
         serializedVersion: 2
-        x: 128
+        x: 96
         y: 192
         width: 32
         height: 32
@@ -263,7 +254,7 @@ TextureImporter:
       name: Walls_7
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 192
         width: 32
         height: 32
@@ -282,32 +273,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls_8
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a2284d51eb1a6b489bf358d765938fc
-      internalID: -774222216
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Walls_9
       rect:
         serializedVersion: 2
-        x: 256
+        x: 288
         y: 192
         width: 32
         height: 32
@@ -329,7 +298,7 @@ TextureImporter:
       name: Walls_10
       rect:
         serializedVersion: 2
-        x: 288
+        x: 352
         y: 192
         width: 32
         height: 32
@@ -351,7 +320,7 @@ TextureImporter:
       name: Walls_11
       rect:
         serializedVersion: 2
-        x: 352
+        x: 416
         y: 192
         width: 32
         height: 32
@@ -373,8 +342,8 @@ TextureImporter:
       name: Walls_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 160
+        x: 480
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -395,8 +364,8 @@ TextureImporter:
       name: Walls_13
       rect:
         serializedVersion: 2
-        x: 32
-        y: 160
+        x: 544
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -417,7 +386,7 @@ TextureImporter:
       name: Walls_14
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 160
         width: 32
         height: 32
@@ -439,7 +408,7 @@ TextureImporter:
       name: Walls_15
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 160
         width: 32
         height: 32
@@ -461,7 +430,7 @@ TextureImporter:
       name: Walls_16
       rect:
         serializedVersion: 2
-        x: 128
+        x: 96
         y: 160
         width: 32
         height: 32
@@ -483,7 +452,7 @@ TextureImporter:
       name: Walls_17
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 160
         width: 32
         height: 32
@@ -505,8 +474,8 @@ TextureImporter:
       name: Walls_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 192
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -527,8 +496,8 @@ TextureImporter:
       name: Walls_19
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
+        x: 288
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -615,7 +584,7 @@ TextureImporter:
       name: Walls_23
       rect:
         serializedVersion: 2
-        x: 192
+        x: 288
         y: 128
         width: 32
         height: 32
@@ -637,7 +606,7 @@ TextureImporter:
       name: Walls_24
       rect:
         serializedVersion: 2
-        x: 288
+        x: 384
         y: 128
         width: 32
         height: 32
@@ -659,7 +628,7 @@ TextureImporter:
       name: Walls_25
       rect:
         serializedVersion: 2
-        x: 320
+        x: 416
         y: 128
         width: 32
         height: 32
@@ -681,7 +650,7 @@ TextureImporter:
       name: Walls_26
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 96
         width: 32
         height: 32
@@ -747,7 +716,7 @@ TextureImporter:
       name: Walls_29
       rect:
         serializedVersion: 2
-        x: 160
+        x: 128
         y: 96
         width: 32
         height: 32
@@ -791,7 +760,7 @@ TextureImporter:
       name: Walls_31
       rect:
         serializedVersion: 2
-        x: 224
+        x: 256
         y: 96
         width: 32
         height: 32
@@ -857,8 +826,8 @@ TextureImporter:
       name: Walls_34
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
+        x: 384
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -879,8 +848,8 @@ TextureImporter:
       name: Walls_35
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 416
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -901,7 +870,7 @@ TextureImporter:
       name: Walls_36
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 64
         width: 32
         height: 32
@@ -923,7 +892,7 @@ TextureImporter:
       name: Walls_37
       rect:
         serializedVersion: 2
-        x: 160
+        x: 96
         y: 64
         width: 32
         height: 32
@@ -945,7 +914,7 @@ TextureImporter:
       name: Walls_38
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 64
         width: 32
         height: 32
@@ -967,7 +936,7 @@ TextureImporter:
       name: Walls_39
       rect:
         serializedVersion: 2
-        x: 224
+        x: 256
         y: 64
         width: 32
         height: 32
@@ -1033,8 +1002,8 @@ TextureImporter:
       name: Walls_42
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 384
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -1055,8 +1024,8 @@ TextureImporter:
       name: Walls_43
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
+        x: 416
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -1077,7 +1046,7 @@ TextureImporter:
       name: Walls_44
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 32
         width: 32
         height: 32
@@ -1099,8 +1068,8 @@ TextureImporter:
       name: Walls_45
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 96
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -1121,8 +1090,8 @@ TextureImporter:
       name: Walls_46
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 128
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -1143,7 +1112,7 @@ TextureImporter:
       name: Walls_47
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 0
         width: 32
         height: 32
@@ -1165,7 +1134,7 @@ TextureImporter:
       name: Walls_48
       rect:
         serializedVersion: 2
-        x: 160
+        x: 96
         y: 0
         width: 32
         height: 32
@@ -1187,7 +1156,7 @@ TextureImporter:
       name: Walls_49
       rect:
         serializedVersion: 2
-        x: 192
+        x: 128
         y: 0
         width: 32
         height: 32
@@ -1209,7 +1178,7 @@ TextureImporter:
       name: Walls_50
       rect:
         serializedVersion: 2
-        x: 224
+        x: 256
         y: 0
         width: 32
         height: 32
@@ -1223,6 +1192,50 @@ TextureImporter:
       bones: []
       spriteID: 1213369026a767c4ebd3f84184099c1e
       internalID: 678001617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_51
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d55253d65c56346bdabccf9a042af8
+      internalID: 805374247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walls_52
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d399ea160b37584183da76be8c4d1bb
+      internalID: -1607080139
       vertices: []
       indices: 
       edges: []
@@ -1288,6 +1301,8 @@ TextureImporter:
       Walls_49: 1221756702
       Walls_5: -804706799
       Walls_50: 678001617
+      Walls_51: 805374247
+      Walls_52: -1607080139
       Walls_6: 2141821870
       Walls_7: 951984730
       Walls_8: -774222216
