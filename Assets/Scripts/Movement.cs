@@ -6,6 +6,9 @@ public class Movement : MonoBehaviour
 {
     [SerializeField]
     private float _movementSpeed = 50.0f;
+    [SerializeField]
+    private float _animationScaling = 35.0f;
+
     private Vector2 _direction;
 
     public Vector2 PreviousDirection;
@@ -22,7 +25,6 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-
         if (IsMoving)
             PreviousDirection = _direction;
 
@@ -34,7 +36,13 @@ public class Movement : MonoBehaviour
 
     private void UpdateAnimator()
     {
+        float newAnimationSpeed = _movementSpeed / _animationScaling;
+
         _animator.SetFloat("Speed", _direction.sqrMagnitude);
+        if (_animator.GetFloat("Animation Speed") != newAnimationSpeed)
+        {
+            _animator.SetFloat("Animation Speed", newAnimationSpeed);
+        }
         if (IsMoving)
         {
             _animator.SetFloat("Horizontal", _direction.x);

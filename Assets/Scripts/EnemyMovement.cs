@@ -58,7 +58,6 @@ public class EnemyMovement : MonoBehaviour
             return false;
 
         Debug.DrawRay(transform.position, _directionToPlayer);
-        Debug.Log($"Hit: Tag = {hit.collider.tag}, Distance = {hit.distance}");
         return hit.collider.CompareTag("Player") && hit.distance < _sightDistance;
     }
 
