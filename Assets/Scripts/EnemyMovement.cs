@@ -26,6 +26,10 @@ public class EnemyMovement : MonoBehaviour
         _playerTransform = FindAnyObjectByType<Movement>().transform;
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+
+        _enemyDirection = Vector2.down;
+        _animator.SetFloat("Horizontal", _enemyDirection.x);
+        _animator.SetFloat("Vertical", _enemyDirection.y);
     }
 
     void Update()
@@ -63,8 +67,8 @@ public class EnemyMovement : MonoBehaviour
         _animator.SetFloat("Speed", _enemyDirection.sqrMagnitude);
         if (_enemyDirection.sqrMagnitude > 0.01f)
         {
-            _animator.SetFloat("Horizontal", _playerDirection.x);
-            _animator.SetFloat("Vertical", _playerDirection.y);
+            _animator.SetFloat("Horizontal", _enemyDirection.x);
+            _animator.SetFloat("Vertical", _enemyDirection.y);
         }
     }
 
