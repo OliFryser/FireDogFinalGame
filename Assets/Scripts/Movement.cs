@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         _rigidBody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
