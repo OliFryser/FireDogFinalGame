@@ -71,16 +71,6 @@ public class Weapon : MonoBehaviour
     void OnHeavyAttack(InputValue _)
     {
         _heavyAttack = true;
-        GameObject hitBox;
-        if (_playerMovement.FacingRight)
-        {
-            hitBox = Instantiate(_lightHitBoxPrefab, transform.position + Vector3.right * _hitBoxOffset, quaternion.identity);
-        }
-        else
-        {
-            hitBox = Instantiate(_lightHitBoxPrefab, transform.position + Vector3.left * _hitBoxOffset, quaternion.identity);
-        }
-        StartCoroutine(DestroyAfterDelay(hitBox));
     }
 
     IEnumerator DestroyAfterDelay(GameObject hitBox)

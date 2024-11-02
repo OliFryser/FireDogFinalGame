@@ -54,7 +54,6 @@ public class EnemyMovement : MonoBehaviour
     bool PlayerIsInLineOfSight()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, _playerDirection);
-        Debug.Log($"Hit: {hit.collider.tag}");
         if (!hit)
             return false;
 
