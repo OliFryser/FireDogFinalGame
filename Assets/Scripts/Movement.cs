@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private float _movementSpeed = 50.0f;
     [SerializeField]
-    private float _animationScaling = 35.0f;
+    private float _animationScaling = .03f;
 
     private Vector2 _direction;
 
