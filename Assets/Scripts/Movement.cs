@@ -5,9 +5,6 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     [SerializeField]
-    private SpriteRenderer _spriteRenderer;
-
-    [SerializeField]
     private float _movementSpeed = 50.0f;
     private Vector2 _direction;
 
@@ -15,14 +12,11 @@ public class Movement : MonoBehaviour
     private Rigidbody2D _rigidBody2D;
     private Animator _animator;
 
-    public bool FacingRight;
-
     private bool IsMoving => _direction.sqrMagnitude > 0.01f;
 
     void Start()
     {
         _rigidBody2D = GetComponent<Rigidbody2D>();
-        _animator = _spriteRenderer.GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -50,8 +44,15 @@ public class Movement : MonoBehaviour
     private void FlipSprite()
     {
         if (Math.Abs(_direction.x) < 0.01f) return;
-        FacingRight = _direction.x > 0;
-        _spriteRenderer.flipX = FacingRight;
+        if (_direction.x > 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+
     }
 
     // Used by input system
