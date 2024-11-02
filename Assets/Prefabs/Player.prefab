@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7534442993687501926}
   - component: {fileID: 2459599049702383541}
   - component: {fileID: 7438015951383730794}
+  - component: {fileID: 8923015035227425177}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -112,6 +113,25 @@ Animator:
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &7438015951383730794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4326332961272460970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21d81b59dcac7347a12dab4e21aa52c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepEvent:
+    Guid:
+      Data1: 1543300721
+      Data2: 1228222807
+      Data3: 1227649468
+      Data4: -516844252
+    Path: event:/Player/Footsteps
+--- !u!114 &8923015035227425177
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -236,10 +256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9001b162b28caa644850479a748e210c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spriteRenderer: {fileID: 7534442993687501926}
   _movementSpeed: 50
   PreviousDirection: {x: 0, y: 0}
-  FacingRight: 0
 --- !u!61 &170204156927166628
 BoxCollider2D:
   m_ObjectHideFlags: 0
