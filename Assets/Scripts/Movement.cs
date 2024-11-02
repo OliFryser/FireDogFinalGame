@@ -36,7 +36,7 @@ public class Movement : MonoBehaviour
 
     private void UpdateAnimator()
     {
-        float newAnimationSpeed = _movementSpeed / _animationScaling;
+        float newAnimationSpeed = _movementSpeed * _animationScaling;
 
         _animator.SetFloat("Speed", _direction.sqrMagnitude);
         if (_animator.GetFloat("Animation Speed") != newAnimationSpeed)
@@ -54,13 +54,9 @@ public class Movement : MonoBehaviour
     {
         if (Math.Abs(_direction.x) < 0.01f) return;
         if (_direction.x > 0)
-        {
             transform.localScale = new Vector3(-1, 1, 1);
-        }
         else
-        {
             transform.localScale = new Vector3(1, 1, 1);
-        }
 
     }
 
