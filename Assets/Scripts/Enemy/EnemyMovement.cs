@@ -46,41 +46,48 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        if (IsPushedBack) {
-            if (_currentPushDistance < _totalPushDistance) {
+        if (IsPushedBack)
+        {
+            if (_currentPushDistance < _totalPushDistance)
+            {
                 transform.Translate(_movementSpeed * Time.deltaTime * _enemyDirection);
                 _currentPushDistance += Time.deltaTime * _movementSpeed;
             }
-            else {
+            else
+            {
                 StopPush();
             }
         }
-        else if (_isStunned){
-            if (_currentStunTimer < _totalStunTimer){
-                    _enemyDirection = Vector2.zero;
-                    transform.Translate(_movementSpeed * Time.deltaTime * _enemyDirection);
-                    _currentStunTimer += Time.deltaTime;
-            } else {
+        else if (_isStunned)
+        {
+            if (_currentStunTimer < _totalStunTimer)
+            {
+                _enemyDirection = Vector2.zero;
+                transform.Translate(_movementSpeed * Time.deltaTime * _enemyDirection);
+                _currentStunTimer += Time.deltaTime;
+            }
+            else
+            {
                 StopStun();
             }
         }
-        else {
-        _directionToPlayer = (_playerTransform.position - transform.position).normalized;
-
-        if (!PlayerIsInLineOfSight())
+        else
         {
-            Debug.Log("Why moving?");
-            _enemyDirection = Vector2.zero;
+            _directionToPlayer = (_playerTransform.position - transform.position).normalized;
+
+            if (!PlayerIsInLineOfSight())
+            {
+                _enemyDirection = Vector2.zero;
+                UpdateAnimator();
+                return;
+            }
+
+            _enemyDirection = _directionToPlayer;
+
+            transform.Translate(_movementSpeed * Time.deltaTime * _enemyDirection);
+            FlipSprite();
+
             UpdateAnimator();
-            return;
-        }
-
-        _enemyDirection = _directionToPlayer;
-
-        transform.Translate(_movementSpeed * Time.deltaTime * _enemyDirection);
-        FlipSprite();
-
-        UpdateAnimator();
         }
     }
 
@@ -125,9 +132,10 @@ public class EnemyMovement : MonoBehaviour
         IsPushedBack = true;
         _enemyDirection = (gameObject.transform.position - _playerTransform.transform.position).normalized;
         _totalPushDistance = distance;
-        if (heavy){
+        if (heavy)
+        {
             _isStunned = true;
-            _totalPushDistance+= (2.0f - (Vector2.Distance(_playerTransform.transform.position, gameObject.transform.position)));
+            _totalPushDistance += 2.0f - Vector2.Distance(_playerTransform.transform.position, gameObject.transform.position);
         }
     }
 
@@ -138,13 +146,15 @@ public class EnemyMovement : MonoBehaviour
         _currentPushDistance = 0;
     }
 
-    public void StopStun(){
+    public void StopStun()
+    {
         _isStunned = false;
         _totalStunTimer = 0;
         _currentStunTimer = 0;
     }
 
-    public Vector2 GetEnemyDirection(){
+    public Vector2 GetEnemyDirection()
+    {
         return _enemyDirection;
     }
 }

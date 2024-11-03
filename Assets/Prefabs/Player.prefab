@@ -12,12 +12,14 @@ GameObject:
   - component: {fileID: 5233744386738908767}
   - component: {fileID: 7806688890617837638}
   - component: {fileID: 8238006801850591497}
+  - component: {fileID: 3000249034656620173}
   - component: {fileID: 170204156927166628}
   - component: {fileID: 1539413260549690082}
   - component: {fileID: 4907875650609213731}
   - component: {fileID: 7681742549620884952}
   - component: {fileID: 1199468839391098195}
   - component: {fileID: 3094542141851771796}
+  - component: {fileID: 6665681605604159108}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -109,9 +111,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9001b162b28caa644850479a748e210c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementSpeed: 50
-  _animationScaling: 35
+  _animationScaling: 0.03
   PreviousDirection: {x: 0, y: 0}
+--- !u!114 &3000249034656620173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757568798257597297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a43b4e87a122b574eb3a1cf6719fccbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &170204156927166628
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,9 +184,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heavyAttack: 0
+  _isAttacking: 0
   _lightHitBoxPrefab: {fileID: 8749505882203051888, guid: 75410b609bd430d40bc7a0965e7fd859, type: 3}
+  _heavyHitBoxPrefab: {fileID: 8749505882203051888, guid: bfb45d8f08b12244186daf1ff35c2b78, type: 3}
   _hitBoxOffset: 0.75
-  _hitBoxDestroyDelay: 0.25
+  _hitBoxDestroyDelayLight: 0.55
+  _hitBoxDestroyDelayHeavy: 1.5
   MeleeLightSwing:
     Guid:
       Data1: 2001040250
@@ -246,7 +262,7 @@ Animator:
   m_GameObject: {fileID: 4757568798257597297}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 70738e448c5d7524bb7d79d7692a63dd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 435d96442b629634da4053fc46496935, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -313,3 +329,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.07426238, y: 0.12094152}
   m_Radius: 0.27278435
+--- !u!114 &6665681605604159108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757568798257597297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 781f0b32a54688249b802583505b1436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovementSpeed: 50
+  MaxHealth: 5
+  Damage: 5
