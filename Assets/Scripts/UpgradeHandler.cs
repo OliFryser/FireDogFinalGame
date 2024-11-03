@@ -2,15 +2,28 @@ using UnityEngine;
 
 public class UpgradeHandler : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private PlayerStats _playerStats;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        _playerStats = FindAnyObjectByType<PlayerStats>();
+    }
+    public void HandleUpgrade(Upgrade upgrade)
+    {
+        switch (upgrade.UpgradeType)
+        {
+            case UpgradeType.HealthBoost:
+                _playerStats.MaxHealth++;
+                break;
+            case UpgradeType.DamageBoost:
+                _playerStats.Damage++;
+                break;
+            case UpgradeType.SpeedBoost:
+                _playerStats.MovementSpeed += 10;
+                break;
+            default:
+                Debug.LogWarning("Undefined Upgrade in UpgradeHandler");
+                break;
+        }
     }
 }

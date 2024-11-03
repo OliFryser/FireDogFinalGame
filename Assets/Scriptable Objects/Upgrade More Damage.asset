@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Upgrade More Damage
   m_EditorClassIdentifier: 
   Title: More Damage
+  UpgradeType: 1

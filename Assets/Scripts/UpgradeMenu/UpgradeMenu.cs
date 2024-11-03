@@ -1,18 +1,24 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class UpgradeMenu : MonoBehaviour
 {
-    private UpgradeDisplay[] _displays;
+    [SerializeField]
+    private UnityEvent _onUpgradeSelected;
+
+    [SerializeField]
+    private UpgradeDisplay[] _displays = new UpgradeDisplay[3];
+
     [SerializeField]
     private Upgrade[] _upgrades = new Upgrade[3];
 
-    private void Start()
+    private void Awake()
     {
-        _displays = GetComponentsInChildren<UpgradeDisplay>(includeInactive: true);
-        Debug.Log($"Displays found: {_displays.Length}");
         for (int i = 0; i < _displays.Length; i++)
         {
             _displays[i].Upgrade = _upgrades[i];
+            _displays[i].AddOnClickListener(OnUpgradeSelected);
         }
     }
 
@@ -20,5 +26,15 @@ public class UpgradeMenu : MonoBehaviour
     {
         gameObject.SetActive(true);
         _displays[0].SetSelected();
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void OnUpgradeSelected()
+    {
+        _onUpgradeSelected?.Invoke();
     }
 }
