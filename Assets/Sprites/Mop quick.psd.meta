@@ -91,7 +91,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -105,7 +105,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,7 +129,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -170,10 +170,10 @@ TextureImporter:
       name: Mop quick_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 299
-        width: 32
-        height: 34
+        x: 0
+        y: 320
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +192,10 @@ TextureImporter:
       name: Mop quick_1
       rect:
         serializedVersion: 2
-        x: 140
-        y: 299
-        width: 52
-        height: 39
+        x: 160
+        y: 320
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,10 +214,10 @@ TextureImporter:
       name: Mop quick_2
       rect:
         serializedVersion: 2
-        x: 259
-        y: 299
-        width: 53
-        height: 55
+        x: 320
+        y: 320
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +236,10 @@ TextureImporter:
       name: Mop quick_3
       rect:
         serializedVersion: 2
-        x: 379
-        y: 299
-        width: 65
-        height: 61
+        x: 480
+        y: 320
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,10 +258,10 @@ TextureImporter:
       name: Mop quick_4
       rect:
         serializedVersion: 2
-        x: 513
-        y: 299
-        width: 73
-        height: 52
+        x: 640
+        y: 320
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,10 +280,10 @@ TextureImporter:
       name: Mop quick_5
       rect:
         serializedVersion: 2
-        x: 43
-        y: 179
-        width: 29
-        height: 34
+        x: 0
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,10 +302,10 @@ TextureImporter:
       name: Mop quick_6
       rect:
         serializedVersion: 2
-        x: 149
-        y: 168
-        width: 46
-        height: 46
+        x: 160
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,10 +324,10 @@ TextureImporter:
       name: Mop quick_7
       rect:
         serializedVersion: 2
-        x: 265
-        y: 158
-        width: 51
-        height: 57
+        x: 320
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,10 +346,10 @@ TextureImporter:
       name: Mop quick_8
       rect:
         serializedVersion: 2
-        x: 385
-        y: 149
-        width: 63
-        height: 66
+        x: 480
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,10 +368,10 @@ TextureImporter:
       name: Mop quick_9
       rect:
         serializedVersion: 2
-        x: 507
-        y: 157
-        width: 33
-        height: 34
+        x: 640
+        y: 160
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -390,10 +390,10 @@ TextureImporter:
       name: Mop quick_10
       rect:
         serializedVersion: 2
-        x: 527
-        y: 156
-        width: 51
-        height: 59
+        x: 0
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -412,10 +412,10 @@ TextureImporter:
       name: Mop quick_11
       rect:
         serializedVersion: 2
-        x: 553
-        y: 153
-        width: 16
-        height: 15
+        x: 160
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -434,10 +434,10 @@ TextureImporter:
       name: Mop quick_12
       rect:
         serializedVersion: 2
-        x: 149
-        y: 59
-        width: 43
-        height: 43
+        x: 320
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -456,10 +456,10 @@ TextureImporter:
       name: Mop quick_13
       rect:
         serializedVersion: 2
-        x: 264
-        y: 59
-        width: 48
-        height: 49
+        x: 480
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -478,10 +478,10 @@ TextureImporter:
       name: Mop quick_14
       rect:
         serializedVersion: 2
-        x: 384
-        y: 59
-        width: 63
-        height: 58
+        x: 640
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -496,99 +496,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Mop quick_15
-      rect:
-        serializedVersion: 2
-        x: 507
-        y: 79
-        width: 33
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b7bb24e0bfdb07d60800000000000000
-      internalID: 7886011833499433851
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mop quick_16
-      rect:
-        serializedVersion: 2
-        x: 527
-        y: 59
-        width: 51
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 97611c672ec78a250800000000000000
-      internalID: 5956147819294299769
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mop quick_17
-      rect:
-        serializedVersion: 2
-        x: 553
-        y: 102
-        width: 16
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4438255e191e494d0800000000000000
-      internalID: -3128627824381754556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mop quick_18
-      rect:
-        serializedVersion: 2
-        x: 43
-        y: 59
-        width: 29
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: acb005e9394e18c30800000000000000
-      internalID: 4360017236938722250
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 219d036aac11e8845a83abd28859d1f3
     internalID: 0
     vertices: []
     indices: 
@@ -605,10 +517,6 @@ TextureImporter:
       Mop quick_12: 2498949134364012647
       Mop quick_13: -1751580562595040178
       Mop quick_14: -2722693967707470519
-      Mop quick_15: 7886011833499433851
-      Mop quick_16: 5956147819294299769
-      Mop quick_17: -3128627824381754556
-      Mop quick_18: 4360017236938722250
       Mop quick_2: -4901087260998592831
       Mop quick_3: 7632674869329855418
       Mop quick_4: 5376119350557266399

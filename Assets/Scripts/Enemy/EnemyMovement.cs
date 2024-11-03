@@ -14,11 +14,25 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private float _sightDistance = 5.0f;
 
+    public bool IsPushedBack = false;
+
     private Animator _animator;
 
     private Vector2 _directionToPlayer;
 
     private Vector2 _enemyDirection;
+
+    private float _totalPushDistance;
+
+    private float _currentPushDistance;
+
+    private bool _isStunned;
+
+    private float _totalStunTimer;
+
+    private float _currentStunTimer;
+
+
 
     void Start()
     {
@@ -32,10 +46,30 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+        if (IsPushedBack) {
+            if (_currentPushDistance < _totalPushDistance) {
+                transform.Translate(_movementSpeed * Time.deltaTime * _enemyDirection);
+                _currentPushDistance += Time.deltaTime * _movementSpeed;
+            }
+            else {
+                StopPush();
+            }
+        }
+        else if (_isStunned){
+            if (_currentStunTimer < _totalStunTimer){
+                    _enemyDirection = Vector2.zero;
+                    transform.Translate(_movementSpeed * Time.deltaTime * _enemyDirection);
+                    _currentStunTimer += Time.deltaTime;
+            } else {
+                StopStun();
+            }
+        }
+        else {
         _directionToPlayer = (_playerTransform.position - transform.position).normalized;
 
         if (!PlayerIsInLineOfSight())
         {
+            Debug.Log("Why moving?");
             _enemyDirection = Vector2.zero;
             UpdateAnimator();
             return;
@@ -47,6 +81,7 @@ public class EnemyMovement : MonoBehaviour
         FlipSprite();
 
         UpdateAnimator();
+        }
     }
 
     bool PlayerIsInLineOfSight()
@@ -82,5 +117,34 @@ public class EnemyMovement : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         else
             transform.localScale = new Vector3(1, 1, 1);
+    }
+
+
+    public void GetPushedBack(float distance, bool heavy)
+    {
+        IsPushedBack = true;
+        _enemyDirection = (gameObject.transform.position - _playerTransform.transform.position).normalized;
+        _totalPushDistance = distance;
+        if (heavy){
+            _isStunned = true;
+            _totalPushDistance+= (2.0f - (Vector2.Distance(_playerTransform.transform.position, gameObject.transform.position)));
+        }
+    }
+
+    public void StopPush()
+    {
+        IsPushedBack = false;
+        _totalPushDistance = 0;
+        _currentPushDistance = 0;
+    }
+
+    public void StopStun(){
+        _isStunned = false;
+        _totalStunTimer = 0;
+        _currentStunTimer = 0;
+    }
+
+    public Vector2 GetEnemyDirection(){
+        return _enemyDirection;
     }
 }

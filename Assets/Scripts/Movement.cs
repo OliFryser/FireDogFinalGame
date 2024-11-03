@@ -13,6 +13,10 @@ public class Movement : MonoBehaviour
     public Vector2 PreviousDirection;
     private Rigidbody2D _rigidBody2D;
     private Animator _animator;
+    private Weapon _playerWeapon;
+    private bool _isPushed;
+    private float _totalPushDistance;
+    private float _currentPushDistance = 0;
 
     private PlayerStats _playerStats;
 
@@ -23,10 +27,21 @@ public class Movement : MonoBehaviour
         _playerStats = GetComponent<PlayerStats>();
         _rigidBody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _playerWeapon = GetComponent<Weapon>();
     }
 
     void FixedUpdate()
     {
+        if (_isPushed){
+            if (_currentPushDistance < _totalPushDistance){
+                _rigidBody2D.AddForce(_direction * _movementSpeed*5);
+                _currentPushDistance += _movementSpeed * Time.deltaTime;
+            } else {
+                StopPush();
+            }
+        }
+        else {
+        if (!_playerWeapon._isAttacking){
         if (IsMoving)
             PreviousDirection = _direction;
 
@@ -34,6 +49,8 @@ public class Movement : MonoBehaviour
 
         FlipSprite();
         UpdateAnimator();
+        }
+        }
     }
 
     private void UpdateAnimator()
@@ -66,5 +83,20 @@ public class Movement : MonoBehaviour
     void OnMove(InputValue input)
     {
         _direction = input.Get<Vector2>();
+    }
+
+
+    public void GetPushed(Vector2 enemyDirection){
+        _isPushed = true;
+        _direction = (enemyDirection-_direction).normalized;
+        _totalPushDistance = 4.0f;
+    }
+
+    public void StopPush()
+    {
+        _isPushed = false;
+        _direction = Vector2.zero;
+        _totalPushDistance = 0;
+        _currentPushDistance = 0;
     }
 }
