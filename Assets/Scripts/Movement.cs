@@ -4,8 +4,7 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField]
-    private float _movementSpeed = 50.0f;
+    private float _movementSpeed => _playerStats.MovementSpeed;
     [SerializeField]
     private float _animationScaling = .03f;
 
@@ -15,10 +14,13 @@ public class Movement : MonoBehaviour
     private Rigidbody2D _rigidBody2D;
     private Animator _animator;
 
+    private PlayerStats _playerStats;
+
     private bool IsMoving => _direction.sqrMagnitude > 0.01f;
 
     void Start()
     {
+        _playerStats = GetComponent<PlayerStats>();
         _rigidBody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
     }
