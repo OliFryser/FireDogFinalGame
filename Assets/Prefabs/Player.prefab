@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSpeed: 50
+  _animationScaling: 35
   PreviousDirection: {x: 0, y: 0}
 --- !u!61 &170204156927166628
 BoxCollider2D:

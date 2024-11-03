@@ -124,8 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSpeed: 2
+  _animationScaling: 35
   _sightDistance: 5
-  FacingRight: 1
 --- !u!50 &8722602593839996403
 Rigidbody2D:
   serializedVersion: 5

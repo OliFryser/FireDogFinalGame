@@ -9,5 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Oliver Scene.unity
     guid: 81cc074440207c5488759ec6c6290873
   m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: e6a55a6188d9eb14d83079abcfd4303c, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 15e0d87d0e36c87439f5e18647d1b38a, type: 3}
   m_UseUCBPForAssetBundles: 0

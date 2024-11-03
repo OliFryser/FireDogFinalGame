@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: _sightDistance
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: _animationScaling
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 7395499960486680252, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_Sprite
       value: 
