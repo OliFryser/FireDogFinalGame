@@ -111,6 +111,8 @@ MonoBehaviour:
       Data3: -1731466579
       Data4: 153182977
     Path: event:/Enemy/Damaged
+  _lightPushBack: 1
+  _heavyPushBack: 2
 --- !u!114 &3643076807879076636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +128,7 @@ MonoBehaviour:
   _movementSpeed: 2
   _animationScaling: 35
   _sightDistance: 5
+  IsPushedBack: 0
 --- !u!50 &8722602593839996403
 Rigidbody2D:
   serializedVersion: 5
