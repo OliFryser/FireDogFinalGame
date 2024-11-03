@@ -104,6 +104,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 5
+  Enemyhit:
+    Guid:
+      Data1: 1495619684
+      Data2: 1273727337
+      Data3: -1731466579
+      Data4: 153182977
+    Path: event:/Enemy/Damaged
 --- !u!114 &3643076807879076636
 MonoBehaviour:
   m_ObjectHideFlags: 0
