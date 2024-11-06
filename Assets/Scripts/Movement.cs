@@ -5,8 +5,11 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     private float _movementSpeed => _playerStats.MovementSpeed;
+
     [SerializeField]
     private float _animationScaling = .03f;
+    [SerializeField]
+    private float _idleAnimationScaling = .015f;
 
     private Vector2 _direction;
 
@@ -36,7 +39,7 @@ public class Movement : MonoBehaviour
         {
             if (_currentPushDistance < _totalPushDistance)
             {
-                _rigidBody2D.AddForce(_direction * _movementSpeed * 5);
+                _rigidBody2D.AddForce(_movementSpeed * 5 * _direction);
                 _currentPushDistance += _movementSpeed * Time.deltaTime;
             }
             else
@@ -62,12 +65,15 @@ public class Movement : MonoBehaviour
     private void UpdateAnimator()
     {
         float newAnimationSpeed = _movementSpeed * _animationScaling;
+        float newIdleSpeed = _movementSpeed * _idleAnimationScaling;
 
         _animator.SetFloat("Speed", _direction.sqrMagnitude);
         if (_animator.GetFloat("Animation Speed") != newAnimationSpeed)
-        {
             _animator.SetFloat("Animation Speed", newAnimationSpeed);
-        }
+
+        if (_animator.GetFloat("Idle Speed") != newIdleSpeed)
+            _animator.SetFloat("Idle Speed", newIdleSpeed);
+
         if (IsMoving)
         {
             _animator.SetFloat("Horizontal", _direction.x);
