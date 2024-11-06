@@ -183,8 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e888a949a46d0cd439335b1287542cf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _heavyAttack: 0
-  _isAttacking: 0
+  HeavyAttack: 0
+  IsAttacking: 0
   _lightHitBoxPrefab: {fileID: 8749505882203051888, guid: 75410b609bd430d40bc7a0965e7fd859, type: 3}
   _heavyHitBoxPrefab: {fileID: 8749505882203051888, guid: bfb45d8f08b12244186daf1ff35c2b78, type: 3}
   _hitBoxOffset: 0.75
@@ -240,7 +240,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 3928668594518261497, guid: fc760cc9a4dbb114e8216758561ffdff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
