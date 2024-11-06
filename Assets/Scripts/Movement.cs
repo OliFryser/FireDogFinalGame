@@ -32,24 +32,30 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (_isPushed){
-            if (_currentPushDistance < _totalPushDistance){
-                _rigidBody2D.AddForce(_direction * _movementSpeed*5);
+        if (_isPushed)
+        {
+            if (_currentPushDistance < _totalPushDistance)
+            {
+                _rigidBody2D.AddForce(_direction * _movementSpeed * 5);
                 _currentPushDistance += _movementSpeed * Time.deltaTime;
-            } else {
+            }
+            else
+            {
                 StopPush();
             }
         }
-        else {
-        if (!_playerWeapon._isAttacking){
-        if (IsMoving)
-            PreviousDirection = _direction;
+        else
+        {
+            if (!_playerWeapon.IsAttacking)
+            {
+                if (IsMoving)
+                    PreviousDirection = _direction;
 
-        _rigidBody2D.AddForce(_direction * _movementSpeed);
+                _rigidBody2D.AddForce(_direction * _movementSpeed);
 
-        FlipSprite();
-        UpdateAnimator();
-        }
+                FlipSprite();
+                UpdateAnimator();
+            }
         }
     }
 
@@ -86,9 +92,10 @@ public class Movement : MonoBehaviour
     }
 
 
-    public void GetPushed(Vector2 enemyDirection){
+    public void GetPushed(Vector2 enemyDirection)
+    {
         _isPushed = true;
-        _direction = (enemyDirection-_direction).normalized;
+        _direction = (enemyDirection - _direction).normalized;
         _totalPushDistance = 4.0f;
     }
 

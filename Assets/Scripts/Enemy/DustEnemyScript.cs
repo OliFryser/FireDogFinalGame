@@ -50,7 +50,7 @@ public class DustEnemy : MonoBehaviour
     {
 
 
-        if (_weapon._heavyAttack)
+        if (_weapon.HeavyAttack)
         {
             GetPushedBack();
         }
