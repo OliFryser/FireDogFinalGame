@@ -195,6 +195,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1539413260549690082, guid: cec5ff131d980e44d8ee1296d635e653, type: 3}
+      propertyPath: _hitBoxDestroyDelayHeavy
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 3704201000589333629, guid: cec5ff131d980e44d8ee1296d635e653, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09

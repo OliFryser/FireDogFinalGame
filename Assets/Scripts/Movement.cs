@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
 
     private PlayerStats _playerStats;
 
-    private bool IsMoving => _direction.sqrMagnitude > 0.01f;
+    public bool IsMoving => _direction.sqrMagnitude > 0.01f;
 
     void Start()
     {
@@ -42,8 +42,10 @@ public class Movement : MonoBehaviour
         }
         else {
         if (!_playerWeapon._isAttacking){
-        if (IsMoving)
+        if (IsMoving) {
+            Debug.Log("moving");
             PreviousDirection = _direction;
+        }
 
         _rigidBody2D.AddForce(_direction * _movementSpeed);
 

@@ -27,7 +27,7 @@ public class Weapon : MonoBehaviour
     private float _hitBoxDestroyDelayLight = 0.55f;
 
     [SerializeField]
-    private float _hitBoxDestroyDelayHeavy = 1.5f;
+    private float _hitBoxDestroyDelayHeavy = 0.9f;
 
     private bool _lightAttack = false;
 
@@ -42,19 +42,20 @@ public class Weapon : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!_isAttacking) {
+        if (!_isAttacking) {    
         if (_lightAttack)
         {
+            Debug.Log("Attacking");
             _isAttacking = true;
-            LightAttack();
             SpawnAttackHitBox(_lightHitBoxPrefab, _lightAttack);
+            LightAttack();
             _lightAttack = false;
         }
         if (_heavyAttack)
         {   
             _isAttacking = true;
+            StartCoroutine(SpawnHitBoxAfterDelay(_heavyHitBoxPrefab, 0.6f));
             HeavyAttack();
-            SpawnAttackHitBox(_heavyHitBoxPrefab, _lightAttack);
             _heavyAttack = false;
         }
         }
@@ -74,17 +75,36 @@ public class Weapon : MonoBehaviour
         else
         {
             // facing either up or down
-            if (_playerMovement.PreviousDirection.y > 0)
+            if (_playerMovement.PreviousDirection.y > 0){
                 direction = Vector3.up;
+                if(isLight)
+                    _hitBoxOffset = 0.45f;
+                else {
+                    _hitBoxOffset = 1.0f;
+                }
+            }
             else
+                {
                 direction = Vector3.down;
+                if(!isLight)
+                    _hitBoxOffset = 1.4f;
+                else
+                    _hitBoxOffset = 0.9f;
+                }
+                
         }
+        if (_playerMovement.IsMoving) {
+            Debug.Log("this happens?");
+            if(isLight)
+                _hitBoxOffset += 0.25f;
+        }
+            
         GameObject hitBox = Instantiate(hitBoxPrefab, transform.position + direction * _hitBoxOffset, quaternion.identity);
         if (isLight) {
             StartCoroutine(DestroyAfterDelay(hitBox, _hitBoxDestroyDelayLight));
         } else
             StartCoroutine(DestroyAfterDelay(hitBox, _hitBoxDestroyDelayHeavy));
-        
+        _hitBoxOffset = 0.75f;
     }
 
     void OnLightAttack(InputValue _)
@@ -121,5 +141,11 @@ public class Weapon : MonoBehaviour
         _animator.SetTrigger("HeavyAttack");
     }
 
+    IEnumerator SpawnHitBoxAfterDelay(GameObject hitBox, float delay)
+    {
+        Debug.Log("Hello?");
+        yield return new WaitForSeconds(delay);
+        SpawnAttackHitBox(hitBox, _lightAttack);
+    }
 
 }
