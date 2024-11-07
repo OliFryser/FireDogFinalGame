@@ -1,4 +1,5 @@
 using System;
+using FMODUnity;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -32,14 +33,23 @@ public class EnemyMovement : MonoBehaviour
 
     private float _currentStunTimer;
 
+    [SerializeField]
+    private CollisionSettings _verticalEnemyCollision;
 
+    [SerializeField]
+    private CollisionSettings _horizontalEnemyCollsion;
+
+    private BoxCollider2D _boxCollider;
 
     void Start()
     {
         _playerTransform = FindAnyObjectByType<Movement>().transform;
-        _animator = GetComponent<Animator>();
+
+        _boxCollider = GetComponent<BoxCollider2D>();
+        UpdateCollider(_verticalEnemyCollision);
 
         _enemyDirection = Vector2.down;
+        _animator = GetComponent<Animator>();
         _animator.SetFloat("Horizontal", _enemyDirection.x);
         _animator.SetFloat("Vertical", _enemyDirection.y);
     }
@@ -84,11 +94,22 @@ public class EnemyMovement : MonoBehaviour
 
             _enemyDirection = _directionToPlayer;
 
+            if (Utils.IsHorizontal(_enemyDirection))
+                UpdateCollider(_horizontalEnemyCollsion);
+            else
+                UpdateCollider(_verticalEnemyCollision);
+
             transform.Translate(_movementSpeed * Time.deltaTime * _enemyDirection);
             FlipSprite();
 
             UpdateAnimator();
         }
+    }
+
+    private void UpdateCollider(CollisionSettings settings)
+    {
+        _boxCollider.size = settings.Size;
+        _boxCollider.offset = settings.Offset;
     }
 
     bool PlayerIsInLineOfSight()
@@ -156,5 +177,12 @@ public class EnemyMovement : MonoBehaviour
     public Vector2 GetEnemyDirection()
     {
         return _enemyDirection;
+    }
+
+    [Serializable]
+    struct CollisionSettings
+    {
+        public Vector2 Offset;
+        public Vector2 Size;
     }
 }
