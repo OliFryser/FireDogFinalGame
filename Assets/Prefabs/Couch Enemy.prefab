@@ -34,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.74
+      value: -1.95
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.44
+      value: 14.13
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -77,12 +77,16 @@ PrefabInstance:
       value: Couch Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: _movementSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: _sightDistance
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: _animationScaling
-      value: 0.75
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: _verticalEnemyCollision.Size.x
@@ -126,6 +130,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7395499960486680252, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577002638160236904, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: _heavyPushBack
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577002638160236904, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: _lightPushBack
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722602593839996403, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8722602593839996403, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}

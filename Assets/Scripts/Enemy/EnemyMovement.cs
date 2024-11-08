@@ -7,10 +7,10 @@ public class EnemyMovement : MonoBehaviour
     private Transform _playerTransform;
 
     [SerializeField]
-    private float _movementSpeed = 2.0f;
+    private float _movementSpeed = 50.0f;
 
     [SerializeField]
-    private float _animationScaling = .75f;
+    private float _animationScaling = .03f;
 
     [SerializeField]
     private float _sightDistance = 5.0f;
@@ -39,11 +39,13 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private CollisionSettings _horizontalEnemyCollsion;
 
+    private Rigidbody2D _rigidbody;
     private BoxCollider2D _boxCollider;
 
     void Start()
     {
         _playerTransform = FindAnyObjectByType<Movement>().transform;
+        _rigidbody = GetComponent<Rigidbody2D>();
 
         _boxCollider = GetComponent<BoxCollider2D>();
         UpdateCollider(_verticalEnemyCollision);
@@ -56,31 +58,31 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+        if (_isStunned)
+        {
+            if (_currentStunTimer < _totalStunTimer)
+                _currentStunTimer += Time.deltaTime;
+            else
+                StopStun();
+        }
+    }
+
+    void FixedUpdate()
+    {
         if (IsPushedBack)
         {
             if (_currentPushDistance < _totalPushDistance)
             {
-                transform.Translate(_movementSpeed * Time.deltaTime * _enemyDirection);
-                _currentPushDistance += Time.deltaTime * _movementSpeed;
+                _rigidbody.AddForce(_movementSpeed * _enemyDirection);
+                _currentPushDistance += _movementSpeed;
             }
             else
             {
                 StopPush();
             }
         }
-        else if (_isStunned)
-        {
-            if (_currentStunTimer < _totalStunTimer)
-            {
-                _enemyDirection = Vector2.zero;
-                transform.Translate(_movementSpeed * Time.deltaTime * _enemyDirection);
-                _currentStunTimer += Time.deltaTime;
-            }
-            else
-            {
-                StopStun();
-            }
-        }
+        else if (_isStunned && _currentStunTimer < _totalStunTimer)
+            _rigidbody.AddForce(_movementSpeed * _enemyDirection);
         else
         {
             _directionToPlayer = (_playerTransform.position - transform.position).normalized;
@@ -99,7 +101,7 @@ public class EnemyMovement : MonoBehaviour
             else
                 UpdateCollider(_verticalEnemyCollision);
 
-            transform.Translate(_movementSpeed * Time.deltaTime * _enemyDirection);
+            _rigidbody.AddForce(_movementSpeed * _enemyDirection);
             FlipSprite();
 
             UpdateAnimator();
@@ -118,7 +120,6 @@ public class EnemyMovement : MonoBehaviour
         if (!hit)
             return false;
 
-        Debug.DrawRay(transform.position, _directionToPlayer);
         return hit.collider.CompareTag("Player") && hit.distance < _sightDistance;
     }
 
@@ -152,7 +153,7 @@ public class EnemyMovement : MonoBehaviour
     {
         IsPushedBack = true;
         _enemyDirection = (gameObject.transform.position - _playerTransform.transform.position).normalized;
-        _totalPushDistance = distance;
+        _totalPushDistance = distance * _movementSpeed;
         if (heavy)
         {
             _isStunned = true;
