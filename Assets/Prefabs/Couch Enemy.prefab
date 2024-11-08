@@ -10,15 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 471079251320473491, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_Size.x
-      value: 1.75
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 471079251320473491, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_Size.y
-      value: 1.22
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 471079251320473491, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 471079251320473491, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_Offset.y
-      value: -0.27
+      value: -0.125
       objectReference: {fileID: 0}
     - target: {fileID: 471079251320473491, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -34,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.94
+      value: 2.44
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -80,6 +84,34 @@ PrefabInstance:
       propertyPath: _animationScaling
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: _verticalEnemyCollision.Size.x
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: _verticalEnemyCollision.Size.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: _horizontalEnemyCollsion.Size.x
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: _horizontalEnemyCollsion.Size.y
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: _verticalEnemyCollision.Offset.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: _horizontalEnemyCollsion.Offset.x
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: _horizontalEnemyCollsion.Offset.y
+      value: -0.125
+      objectReference: {fileID: 0}
     - target: {fileID: 7395499960486680252, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -95,6 +127,10 @@ PrefabInstance:
     - target: {fileID: 7395499960486680252, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722602593839996403, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: m_LinearDamping
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
