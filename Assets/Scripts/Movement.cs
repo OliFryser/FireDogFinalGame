@@ -5,8 +5,11 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     private float _movementSpeed => _playerStats.MovementSpeed;
+
     [SerializeField]
     private float _animationScaling = .03f;
+    [SerializeField]
+    private float _idleAnimationScaling = .015f;
 
     private Vector2 _direction;
 
@@ -32,36 +35,45 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (_isPushed){
-            if (_currentPushDistance < _totalPushDistance){
-                _rigidBody2D.AddForce(_direction * _movementSpeed*5);
+        if (_isPushed)
+        {
+            if (_currentPushDistance < _totalPushDistance)
+            {
+                _rigidBody2D.AddForce(_movementSpeed * 5 * _direction);
                 _currentPushDistance += _movementSpeed * Time.deltaTime;
-            } else {
+            }
+            else
+            {
                 StopPush();
             }
         }
-        else {
-        if (!_playerWeapon._isAttacking){
-        if (IsMoving) {
-            PreviousDirection = _direction;
-        }
-        _rigidBody2D.AddForce(_direction * _movementSpeed);
+        else
+        {
+            if (!_playerWeapon.IsAttacking)
+            {
+                if (IsMoving)
+                    PreviousDirection = _direction;
 
-        FlipSprite();
-        UpdateAnimator();
-        }
+                _rigidBody2D.AddForce(_direction * _movementSpeed);
+
+                FlipSprite();
+                UpdateAnimator();
+            }
         }
     }
 
     private void UpdateAnimator()
     {
         float newAnimationSpeed = _movementSpeed * _animationScaling;
+        float newIdleSpeed = _movementSpeed * _idleAnimationScaling;
 
         _animator.SetFloat("Speed", _direction.sqrMagnitude);
         if (_animator.GetFloat("Animation Speed") != newAnimationSpeed)
-        {
             _animator.SetFloat("Animation Speed", newAnimationSpeed);
-        }
+
+        if (_animator.GetFloat("Idle Speed") != newIdleSpeed)
+            _animator.SetFloat("Idle Speed", newIdleSpeed);
+
         if (IsMoving)
         {
             _animator.SetFloat("Horizontal", _direction.x);
@@ -86,9 +98,10 @@ public class Movement : MonoBehaviour
     }
 
 
-    public void GetPushed(Vector2 enemyDirection){
+    public void GetPushed(Vector2 enemyDirection)
+    {
         _isPushed = true;
-        _direction = (enemyDirection-_direction).normalized;
+        _direction = (enemyDirection - _direction).normalized;
         _totalPushDistance = 4.0f;
     }
 
