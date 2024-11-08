@@ -109,7 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9001b162b28caa644850479a748e210c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementSpeed: 50
   _animationScaling: 35
   PreviousDirection: {x: 0, y: 0}
 --- !u!61 &4439596738193895179
@@ -172,8 +171,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _heavyAttack: 0
   _isAttacking: 0
-  _lightHitBoxPrefab: {fileID: 8749505882203051888, guid: 75410b609bd430d40bc7a0965e7fd859, type: 3}
-  _heavyHitBoxPrefab: {fileID: 8749505882203051888, guid: bfb45d8f08b12244186daf1ff35c2b78, type: 3}
+  _lightHitBoxPrefabDown: {fileID: 0}
+  _lightHitBoxPrefabUp: {fileID: 0}
+  _lightHitBoxPrefabSide: {fileID: 0}
+  _heavyHitBoxPrefabDown: {fileID: 0}
+  _heavyHitBoxPrefabSide: {fileID: 0}
+  _heavyHitBoxPrefabUp: {fileID: 0}
   _hitBoxOffset: 0.75
   _hitBoxDestroyDelayLight: 0.55
   _hitBoxDestroyDelayHeavy: 1.5

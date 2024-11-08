@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     private Vector2 _direction;
 
     public Vector2 PreviousDirection;
-    private Rigidbody2D _rigidBody2D;
+    public Rigidbody2D _rigidBody2D;
     private Animator _animator;
     private Weapon _playerWeapon;
     private bool _isPushed;
@@ -43,10 +43,8 @@ public class Movement : MonoBehaviour
         else {
         if (!_playerWeapon._isAttacking){
         if (IsMoving) {
-            Debug.Log("moving");
             PreviousDirection = _direction;
         }
-
         _rigidBody2D.AddForce(_direction * _movementSpeed);
 
         FlipSprite();
