@@ -15,14 +15,18 @@ public class RoomManager : MonoBehaviour
 
     private Flashlight _flashlight;
 
+    private MusicController _musicController;
+
     private void Start()
     {
         _inputLock = FindAnyObjectByType<InputLock>();
         _flashlight = FindAnyObjectByType<Flashlight>();
+        _musicController = Object.FindFirstObjectByType<MusicController>();
     }
 
     public void ClearRoom()
     {
+        _musicController.ClearRoom();
         _upgradeMenu.Show();
         _inputLock.LockInput();
         _spookyLight.SetActive(false);
