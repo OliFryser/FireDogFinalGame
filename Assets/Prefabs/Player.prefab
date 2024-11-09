@@ -308,6 +308,7 @@ MonoBehaviour:
   _animationScaling: 0.03
   _idleAnimationScaling: 0.015
   PreviousDirection: {x: 0, y: 0}
+  _rigidBody2D: {fileID: 0}
 --- !u!114 &3000249034656620173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,13 +379,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e888a949a46d0cd439335b1287542cf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HeavyAttack: 0
   IsAttacking: 0
-  _lightHitBoxPrefab: {fileID: 8749505882203051888, guid: 75410b609bd430d40bc7a0965e7fd859, type: 3}
-  _heavyHitBoxPrefab: {fileID: 8749505882203051888, guid: bfb45d8f08b12244186daf1ff35c2b78, type: 3}
-  _hitBoxOffset: 0.75
-  _hitBoxDestroyDelayLight: 0.55
-  _hitBoxDestroyDelayHeavy: 1.5
+  _lightHitBoxPrefabDown:
+    Prefab: {fileID: 1352821087091708786, guid: 4b89031f8acd5464fb307f759d545ff3, type: 3}
+    Offset: 0.9
+  _lightHitBoxPrefabUp:
+    Prefab: {fileID: 2031191436154690395, guid: ee1d06e42d0ef40478deb4f074f1296e, type: 3}
+    Offset: 0.35
+  _lightHitBoxPrefabSide:
+    Prefab: {fileID: 104633210319889299, guid: 0ab844b31bfa40645bec1c0883b6d73e, type: 3}
+    Offset: 0.45
+  _heavyHitBoxPrefabDown:
+    Prefab: {fileID: 4584349179100242260, guid: c3009d071118c734ba603555d5fca12b, type: 3}
+    Offset: 1.3
+  _heavyHitBoxPrefabSide:
+    Prefab: {fileID: 4358119206119419528, guid: d8abf3bfec7fc534bbff760522624552, type: 3}
+    Offset: 0.8
+  _heavyHitBoxPrefabUp:
+    Prefab: {fileID: 2854161767783743423, guid: 8f898a1ad5981fe44bd720cd6c6f9015, type: 3}
+    Offset: 0.9
+  _hitBoxDestroyDelayLight: 0.1
+  _lightAttackHitBoxDelay: 0.1
+  _heavyAttackHitBoxDelay: 0.6
+  _hitBoxDestroyDelayHeavy: 0.9
   MeleeLightSwing:
     Guid:
       Data1: 2001040250

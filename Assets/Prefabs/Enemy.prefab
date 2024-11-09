@@ -129,6 +129,12 @@ MonoBehaviour:
   _animationScaling: 35
   _sightDistance: 5
   IsPushedBack: 0
+  _verticalEnemyCollision:
+    Offset: {x: 0, y: 0}
+    Size: {x: 0, y: 0}
+  _horizontalEnemyCollsion:
+    Offset: {x: 0, y: 0}
+    Size: {x: 0, y: 0}
 --- !u!50 &8722602593839996403
 Rigidbody2D:
   serializedVersion: 5
