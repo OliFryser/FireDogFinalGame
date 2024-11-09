@@ -20,12 +20,15 @@ public class EnemyHitDetection : MonoBehaviour
 
     private Movement _playerMovement;
 
+    private CameraShake _cameraShake;
+
     private void Start()
     {
         _enemyTracker = FindFirstObjectByType<EnemyTracker>();
         _enemyTracker.RegisterEnemy();
         _enemyMovement = GetComponent<EnemyMovement>();
         _playerMovement = FindFirstObjectByType<Movement>();
+        _cameraShake = FindAnyObjectByType<CameraShake>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -35,12 +38,15 @@ public class EnemyHitDetection : MonoBehaviour
             _health--;
             _enemyMovement.GetPushedBack(_lightPushBack, false);
             RuntimeManager.PlayOneShot(Enemyhit);
+            _cameraShake.StartShake();
+
         }
 
         else if (other.CompareTag("Heavy Weapon Hit Box"))
         {
             _enemyMovement.GetPushedBack(_heavyPushBack, true);
             _health -= 2;
+            _cameraShake.StartShake();
         }
 
         else if (other.CompareTag("Player"))
