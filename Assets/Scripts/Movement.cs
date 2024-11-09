@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
     private Vector2 _direction;
 
     public Vector2 PreviousDirection;
-    private Rigidbody2D _rigidBody2D;
+    public Rigidbody2D _rigidBody2D;
     private Animator _animator;
     private Weapon _playerWeapon;
     private bool _isPushed;
@@ -23,7 +23,7 @@ public class Movement : MonoBehaviour
 
     private PlayerStats _playerStats;
 
-    private bool IsMoving => _direction.sqrMagnitude > 0.01f;
+    public bool IsMoving => _direction.sqrMagnitude > 0.01f;
 
     void Start()
     {
