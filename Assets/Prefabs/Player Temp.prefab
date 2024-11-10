@@ -111,6 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animationScaling: 35
   PreviousDirection: {x: 0, y: 0}
+  _rigidBody2D: {fileID: 0}
 --- !u!61 &4439596738193895179
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -180,6 +181,8 @@ MonoBehaviour:
   _hitBoxOffset: 0.75
   _hitBoxDestroyDelayLight: 0.55
   _hitBoxDestroyDelayHeavy: 1.5
+  _lightCooldown: 0
+  _heavyCooldown: 0
   MeleeLightSwing:
     Guid:
       Data1: 2001040250

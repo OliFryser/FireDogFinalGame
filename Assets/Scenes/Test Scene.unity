@@ -139,6 +139,18 @@ MonoBehaviour:
   MovementSpeed: 50
   MaxHealth: 5
   Damage: 5
+--- !u!114 &42005101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42005079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a43b4e87a122b574eb3a1cf6719fccbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &414321244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -626,6 +638,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1580183473451685874, guid: 8ec7a82a61053464cacb5b2859342dcb, type: 3}
+      propertyPath: _heavyCooldown
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580183473451685874, guid: 8ec7a82a61053464cacb5b2859342dcb, type: 3}
+      propertyPath: _lightCooldown
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580183473451685874, guid: 8ec7a82a61053464cacb5b2859342dcb, type: 3}
       propertyPath: _heavyHitBoxPrefabUp
       value: 
       objectReference: {fileID: 2854161767783743423, guid: 8f898a1ad5981fe44bd720cd6c6f9015, type: 3}
@@ -684,6 +704,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8208593132296639675, guid: 8ec7a82a61053464cacb5b2859342dcb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 42005090}
+    - targetCorrespondingSourceObject: {fileID: 8208593132296639675, guid: 8ec7a82a61053464cacb5b2859342dcb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 42005101}
   m_SourcePrefab: {fileID: 100100000, guid: 8ec7a82a61053464cacb5b2859342dcb, type: 3}
 --- !u!1001 &2087314949
 PrefabInstance:
