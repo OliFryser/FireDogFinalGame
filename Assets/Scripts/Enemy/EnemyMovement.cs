@@ -1,4 +1,5 @@
 using System;
+using FMODUnity;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -6,10 +7,10 @@ public class EnemyMovement : MonoBehaviour
     private Transform _playerTransform;
 
     [SerializeField]
-    private float _movementSpeed = 2.0f;
+    private float _movementSpeed = 50.0f;
 
     [SerializeField]
-    private float _animationScaling = .75f;
+    private float _animationScaling = .03f;
 
     [SerializeField]
     private float _sightDistance = 5.0f;
@@ -32,45 +33,56 @@ public class EnemyMovement : MonoBehaviour
 
     private float _currentStunTimer;
 
+    [SerializeField]
+    private CollisionSettings _verticalEnemyCollision;
 
+    [SerializeField]
+    private CollisionSettings _horizontalEnemyCollsion;
+
+    private Rigidbody2D _rigidbody;
+    private BoxCollider2D _boxCollider;
 
     void Start()
     {
         _playerTransform = FindAnyObjectByType<Movement>().transform;
-        _animator = GetComponent<Animator>();
+        _rigidbody = GetComponent<Rigidbody2D>();
+
+        _boxCollider = GetComponent<BoxCollider2D>();
+        UpdateCollider(_verticalEnemyCollision);
 
         _enemyDirection = Vector2.down;
+        _animator = GetComponent<Animator>();
         _animator.SetFloat("Horizontal", _enemyDirection.x);
         _animator.SetFloat("Vertical", _enemyDirection.y);
     }
 
     void Update()
     {
+        if (_isStunned)
+        {
+            if (_currentStunTimer < _totalStunTimer)
+                _currentStunTimer += Time.deltaTime;
+            else
+                StopStun();
+        }
+    }
+
+    void FixedUpdate()
+    {
         if (IsPushedBack)
         {
             if (_currentPushDistance < _totalPushDistance)
             {
-                transform.Translate(_movementSpeed * Time.deltaTime * _enemyDirection);
-                _currentPushDistance += Time.deltaTime * _movementSpeed;
+                _rigidbody.AddForce(_movementSpeed * _enemyDirection);
+                _currentPushDistance += _movementSpeed;
             }
             else
             {
                 StopPush();
             }
         }
-        else if (_isStunned)
-        {
-            if (_currentStunTimer < _totalStunTimer)
-            {
-                _enemyDirection = Vector2.zero;
-                transform.Translate(_movementSpeed * Time.deltaTime * _enemyDirection);
-                _currentStunTimer += Time.deltaTime;
-            }
-            else
-            {
-                StopStun();
-            }
-        }
+        else if (_isStunned && _currentStunTimer < _totalStunTimer)
+            _rigidbody.AddForce(_movementSpeed * _enemyDirection);
         else
         {
             _directionToPlayer = (_playerTransform.position - transform.position).normalized;
@@ -84,11 +96,22 @@ public class EnemyMovement : MonoBehaviour
 
             _enemyDirection = _directionToPlayer;
 
-            transform.Translate(_movementSpeed * Time.deltaTime * _enemyDirection);
+            if (Utils.IsHorizontal(_enemyDirection))
+                UpdateCollider(_horizontalEnemyCollsion);
+            else
+                UpdateCollider(_verticalEnemyCollision);
+
+            _rigidbody.AddForce(_movementSpeed * _enemyDirection);
             FlipSprite();
 
             UpdateAnimator();
         }
+    }
+
+    private void UpdateCollider(CollisionSettings settings)
+    {
+        _boxCollider.size = settings.Size;
+        _boxCollider.offset = settings.Offset;
     }
 
     bool PlayerIsInLineOfSight()
@@ -97,7 +120,6 @@ public class EnemyMovement : MonoBehaviour
         if (!hit)
             return false;
 
-        Debug.DrawRay(transform.position, _directionToPlayer);
         return hit.collider.CompareTag("Player") && hit.distance < _sightDistance;
     }
 
@@ -131,7 +153,7 @@ public class EnemyMovement : MonoBehaviour
     {
         IsPushedBack = true;
         _enemyDirection = (gameObject.transform.position - _playerTransform.transform.position).normalized;
-        _totalPushDistance = distance;
+        _totalPushDistance = distance * _movementSpeed;
         if (heavy)
         {
             _isStunned = true;
@@ -156,5 +178,12 @@ public class EnemyMovement : MonoBehaviour
     public Vector2 GetEnemyDirection()
     {
         return _enemyDirection;
+    }
+
+    [Serializable]
+    struct CollisionSettings
+    {
+        public Vector2 Offset;
+        public Vector2 Size;
     }
 }

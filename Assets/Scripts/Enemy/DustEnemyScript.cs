@@ -48,16 +48,10 @@ public class DustEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-
-        if (_weapon._heavyAttack)
-        {
+        if (other.CompareTag("Heavy Hit Box"))
             GetPushedBack();
-        }
         else
-        {
             Destroy(gameObject);
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)

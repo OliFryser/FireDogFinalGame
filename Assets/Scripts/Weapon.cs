@@ -9,10 +9,9 @@ public class Weapon : MonoBehaviour
 {
     private Movement _playerMovement;
 
-    public bool _heavyAttack = false;
-    public bool _isAttacking = false;
+    public bool IsAttacking;
 
-     [SerializeField]
+    [SerializeField]
     private HitBox _lightHitBoxPrefabDown;
 
     [SerializeField]
@@ -30,17 +29,19 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private HitBox _heavyHitBoxPrefabUp;
 
-    private GameObject _finalHitBox;
-
     private Animator _animator;
 
     private InputLock _inputLocker;
 
     [SerializeField]
-    private float _hitBoxOffset = 0.75f;
+    private float _hitBoxDestroyDelayLight = 0.55f;
 
     [SerializeField]
-    private float _hitBoxDestroyDelayLight = 0.55f;
+    private float _lightAttackHitBoxDelay = 0.1f;
+
+    [SerializeField]
+    private float _heavyAttackHitBoxDelay = 0.6f;
+
 
     [SerializeField]
     private float _hitBoxDestroyDelayHeavy = 0.9f;
@@ -52,14 +53,13 @@ public class Weapon : MonoBehaviour
     private float _heavyCooldown;
 
     private bool _lightAttack = false;
+    
+    private bool _heavyAttack;
 
     private bool _onCooldownLight = false;
 
     private bool _onCooldownHeavy = false;
 
-
-
-    
 
     [SerializeField]
     EventReference MeleeLightSwing;
@@ -71,7 +71,7 @@ public class Weapon : MonoBehaviour
         _inputLocker = GetComponent<InputLock>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (!_isAttacking) {    
         if (_lightAttack && !_onCooldownLight)
@@ -134,7 +134,9 @@ public class Weapon : MonoBehaviour
             }
 
         }
+
         _playerMovement._rigidBody2D.linearVelocity = Vector2.zero;
+
         
         GameObject hitBox = Instantiate(attackHitBox.Prefab, transform.position + direction * attackHitBox.Offset, quaternion.identity);
        
@@ -142,12 +144,8 @@ public class Weapon : MonoBehaviour
             StartCoroutine(DestroyAfterDelay(hitBox, _hitBoxDestroyDelayLight));
         } else
             StartCoroutine(DestroyAfterDelay(hitBox, _hitBoxDestroyDelayHeavy));
-        _hitBoxOffset = 0.45f;
     }
 
-    
-
-    
 
     IEnumerator DestroyAfterDelay(GameObject hitBox, float delay)
     {
@@ -158,34 +156,50 @@ public class Weapon : MonoBehaviour
         else {
             _inputLocker.UnlockInput();
             _heavyAttack = false;
-            _isAttacking = false;
-        }
-        
+            IsAttacking = false;
+        }  
     }
 
-    void OnEnemyHit()
-    {
-        Time.timeScale = 0;
-        Destroy(gameObject);
-    }
 
     void DoLightAttack() {
         _isAttacking = true;
+        StartCoroutine(SpawnHitBoxAfterDelay(_lightAttackHitBoxDelay, _lightAttack));
         RuntimeManager.PlayOneShot(MeleeLightSwing);
         _animator.SetTrigger("LightAttack");
     }
 
-    void DoHeavyAttack() {
+    void DoHeavyAttack()
+    {
+        IsAttacking = true;
+        StartCoroutine(SpawnHitBoxAfterDelay(_heavyAttackHitBoxDelay, _lightAttack));
         _animator.SetTrigger("HeavyAttack");
     }
 
-    void HeavyAttackHold() {
-    }
-
-    IEnumerator SpawnHitBoxAfterDelay(float delay)
+    IEnumerator SpawnHitBoxAfterDelay(float delay, bool isLight)
     {
         yield return new WaitForSeconds(delay);
-        SpawnAttackHitBox(_lightAttack);
+        SpawnAttackHitBox(isLight);
+    }
+
+    #region Input System
+
+    void OnLightAttack(InputValue _)
+    {
+        _lightAttack = true;
+    }
+
+    void OnHeavyAttack(InputValue _)
+    {
+        _heavyAttack = true;
+    }
+
+    #endregion
+
+    [Serializable]
+    struct HitBox
+    {
+        public GameObject Prefab;
+        public float Offset;
     }
 
     IEnumerator DelayLightFinish(){
