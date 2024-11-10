@@ -235,7 +235,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lampattack_0: -5359177468503607473
+      lampattack_1: -6410011017591316869
+      lampattack_2: 8750428025081114159
+      lampattack_3: -4783838126597903450
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

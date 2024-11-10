@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour
 {
     private Movement _playerMovement;
 
-    public bool IsAttacking;
+    public bool IsAttacking = false;
 
     [SerializeField]
     private HitBox _lightHitBoxPrefabDown;
@@ -73,12 +73,12 @@ public class Weapon : MonoBehaviour
 
     private void Update()
     {
-        if (!_isAttacking) {    
+        if (!IsAttacking) {    
         if (_lightAttack && !_onCooldownLight)
         {
             StartCoroutine(CooldownTimer(_lightCooldown, _lightAttack));
              _inputLocker.LockInput();
-            _isAttacking = true;
+            IsAttacking = true;
             SpawnAttackHitBox(_lightAttack);
             DoLightAttack();
              
@@ -87,8 +87,8 @@ public class Weapon : MonoBehaviour
         {   
             StartCoroutine(CooldownTimer(_heavyCooldown, _lightAttack));
              _inputLocker.LockInput();
-            _isAttacking = true;
-            StartCoroutine(SpawnHitBoxAfterDelay(0.6f));
+            IsAttacking = true;
+            StartCoroutine(SpawnHitBoxAfterDelay(0.6f, _lightAttack));
             DoHeavyAttack();
             
         }
@@ -162,7 +162,7 @@ public class Weapon : MonoBehaviour
 
 
     void DoLightAttack() {
-        _isAttacking = true;
+        IsAttacking = true;
         StartCoroutine(SpawnHitBoxAfterDelay(_lightAttackHitBoxDelay, _lightAttack));
         RuntimeManager.PlayOneShot(MeleeLightSwing);
         _animator.SetTrigger("LightAttack");
@@ -181,31 +181,11 @@ public class Weapon : MonoBehaviour
         SpawnAttackHitBox(isLight);
     }
 
-    #region Input System
-
-    void OnLightAttack(InputValue _)
-    {
-        _lightAttack = true;
-    }
-
-    void OnHeavyAttack(InputValue _)
-    {
-        _heavyAttack = true;
-    }
-
-    #endregion
-
-    [Serializable]
-    struct HitBox
-    {
-        public GameObject Prefab;
-        public float Offset;
-    }
 
     IEnumerator DelayLightFinish(){
         yield return new WaitForSeconds(0.15f);
         _lightAttack = false;
-        _isAttacking = false;
+        IsAttacking = false;
         _inputLocker.UnlockInput();
     }
 
