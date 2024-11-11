@@ -1,34 +1,52 @@
 fileFormatVersion: 2
-guid: 50132ca1fffcdb243bed96ec87f4690a
+guid: 191fa9a6813fffb4ca044f3c7a87b157
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1595736872862477925
-    second: dust_0
+      213: 2057684024972201477
+    second: death poof_0
   - first:
-      213: 2220361516922240005
-    second: dust_1
+      213: 7823638798690208592
+    second: death poof_1
   - first:
-      213: -3900193300909595132
-    second: dust_2
+      213: 458433623959931662
+    second: death poof_2
   - first:
-      213: 7302673073982842297
-    second: dust_3
+      213: -1196720609474690842
+    second: death poof_3
   - first:
-      213: 1051091026966099959
-    second: dust_4
+      213: -8214886412022593891
+    second: death poof_4
   - first:
-      213: -3246277489707905420
-    second: dust_5
+      213: 7233798254450022675
+    second: death poof_5
   - first:
-      213: 5145894643363775658
-    second: dust_6
+      213: -3406563746126019424
+    second: death poof_6
   - first:
-      213: -4390563669279041178
-    second: dust_7
+      213: -331337570825301708
+    second: death poof_7
   - first:
-      213: -7137576525838783544
-    second: dust_8
+      213: 7398235541811382988
+    second: death poof_8
+  - first:
+      213: 3988717875333690605
+    second: death poof_9
+  - first:
+      213: -3649702842634288129
+    second: death poof_10
+  - first:
+      213: 2916183109316226999
+    second: death poof_11
+  - first:
+      213: 6875587829279644853
+    second: death poof_12
+  - first:
+      213: 3733672267662116023
+    second: death poof_13
+  - first:
+      213: -8344237383341233150
+    second: death poof_14
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -108,33 +126,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Win64
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -150,56 +142,78 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dust_0
+      name: death poof_0
       rect:
         serializedVersion: 2
-        x: 71
-        y: 79
-        width: 18
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b911a0ac4cdcad9e0800000000000000
-      internalID: -1595736872862477925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dust_1
-      rect:
-        serializedVersion: 2
-        x: 229
-        y: 79
-        width: 22
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 50cf811290f40de10800000000000000
-      internalID: 2220361516922240005
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dust_2
-      rect:
-        serializedVersion: 2
-        x: 386
-        y: 79
+        x: 535
+        y: 83
         width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50ec678f7bc5e8c10800000000000000
+      internalID: 2057684024972201477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death poof_1
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 82
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05bc4e63906239c60800000000000000
+      internalID: 7823638798690208592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death poof_2
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 89
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b0a3db3feac5600800000000000000
+      internalID: 458433623959931662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death poof_3
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 106
+        width: 9
         height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -209,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 406ecef5bdabfd9c0800000000000000
-      internalID: -3900193300909595132
+      spriteID: 6e04fd832f4646fe0800000000000000
+      internalID: -1196720609474690842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dust_3
+      name: death poof_4
       rect:
         serializedVersion: 2
-        x: 551
-        y: 79
-        width: 17
-        height: 25
+        x: 725
+        y: 103
+        width: 9
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,85 +245,173 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b5ae85387e485560800000000000000
-      internalID: 7302673073982842297
+      spriteID: d96c535255cdefd80800000000000000
+      internalID: -8214886412022593891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dust_4
+      name: death poof_5
       rect:
         serializedVersion: 2
-        x: 710
-        y: 79
-        width: 20
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7f73ae858b9369e00800000000000000
-      internalID: 1051091026966099959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dust_5
-      rect:
-        serializedVersion: 2
-        x: 870
-        y: 90
-        width: 21
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 47e0d9792d7e2f2d0800000000000000
-      internalID: -3246277489707905420
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dust_6
-      rect:
-        serializedVersion: 2
-        x: 1026
-        y: 90
-        width: 28
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aa4884df9e3e96740800000000000000
-      internalID: 5145894643363775658
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dust_7
-      rect:
-        serializedVersion: 2
-        x: 1178
+        x: 737
         y: 85
+        width: 312
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3199555af2d936460800000000000000
+      internalID: 7233798254450022675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death poof_6
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 79
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a44f67525479b0d0800000000000000
+      internalID: -3406563746126019424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death poof_7
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 80
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 431973e1c3ad66bf0800000000000000
+      internalID: -331337570825301708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death poof_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 90
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca465a1700dba660800000000000000
+      internalID: 7398235541811382988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death poof_9
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 96
         width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4f38446c5ca5730800000000000000
+      internalID: 3988717875333690605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death poof_10
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 80
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff3cc010a96a95dc0800000000000000
+      internalID: -3649702842634288129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death poof_11
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 89
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bfa9ca561d587820800000000000000
+      internalID: 2916183109316226999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death poof_12
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 79
+        width: 12
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -319,20 +421,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 66913e0ea959113c0800000000000000
-      internalID: -4390563669279041178
+      spriteID: 5bc563ac3befa6f50800000000000000
+      internalID: 6875587829279644853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dust_8
+      name: death poof_13
       rect:
         serializedVersion: 2
-        x: 1183
-        y: 79
-        width: 38
-        height: 16
+        x: 531
+        y: 80
+        width: 7
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,8 +443,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8cb663c57fb32fc90800000000000000
-      internalID: -7137576525838783544
+      spriteID: 7b44ab5452ba0d330800000000000000
+      internalID: 3733672267662116023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death poof_14
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 80
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20c296c3f40533c80800000000000000
+      internalID: -8344237383341233150
       vertices: []
       indices: 
       edges: []
@@ -360,16 +484,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      dust_0: -1595736872862477925
-      dust_1: 2220361516922240005
-      dust_2: -3900193300909595132
-      dust_3: 7302673073982842297
-      dust_4: 1051091026966099959
-      dust_5: -3246277489707905420
-      dust_6: 5145894643363775658
-      dust_7: -4390563669279041178
-      dust_8: -7137576525838783544
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
