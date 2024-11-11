@@ -77,18 +77,17 @@ public class Weapon : MonoBehaviour
         {
             if (_lightAttack && !_onCooldownLight)
             {
+                IsAttacking = true;
                 StartCoroutine(CooldownTimer(_lightCooldown, _lightAttack));
                 _inputLocker.LockInput();
-                IsAttacking = true;
-                SpawnAttackHitBox(_lightAttack);
                 DoLightAttack();
 
             }
             if (_heavyAttack && !_onCooldownHeavy)
             {
+                IsAttacking = true;
                 StartCoroutine(CooldownTimer(_heavyCooldown, _lightAttack));
                 _inputLocker.LockInput();
-                IsAttacking = true;
                 StartCoroutine(SpawnHitBoxAfterDelay(0.6f, _lightAttack));
                 DoHeavyAttack();
 
@@ -212,18 +211,17 @@ public class Weapon : MonoBehaviour
     }
 
     #region Input System
-    void OnLightAttack(InputValue _)
+    void OnLightAttack(InputValue input)
     {
         if (!_onCooldownLight)
             _lightAttack = true;
     }
 
 
-    void OnHeavyAttack(InputValue _)
+    void OnHeavyAttack(InputValue input)
     {
         if (!_onCooldownHeavy)
             _heavyAttack = true;
-
     }
 
     #endregion
