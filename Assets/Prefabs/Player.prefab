@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4298752244870752780}
   - component: {fileID: 2232233871322407887}
   - component: {fileID: 8211528659226840759}
-  - component: {fileID: 272824810904756173}
   - component: {fileID: 8469965378183405902}
+  - component: {fileID: 4996773357356369843}
   m_Layer: 0
   m_Name: Follow along Camera
   m_TagString: Untagged
@@ -97,23 +97,6 @@ MonoBehaviour:
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
   FollowOffset: {x: 0, y: 0, z: -10}
---- !u!114 &272824810904756173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1874082089307019094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
-  PivotOffset: {x: 0, y: 0, z: 0}
-  AmplitudeGain: 0
-  FrequencyGain: 1
-  m_NoiseOffsets: {x: -571.8782, y: -919.173, z: -917.3384}
 --- !u!114 &8469965378183405902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +111,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shakeStrength: 1.5
   _shakeDuration: 0.2
+--- !u!114 &4996773357356369843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874082089307019094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  PivotOffset: {x: 0, y: 0, z: 0}
+  AmplitudeGain: 1.98
+  FrequencyGain: 1
+  m_NoiseOffsets: {x: -571.8782, y: -919.173, z: -917.3384}
 --- !u!1 &4731330365352767803
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 1199468839391098195}
   - component: {fileID: 3094542141851771796}
   - component: {fileID: 6665681605604159108}
+  - component: {fileID: 9051645628794513165}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -435,6 +436,8 @@ MonoBehaviour:
   _lightAttackHitBoxDelay: 0.1
   _heavyAttackHitBoxDelay: 0.6
   _hitBoxDestroyDelayHeavy: 0.9
+  _lightCooldown: 0
+  _heavyCooldown: 0
   MeleeLightSwing:
     Guid:
       Data1: 2001040250
@@ -589,3 +592,15 @@ MonoBehaviour:
   MovementSpeed: 50
   MaxHealth: 5
   Damage: 5
+--- !u!114 &9051645628794513165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757568798257597297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0e481936470384eaa17d392de088e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
