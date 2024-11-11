@@ -21,7 +21,7 @@ public class RoomManager : MonoBehaviour
     {
         _inputLock = FindAnyObjectByType<InputLock>();
         _flashlight = FindAnyObjectByType<Flashlight>();
-        _musicController = Object.FindFirstObjectByType<MusicController>();
+        _musicController = GetComponentInChildren<MusicController>();
     }
 
     public void ClearRoom()

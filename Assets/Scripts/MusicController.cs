@@ -11,7 +11,6 @@ public class MusicController : MonoBehaviour
     {
         musicInstance = RuntimeManager.CreateInstance(musicEvent);
         musicInstance.setParameterByName("BattleState", 1f);
-        Debug.Log("BattleState set to 0");
         musicInstance.start();
     }
     public void SetBattleState(float value)
