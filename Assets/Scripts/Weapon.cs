@@ -31,6 +31,8 @@ public class Weapon : MonoBehaviour
 
     private Animator _animator;
 
+    private InputLock _inputLocker;
+
     [SerializeField]
     private float _hitBoxDestroyDelayLight = 0.55f;
 
@@ -44,8 +46,20 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private float _hitBoxDestroyDelayHeavy = 0.9f;
 
+    [SerializeField]
+    private float _lightCooldown;
+
+    [SerializeField]
+    private float _heavyCooldown;
+
     private bool _lightAttack;
+    
     private bool _heavyAttack;
+
+    private bool _onCooldownLight;
+
+    private bool _onCooldownHeavy;
+
 
     [SerializeField]
     EventReference MeleeLightSwing;
@@ -53,23 +67,31 @@ public class Weapon : MonoBehaviour
     void Start()
     {
         _playerMovement = GetComponent<Movement>();
-        _animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>(); 
+        _inputLocker = GetComponent<InputLock>();
     }
 
     private void Update()
     {
-        if (!IsAttacking)
+        if (!IsAttacking) {    
+        if (_lightAttack && !_onCooldownLight)
         {
-            if (_lightAttack)
-            {
-                DoLightAttack();
-                _lightAttack = false;
-            }
-            if (_heavyAttack)
-            {
-                DoHeavyAttack();
-                _heavyAttack = false;
-            }
+            StartCoroutine(CooldownTimer(_lightCooldown, _lightAttack));
+             _inputLocker.LockInput();
+            IsAttacking = true;
+            SpawnAttackHitBox(_lightAttack);
+            DoLightAttack();
+             
+        }
+        if (_heavyAttack && !_onCooldownHeavy)
+        {   
+            StartCoroutine(CooldownTimer(_heavyCooldown, _lightAttack));
+             _inputLocker.LockInput();
+            IsAttacking = true;
+            StartCoroutine(SpawnHitBoxAfterDelay(0.6f, _lightAttack));
+            DoHeavyAttack();
+            
+        }
         }
     }
 
@@ -115,26 +137,33 @@ public class Weapon : MonoBehaviour
 
         _playerMovement._rigidBody2D.linearVelocity = Vector2.zero;
 
+        
         GameObject hitBox = Instantiate(attackHitBox.Prefab, transform.position + direction * attackHitBox.Offset, quaternion.identity);
-
-        if (isLight)
+       
+        if (isLight) 
             StartCoroutine(DestroyAfterDelay(hitBox, _hitBoxDestroyDelayLight));
         else
             StartCoroutine(DestroyAfterDelay(hitBox, _hitBoxDestroyDelayHeavy));
     }
 
+
     IEnumerator DestroyAfterDelay(GameObject hitBox, float delay)
     {
         yield return new WaitForSeconds(delay);
         Destroy(hitBox);
-        _heavyAttack = false;
-        IsAttacking = false;
+        if (_lightAttack)
+            StartCoroutine(DelayLightFinish());
+        else {
+            _inputLocker.UnlockInput();
+            _heavyAttack = false;
+            IsAttacking = false;
+        }  
     }
 
-    void DoLightAttack()
-    {
-        StartCoroutine(SpawnHitBoxAfterDelay(_lightAttackHitBoxDelay, _lightAttack));
+
+    void DoLightAttack() {
         IsAttacking = true;
+        StartCoroutine(SpawnHitBoxAfterDelay(_lightAttackHitBoxDelay, _lightAttack));
         RuntimeManager.PlayOneShot(MeleeLightSwing);
         _animator.SetTrigger("LightAttack");
     }
@@ -152,16 +181,41 @@ public class Weapon : MonoBehaviour
         SpawnAttackHitBox(isLight);
     }
 
-    #region Input System
 
+    IEnumerator DelayLightFinish(){
+        yield return new WaitForSeconds(0.15f);
+        _lightAttack = false;
+        IsAttacking = false;
+        _inputLocker.UnlockInput();
+    }
+
+
+    IEnumerator CooldownTimer(float cd, bool isLight){
+        if (isLight) {
+            _onCooldownLight = true;
+            yield return new WaitForSeconds(cd);
+            _onCooldownLight = false;
+        } else {
+             _onCooldownHeavy = true;
+            yield return new WaitForSeconds(cd);
+            _onCooldownHeavy = false;
+        }
+       
+    }
+
+    #region Input System
     void OnLightAttack(InputValue _)
     {
-        _lightAttack = true;
-    }
+        if (!_onCooldownLight)
+            _lightAttack = true;
+        }
+
 
     void OnHeavyAttack(InputValue _)
     {
-        _heavyAttack = true;
+        if (!_onCooldownHeavy)
+            _heavyAttack = true;
+            
     }
 
     #endregion
