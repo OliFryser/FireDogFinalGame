@@ -52,13 +52,13 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private float _heavyCooldown;
 
-    private bool _lightAttack = false;
+    private bool _lightAttack;
     
     private bool _heavyAttack;
 
-    private bool _onCooldownLight = false;
+    private bool _onCooldownLight;
 
-    private bool _onCooldownHeavy = false;
+    private bool _onCooldownHeavy;
 
 
     [SerializeField]
