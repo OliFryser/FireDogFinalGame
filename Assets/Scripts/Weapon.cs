@@ -88,7 +88,6 @@ public class Weapon : MonoBehaviour
                 IsAttacking = true;
                 StartCoroutine(CooldownTimer(_heavyCooldown, _lightAttack));
                 _inputLocker.LockInput();
-                StartCoroutine(SpawnHitBoxAfterDelay(0.6f, _lightAttack));
                 DoHeavyAttack();
 
             }

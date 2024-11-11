@@ -583,6 +583,10 @@ PrefabInstance:
       propertyPath: _onRoomCleared.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 65307208}
+    - target: {fileID: 6310335324695307631, guid: 5aad9b9c4667f2347a31fe88817d96d6, type: 3}
+      propertyPath: _onRoomCleared.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClearRoom
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

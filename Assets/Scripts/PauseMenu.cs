@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -9,6 +11,33 @@ public class PauseMenu : MonoBehaviour
     [HideInInspector]
     public bool IsPaused;
 
+    [SerializeField]
+    private Button _resumeButton;
+
+    [SerializeField]
+    private Slider _firstAudioControl;
+
+    private void OnEnable()
+    {
+        SelectFirstControl();
+    }
+
+    private void SelectFirstControl()
+    {
+        if (_audioPanel.activeSelf)
+            _firstAudioControl.Select();
+        else
+            EventSystem.current.SetSelectedGameObject(_resumeButton.gameObject);
+    }
+
+    private void Update()
+    {
+        if (EventSystem.current.currentSelectedGameObject == null)
+        {
+            SelectFirstControl();
+        }
+    }
+
     public void ReturnToMainMenu()
     {
         Time.timeScale = 1f;
@@ -16,22 +45,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void ToggleAudioPanel()
     {
-        if (_audioPanel != null)
-            _audioPanel.SetActive(!_audioPanel.activeSelf);
-        else
-            Debug.LogWarning("Audio Panel is not assigned in the Inspector.");
-    }
-
-    public void ResumeGame()
-    {
-        gameObject.SetActive(false);
-        Time.timeScale = 1f;
-        IsPaused = false;
-    }
-
-    public void CloseAudioPanel()
-    {
-        if (_audioPanel != null)
-            _audioPanel.SetActive(false);
+        _audioPanel.SetActive(!_audioPanel.activeSelf);
+        SelectFirstControl();
     }
 }
