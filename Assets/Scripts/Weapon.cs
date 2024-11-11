@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour
 {
     private Movement _playerMovement;
 
-    public bool IsAttacking = false;
+    public bool IsAttacking;
 
     [SerializeField]
     private HitBox _lightHitBoxPrefabDown;
@@ -140,9 +140,9 @@ public class Weapon : MonoBehaviour
         
         GameObject hitBox = Instantiate(attackHitBox.Prefab, transform.position + direction * attackHitBox.Offset, quaternion.identity);
        
-        if (isLight) {
+        if (isLight) 
             StartCoroutine(DestroyAfterDelay(hitBox, _hitBoxDestroyDelayLight));
-        } else
+        else
             StartCoroutine(DestroyAfterDelay(hitBox, _hitBoxDestroyDelayHeavy));
     }
 

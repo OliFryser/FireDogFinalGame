@@ -510,7 +510,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      death poof_0: 2057684024972201477
+      death poof_1: 7823638798690208592
+      death poof_10: -3649702842634288129
+      death poof_11: 2916183109316226999
+      death poof_12: 6875587829279644853
+      death poof_13: 3733672267662116023
+      death poof_14: -8344237383341233150
+      death poof_2: 458433623959931662
+      death poof_3: -1196720609474690842
+      death poof_4: -8214886412022593891
+      death poof_5: 7233798254450022675
+      death poof_6: -3406563746126019424
+      death poof_7: -331337570825301708
+      death poof_8: 7398235541811382988
+      death poof_9: 3988717875333690605
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
