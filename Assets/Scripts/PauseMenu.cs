@@ -3,65 +3,24 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject audioPanel;
-    [SerializeField] private string MainMenu;
-    public GameObject pausePanel;
+    [SerializeField] private GameObject _audioPanel;
+    private const string MAIN_MENU = "Main Menu";
 
-    private bool isPaused = false;
-
-    void Start()
-    {
-        pausePanel.SetActive(false);
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (isPaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
-        }
-    }
-
-    public void PauseGame()
-    {
-        pausePanel.SetActive(true);
-        Time.timeScale = 0f;         // Freeze the game
-        isPaused = true;
-    }
-
-    public void ResumeGame()
-    {
-        pausePanel.SetActive(false);
-        Time.timeScale = 1f;         
-        isPaused = false;
-    }
     public void ReturnToMainMenu()
     {
-        Time.timeScale = 1f;  // Reset time scale to normal
-        SceneManager.LoadScene(MainMenu);  // Load the main menu scene
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(MAIN_MENU);
     }
     public void ToggleAudioPanel()
     {
-        if (audioPanel != null)
-        {
-            audioPanel.SetActive(!audioPanel.activeSelf);
-        }
+        if (_audioPanel != null)
+            _audioPanel.SetActive(!_audioPanel.activeSelf);
         else
-        {
             Debug.LogWarning("Audio Panel is not assigned in the Inspector.");
-        }
     }
     public void CloseAudioPanel()
     {
-        if (audioPanel != null)
-        {
-            audioPanel.SetActive(false); // Hide the Audio Panel
-        }
+        if (_audioPanel != null)
+            _audioPanel.SetActive(false);
     }
 }
