@@ -15,7 +15,7 @@ public class PauseListener : MonoBehaviour
         _isPaused = true;
     }
 
-    private void ResumeGame()
+    public void ResumeGame()
     {
         _pauseMenu.gameObject.SetActive(false);
         Time.timeScale = 1f;
