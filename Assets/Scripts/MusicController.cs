@@ -27,4 +27,9 @@ public class MusicController : MonoBehaviour
     {
         musicInstance.setParameterByName("BattleState", 0);
     }
+    public void SetPauseVolume(bool isPaused)
+    {
+        musicInstance.setParameterByName("PauseVolume", isPaused ? 1f : 0f);
+    }
+
 }

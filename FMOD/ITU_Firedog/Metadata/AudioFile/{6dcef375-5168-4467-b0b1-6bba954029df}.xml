@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6dcef375-5168-4467-b0b1-6bba954029df}">
+		<property name="assetPath">
+			<value>MUSCSong_Game Successful 01_B00M_ONE.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.1146666666666665</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e2fd4aac-b52c-4156-8e60-b30314b51092}</destination>
+		</relationship>
+	</object>
+</objects>
