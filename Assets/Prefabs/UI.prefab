@@ -862,6 +862,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6318984550421357928, guid: 163f03d90ae1a3e42a58ec5b26a0ee6a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7721396347639014538}
+    - target: {fileID: 6318984550421357928, guid: 163f03d90ae1a3e42a58ec5b26a0ee6a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6318984550421357928, guid: 163f03d90ae1a3e42a58ec5b26a0ee6a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseListener, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3706441631064933616, guid: 163f03d90ae1a3e42a58ec5b26a0ee6a, type: 3}
