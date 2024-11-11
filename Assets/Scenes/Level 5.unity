@@ -1213,10 +1213,6 @@ PrefabInstance:
       propertyPath: _onUpgradeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 65307208}
-    - target: {fileID: 5551040761935996568, guid: 1be910089565424479836ec30fc5b73b, type: 3}
-      propertyPath: _onUpgradeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseUpgradeMenu
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

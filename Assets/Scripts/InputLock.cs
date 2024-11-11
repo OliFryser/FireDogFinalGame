@@ -17,7 +17,8 @@ public class InputLock : MonoBehaviour
         _lockCount++;
         Debug.Log($"Lock Counter: {_lockCount}");
         if (_lockCount == 1)
-            _playerInput.DeactivateInput();
+            _playerInput.actions.FindActionMap("Player", true).Disable();
+
     }
 
     public void UnlockInput()
@@ -25,6 +26,6 @@ public class InputLock : MonoBehaviour
         _lockCount--;
         Debug.Log($"Lock Counter: {_lockCount}");
         if (_lockCount == 0)
-            _playerInput.ActivateInput();
+            _playerInput.actions.FindActionMap("Player", true).Enable();
     }
 }

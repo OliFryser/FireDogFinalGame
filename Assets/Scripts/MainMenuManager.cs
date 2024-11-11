@@ -1,26 +1,40 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using FMODUnity;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MainMenuManager : MonoBehaviour
 {
-    [SerializeField] private GameObject audioPanel;
+    [SerializeField] private GameObject _audioPanel;
+
+    [SerializeField]
+    private Selectable _playButton;
+
+    [SerializeField]
+    private Selectable _firstAudioSelectable;
 
     [SerializeField] private EventReference mainMenuMusicEvent;
     private FMOD.Studio.EventInstance musicInstance;
 
     void Start()
     {
-        // Create and start playing the music event
-        if (!mainMenuMusicEvent.IsNull)
-        {
-            musicInstance = RuntimeManager.CreateInstance(mainMenuMusicEvent);
-            musicInstance.start();
-        }
+        musicInstance = RuntimeManager.CreateInstance(mainMenuMusicEvent);
+        musicInstance.start();
+    }
+
+    private void SelectFirstSelectable()
+    {
+        if (_audioPanel.activeSelf)
+            _firstAudioSelectable.Select();
         else
-        {
-            Debug.LogWarning("Main Menu Music Event is not assigned in the Inspector.");
-        }
+            _playButton.Select();
+    }
+
+    private void Update()
+    {
+        if (EventSystem.current.currentSelectedGameObject == null)
+            SelectFirstSelectable();
     }
 
     public void StartGame()
@@ -32,27 +46,23 @@ public class MainMenuManager : MonoBehaviour
     }
     public void ToggleAudioPanel()
     {
-        if (audioPanel != null)
+        if (_audioPanel != null)
         {
-            audioPanel.SetActive(!audioPanel.activeSelf);
+            _audioPanel.SetActive(!_audioPanel.activeSelf);
+            SelectFirstSelectable();
         }
         else
         {
             Debug.LogWarning("Audio Panel is not assigned in the Inspector.");
         }
     }
-    public void CloseAudioPanel()
-    {
-        if (audioPanel != null)
-        {
-            audioPanel.SetActive(false); // Hide the Audio Panel
-        }
-    }
+
     public void QuitGame()
     {
         Debug.Log("Game is quitting..."); // This line will show in the Console while testing in the Editor
         Application.Quit();
     }
+
     void OnDestroy()
     {
         // Ensure the music instance is stopped and released when the object is destroyed
