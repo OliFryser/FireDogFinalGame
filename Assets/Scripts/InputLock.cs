@@ -14,11 +14,13 @@ public class InputLock : MonoBehaviour
 
     public void LockInput()
     {
+        Debug.Log("Input Locked");
         _playerInput.DeactivateInput();
     }
 
     public void UnlockInput()
     {
+        Debug.Log("Input Unlocked");
         _playerInput.ActivateInput();
     }
 }
