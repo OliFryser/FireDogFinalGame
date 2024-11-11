@@ -6,6 +6,9 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject _audioPanel;
     private const string MAIN_MENU = "Main Menu";
 
+    [HideInInspector]
+    public bool IsPaused;
+
     public void ReturnToMainMenu()
     {
         Time.timeScale = 1f;
@@ -18,6 +21,14 @@ public class PauseMenu : MonoBehaviour
         else
             Debug.LogWarning("Audio Panel is not assigned in the Inspector.");
     }
+
+    public void ResumeGame()
+    {
+        gameObject.SetActive(false);
+        Time.timeScale = 1f;
+        IsPaused = false;
+    }
+
     public void CloseAudioPanel()
     {
         if (_audioPanel != null)

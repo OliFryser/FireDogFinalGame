@@ -3,28 +3,30 @@ using UnityEngine.InputSystem;
 
 public class PauseListener : MonoBehaviour
 {
-    [SerializeField]
     private PauseMenu _pauseMenu;
 
-    private bool _isPaused;
+    private void Awake()
+    {
+        _pauseMenu = FindAnyObjectByType<PauseMenu>(FindObjectsInactive.Include);
+    }
 
     private void PauseGame()
     {
         _pauseMenu.gameObject.SetActive(true);
         Time.timeScale = 0.0f;
-        _isPaused = true;
+        _pauseMenu.IsPaused = true;
     }
 
-    public void ResumeGame()
+    private void ResumeGame()
     {
         _pauseMenu.gameObject.SetActive(false);
         Time.timeScale = 1f;
-        _isPaused = false;
+        _pauseMenu.IsPaused = false;
     }
 
     void OnPause(InputValue _)
     {
-        if (_isPaused)
+        if (_pauseMenu.IsPaused)
             ResumeGame();
         else
             PauseGame();
