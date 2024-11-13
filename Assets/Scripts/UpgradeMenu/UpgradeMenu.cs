@@ -47,6 +47,6 @@ public class UpgradeMenu : MonoBehaviour
 
     public void OnUpgradeSelected()
     {
-        _roomManager.ClearRoom();
+        _roomManager.CloseUpgradeMenu();
     }
 }
