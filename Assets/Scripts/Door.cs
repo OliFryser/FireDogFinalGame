@@ -3,9 +3,6 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     [SerializeField]
-    private bool _isOpen = false;
-
-    [SerializeField]
     private Sprite _openDoor;
 
     [SerializeField]
@@ -21,15 +18,7 @@ public class Door : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    private void Update()
-    {
-        if (_isOpen)
-        {
-            OpenDoor();
-        }
-    }
-
-    private void OpenDoor()
+    public void OpenDoor()
     {
         _closedDoorCollider.gameObject.SetActive(false);
         _spriteRenderer.sprite = _openDoor;
