@@ -1,11 +1,9 @@
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class UpgradeMenu : MonoBehaviour
 {
-    [SerializeField]
-    private UnityEvent _onUpgradeSelected;
+    private RoomManager _roomManager;
 
     [SerializeField]
     private UpgradeDisplay[] _displays = new UpgradeDisplay[3];
@@ -15,6 +13,7 @@ public class UpgradeMenu : MonoBehaviour
 
     private void Awake()
     {
+        _roomManager = FindAnyObjectByType<RoomManager>();
         for (int i = 0; i < _displays.Length; i++)
         {
             _displays[i].Upgrade = _upgrades[i];
@@ -48,6 +47,6 @@ public class UpgradeMenu : MonoBehaviour
 
     public void OnUpgradeSelected()
     {
-        _onUpgradeSelected?.Invoke();
+        _roomManager.ClearRoom();
     }
 }

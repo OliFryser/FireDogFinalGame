@@ -8,7 +8,7 @@ public class ButtonPrompt : MonoBehaviour
     private ButtonPrompts _buttonPrompt;
     private SpriteRenderer _spriteRenderer;
 
-    private void Start()
+    private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
