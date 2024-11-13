@@ -1,13 +1,31 @@
 fileFormatVersion: 2
-guid: 6c0660695d920524c9d1d0879f7a3385
+guid: 2da6a40675c8b6640892545bcfda9f5e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5989378577333608929
-    second: cobwebs_0
+      213: -1869492064128092055
+    second: PauseMenu_0
   - first:
-      213: -7352513283882116639
-    second: cobwebs_1
+      213: 6370572803633710929
+    second: PauseMenu_1
+  - first:
+      213: 5750796289876646855
+    second: PauseMenu_2
+  - first:
+      213: -7802549915261431277
+    second: PauseMenu_3
+  - first:
+      213: -4910731951273865786
+    second: PauseMenu_4
+  - first:
+      213: -784045569811047150
+    second: PauseMenu_5
+  - first:
+      213: -882735017508374810
+    second: PauseMenu_6
+  - first:
+      213: -4202629264355597943
+    second: PauseMenu_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -78,19 +96,6 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Win64
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -100,7 +105,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Standalone
+    buildTarget: Win64
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,11 +131,24 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -142,13 +160,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cobwebs_0
+      name: PauseMenu_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 80
-        height: 80
+        x: 26
+        y: 12
+        width: 136
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f1e12b0cae371eca0800000000000000
-      internalID: -5989378577333608929
+      spriteID: 968bb376fda3e06e0800000000000000
+      internalID: -1869492064128092055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cobwebs_1
+      name: PauseMenu_1
       rect:
         serializedVersion: 2
-        x: 80
-        y: 0
-        width: 80
-        height: 80
+        x: 196
+        y: 12
+        width: 136
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +197,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e99dd3af10a6f990800000000000000
-      internalID: -7352513283882116639
+      spriteID: 1570a505632d86850800000000000000
+      internalID: 6370572803633710929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu_2
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 12
+        width: 136
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cb5bb1b1ceeecf40800000000000000
+      internalID: 5750796289876646855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu_3
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 12
+        width: 136
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31296961136c7b390800000000000000
+      internalID: -7802549915261431277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu_4
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 12
+        width: 136
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd0929fe4399dbb0800000000000000
+      internalID: -4910731951273865786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu_5
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 12
+        width: 136
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21d91b355b28e15f0800000000000000
+      internalID: -784045569811047150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu_6
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 12
+        width: 136
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e67d92bd25efb3f0800000000000000
+      internalID: -882735017508374810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu_7
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 0
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9816c6753f24da5c0800000000000000
+      internalID: -4202629264355597943
       vertices: []
       indices: 
       edges: []
@@ -189,7 +339,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8269acb505af1504487af5d55a00ade4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +348,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      cobwebs_0: -5989378577333608929
-      cobwebs_1: -7352513283882116639
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
