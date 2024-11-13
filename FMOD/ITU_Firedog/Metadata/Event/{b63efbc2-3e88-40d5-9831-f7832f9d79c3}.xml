@@ -153,6 +153,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{d6971bbe-1e5f-4f68-a6fc-1858e3c3706a}">
+		<property name="volume">
+			<value>-3</value>
+		</property>
 		<property name="name">
 			<value>GameMusic</value>
 		</property>
@@ -348,10 +351,10 @@
 	</object>
 	<object class="AutomationPoint" id="{df5aa19d-dc8e-45ba-8270-2388c19a11eb}">
 		<property name="position">
-			<value>0.88235294117647056</value>
+			<value>0.92000000000000004</value>
 		</property>
 		<property name="value">
-			<value>-15</value>
+			<value>-22</value>
 		</property>
 	</object>
 </objects>

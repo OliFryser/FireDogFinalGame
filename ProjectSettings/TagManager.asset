@@ -7,6 +7,7 @@ TagManager:
   - Light Weapon Hit Box
   - DustEnemy
   - Heavy Weapon Hit Box
+  - Enemy
   layers:
   - Default
   - TransparentFX

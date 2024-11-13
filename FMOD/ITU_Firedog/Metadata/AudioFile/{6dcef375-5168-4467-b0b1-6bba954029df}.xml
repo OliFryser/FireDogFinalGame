@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{6dcef375-5168-4467-b0b1-6bba954029df}">
 		<property name="assetPath">
-			<value>MUSCSong_Game Successful 01_B00M_ONE.wav</value>
+			<value>Music/MUSCSong_Game Successful 01_B00M_ONE.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

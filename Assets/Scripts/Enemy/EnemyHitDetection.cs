@@ -4,7 +4,7 @@ using FMODUnity;
 public class EnemyHitDetection : MonoBehaviour
 {
     [SerializeField]
-    private int _health = 5;
+    private float _health = 50.0f;
     [SerializeField]
     EventReference Enemyhit;
 
@@ -18,16 +18,18 @@ public class EnemyHitDetection : MonoBehaviour
 
     private EnemyMovement _enemyMovement;
 
-    private Movement _playerMovement;
+    private PlayerStats _playerStats;
 
     private CameraShake _cameraShake;
 
+    private bool _isDead;
+
     private void Start()
     {
-        _enemyTracker = FindFirstObjectByType<EnemyTracker>();
+        _enemyTracker = FindAnyObjectByType<EnemyTracker>();
         _enemyTracker.RegisterEnemy();
         _enemyMovement = GetComponent<EnemyMovement>();
-        _playerMovement = FindFirstObjectByType<Movement>();
+        _playerStats = FindAnyObjectByType<PlayerStats>();
         _cameraShake = FindAnyObjectByType<CameraShake>();
     }
 
@@ -35,29 +37,27 @@ public class EnemyHitDetection : MonoBehaviour
     {
         if (other.CompareTag("Light Weapon Hit Box"))
         {
-            _health--;
             _enemyMovement.GetPushedBack(_lightPushBack, false);
             RuntimeManager.PlayOneShot(Enemyhit);
             _cameraShake.StartShake();
-
+            _health -= _playerStats.Damage;
         }
 
         else if (other.CompareTag("Heavy Weapon Hit Box"))
         {
             _enemyMovement.GetPushedBack(_heavyPushBack, true);
-            _health -= 2;
+            _health -= _playerStats.Damage * 2;
             _cameraShake.StartShake();
-        }
-
-        else if (other.CompareTag("Player"))
-        {
-            _playerMovement.GetPushed(_enemyMovement.GetEnemyDirection());
         }
 
         if (_health <= 0)
         {
-            _enemyTracker.UnregisterEnemy();
-            Destroy(gameObject);
+            if (!_isDead)
+            {
+                _enemyTracker.UnregisterEnemy();
+                Destroy(gameObject);
+                _isDead = true;
+            }
         }
     }
 }
