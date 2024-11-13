@@ -723,7 +723,30 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Anim_door_16x16_0: 6583986300693057989
+      Anim_door_16x16_1: -2927330348331508755
+      Anim_door_16x16_10: 5383778400567023391
+      Anim_door_16x16_11: 7427763821060593843
+      Anim_door_16x16_12: 3767600935732775335
+      Anim_door_16x16_13: -5213766490601030998
+      Anim_door_16x16_14: -657687349448098188
+      Anim_door_16x16_15: 913550647594932094
+      Anim_door_16x16_16: -9015304326456129594
+      Anim_door_16x16_17: -2092686465951209858
+      Anim_door_16x16_18: -5749072808198011452
+      Anim_door_16x16_19: -8925938126911389190
+      Anim_door_16x16_2: 6502548525262612115
+      Anim_door_16x16_20: -2912446055817593524
+      Anim_door_16x16_21: 1166955024066132763
+      Anim_door_16x16_22: 7541209297242541899
+      Anim_door_16x16_3: -7148751780896650517
+      Anim_door_16x16_4: -6432038624543077463
+      Anim_door_16x16_5: 244870643456611949
+      Anim_door_16x16_6: -3335890442201764096
+      Anim_door_16x16_7: 7309719666988311396
+      Anim_door_16x16_8: -3385144786030657183
+      Anim_door_16x16_9: -8597275910369013368
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
