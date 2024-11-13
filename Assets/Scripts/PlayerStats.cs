@@ -8,6 +8,10 @@ public class PlayerStats : MonoBehaviour
     public int CurrentHealth = 6;
     public float EnemyStunDuration;
 
+    void Start()
+    {
+        CurrentHealth = MaxHealth;
+    }
 
     public void Reset()
     {

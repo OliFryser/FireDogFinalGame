@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,9 @@ public class PlayerCollisionDetection : MonoBehaviour
     private bool _inCollision;
     private float _timeCounter = 0;
     private Animator _animator;
+    private HealthUIManager _healthUIManager;
+
+    public string hitSoundEventPath = "event:/Player/Damage";
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,6 +22,7 @@ public class PlayerCollisionDetection : MonoBehaviour
         _cameraShake = FindAnyObjectByType<CameraShake>();
         _playerMovement = GetComponent<Movement>();
         _animator = GetComponent<Animator>();
+        _healthUIManager = FindAnyObjectByType<HealthUIManager>();
     }
 
     // Update is called once per frame
@@ -39,6 +44,7 @@ public class PlayerCollisionDetection : MonoBehaviour
         {
             //Return player to hub.
             _playerStats.Reset();
+            _healthUIManager.UpdateHearts();
             SceneManager.LoadScene(1);
         }
     }
@@ -69,7 +75,11 @@ public class PlayerCollisionDetection : MonoBehaviour
     private void TakeDamage(int damage)
     {
         _playerStats.CurrentHealth -= damage;
+        _playerStats.CurrentHealth = Mathf.Clamp(_playerStats.CurrentHealth, 0, _playerStats.MaxHealth);
 
+        _healthUIManager?.UpdateHearts();
+
+        RuntimeManager.PlayOneShot(hitSoundEventPath);
         _animator.SetTrigger("TakeDamage");
 
         _cameraShake.StartShake();
