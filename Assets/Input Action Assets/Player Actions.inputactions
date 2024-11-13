@@ -25,12 +25,12 @@
                 },
                 {
                     "name": "HeavyAttack",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "8a037fd1-8665-4c5e-8c20-063d151228f3",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [

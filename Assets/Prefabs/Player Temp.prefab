@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animationScaling: 35
+  _idleAnimationScaling: 0.015
   PreviousDirection: {x: 0, y: 0}
   _rigidBody2D: {fileID: 0}
 --- !u!61 &4439596738193895179
@@ -170,16 +171,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e888a949a46d0cd439335b1287542cf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _heavyAttack: 0
-  _isAttacking: 0
-  _lightHitBoxPrefabDown: {fileID: 0}
-  _lightHitBoxPrefabUp: {fileID: 0}
-  _lightHitBoxPrefabSide: {fileID: 0}
-  _heavyHitBoxPrefabDown: {fileID: 0}
-  _heavyHitBoxPrefabSide: {fileID: 0}
-  _heavyHitBoxPrefabUp: {fileID: 0}
-  _hitBoxOffset: 0.75
+  IsAttacking: 0
+  _lightHitBoxPrefabDown:
+    Prefab: {fileID: 0}
+    Offset: 0
+  _lightHitBoxPrefabUp:
+    Prefab: {fileID: 0}
+    Offset: 0
+  _lightHitBoxPrefabSide:
+    Prefab: {fileID: 0}
+    Offset: 0
+  _heavyHitBoxPrefabDown:
+    Prefab: {fileID: 0}
+    Offset: 0
+  _heavyHitBoxPrefabSide:
+    Prefab: {fileID: 0}
+    Offset: 0
+  _heavyHitBoxPrefabUp:
+    Prefab: {fileID: 0}
+    Offset: 0
   _hitBoxDestroyDelayLight: 0.55
+  _lightAttackHitBoxDelay: 0.1
+  _heavyAttackHitBoxDelay: 0.6
   _hitBoxDestroyDelayHeavy: 1.5
   _lightCooldown: 0
   _heavyCooldown: 0

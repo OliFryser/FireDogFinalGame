@@ -60,6 +60,8 @@ public class Weapon : MonoBehaviour
 
     private bool _onCooldownHeavy;
 
+    private bool _extendHeavyAttack;
+
 
     [SerializeField]
     EventReference MeleeLightSwing;
@@ -89,9 +91,9 @@ public class Weapon : MonoBehaviour
                 StartCoroutine(CooldownTimer(_heavyCooldown, _lightAttack));
                 _inputLocker.LockInput();
                 DoHeavyAttack();
-
             }
         }
+        ExtendHeavyAttack();
     }
 
     private void SpawnAttackHitBox(bool isLight)
@@ -176,6 +178,20 @@ public class Weapon : MonoBehaviour
         _animator.SetTrigger("HeavyAttack");
     }
 
+    void ExtendHeavyAttack() 
+    {
+       Debug.Log("Extend heavy is: " + _extendHeavyAttack.ToString());
+        if (_extendHeavyAttack){
+             Debug.Log("Hello?");
+            _animator.SetBool("ExtendHeavy", true);
+            Debug.Log("Animator bool is: " + _animator.GetBool("ExtendHeavy").ToString());
+        }
+        else {
+            _animator.SetBool("ExtendHeavy", false);
+        }
+        
+    }
+
     IEnumerator SpawnHitBoxAfterDelay(float delay, bool isLight)
     {
         yield return new WaitForSeconds(delay);
@@ -221,7 +237,18 @@ public class Weapon : MonoBehaviour
     {
         if (!_onCooldownHeavy)
             _heavyAttack = true;
+            _extendHeavyAttack = true;
     }
+
+
+    /*void OnTestAttack(InputValue input){
+        if (input.IsPressed()) {
+            _extendHeavyAttack = true;
+        }
+        else {
+            _extendHeavyAttack = false; 
+        }
+    }*/
 
     #endregion
 
