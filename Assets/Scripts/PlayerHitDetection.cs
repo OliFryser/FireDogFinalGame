@@ -5,41 +5,39 @@ public class PlayerCollisionDetection : MonoBehaviour
 {
 
     private PlayerStats _playerStats;
+    private CameraShake _cameraShake;
+    private Movement _playerMovement;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _playerStats = GetComponent<PlayerStats>();
+        _cameraShake = FindAnyObjectByType<CameraShake>();
+        _playerMovement = GetComponent<Movement>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (_playerStats.CurrentHealth <= 0) {
-            Debug.Log("Current hp: " + _playerStats.CurrentHealth.ToString());
-            Debug.Log ("You died noob");
-
+            //Return player to hub.
             int currentScene = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene((currentScene%currentScene)+1);
-
-
-            /*Scene resetScene = SceneManager.GetSceneByName("Level 1");
-            SceneManager.LoadScene(resetScene.name);*/
             _playerStats.Reset();
-            //Return player to hub.
         }
     }
 
 
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("Enemy"))
-        {
-            Debug.Log("taking damkage");
+        if (other.gameObject.tag == "Enemy")
+        {   
             _playerStats.CurrentHealth--;
+            Vector2 _enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
             //RuntimeManager.PlayOneShot(Enemyhit);
-            //_cameraShake.StartShake();
+            _playerMovement.GetPushed(_enemyDirection);
+            _cameraShake.StartShake();
 
         }
     }
