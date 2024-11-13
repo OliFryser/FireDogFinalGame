@@ -4,114 +4,115 @@ using System.Collections;
 using System.Collections.Generic;
 using FMODUnity;
 
-public class DialogueBox : MonoBehaviour
+public class DialogueManager : MonoBehaviour
 {
-    public GameObject dialoguePanel;              // UI panel for the dialogue box
-    public TextMeshProUGUI dialogueText;          // Text component for displaying dialogue
-    public float typingSpeed = 0.05f;             // Speed of the typewriter effect
-    public EventReference characterSoundEvent;    // FMOD event reference for character sound
+    public GameObject DialoguePanel;
+    public TextMeshProUGUI DialogueText;
+    public float TypingSpeed = 0.05f;
+    public EventReference CharacterSoundEvent;
 
-    private List<string> dialogueLines;           // List of dialogue lines for sequential display
-    private int currentLineIndex = 0;             // Track the current line of dialogue
-    private bool isTyping = false;                // Check if typing is still in progress
-    private bool dialogueStarted = false;         // Track if dialogue has been initiated
+    private List<string> _dialogueLines;
+    private int _currentLineIndex = 0;
+    private bool _isTyping = false;
+    private bool _dialogueStarted = false;
 
     void Start()
     {
-        dialoguePanel.SetActive(false);           // Hide the panel at start
+        DialoguePanel.SetActive(false);
     }
 
-    // Method to initialize and start the dialogue sequence
     public void StartDialogue(List<string> lines)
     {
-        dialogueLines = lines;
-        currentLineIndex = 0;
-        dialogueStarted = true;                   // Mark that the dialogue has started
-        dialoguePanel.SetActive(true);
+        _dialogueLines = lines;
+        _currentLineIndex = 0;
+        _dialogueStarted = true;
+        DialoguePanel.SetActive(true);
         ShowNextLine();
     }
 
-    // Display the current line with a typewriter effect
     private void ShowNextLine()
     {
-        if (currentLineIndex < dialogueLines.Count)
+        if (_currentLineIndex < _dialogueLines.Count)
         {
-            StopAllCoroutines();                  // Stop any ongoing typing effect
-            StartCoroutine(TypeText(dialogueLines[currentLineIndex]));
-            currentLineIndex++;
+            StopAllCoroutines();
+            StartCoroutine(TypeText(_dialogueLines[_currentLineIndex]));
+            _currentLineIndex++;
         }
         else
         {
-            EndDialogue();                        // End dialogue if all lines are shown
+            EndDialogue();
         }
     }
 
     // Simplified coroutine for typewriter effect
     private IEnumerator TypeText(string line)
     {
-        isTyping = true;
-        dialogueText.text = "";                // Clear the text box
+        _isTyping = true;
+        DialogueText.text = "";                // Clear the text box
 
         foreach (char letter in line.ToCharArray())
         {
-            dialogueText.text += letter;
+            DialogueText.text += letter;
             PlayCharacterSound();              // Play FMOD sound for each character
-            yield return new WaitForSeconds(typingSpeed);
+            yield return new WaitForSeconds(TypingSpeed);
         }
 
-        isTyping = false;
+        _isTyping = false;
     }
 
     // Method to play FMOD sound for each character
     private void PlayCharacterSound()
     {
-        if (characterSoundEvent.IsNull) return;   // Check if an event has been set in Inspector
-        FMOD.Studio.EventInstance soundInstance = RuntimeManager.CreateInstance(characterSoundEvent);
+        if (CharacterSoundEvent.IsNull) return;
+        FMOD.Studio.EventInstance soundInstance = RuntimeManager.CreateInstance(CharacterSoundEvent);
         soundInstance.start();
-        soundInstance.release();                  // Release instance after playing to free up resources
+        soundInstance.release();
     }
 
     // Skip to display full line if typing is in progress
     public void SkipToFullText()
     {
-        if (isTyping)
+        if (_isTyping)
         {
             StopAllCoroutines();
-            dialogueText.text = dialogueLines[currentLineIndex - 1];
-            isTyping = false;
+            DialogueText.text = _dialogueLines[_currentLineIndex - 1];
+            _isTyping = false;
         }
     }
 
     // End the dialogue by hiding the panel
     private void EndDialogue()
     {
-        dialoguePanel.SetActive(false);
-        dialogueStarted = false;
+        DialoguePanel.SetActive(false);
+        _dialogueStarted = false;
     }
 
-    // Update to handle input for advancing dialogue or starting dialogue on click
-    void Update()
+    public void OnDialogClick()
     {
-        if (!dialogueStarted && Input.GetMouseButtonDown(0))  // Left-click to start dialogue
+        if (!_dialogueStarted)
         {
-            // Start dialogue when the screen is clicked for the first time
             StartDialogue(new List<string> {
-                "Alright, just gotta clean this \nspooky mansion.No big deal",
-                "I mean, it’s not like the couch is \ngonna try to eat me... right?",
-                "Who lives here anyway?\nCount Dustula or something?",
-                "Okay, pep talk time:You need \nrent money, NOT a panic attack!",
-                "Let’s do this!"
+                "This the place? Shouldn't they\nwant a couple of 100 renovators",
+                "or a bulldozer? Where was\nthat letter again?",
+                "\"My deepest gratitude for\naccepting this undertaking.",
+                "The remainder of your payment\nshall be rendered upon",
+                "the completion of your duties.\nAs previously noted,",
+                "the manor has languished in\nneglect for many years,",
+                "and you would do well to prepare\nyourself for a rather",
+                "persistent infestation.\"",
+                "An infestation? Ha. Nothing ever\nsurvived my mop and strong",
+                "cleaning arm!"
             });
         }
-        else if (dialoguePanel.activeSelf && Input.GetMouseButtonDown(0))  // Left-click to advance
+        else if (DialoguePanel.activeSelf)
         {
-            if (isTyping)
+            if (_isTyping)
             {
-                SkipToFullText();  // Complete the line if still typing
+                SkipToFullText();
             }
             else
             {
-                ShowNextLine();    // Otherwise, show the next line
+                ShowNextLine();
             }
         }
     }
