@@ -9,6 +9,7 @@ public class PlayerCollisionDetection : MonoBehaviour
     private Movement _playerMovement;
     private bool _inCollision;
     private float _timeCounter = 0;
+    private Animator _animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,6 +17,7 @@ public class PlayerCollisionDetection : MonoBehaviour
         _playerStats = GetComponent<PlayerStats>();
         _cameraShake = FindAnyObjectByType<CameraShake>();
         _playerMovement = GetComponent<Movement>();
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class PlayerCollisionDetection : MonoBehaviour
         if (_inCollision) {
             _timeCounter += Time.deltaTime;
             if (_timeCounter >= 0.8) {
-                _playerStats.CurrentHealth--;
+                TakeDamage(1);
                 _timeCounter = 0;
             }
         }
@@ -45,11 +47,9 @@ public class PlayerCollisionDetection : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {   
-            _playerStats.CurrentHealth--;
+            TakeDamage(1);
             Vector2 _enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
-            //RuntimeManager.PlayOneShot(Enemyhit);
             _playerMovement.GetPushed(_enemyDirection);
-            _cameraShake.StartShake();
             _inCollision = true;
 
         }
@@ -61,5 +61,16 @@ public class PlayerCollisionDetection : MonoBehaviour
         if (other.gameObject.tag == "Enemy") {
             _inCollision = false;
         }
+    }
+
+
+    private void TakeDamage(int damage){
+        _playerStats.CurrentHealth -= damage;
+        
+        //RuntimeManager.PlayOneShot(Enemyhit);
+        _animator.SetTrigger("TakeDamage");
+        
+        _cameraShake.StartShake();
+
     }
 }
