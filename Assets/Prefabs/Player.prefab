@@ -594,6 +594,7 @@ MonoBehaviour:
   MaxHealth: 6
   Damage: 5
   CurrentHealth: 6
+  EnemyStunDuration: 1
 --- !u!114 &9051645628794513165
 MonoBehaviour:
   m_ObjectHideFlags: 0

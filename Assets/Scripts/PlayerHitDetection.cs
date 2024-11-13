@@ -7,6 +7,8 @@ public class PlayerCollisionDetection : MonoBehaviour
     private PlayerStats _playerStats;
     private CameraShake _cameraShake;
     private Movement _playerMovement;
+    private bool _inCollision;
+    private float _timeCounter = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +21,16 @@ public class PlayerCollisionDetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_inCollision) {
+            _timeCounter += Time.deltaTime;
+            if (_timeCounter >= 0.8) {
+                _playerStats.CurrentHealth--;
+                _timeCounter = 0;
+            }
+        }
+        else
+            _timeCounter = 0;
+
         if (_playerStats.CurrentHealth <= 0) {
             //Return player to hub.
             int currentScene = SceneManager.GetActiveScene().buildIndex;
@@ -38,7 +50,16 @@ public class PlayerCollisionDetection : MonoBehaviour
             //RuntimeManager.PlayOneShot(Enemyhit);
             _playerMovement.GetPushed(_enemyDirection);
             _cameraShake.StartShake();
+            _inCollision = true;
 
+        }
+
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Enemy") {
+            _inCollision = false;
         }
     }
 }

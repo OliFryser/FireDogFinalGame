@@ -6,6 +6,7 @@ public class PlayerStats : MonoBehaviour
     public int MaxHealth = 6;
     public float Damage = 5.0f;
     public int CurrentHealth = 6;
+    public float EnemyStunDuration;
 
 
     public void Reset(){
@@ -13,5 +14,6 @@ public class PlayerStats : MonoBehaviour
         MaxHealth = 6;
         Damage = 5.0f;
         CurrentHealth = 6;
+        EnemyStunDuration = 1.0f;
     }
 }
