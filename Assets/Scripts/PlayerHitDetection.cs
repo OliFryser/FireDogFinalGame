@@ -10,6 +10,7 @@ public class PlayerCollisionDetection : MonoBehaviour
     private bool _inCollision;
     private float _timeCounter = 0;
     private Animator _animator;
+    private HealthUIManager _healthUIManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,6 +19,7 @@ public class PlayerCollisionDetection : MonoBehaviour
         _cameraShake = FindAnyObjectByType<CameraShake>();
         _playerMovement = GetComponent<Movement>();
         _animator = GetComponent<Animator>();
+        _healthUIManager = FindAnyObjectByType<HealthUIManager>();
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class PlayerCollisionDetection : MonoBehaviour
             int currentScene = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(1);
             _playerStats.Reset();
+            _healthUIManager.UpdateHearts();
         }
     }
 
@@ -63,14 +66,17 @@ public class PlayerCollisionDetection : MonoBehaviour
         }
     }
 
-
     private void TakeDamage(int damage){
         _playerStats.CurrentHealth -= damage;
-        
-        //RuntimeManager.PlayOneShot(Enemyhit);
-        _animator.SetTrigger("TakeDamage");
-        
-        _cameraShake.StartShake();
+        _playerStats.CurrentHealth = Mathf.Clamp(_playerStats.CurrentHealth, 0, _playerStats.MaxHealth);
 
+        if (_healthUIManager != null)
+        {
+            _healthUIManager.UpdateHearts();
+        }
+
+        // RuntimeManager.PlayOneShot(Enemyhit);
+        _animator.SetTrigger("TakeDamage");
+        _cameraShake.StartShake();
     }
 }
