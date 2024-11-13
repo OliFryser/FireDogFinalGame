@@ -14,10 +14,15 @@ public class EnemyMovement : MonoBehaviour
 
     [SerializeField]
     private float _sightDistance = 5.0f;
+    
+    [SerializeField]
+    private float _knockBackSpeed;
 
     public bool IsPushedBack = false;
 
     private Animator _animator;
+
+    private PlayerStats _playerStats;
 
     private Vector2 _directionToPlayer;
 
@@ -50,6 +55,8 @@ public class EnemyMovement : MonoBehaviour
         _boxCollider = GetComponent<BoxCollider2D>();
         UpdateCollider(_verticalEnemyCollision);
 
+        _playerStats = FindAnyObjectByType<PlayerStats>();
+
         _enemyDirection = Vector2.down;
         _animator = GetComponent<Animator>();
         _animator.SetFloat("Horizontal", _enemyDirection.x);
@@ -73,16 +80,17 @@ public class EnemyMovement : MonoBehaviour
         {
             if (_currentPushDistance < _totalPushDistance)
             {
-                _rigidbody.AddForce(_movementSpeed * _enemyDirection);
-                _currentPushDistance += _movementSpeed;
+                _rigidbody.AddForce(_knockBackSpeed * _enemyDirection);
+                _currentPushDistance += _knockBackSpeed;
             }
             else
             {
                 StopPush();
             }
         }
-        else if (_isStunned && _currentStunTimer < _totalStunTimer)
-            _rigidbody.AddForce(_movementSpeed * _enemyDirection);
+        else if (_isStunned && _currentStunTimer < _totalStunTimer) {
+            //Makes sure the enemy doesn't move while stunned.
+        }
         else
         {
             _directionToPlayer = (_playerTransform.position - transform.position).normalized;
@@ -157,6 +165,7 @@ public class EnemyMovement : MonoBehaviour
         if (heavy)
         {
             _isStunned = true;
+            _totalStunTimer = _playerStats.EnemyStunDuration;
             _totalPushDistance += 2.0f - Vector2.Distance(_playerTransform.transform.position, gameObject.transform.position);
         }
     }
