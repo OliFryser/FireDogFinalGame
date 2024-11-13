@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eea172cb9f36ff428ec6f8e42d226d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upgradeMenu: {fileID: 0}
   _warmLight: {fileID: 8018985254042270459}
   _spookyLight: {fileID: 5892617368198646111}
 --- !u!1 &5700920754928906015

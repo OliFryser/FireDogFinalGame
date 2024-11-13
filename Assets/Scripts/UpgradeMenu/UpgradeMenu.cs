@@ -1,6 +1,6 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class UpgradeMenu : MonoBehaviour
 {
@@ -22,9 +22,22 @@ public class UpgradeMenu : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (EventSystem.current.currentSelectedGameObject == null)
+        {
+            SelectFirstControl();
+        }
+    }
+
     public void Show()
     {
         gameObject.SetActive(true);
+        SelectFirstControl();
+    }
+
+    private void SelectFirstControl()
+    {
         _displays[0].SetSelected();
     }
 
