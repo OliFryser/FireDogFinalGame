@@ -49,11 +49,6 @@ public class EnemyHitDetection : MonoBehaviour
             _cameraShake.StartShake();
         }
 
-        else if (other.CompareTag("Player"))
-        {
-            _playerMovement.GetPushed(_enemyMovement.GetEnemyDirection());
-        }
-
         if (_health <= 0)
         {
             Destroy(gameObject);

@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 3094542141851771796}
   - component: {fileID: 6665681605604159108}
   - component: {fileID: 9051645628794513165}
-  - component: {fileID: 4728354430850083462}
+  - component: {fileID: 8946267332930503242}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -437,8 +437,8 @@ MonoBehaviour:
   _lightAttackHitBoxDelay: 0.1
   _heavyAttackHitBoxDelay: 0.6
   _hitBoxDestroyDelayHeavy: 0.9
-  _lightCooldown: 0
-  _heavyCooldown: 0
+  _lightCooldown: 1.5
+  _heavyCooldown: 2.5
   MeleeLightSwing:
     Guid:
       Data1: 2001040250
@@ -591,8 +591,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: 50
-  MaxHealth: 5
+  MaxHealth: 6
   Damage: 5
+  CurrentHealth: 6
+  EnemyStunDuration: 1
 --- !u!114 &9051645628794513165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,7 +607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a0e481936470384eaa17d392de088e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4728354430850083462
+--- !u!114 &8946267332930503242
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -614,6 +616,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4757568798257597297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daaab72909f892944a2c5b570d4f1fb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 37d3d4208b50f984ebaf0b5f05eae07f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
