@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
-    [SerializeField]
     private UpgradeMenu _upgradeMenu;
 
     [SerializeField]
@@ -21,6 +20,7 @@ public class RoomManager : MonoBehaviour
     {
         _inputLock = FindAnyObjectByType<InputLock>();
         _flashlight = FindAnyObjectByType<Flashlight>();
+        _upgradeMenu = FindAnyObjectByType<UpgradeMenu>();
         _musicController = GetComponentInChildren<MusicController>();
     }
 
