@@ -36,7 +36,7 @@ public class PlayerCollisionDetection : MonoBehaviour
         if (_playerStats.CurrentHealth <= 0) {
             //Return player to hub.
             int currentScene = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene((currentScene%currentScene)+1);
+            SceneManager.LoadScene(1);
             _playerStats.Reset();
         }
     }

@@ -89,7 +89,8 @@ public class EnemyMovement : MonoBehaviour
             }
         }
         else if (_isStunned && _currentStunTimer < _totalStunTimer) {
-            _rigidbody.AddForce(_movementSpeed * Vector2.zero);
+            //Makes sure the enemy doesn't move while stunned.
+            //_rigidbody.AddForce(_movementSpeed * Vector2.zero);
         }
         else
         {
