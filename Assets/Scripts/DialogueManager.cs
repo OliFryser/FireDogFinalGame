@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using FMODUnity;
 
 public class DialogueManager : MonoBehaviour
@@ -41,6 +42,7 @@ public class DialogueManager : MonoBehaviour
         else
         {
             EndDialogue();
+            SceneManager.LoadScene(2);
         }
     }
 
