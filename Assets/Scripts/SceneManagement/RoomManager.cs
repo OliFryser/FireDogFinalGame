@@ -43,7 +43,8 @@ public class RoomManager : MonoBehaviour
     {
         _spookyLight.SetActive(false);
         _warmLight.SetActive(true);
-        _flashlight.TurnOffFlashlight();
+        if (_flashlight != null)
+            _flashlight.TurnOffFlashlight();
     }
 
     public void CloseUpgradeMenu()

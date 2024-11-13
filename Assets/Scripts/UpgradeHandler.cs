@@ -16,7 +16,7 @@ public class UpgradeHandler : MonoBehaviour
                 _playerStats.MaxHealth++;
                 break;
             case UpgradeType.DamageBoost:
-                _playerStats.Damage++;
+                _playerStats.Damage *= 1.05f;
                 break;
             case UpgradeType.SpeedBoost:
                 _playerStats.MovementSpeed += 10;

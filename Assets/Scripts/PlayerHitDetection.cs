@@ -28,9 +28,11 @@ public class PlayerCollisionDetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_inCollision) {
+        if (_inCollision)
+        {
             _timeCounter += Time.deltaTime;
-            if (_timeCounter >= 0.8) {
+            if (_timeCounter >= 0.8)
+            {
                 TakeDamage(1);
                 _timeCounter = 0;
             }
@@ -38,12 +40,12 @@ public class PlayerCollisionDetection : MonoBehaviour
         else
             _timeCounter = 0;
 
-        if (_playerStats.CurrentHealth <= 0) {
+        if (_playerStats.CurrentHealth <= 0)
+        {
             //Return player to hub.
-            int currentScene = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(1);
             _playerStats.Reset();
             _healthUIManager.UpdateHearts();
+            SceneManager.LoadScene(1);
         }
     }
 
@@ -51,35 +53,35 @@ public class PlayerCollisionDetection : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Enemy")
-        {   
+        if (other.gameObject.CompareTag("Enemy"))
+        {
             TakeDamage(1);
             Vector2 _enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
             _playerMovement.GetPushed(_enemyDirection);
             _inCollision = true;
-
         }
 
     }
 
     void OnCollisionExit2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Enemy") {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
             _inCollision = false;
         }
     }
 
-    private void TakeDamage(int damage){
+
+    private void TakeDamage(int damage)
+    {
         _playerStats.CurrentHealth -= damage;
         _playerStats.CurrentHealth = Mathf.Clamp(_playerStats.CurrentHealth, 0, _playerStats.MaxHealth);
 
-        if (_healthUIManager != null)
-        {
-            _healthUIManager.UpdateHearts();
-        }
+        _healthUIManager?.UpdateHearts();
 
         RuntimeManager.PlayOneShot(hitSoundEventPath);
         _animator.SetTrigger("TakeDamage");
+
         _cameraShake.StartShake();
     }
 }
