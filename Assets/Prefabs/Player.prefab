@@ -285,7 +285,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 10
+  m_LinearDamping: 20
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -341,8 +341,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9001b162b28caa644850479a748e210c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animationScaling: 0.03
-  _idleAnimationScaling: 0.015
+  _animationScaling: 0.015
+  _idleAnimationScaling: 0.01
   PreviousDirection: {x: 0, y: 0}
   _rigidBody2D: {fileID: 0}
 --- !u!114 &3000249034656620173
@@ -591,7 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 781f0b32a54688249b802583505b1436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 50
+  MovementSpeed: 100
   MaxHealth: 6
   Damage: 10
   CurrentHealth: 6
@@ -620,6 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d3d4208b50f984ebaf0b5f05eae07f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSoundEventPath: event:/Player/Damage
 --- !u!114 &2164337826507384195
 MonoBehaviour:
   m_ObjectHideFlags: 0
