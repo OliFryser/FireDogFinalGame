@@ -51,8 +51,12 @@ public class EnemyHitDetection : MonoBehaviour
 
         if (_health <= 0)
         {
-            _enemyTracker.UnregisterEnemy();
             Destroy(gameObject);
         }
+    }
+
+    private void OnDestroy()
+    {
+        _enemyTracker.UnregisterEnemy();
     }
 }
