@@ -15,7 +15,7 @@ public class PlayerStats : MonoBehaviour
 
     public void Reset()
     {
-        MovementSpeed = 50.0f;
+        MovementSpeed = 100.0f;
         MaxHealth = 6;
         Damage = 10.0f;
         CurrentHealth = 6;

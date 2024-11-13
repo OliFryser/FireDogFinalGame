@@ -1,8 +1,9 @@
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
-public class PlayerCollisionDetection : MonoBehaviour
+public class PlayerHitDetection : MonoBehaviour
 {
 
     private PlayerStats _playerStats;
@@ -11,6 +12,7 @@ public class PlayerCollisionDetection : MonoBehaviour
     private bool _inCollision;
     private float _timeCounter = 0;
     private Animator _animator;
+    private Light2D _flashlight;
     private HealthUIManager _healthUIManager;
 
     public string hitSoundEventPath = "event:/Player/Damage";
@@ -19,10 +21,17 @@ public class PlayerCollisionDetection : MonoBehaviour
     void Start()
     {
         _playerStats = GetComponent<PlayerStats>();
-        _cameraShake = FindAnyObjectByType<CameraShake>();
         _playerMovement = GetComponent<Movement>();
         _animator = GetComponent<Animator>();
+        _flashlight = GetComponentInChildren<Light2D>(includeInactive: true);
+        Initialize();
+    }
+
+    public void Initialize()
+    {
+        _cameraShake = FindAnyObjectByType<CameraShake>();
         _healthUIManager = FindAnyObjectByType<HealthUIManager>();
+        _flashlight.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
