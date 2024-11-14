@@ -9,10 +9,10 @@ public class EnemyHitDetection : MonoBehaviour
     EventReference Enemyhit;
 
     [SerializeField]
-    private float _lightPushBack = 50.0f;
+    private float _lightPushBack = 2.0f;
 
     [SerializeField]
-    private float _heavyPushBack = 100.0f;
+    private float _heavyPushBack = 3.0f;
 
     private EnemyTracker _enemyTracker;
 
@@ -47,8 +47,14 @@ public class EnemyHitDetection : MonoBehaviour
         {
             _enemyMovement.GetPushedBack(_heavyPushBack, true);
             _health -= _playerStats.Damage * 2;
+            RuntimeManager.PlayOneShot(Enemyhit);
             _cameraShake.StartShake();
         }
+
+        /*else if (other.CompareTag("Player")){
+            Debug.Log("Is called?");
+            _enemyMovement.GetPushedBack(_heavyPushBack, false);
+        }*/
 
         if (_health <= 0)
         {
