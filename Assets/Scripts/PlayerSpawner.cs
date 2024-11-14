@@ -15,7 +15,6 @@ public class PlayerSpawner : MonoBehaviour
         else
         {
             player.transform.position = transform.position;
-            player.Initialize();
         }
     }
 

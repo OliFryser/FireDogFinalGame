@@ -13,25 +13,32 @@ public class PlayerHitDetection : MonoBehaviour
     private float _timeCounter = 0;
     private Animator _animator;
     private Light2D _flashlight;
-    private HealthUIManager _healthUIManager;
 
     public string hitSoundEventPath = "event:/Player/Damage";
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         _playerStats = GetComponent<PlayerStats>();
         _playerMovement = GetComponent<Movement>();
         _animator = GetComponent<Animator>();
         _flashlight = GetComponentInChildren<Light2D>(includeInactive: true);
-        Initialize();
     }
 
-    public void Initialize()
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         _cameraShake = FindAnyObjectByType<CameraShake>();
-        _healthUIManager = FindAnyObjectByType<HealthUIManager>();
         _flashlight.gameObject.SetActive(true);
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     // Update is called once per frame
@@ -49,16 +56,18 @@ public class PlayerHitDetection : MonoBehaviour
         else
             _timeCounter = 0;
 
-        if (_playerStats.CurrentHealth <= 0)
+        if (_playerStats.IsDead)
         {
-            //Return player to hub.
-            _playerStats.Reset();
-            _healthUIManager.UpdateHearts();
-            SceneManager.LoadScene(1);
+            KillPlayer();
         }
     }
 
-
+    private void KillPlayer()
+    {
+        //Return player to hub.
+        Destroy(gameObject);
+        SceneManager.LoadScene(2);
+    }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -83,10 +92,7 @@ public class PlayerHitDetection : MonoBehaviour
 
     private void TakeDamage(int damage)
     {
-        _playerStats.CurrentHealth -= damage;
-        _playerStats.CurrentHealth = Mathf.Clamp(_playerStats.CurrentHealth, 0, _playerStats.MaxHealth);
-
-        _healthUIManager?.UpdateHearts();
+        _playerStats.ApplyDamage(damage);
 
         RuntimeManager.PlayOneShot(hitSoundEventPath);
         _animator.SetTrigger("TakeDamage");

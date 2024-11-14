@@ -41,6 +41,7 @@ public class PauseMenu : MonoBehaviour
     public void ReturnToMainMenu()
     {
         Time.timeScale = 1f;
+        Destroy(FindAnyObjectByType<PlayerStats>().gameObject);
         SceneManager.LoadScene(MAIN_MENU);
     }
     public void ToggleAudioPanel()

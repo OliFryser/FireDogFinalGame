@@ -13,7 +13,7 @@ public class UpgradeHandler : MonoBehaviour
         switch (upgrade.UpgradeType)
         {
             case UpgradeType.HealthBoost:
-                _playerStats.MaxHealth++;
+                _playerStats.Heal(2);
                 break;
             case UpgradeType.DamageBoost:
                 _playerStats.Damage *= 1.05f;
