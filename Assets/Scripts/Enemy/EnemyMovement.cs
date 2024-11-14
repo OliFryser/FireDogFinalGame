@@ -81,7 +81,7 @@ public class EnemyMovement : MonoBehaviour
             if (_currentPushDistance < _totalPushDistance)
             {
                 _rigidbody.AddForce(_knockBackSpeed * _enemyDirection);
-                _currentPushDistance += _knockBackSpeed;
+                _currentPushDistance += _knockBackSpeed * Time.fixedDeltaTime;
             }
             else
             {
@@ -161,7 +161,7 @@ public class EnemyMovement : MonoBehaviour
     {
         IsPushedBack = true;
         _enemyDirection = (gameObject.transform.position - _playerTransform.transform.position).normalized;
-        _totalPushDistance = distance * _movementSpeed;
+        _totalPushDistance = distance;
         if (heavy)
         {
             _isStunned = true;

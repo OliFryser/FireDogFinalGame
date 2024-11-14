@@ -40,7 +40,7 @@ public class Movement : MonoBehaviour
             if (_currentPushDistance < _totalPushDistance)
             {
                 _rigidBody2D.AddForce(_movementSpeed * 5 * _direction);
-                _currentPushDistance += _movementSpeed * Time.deltaTime;
+                _currentPushDistance += _movementSpeed * 5 * Time.fixedDeltaTime;
             }
             else
             {
@@ -102,7 +102,7 @@ public class Movement : MonoBehaviour
     {
         _isPushed = true;
         _direction = (enemyDirection - _direction).normalized;
-        _totalPushDistance = 4.0f;
+        _totalPushDistance = _playerStats.PlayerPushBack;
     }
 
     public void StopPush()

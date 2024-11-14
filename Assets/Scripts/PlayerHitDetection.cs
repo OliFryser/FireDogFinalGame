@@ -76,6 +76,7 @@ public class PlayerHitDetection : MonoBehaviour
             TakeDamage(1);
             Vector2 _enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
             _playerMovement.GetPushed(_enemyDirection);
+            other.gameObject.GetComponent<EnemyMovement>().GetPushedBack(15.0f, false);
             _inCollision = true;
         }
 

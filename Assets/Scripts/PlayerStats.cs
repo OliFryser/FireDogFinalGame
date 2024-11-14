@@ -11,6 +11,8 @@ public class PlayerStats : MonoBehaviour
     private int _currentHealth = 6;
     private HealthUIManager _healthUIManager;
     public float EnemyStunDuration;
+    public float PlayerPushBack;
+    public float EnemyPushBack;
 
     private void OnEnable()
     {
