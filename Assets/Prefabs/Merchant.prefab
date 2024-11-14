@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 7473973082223054731}
   - component: {fileID: 2871065549250808418}
   - component: {fileID: 7889117482961456254}
+  - component: {fileID: 4613160243990690233}
   m_Layer: 0
   m_Name: Merchant
   m_TagString: Untagged
@@ -253,3 +254,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.7130544, y: 0.5917835}
   m_EdgeRadius: 0
+--- !u!95 &4613160243990690233
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2864422629731911783}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab6a00d746736b7469fea0e08f499cad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
