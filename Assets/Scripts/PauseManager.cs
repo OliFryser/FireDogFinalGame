@@ -11,6 +11,10 @@ public class PauseManager : MonoBehaviour
     {
         _pauseMenu = FindAnyObjectByType<PauseMenu>(FindObjectsInactive.Include);
         _musicController = FindAnyObjectByType<MusicController>();
+    }
+
+    private void Start()
+    {
         _inputLock = FindAnyObjectByType<InputLock>();
     }
 

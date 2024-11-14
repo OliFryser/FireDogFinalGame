@@ -6,21 +6,21 @@ public class HealthUIManager : MonoBehaviour
 {
     public GameObject heartPrefab; // Assign the HeartUI prefab here
     private List<HeartUI> hearts = new List<HeartUI>();
-    private PlayerStats playerStats;
+    private PlayerStats _playerStats;
 
     void Start()
     {
         // Find the PlayerStats component
-        playerStats = FindAnyObjectByType<PlayerStats>();
+        _playerStats = FindAnyObjectByType<PlayerStats>();
 
         // Create hearts based on player's max health
         CreateHearts();
-        UpdateHearts();
+        UpdateHearts(_playerStats.GetCurrentHealth());
     }
 
     void CreateHearts()
     {
-        int numHearts = Mathf.CeilToInt(playerStats.MaxHealth / 2f);
+        int numHearts = Mathf.CeilToInt(_playerStats.MaxHealth / 2f);
 
         for (int i = 0; i < numHearts; i++)
         {
@@ -30,21 +30,19 @@ public class HealthUIManager : MonoBehaviour
         }
     }
 
-    public void UpdateHearts()
+    public void UpdateHearts(int currentHealth)
     {
-        int hp = playerStats.CurrentHealth;
-
         for (int i = 0; i < hearts.Count; i++)
         {
-            if (hp >= 2)
+            if (currentHealth >= 2)
             {
                 hearts[i].SetFullHeart();
-                hp -= 2;
+                currentHealth -= 2;
             }
-            else if (hp == 1)
+            else if (currentHealth == 1)
             {
                 hearts[i].SetHalfHeart();
-                hp -= 1;
+                currentHealth -= 1;
             }
             else
             {
