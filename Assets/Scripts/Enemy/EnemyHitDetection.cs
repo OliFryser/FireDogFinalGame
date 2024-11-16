@@ -51,11 +51,6 @@ public class EnemyHitDetection : MonoBehaviour
             _cameraShake.StartShake();
         }
 
-        /*else if (other.CompareTag("Player")){
-            Debug.Log("Is called?");
-            _enemyMovement.GetPushedBack(_heavyPushBack, false);
-        }*/
-
         if (_health <= 0)
         {
             if (!_isDead)
@@ -64,6 +59,14 @@ public class EnemyHitDetection : MonoBehaviour
                 Destroy(gameObject);
                 _isDead = true;
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _enemyMovement.GetPushedBack(_lightPushBack, false);
         }
     }
 }

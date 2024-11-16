@@ -1,20 +1,23 @@
 using System;
-using FMODUnity;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent), typeof(Animator))]
 public class EnemyMovement : MonoBehaviour
 {
+    const float AGENT_DRIFT = 0.0001f;
     private Transform _playerTransform;
 
     [SerializeField]
     private float _movementSpeed = 50.0f;
 
-    [SerializeField]
+    [SerializeField, Range(0.01f, 2f)]
     private float _animationScaling = .03f;
 
     [SerializeField]
     private float _sightDistance = 5.0f;
-    
+
     [SerializeField]
     private float _knockBackSpeed;
 
@@ -26,7 +29,7 @@ public class EnemyMovement : MonoBehaviour
 
     private Vector2 _directionToPlayer;
 
-    private Vector2 _enemyDirection;
+    private Vector2 _direction;
 
     private float _totalPushDistance;
 
@@ -47,6 +50,15 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private BoxCollider2D _boxCollider;
 
+    private NavMeshAgent _navMeshAgent;
+
+    void Awake()
+    {
+        _navMeshAgent = GetComponent<NavMeshAgent>();
+        _navMeshAgent.updateRotation = false;
+        _navMeshAgent.updateUpAxis = false;
+    }
+
     void Start()
     {
         _playerTransform = FindAnyObjectByType<Movement>().transform;
@@ -57,63 +69,70 @@ public class EnemyMovement : MonoBehaviour
 
         _playerStats = FindAnyObjectByType<PlayerStats>();
 
-        _enemyDirection = Vector2.down;
+        _direction = Vector2.down;
         _animator = GetComponent<Animator>();
-        _animator.SetFloat("Horizontal", _enemyDirection.x);
-        _animator.SetFloat("Vertical", _enemyDirection.y);
+        _animator.SetFloat("Horizontal", _direction.x);
+        _animator.SetFloat("Vertical", _direction.y);
+
+        _navMeshAgent.speed = _movementSpeed;
     }
 
     void Update()
     {
-        if (_isStunned)
-        {
-            if (_currentStunTimer < _totalStunTimer)
-                _currentStunTimer += Time.deltaTime;
-            else
-                StopStun();
-        }
-    }
+        _directionToPlayer = _playerTransform.position - transform.position;
 
-    void FixedUpdate()
-    {
         if (IsPushedBack)
         {
             if (_currentPushDistance < _totalPushDistance)
             {
-                _rigidbody.AddForce(_knockBackSpeed * _enemyDirection);
-                _currentPushDistance += _knockBackSpeed * Time.fixedDeltaTime;
+                _navMeshAgent.velocity = Vector2.zero;
+                transform.Translate(_knockBackSpeed * Time.deltaTime * -_directionToPlayer);
+                _currentPushDistance += _knockBackSpeed * Time.deltaTime;
             }
             else
             {
                 StopPush();
             }
         }
-        else if (_isStunned && _currentStunTimer < _totalStunTimer) {
-            //Makes sure the enemy doesn't move while stunned.
+        else if (_isStunned)
+        {
+            if (_currentStunTimer < _totalStunTimer)
+                _currentStunTimer += Time.deltaTime;
+            else
+                StopStun();
         }
         else
         {
-            _directionToPlayer = (_playerTransform.position - transform.position).normalized;
-
             if (!PlayerIsInLineOfSight())
             {
-                _enemyDirection = Vector2.zero;
+                _direction = Vector2.zero;
+                _navMeshAgent.velocity = _direction;
                 UpdateAnimator();
                 return;
             }
 
-            _enemyDirection = _directionToPlayer;
+            SetDestination(_playerTransform);
+            _direction = _navMeshAgent.velocity.normalized;
 
-            if (Utils.IsHorizontal(_enemyDirection))
+            if (Utils.IsHorizontal(_direction))
                 UpdateCollider(_horizontalEnemyCollsion);
             else
                 UpdateCollider(_verticalEnemyCollision);
 
-            _rigidbody.AddForce(_movementSpeed * _enemyDirection);
             FlipSprite();
-
             UpdateAnimator();
         }
+    }
+
+    private void SetDestination(Transform playerTransform)
+    {
+        if (Mathf.Abs(transform.position.x - playerTransform.position.x) < AGENT_DRIFT)
+        {
+            var driftPos = playerTransform.position + new Vector3(AGENT_DRIFT, 0f, 0f);
+            _navMeshAgent.SetDestination(driftPos);
+        }
+        else
+            _navMeshAgent.SetDestination(playerTransform.position);
     }
 
     private void UpdateCollider(CollisionSettings settings)
@@ -138,11 +157,11 @@ public class EnemyMovement : MonoBehaviour
         {
             _animator.SetFloat("Animation Speed", newAnimationSpeed);
         }
-        _animator.SetFloat("Speed", _enemyDirection.sqrMagnitude);
-        if (_enemyDirection.sqrMagnitude > 0.01f)
+        _animator.SetFloat("Speed", _direction.magnitude);
+        if (_direction.magnitude > 0.01f)
         {
-            _animator.SetFloat("Horizontal", _enemyDirection.x);
-            _animator.SetFloat("Vertical", _enemyDirection.y);
+            _animator.SetFloat("Horizontal", _direction.x);
+            _animator.SetFloat("Vertical", _direction.y);
         }
     }
 
@@ -160,7 +179,7 @@ public class EnemyMovement : MonoBehaviour
     public void GetPushedBack(float distance, bool heavy)
     {
         IsPushedBack = true;
-        _enemyDirection = (gameObject.transform.position - _playerTransform.transform.position).normalized;
+        _direction = (gameObject.transform.position - _playerTransform.transform.position).normalized;
         _totalPushDistance = distance;
         if (heavy)
         {
@@ -186,7 +205,7 @@ public class EnemyMovement : MonoBehaviour
 
     public Vector2 GetEnemyDirection()
     {
-        return _enemyDirection;
+        return _direction;
     }
 
     [Serializable]

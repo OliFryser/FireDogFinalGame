@@ -2,33 +2,27 @@ using UnityEngine;
 using UnityEngine.UI;
 using FMODUnity;
 
+[RequireComponent(typeof(Slider))]
 public class UISliderSFX : MonoBehaviour
 {
-    [SerializeField] private EventReference sliderAdjustSound;
-    [SerializeField] private string vcaName;
+    [SerializeField] private EventReference _sliderAdjustSound;
+    [SerializeField] private string _vcaName;
 
-    private FMOD.Studio.VCA vcaControl;
-    private Slider volumeSlider;
+    private FMOD.Studio.VCA _vcaControl;
+    private Slider _volumeSlider;
 
     void Awake()
     {
-        volumeSlider = GetComponent<Slider>();
+        _volumeSlider = GetComponent<Slider>();
+        _volumeSlider.onValueChanged.AddListener(UpdateVolume);
 
-        if (volumeSlider != null)
-        {
-            volumeSlider.onValueChanged.AddListener(UpdateVolume);
-        }
-        else
-        {
-            Debug.LogWarning("Slider component is missing on " + gameObject.name);
-        }
 
-        if (!string.IsNullOrEmpty(vcaName))
+        if (!string.IsNullOrEmpty(_vcaName))
         {
-            vcaControl = RuntimeManager.GetVCA("vca:/" + vcaName);
-            if (!vcaControl.isValid())
+            _vcaControl = RuntimeManager.GetVCA("vca:/" + _vcaName);
+            if (!_vcaControl.isValid())
             {
-                Debug.LogWarning("Invalid VCA: " + vcaName);
+                Debug.LogWarning("Invalid VCA: " + _vcaName);
             }
         }
         else
@@ -39,23 +33,23 @@ public class UISliderSFX : MonoBehaviour
 
     public void UpdateVolume(float value)
     {
-        if (!sliderAdjustSound.IsNull)
+        if (!_sliderAdjustSound.IsNull)
         {
-            RuntimeManager.PlayOneShot(sliderAdjustSound);
+            RuntimeManager.PlayOneShot(_sliderAdjustSound);
         }
 
-        if (vcaControl.isValid())
+        if (_vcaControl.isValid())
         {
             float normalizedValue = Mathf.Clamp01(value);
-            vcaControl.setVolume(normalizedValue);
+            _vcaControl.setVolume(normalizedValue);
         }
     }
 
     void OnDestroy()
     {
-        if (volumeSlider != null)
+        if (_volumeSlider != null)
         {
-            volumeSlider.onValueChanged.RemoveListener(UpdateVolume);
+            _volumeSlider.onValueChanged.RemoveListener(UpdateVolume);
         }
     }
 }

@@ -82,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: _movementSpeed
-      value: 30
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: _sightDistance
@@ -90,11 +90,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: _knockBackSpeed
-      value: 150
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: _animationScaling
-      value: 0.05
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: _verticalEnemyCollision.Size.x
@@ -154,11 +154,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7577002638160236904, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: _heavyPushBack
-      value: 30
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7577002638160236904, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: _lightPushBack
-      value: 15
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802817812405518231, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722602593839996403, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8722602593839996403, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_Interpolate
