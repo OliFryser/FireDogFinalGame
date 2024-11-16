@@ -45,16 +45,12 @@ public class EnemyHitDetection : MonoBehaviour
 
         else if (other.CompareTag("Heavy Weapon Hit Box"))
         {
+            Debug.Log("Hit heavy hit box!");
             _enemyMovement.GetPushedBack(_heavyPushBack, true);
             _health -= _playerStats.Damage * 2;
             RuntimeManager.PlayOneShot(Enemyhit);
             _cameraShake.StartShake();
         }
-
-        /*else if (other.CompareTag("Player")){
-            Debug.Log("Is called?");
-            _enemyMovement.GetPushedBack(_heavyPushBack, false);
-        }*/
 
         if (_health <= 0)
         {
@@ -64,6 +60,14 @@ public class EnemyHitDetection : MonoBehaviour
                 Destroy(gameObject);
                 _isDead = true;
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _enemyMovement.GetPushedBack(_lightPushBack, false);
         }
     }
 }

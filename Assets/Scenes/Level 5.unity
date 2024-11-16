@@ -591,6 +591,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc23616e2a15a4a45b425d608b2d55b9, type: 3}
+--- !u!1001 &823988527
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 49791622623346917, guid: 2a17f88875106ea4094b58b43f30c363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 49791622623346917, guid: 2a17f88875106ea4094b58b43f30c363, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 49791622623346917, guid: 2a17f88875106ea4094b58b43f30c363, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 49791622623346917, guid: 2a17f88875106ea4094b58b43f30c363, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 49791622623346917, guid: 2a17f88875106ea4094b58b43f30c363, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 49791622623346917, guid: 2a17f88875106ea4094b58b43f30c363, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 49791622623346917, guid: 2a17f88875106ea4094b58b43f30c363, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 49791622623346917, guid: 2a17f88875106ea4094b58b43f30c363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 49791622623346917, guid: 2a17f88875106ea4094b58b43f30c363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 49791622623346917, guid: 2a17f88875106ea4094b58b43f30c363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757153278489771692, guid: 2a17f88875106ea4094b58b43f30c363, type: 3}
+      propertyPath: m_Name
+      value: NavMesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 8019905345331211504, guid: 2a17f88875106ea4094b58b43f30c363, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: f3a8019410cf43049afd773af462e493, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2a17f88875106ea4094b58b43f30c363, type: 3}
 --- !u!1001 &923936814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1156,6 +1217,7 @@ GameObject:
   - component: {fileID: 4336846487644229890}
   - component: {fileID: 8358240993193831297}
   - component: {fileID: 8860132848918605765}
+  - component: {fileID: 8860132848918605766}
   m_Layer: 0
   m_Name: Floors
   m_TagString: Untagged
@@ -4454,6 +4516,7 @@ GameObject:
   - component: {fileID: 7767324955446086737}
   - component: {fileID: 8260158293467671248}
   - component: {fileID: 7898404139489513195}
+  - component: {fileID: 8260158293467671249}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -4839,6 +4902,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8260158293467671249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7669983441348615067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1839735485 &8358240993193831297
 Tilemap:
   m_ObjectHideFlags: 0
@@ -12267,6 +12346,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!114 &8860132848918605766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802977179572973349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -12289,3 +12384,4 @@ SceneRoots:
   - {fileID: 699624420}
   - {fileID: 1645490464}
   - {fileID: 244897177}
+  - {fileID: 823988527}
