@@ -212,7 +212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 747febe6dde20a346970e924e5a7262e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isOpen: 0
   _openDoor: {fileID: 1949780275, guid: fbf560f010c98124f8e829c41f831f6d, type: 3}
   _closedDoor: {fileID: -338084530, guid: fbf560f010c98124f8e829c41f831f6d, type: 3}
   _closedDoorCollider: {fileID: 4695495671046148396}
@@ -259,7 +258,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -338084530, guid: fbf560f010c98124f8e829c41f831f6d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

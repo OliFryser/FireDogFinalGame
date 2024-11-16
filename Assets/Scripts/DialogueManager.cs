@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using FMODUnity;
+using System;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -16,6 +17,13 @@ public class DialogueManager : MonoBehaviour
     private int _currentLineIndex = 0;
     private bool _isTyping = false;
     private bool _dialogueStarted = false;
+
+    private HubDoor _hubDoor;
+
+    private void Awake()
+    {
+        _hubDoor = FindAnyObjectByType<HubDoor>();
+    }
 
     void Start()
     {
@@ -42,8 +50,15 @@ public class DialogueManager : MonoBehaviour
         else
         {
             EndDialogue();
-            SceneManager.LoadScene(2);
+            StartCoroutine(EndScene());
         }
+    }
+
+    private IEnumerator EndScene()
+    {
+        _hubDoor.OpenDoor();
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(2);
     }
 
     // Simplified coroutine for typewriter effect
