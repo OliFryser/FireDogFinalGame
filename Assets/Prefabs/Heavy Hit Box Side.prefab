@@ -128,10 +128,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-    - target: {fileID: 6852765771199375981, guid: bfb45d8f08b12244186daf1ff35c2b78, type: 3}
-      propertyPath: m_SortingOrder
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 8749505882203051888, guid: bfb45d8f08b12244186daf1ff35c2b78, type: 3}
       propertyPath: m_Name
       value: Heavy Hit Box Side
