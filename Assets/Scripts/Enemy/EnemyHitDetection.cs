@@ -45,7 +45,6 @@ public class EnemyHitDetection : MonoBehaviour
 
         else if (other.CompareTag("Heavy Weapon Hit Box"))
         {
-            Debug.Log("Hit heavy hit box!");
             _enemyMovement.GetPushedBack(_heavyPushBack, true);
             _health -= _playerStats.Damage * 2;
             RuntimeManager.PlayOneShot(Enemyhit);
