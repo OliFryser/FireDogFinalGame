@@ -52,6 +52,9 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private float _heavyCooldown;
 
+    [SerializeField]
+    private float _delayLightFinish;
+
     private bool _lightAttack;
 
     private bool _heavyAttack;
@@ -134,8 +137,6 @@ public class Weapon : MonoBehaviour
 
         }
 
-        _playerMovement._rigidBody2D.linearVelocity = Vector2.zero;
-
 
         GameObject hitBox = Instantiate(attackHitBox.Prefab, transform.position + direction * attackHitBox.Offset, quaternion.identity);
 
@@ -150,8 +151,9 @@ public class Weapon : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         Destroy(hitBox);
-        if (_lightAttack)
+        if (_lightAttack) {
             StartCoroutine(DelayLightFinish());
+        }
         else
         {
             _inputLocker.UnlockInput();
@@ -185,7 +187,7 @@ public class Weapon : MonoBehaviour
 
     IEnumerator DelayLightFinish()
     {
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(_delayLightFinish);
         _lightAttack = false;
         IsAttacking = false;
         _inputLocker.UnlockInput();

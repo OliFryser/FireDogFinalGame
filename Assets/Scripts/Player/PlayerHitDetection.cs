@@ -2,6 +2,8 @@ using FMODUnity;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
+using System;
+using System.Collections;
 
 public class PlayerHitDetection : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class PlayerHitDetection : MonoBehaviour
     private float _timeCounter = 0;
     private Animator _animator;
     private Light2D _flashlight;
+    private bool _invincible;
 
     public string hitSoundEventPath = "event:/Player/Damage";
 
@@ -23,6 +26,7 @@ public class PlayerHitDetection : MonoBehaviour
         _playerMovement = GetComponent<Movement>();
         _animator = GetComponent<Animator>();
         _flashlight = GetComponentInChildren<Light2D>(includeInactive: true);
+
     }
 
     private void OnEnable()
@@ -92,11 +96,21 @@ public class PlayerHitDetection : MonoBehaviour
 
     private void TakeDamage(int damage)
     {
+        if (!_invincible) {
         _playerStats.ApplyDamage(damage);
 
         RuntimeManager.PlayOneShot(hitSoundEventPath);
         _animator.SetTrigger("TakeDamage");
 
         _cameraShake.StartShake();
+        }
+    }
+
+    public IEnumerator MakeInvinceble(float time){
+        _invincible = true;
+        Physics2D.IgnoreLayerCollision(0, 2, true);
+        yield return new WaitForSeconds(time);
+        Physics2D.IgnoreLayerCollision(0, 2, false);
+        _invincible = false;
     }
 }

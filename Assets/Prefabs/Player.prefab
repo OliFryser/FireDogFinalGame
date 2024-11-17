@@ -343,6 +343,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animationScaling: 0.015
   _idleAnimationScaling: 0.01
+  _totalDodgeDistance: 50
+  _invincibilityTime: 0.3
   PreviousDirection: {x: 0, y: 0}
   _rigidBody2D: {fileID: 0}
 --- !u!114 &3000249034656620173
@@ -434,12 +436,13 @@ MonoBehaviour:
   _heavyHitBoxPrefabUp:
     Prefab: {fileID: 2854161767783743423, guid: 8f898a1ad5981fe44bd720cd6c6f9015, type: 3}
     Offset: 0.9
-  _hitBoxDestroyDelayLight: 0.1
-  _lightAttackHitBoxDelay: 0.1
+  _hitBoxDestroyDelayLight: 0.08
+  _lightAttackHitBoxDelay: 0
   _heavyAttackHitBoxDelay: 0.6
   _hitBoxDestroyDelayHeavy: 0.9
-  _lightCooldown: 1.5
-  _heavyCooldown: 2.5
+  _lightCooldown: 0.08
+  _heavyCooldown: 1.8
+  _delayLightFinish: 0.12
   MeleeLightSwing:
     Guid:
       Data1: 2001040250
