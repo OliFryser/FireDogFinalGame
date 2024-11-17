@@ -2,7 +2,6 @@ using FMODUnity;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
-using System;
 using System.Collections;
 
 public class PlayerHitDetection : MonoBehaviour
@@ -96,17 +95,19 @@ public class PlayerHitDetection : MonoBehaviour
 
     private void TakeDamage(int damage)
     {
-        if (!_invincible) {
-        _playerStats.ApplyDamage(damage);
+        if (!_invincible)
+        {
+            _playerStats.ApplyDamage(damage);
 
-        RuntimeManager.PlayOneShot(hitSoundEventPath);
-        _animator.SetTrigger("TakeDamage");
+            RuntimeManager.PlayOneShot(hitSoundEventPath);
+            _animator.SetTrigger("TakeDamage");
 
-        _cameraShake.StartShake();
+            _cameraShake.StartShake();
         }
     }
 
-    public IEnumerator MakeInvinceble(float time){
+    public IEnumerator MakeInvincible(float time)
+    {
         _invincible = true;
         Physics2D.IgnoreLayerCollision(0, 2, true);
         yield return new WaitForSeconds(time);
