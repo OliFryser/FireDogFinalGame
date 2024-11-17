@@ -134,8 +134,6 @@ public class Weapon : MonoBehaviour
 
         }
 
-        _playerMovement._rigidBody2D.linearVelocity = Vector2.zero;
-
 
         GameObject hitBox = Instantiate(attackHitBox.Prefab, transform.position + direction * attackHitBox.Offset, quaternion.identity);
 
@@ -150,8 +148,9 @@ public class Weapon : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         Destroy(hitBox);
-        if (_lightAttack)
+        if (_lightAttack) {
             StartCoroutine(DelayLightFinish());
+        }
         else
         {
             _inputLocker.UnlockInput();
@@ -185,7 +184,7 @@ public class Weapon : MonoBehaviour
 
     IEnumerator DelayLightFinish()
     {
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.12f);
         _lightAttack = false;
         IsAttacking = false;
         _inputLocker.UnlockInput();

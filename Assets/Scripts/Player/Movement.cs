@@ -10,6 +10,13 @@ public class Movement : MonoBehaviour
     private float _animationScaling = .03f;
     [SerializeField]
     private float _idleAnimationScaling = .015f;
+    [SerializeField]
+    private float _totalDodgeDistance;
+
+    [SerializeField]
+    private float _invicDuration;
+
+    private float _currentDodgeDistance;
 
     private Vector2 _direction;
 
@@ -20,6 +27,8 @@ public class Movement : MonoBehaviour
     private bool _isPushed;
     private float _totalPushDistance;
     private float _currentPushDistance = 0;
+    private bool _dodging;
+    private PlayerHitDetection _hitDetection;
 
     private PlayerStats _playerStats;
 
@@ -31,6 +40,7 @@ public class Movement : MonoBehaviour
         _rigidBody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _playerWeapon = GetComponent<Weapon>();
+        _hitDetection = GetComponent<PlayerHitDetection>();
     }
 
     void FixedUpdate()
@@ -53,9 +63,12 @@ public class Movement : MonoBehaviour
             {
                 if (IsMoving)
                     PreviousDirection = _direction;
-
-                _rigidBody2D.AddForce(_direction * _movementSpeed);
-
+                if (_dodging){
+                    DoDodgeRoll();
+                } 
+                else{
+                    _rigidBody2D.AddForce(_direction * _movementSpeed);
+                }
                 FlipSprite();
                 UpdateAnimator();
             }
@@ -97,6 +110,10 @@ public class Movement : MonoBehaviour
         _direction = input.Get<Vector2>();
     }
 
+    void OnDodgeRoll(InputValue _) {
+        _dodging = true;
+    }
+
 
     public void GetPushed(Vector2 enemyDirection)
     {
@@ -111,5 +128,17 @@ public class Movement : MonoBehaviour
         _direction = Vector2.zero;
         _totalPushDistance = 0;
         _currentPushDistance = 0;
+    }
+
+
+    void DoDodgeRoll(){
+        _animator.SetTrigger("Dodge");
+        StartCoroutine(_hitDetection.MakeInvinceble(_invicDuration));
+        while (_currentDodgeDistance < _totalDodgeDistance){
+            _rigidBody2D.AddForce(PreviousDirection * (_movementSpeed*8));
+            _currentDodgeDistance += _movementSpeed * 10 * Time.fixedDeltaTime;
+        }
+        _currentDodgeDistance = 0;
+        _dodging = false;
     }
 }
