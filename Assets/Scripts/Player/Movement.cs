@@ -63,10 +63,12 @@ public class Movement : MonoBehaviour
             {
                 if (IsMoving)
                     PreviousDirection = _direction;
-                if (_dodging){
+                if (_dodging)
+                {
                     DoDodgeRoll();
-                } 
-                else{
+                }
+                else
+                {
                     _rigidBody2D.AddForce(_direction * _movementSpeed);
                 }
                 FlipSprite();
@@ -110,7 +112,8 @@ public class Movement : MonoBehaviour
         _direction = input.Get<Vector2>();
     }
 
-    void OnDodgeRoll(InputValue _) {
+    void OnDodgeRoll(InputValue _)
+    {
         _dodging = true;
     }
 
@@ -131,11 +134,13 @@ public class Movement : MonoBehaviour
     }
 
 
-    void DoDodgeRoll(){
+    void DoDodgeRoll()
+    {
         _animator.SetTrigger("Dodge");
-        StartCoroutine(_hitDetection.MakeInvinceble(_invincibilityTime));
-        while (_currentDodgeDistance < _totalDodgeDistance){
-            _rigidBody2D.AddForce(PreviousDirection * (_movementSpeed*8));
+        StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime));
+        while (_currentDodgeDistance < _totalDodgeDistance)
+        {
+            _rigidBody2D.AddForce(PreviousDirection * (_movementSpeed * 8));
             _currentDodgeDistance += _movementSpeed * 10 * Time.fixedDeltaTime;
         }
         _currentDodgeDistance = 0;
