@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
     private float _totalDodgeDistance;
 
     [SerializeField]
-    private float _invicDuration;
+    private float _invincibilityTime;
 
     private float _currentDodgeDistance;
 
@@ -133,7 +133,7 @@ public class Movement : MonoBehaviour
 
     void DoDodgeRoll(){
         _animator.SetTrigger("Dodge");
-        StartCoroutine(_hitDetection.MakeInvinceble(_invicDuration));
+        StartCoroutine(_hitDetection.MakeInvinceble(_invincibilityTime));
         while (_currentDodgeDistance < _totalDodgeDistance){
             _rigidBody2D.AddForce(PreviousDirection * (_movementSpeed*8));
             _currentDodgeDistance += _movementSpeed * 10 * Time.fixedDeltaTime;
