@@ -1,4 +1,5 @@
 using UnityEngine;
+using FMODUnity;
 
 public class Door : MonoBehaviour
 {
@@ -22,5 +23,6 @@ public class Door : MonoBehaviour
     {
         _closedDoorCollider.gameObject.SetActive(false);
         _spriteRenderer.sprite = _openDoor;
+        RuntimeManager.PlayOneShot("event:/Environment/Door Unlock");
     }
 }
