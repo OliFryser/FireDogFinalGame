@@ -442,6 +442,7 @@ MonoBehaviour:
   _hitBoxDestroyDelayHeavy: 0.9
   _lightCooldown: 0.08
   _heavyCooldown: 1.8
+  _delayLightFinish: 0.12
   MeleeLightSwing:
     Guid:
       Data1: 2001040250

@@ -52,6 +52,9 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private float _heavyCooldown;
 
+    [SerializeField]
+    private float _delayLightFinish;
+
     private bool _lightAttack;
 
     private bool _heavyAttack;
@@ -184,7 +187,7 @@ public class Weapon : MonoBehaviour
 
     IEnumerator DelayLightFinish()
     {
-        yield return new WaitForSeconds(0.12f);
+        yield return new WaitForSeconds(_delayLightFinish);
         _lightAttack = false;
         IsAttacking = false;
         _inputLocker.UnlockInput();
