@@ -344,10 +344,9 @@ MonoBehaviour:
   _animationScaling: 0.015
   _idleAnimationScaling: 0.01
   _totalDodgeDistance: 50
+  _dogdeSpeedScalar: 5
   _invincibilityTime: 0.3
   PreviousDirection: {x: 0, y: 0}
-  _rigidBody2D: {fileID: 0}
-  _dogdeSpeedScalar: 5
 --- !u!114 &3000249034656620173
 MonoBehaviour:
   m_ObjectHideFlags: 0

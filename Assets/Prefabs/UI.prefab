@@ -548,21 +548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf07754424f6ccd4fb645f73f13efccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _onUpgradeSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RoomManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   _displays:
   - {fileID: 7592180611370267918}
   - {fileID: 8384708923106508548}
@@ -2909,14 +2894,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0c801192d4f2844ad4b88e69153fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderAdjustSound:
+  _sliderAdjustSound:
     Guid:
-      Data1: 401762641
-      Data2: 1112851259
-      Data3: 1363970226
-      Data4: -1632590789
-    Path: event:/UI/GUI/Slider
-  vcaName: MASTER
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  _vcaName: MASTER
 --- !u!1 &4418270119409820654
 GameObject:
   m_ObjectHideFlags: 0
@@ -3558,8 +3543,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choose your upgrade!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 180ea1aaf957c5b4aaab3dd1e10bfee0, type: 2}
+  m_sharedMaterial: {fileID: 4755182908126789480, guid: 180ea1aaf957c5b4aaab3dd1e10bfee0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3770,14 +3755,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0c801192d4f2844ad4b88e69153fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderAdjustSound:
+  _sliderAdjustSound:
     Guid:
-      Data1: 401762641
-      Data2: 1112851259
-      Data3: 1363970226
-      Data4: -1632590789
-    Path: event:/UI/GUI/Slider
-  vcaName: Music
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  _vcaName: Music
 --- !u!1 &5422397528135668053
 GameObject:
   m_ObjectHideFlags: 0
@@ -4503,6 +4488,82 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6161770496828477161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7248390861603773554}
+  - component: {fileID: 1033288589247429530}
+  - component: {fileID: 1147946504007100864}
+  m_Layer: 5
+  m_Name: HealthPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7248390861603773554
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6161770496828477161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7346830782297018968}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.012, y: 0.984}
+  m_AnchorMax: {x: 0.012, y: 0.984}
+  m_AnchoredPosition: {x: 70, y: -35.5}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1033288589247429530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6161770496828477161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 2
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &1147946504007100864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6161770496828477161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3985f6ae83dd38b4e91280b3300f0f3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartPrefab: {fileID: 3395118380448702307, guid: c544b0f0e3005224288aec3d48fa99a3, type: 3}
 --- !u!1 &6164939058053743436
 GameObject:
   m_ObjectHideFlags: 0
@@ -5264,14 +5325,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab0c801192d4f2844ad4b88e69153fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderAdjustSound:
+  _sliderAdjustSound:
     Guid:
-      Data1: 401762641
-      Data2: 1112851259
-      Data3: 1363970226
-      Data4: -1632590789
-    Path: event:/UI/GUI/Slider
-  vcaName: SFX
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  _vcaName: SFX
 --- !u!1 &7910930449626023092
 GameObject:
   m_ObjectHideFlags: 0
@@ -5935,82 +5996,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &6161770496828477161
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7248390861603773554}
-  - component: {fileID: 1033288589247429530}
-  - component: {fileID: 1147946504007100864}
-  m_Layer: 5
-  m_Name: HealthPanel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7248390861603773554
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6161770496828477161}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7346830782297018968}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.012, y: 0.984}
-  m_AnchorMax: {x: 0.012, y: 0.984}
-  m_AnchoredPosition: {x: 70, y: -35.5}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1033288589247429530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6161770496828477161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 0
-  m_Spacing: 2
-  m_ChildForceExpandWidth: 0
-  m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
---- !u!114 &1147946504007100864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6161770496828477161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3985f6ae83dd38b4e91280b3300f0f3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heartPrefab: {fileID: 3395118380448702307, guid: c544b0f0e3005224288aec3d48fa99a3, type: 3}
 --- !u!1 &9186538419119663816
 GameObject:
   m_ObjectHideFlags: 0
@@ -6063,6 +6048,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7348044156591727035}
     m_Modifications:
+    - target: {fileID: 447001201478970631, guid: 2e3f90d6606583d41b696d1c80fae03c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 180ea1aaf957c5b4aaab3dd1e10bfee0, type: 2}
+    - target: {fileID: 447001201478970631, guid: 2e3f90d6606583d41b696d1c80fae03c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4755182908126789480, guid: 180ea1aaf957c5b4aaab3dd1e10bfee0, type: 2}
     - target: {fileID: 5761168671161531036, guid: 2e3f90d6606583d41b696d1c80fae03c, type: 3}
       propertyPath: m_Name
       value: Upgrade Display (2)
@@ -6136,6 +6129,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7348044156591727035}
     m_Modifications:
+    - target: {fileID: 447001201478970631, guid: 2e3f90d6606583d41b696d1c80fae03c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 180ea1aaf957c5b4aaab3dd1e10bfee0, type: 2}
+    - target: {fileID: 447001201478970631, guid: 2e3f90d6606583d41b696d1c80fae03c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4755182908126789480, guid: 180ea1aaf957c5b4aaab3dd1e10bfee0, type: 2}
     - target: {fileID: 5761168671161531036, guid: 2e3f90d6606583d41b696d1c80fae03c, type: 3}
       propertyPath: m_Name
       value: Upgrade Display
@@ -6209,6 +6210,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7348044156591727035}
     m_Modifications:
+    - target: {fileID: 447001201478970631, guid: 2e3f90d6606583d41b696d1c80fae03c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 180ea1aaf957c5b4aaab3dd1e10bfee0, type: 2}
+    - target: {fileID: 447001201478970631, guid: 2e3f90d6606583d41b696d1c80fae03c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 4755182908126789480, guid: 180ea1aaf957c5b4aaab3dd1e10bfee0, type: 2}
     - target: {fileID: 5761168671161531036, guid: 2e3f90d6606583d41b696d1c80fae03c, type: 3}
       propertyPath: m_Name
       value: Upgrade Display (1)
