@@ -347,6 +347,7 @@ MonoBehaviour:
   _invincibilityTime: 0.3
   PreviousDirection: {x: 0, y: 0}
   _rigidBody2D: {fileID: 0}
+  _dogdeSpeedScalar: 5
 --- !u!114 &3000249034656620173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,6 +419,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsAttacking: 0
+  _hitBoxDestroyDelayLight: 0.12
+  _lightAttackHitBoxDelay: 0
+  _lightCooldown: 0.08
+  _delayLightFinish: 0.12
   _lightHitBoxPrefabDown:
     Prefab: {fileID: 1352821087091708786, guid: 4b89031f8acd5464fb307f759d545ff3, type: 3}
     Offset: 0.9
@@ -426,7 +431,10 @@ MonoBehaviour:
     Offset: 0.35
   _lightHitBoxPrefabSide:
     Prefab: {fileID: 104633210319889299, guid: 0ab844b31bfa40645bec1c0883b6d73e, type: 3}
-    Offset: 0.45
+    Offset: 0.6
+  _heavyAttackHitBoxDelay: 0.6
+  _hitBoxDestroyDelayHeavy: 0.9
+  _heavyCooldown: 1.8
   _heavyHitBoxPrefabDown:
     Prefab: {fileID: 4584349179100242260, guid: c3009d071118c734ba603555d5fca12b, type: 3}
     Offset: 1.3
@@ -436,13 +444,6 @@ MonoBehaviour:
   _heavyHitBoxPrefabUp:
     Prefab: {fileID: 2854161767783743423, guid: 8f898a1ad5981fe44bd720cd6c6f9015, type: 3}
     Offset: 0.9
-  _hitBoxDestroyDelayLight: 0.08
-  _lightAttackHitBoxDelay: 0
-  _heavyAttackHitBoxDelay: 0.6
-  _hitBoxDestroyDelayHeavy: 0.9
-  _lightCooldown: 0.08
-  _heavyCooldown: 1.8
-  _delayLightFinish: 0.12
   MeleeLightSwing:
     Guid:
       Data1: 2001040250

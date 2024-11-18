@@ -11,6 +11,23 @@ public class Weapon : MonoBehaviour
 
     public bool IsAttacking;
 
+    private Animator _animator;
+
+    private InputLock _inputLocker;
+
+    [Header("Light Attack")]
+    [SerializeField]
+    private float _hitBoxDestroyDelayLight = 0.55f;
+
+    [SerializeField]
+    private float _lightAttackHitBoxDelay = 0.1f;
+
+    [SerializeField]
+    private float _lightCooldown;
+
+    [SerializeField]
+    private float _delayLightFinish;
+
     [SerializeField]
     private HitBox _lightHitBoxPrefabDown;
 
@@ -20,6 +37,16 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private HitBox _lightHitBoxPrefabSide;
 
+    [Header("Heavy Attack")]
+    [SerializeField]
+    private float _heavyAttackHitBoxDelay = 0.6f;
+
+    [SerializeField]
+    private float _hitBoxDestroyDelayHeavy = 0.9f;
+
+    [SerializeField]
+    private float _heavyCooldown;
+
     [SerializeField]
     private HitBox _heavyHitBoxPrefabDown;
 
@@ -28,32 +55,6 @@ public class Weapon : MonoBehaviour
 
     [SerializeField]
     private HitBox _heavyHitBoxPrefabUp;
-
-    private Animator _animator;
-
-    private InputLock _inputLocker;
-
-    [SerializeField]
-    private float _hitBoxDestroyDelayLight = 0.55f;
-
-    [SerializeField]
-    private float _lightAttackHitBoxDelay = 0.1f;
-
-    [SerializeField]
-    private float _heavyAttackHitBoxDelay = 0.6f;
-
-
-    [SerializeField]
-    private float _hitBoxDestroyDelayHeavy = 0.9f;
-
-    [SerializeField]
-    private float _lightCooldown;
-
-    [SerializeField]
-    private float _heavyCooldown;
-
-    [SerializeField]
-    private float _delayLightFinish;
 
     private bool _lightAttack;
 
@@ -80,7 +81,6 @@ public class Weapon : MonoBehaviour
         {
             if (_lightAttack && !_onCooldownLight)
             {
-                IsAttacking = true;
                 StartCoroutine(CooldownTimer(_lightCooldown, _lightAttack));
                 _inputLocker.LockInput();
                 DoLightAttack();
@@ -88,7 +88,6 @@ public class Weapon : MonoBehaviour
             }
             if (_heavyAttack && !_onCooldownHeavy)
             {
-                IsAttacking = true;
                 StartCoroutine(CooldownTimer(_heavyCooldown, _lightAttack));
                 _inputLocker.LockInput();
                 DoHeavyAttack();
@@ -138,7 +137,9 @@ public class Weapon : MonoBehaviour
         }
 
 
-        GameObject hitBox = Instantiate(attackHitBox.Prefab, transform.position + direction * attackHitBox.Offset, quaternion.identity);
+        GameObject hitBox = Instantiate(attackHitBox.Prefab, transform);
+        hitBox.transform.position = hitBox.transform.position + direction * attackHitBox.Offset;
+        //Instantiate(attackHitBox.Prefab, transform.position + direction * attackHitBox.Offset, quaternion.identity);
 
         if (isLight)
             StartCoroutine(DestroyAfterDelay(hitBox, _hitBoxDestroyDelayLight));
@@ -151,7 +152,8 @@ public class Weapon : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         Destroy(hitBox);
-        if (_lightAttack) {
+        if (_lightAttack)
+        {
             StartCoroutine(DelayLightFinish());
         }
         else

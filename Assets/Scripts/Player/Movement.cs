@@ -6,12 +6,19 @@ public class Movement : MonoBehaviour
 {
     private float _movementSpeed => _playerStats.MovementSpeed;
 
+    [Header("Animation scaling")]
     [SerializeField]
     private float _animationScaling = .03f;
+
     [SerializeField]
     private float _idleAnimationScaling = .015f;
+
+    [Header("Dodging")]
     [SerializeField]
     private float _totalDodgeDistance;
+
+    [SerializeField, Range(1, 15)]
+    private float _dogdeSpeedScalar;
 
     [SerializeField]
     private float _invincibilityTime;
@@ -21,7 +28,7 @@ public class Movement : MonoBehaviour
     private Vector2 _direction;
 
     public Vector2 PreviousDirection;
-    public Rigidbody2D _rigidBody2D;
+    private Rigidbody2D _rigidBody2D;
     private Animator _animator;
     private Weapon _playerWeapon;
     private bool _isPushed;
@@ -29,7 +36,6 @@ public class Movement : MonoBehaviour
     private float _currentPushDistance = 0;
     private bool _dodging;
     private PlayerHitDetection _hitDetection;
-
     private PlayerStats _playerStats;
 
     public bool IsMoving => _direction.sqrMagnitude > 0.01f;
@@ -140,8 +146,8 @@ public class Movement : MonoBehaviour
         StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime));
         while (_currentDodgeDistance < _totalDodgeDistance)
         {
-            _rigidBody2D.AddForce(PreviousDirection * (_movementSpeed * 8));
-            _currentDodgeDistance += _movementSpeed * 10 * Time.fixedDeltaTime;
+            _rigidBody2D.AddForce(PreviousDirection * (_movementSpeed * _dogdeSpeedScalar));
+            _currentDodgeDistance += _movementSpeed * _dogdeSpeedScalar * Time.fixedDeltaTime;
         }
         _currentDodgeDistance = 0;
         _dodging = false;
