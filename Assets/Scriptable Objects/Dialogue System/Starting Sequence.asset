@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0f22b432dc4564c9633f42aec7254a, type: 3}
+  m_Name: Starting Sequence
+  m_EditorClassIdentifier: 
+  Lines:
+  - DialogContent: "This the place? Shouldn\u2019t they want a couple of 100 renovators
+      or a bulldozer? Where was that letter again? \r"
+    Speaker: {fileID: 11400000, guid: 5e07a4ebe4e753f4e91e343812c4f2f2, type: 2}
+  - DialogContent: "My deepest gratitude for accepting this undertaking. The remainder
+      of your payment shall be rendered upon the completion of your duties. \r\nAs
+      previously noted, the manor has languished in neglect for many years, and you
+      would do well to prepare yourself for a rather persistent infestation."
+    Speaker: {fileID: 11400000, guid: acd15204befaf7741a576311b8666525, type: 2}
+  - DialogContent: An infestation? Ha. Nothing ever survived my mop and strong cleaning
+      arm!
+    Speaker: {fileID: 11400000, guid: 5e07a4ebe4e753f4e91e343812c4f2f2, type: 2}
