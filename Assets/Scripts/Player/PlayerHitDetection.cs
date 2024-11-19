@@ -11,8 +11,6 @@ public class PlayerHitDetection : MonoBehaviour
     private PlayerStats _playerStats;
     private CameraShake _cameraShake;
     private Movement _playerMovement;
-    private bool _inCollision;
-    private float _timeCounter = 0;
     private Animator _animator;
     private Light2D _flashlight;
     private bool _invincible;
@@ -48,18 +46,6 @@ public class PlayerHitDetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_inCollision)
-        {
-            _timeCounter += Time.deltaTime;
-            if (_timeCounter >= 0.8)
-            {
-                TakeDamage(1);
-                _timeCounter = 0;
-            }
-        }
-        else
-            _timeCounter = 0;
-
         if (_playerStats.IsDead)
         {
             KillPlayer();
@@ -80,17 +66,8 @@ public class PlayerHitDetection : MonoBehaviour
             TakeDamage(1);
             Vector2 _enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
             _playerMovement.GetPushed(_enemyDirection);
-            _inCollision = true;
         }
 
-    }
-
-    void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            _inCollision = false;
-        }
     }
 
 

@@ -91,13 +91,16 @@ public class EnemyMovement : MonoBehaviour
             }
             else
             {
+                
                 StopPush();
             }
         }
         else if (_isStunned)
         {
-            if (_currentStunTimer < _totalStunTimer)
+            if (_currentStunTimer < _totalStunTimer){
                 _currentStunTimer += Time.deltaTime;
+                _navMeshAgent.velocity = Vector2.zero;
+            }
             else
                 StopStun();
         }
@@ -113,6 +116,7 @@ public class EnemyMovement : MonoBehaviour
 
             SetDestination(_playerTransform);
             _direction = _navMeshAgent.velocity.normalized;
+
 
             if (Utils.IsHorizontal(_direction))
                 UpdateCollider(_horizontalEnemyCollsion);
@@ -176,17 +180,13 @@ public class EnemyMovement : MonoBehaviour
     }
 
 
-    public void GetPushedBack(float distance, bool heavy)
+    public void GetPushedBack(float distance, float stun)
     {
         IsPushedBack = true;
         _direction = (gameObject.transform.position - _playerTransform.transform.position).normalized;
         _totalPushDistance = distance;
-        if (heavy)
-        {
-            _isStunned = true;
-            _totalStunTimer = _playerStats.EnemyStunDuration;
-            _totalPushDistance += 2.0f - Vector2.Distance(_playerTransform.transform.position, gameObject.transform.position);
-        }
+        _isStunned = true;
+        _totalStunTimer = stun;
     }
 
     public void StopPush()
@@ -195,7 +195,6 @@ public class EnemyMovement : MonoBehaviour
         _totalPushDistance = 0;
         _currentPushDistance = 0;
     }
-
     public void StopStun()
     {
         _isStunned = false;

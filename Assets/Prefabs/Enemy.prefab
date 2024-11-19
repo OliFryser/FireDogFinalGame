@@ -113,8 +113,7 @@ MonoBehaviour:
       Data3: -1731466579
       Data4: 153182977
     Path: event:/Enemy/Damaged
-  _lightPushBack: 1
-  _heavyPushBack: 2
+  _pushBackOnPlayerHit: 0.8
 --- !u!114 &3643076807879076636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSpeed: 2
-  _animationScaling: 35
+  _animationScaling: 2
   _sightDistance: 5
   _knockBackSpeed: 0
   IsPushedBack: 0
