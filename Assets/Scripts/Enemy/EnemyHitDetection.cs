@@ -9,10 +9,7 @@ public class EnemyHitDetection : MonoBehaviour
     EventReference Enemyhit;
 
     [SerializeField]
-    private float _lightPushBack = 2.0f;
-
-    [SerializeField]
-    private float _heavyPushBack = 3.0f;
+    private float _pushBackOnPlayerHit;
 
     private EnemyTracker _enemyTracker;
 
@@ -37,7 +34,7 @@ public class EnemyHitDetection : MonoBehaviour
     {
         if (other.CompareTag("Light Weapon Hit Box"))
         {
-            _enemyMovement.GetPushedBack(_lightPushBack, false);
+            _enemyMovement.GetPushedBack(_playerStats.EnemyPushBack, _playerStats.EnemyStunDuration);
             RuntimeManager.PlayOneShot(Enemyhit);
             _cameraShake.StartShake();
             _health -= _playerStats.Damage;
@@ -45,7 +42,7 @@ public class EnemyHitDetection : MonoBehaviour
 
         else if (other.CompareTag("Heavy Weapon Hit Box"))
         {
-            _enemyMovement.GetPushedBack(_heavyPushBack, true);
+            _enemyMovement.GetPushedBack(_playerStats.EnemyPushBack*2, _playerStats.EnemyStunDuration*2);
             _health -= _playerStats.Damage * 2;
             RuntimeManager.PlayOneShot(Enemyhit);
             _cameraShake.StartShake();
@@ -66,7 +63,7 @@ public class EnemyHitDetection : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            _enemyMovement.GetPushedBack(_lightPushBack, false);
+            _enemyMovement.GetPushedBack(_pushBackOnPlayerHit, 0);
         }
     }
 }
