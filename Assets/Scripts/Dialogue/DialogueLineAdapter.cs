@@ -40,6 +40,11 @@ public class DialogueLineAdapter : MonoBehaviour
 
   private void OnDialogLinePlayed()
   {
+    if (!_lineQueue.Any())
+    {
+      _onCompleted();
+      return;
+    }
     PlayNextLineInDisplay();
   }
 
@@ -50,11 +55,6 @@ public class DialogueLineAdapter : MonoBehaviour
 
   public void OnDialogClick()
   {
-    if (!_lineQueue.Any())
-    {
-      _onCompleted();
-      return;
-    }
     _dialogueDisplay.OnDialogClick();
   }
 

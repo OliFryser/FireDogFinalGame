@@ -1,13 +1,9 @@
-using TMPro;
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-using FMODUnity;
 using System;
 using System.Linq;
 
-public class DialogueManager : MonoBehaviour
+public class DialoguePlayer : MonoBehaviour
 {
 
     [SerializeField]

@@ -11,12 +11,12 @@ public class HubManager : MonoBehaviour
     private float _endDelay = 2f;
 
 
-    private DialogueManager _dialogueManager;
+    private DialoguePlayer _dialogueManager;
     private HubDoor _hubDoor;
 
     private void Awake()
     {
-        _dialogueManager = FindAnyObjectByType<DialogueManager>();
+        _dialogueManager = FindAnyObjectByType<DialoguePlayer>();
         _hubDoor = FindAnyObjectByType<HubDoor>();
     }
 
