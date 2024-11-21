@@ -50,9 +50,9 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private BoxCollider2D _boxCollider;
 
-    private NavMeshAgent _navMeshAgent;
+    protected NavMeshAgent _navMeshAgent;
 
-    void Awake()
+    protected virtual void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _navMeshAgent.updateRotation = false;
@@ -77,7 +77,7 @@ public class EnemyMovement : MonoBehaviour
         _navMeshAgent.speed = _movementSpeed;
     }
 
-    void Update()
+    protected virtual void Update()
     {
         _directionToPlayer = _playerTransform.position - transform.position;
 
@@ -91,13 +91,14 @@ public class EnemyMovement : MonoBehaviour
             }
             else
             {
-                
+
                 StopPush();
             }
         }
         else if (_isStunned)
         {
-            if (_currentStunTimer < _totalStunTimer){
+            if (_currentStunTimer < _totalStunTimer)
+            {
                 _currentStunTimer += Time.deltaTime;
                 _navMeshAgent.velocity = Vector2.zero;
             }
