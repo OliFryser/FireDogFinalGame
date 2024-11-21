@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     private float _movementSpeed => _playerStats.MovementSpeed;
+    public bool canMove = true;
 
     [Header("Animation scaling")]
     [SerializeField]
@@ -51,6 +52,8 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!canMove) return;
+
         if (_isPushed)
         {
             if (_currentPushDistance < _totalPushDistance)
@@ -115,6 +118,7 @@ public class Movement : MonoBehaviour
     // Used by input system
     void OnMove(InputValue input)
     {
+        if (!canMove) return;
         _direction = input.Get<Vector2>();
     }
 
