@@ -61,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,7 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -153,10 +153,10 @@ TextureImporter:
       name: dust_0
       rect:
         serializedVersion: 2
-        x: 71
-        y: 79
-        width: 18
-        height: 16
+        x: 0
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,10 +175,10 @@ TextureImporter:
       name: dust_1
       rect:
         serializedVersion: 2
-        x: 229
-        y: 79
-        width: 22
-        height: 16
+        x: 160
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +197,10 @@ TextureImporter:
       name: dust_2
       rect:
         serializedVersion: 2
-        x: 386
-        y: 79
-        width: 29
-        height: 13
+        x: 320
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,10 +219,10 @@ TextureImporter:
       name: dust_3
       rect:
         serializedVersion: 2
-        x: 551
-        y: 79
-        width: 17
-        height: 25
+        x: 480
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +241,10 @@ TextureImporter:
       name: dust_4
       rect:
         serializedVersion: 2
-        x: 710
-        y: 79
-        width: 20
-        height: 29
+        x: 640
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,10 +263,10 @@ TextureImporter:
       name: dust_5
       rect:
         serializedVersion: 2
-        x: 870
-        y: 90
-        width: 21
-        height: 24
+        x: 800
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -285,10 +285,10 @@ TextureImporter:
       name: dust_6
       rect:
         serializedVersion: 2
-        x: 1026
-        y: 90
-        width: 28
-        height: 24
+        x: 960
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,10 +307,10 @@ TextureImporter:
       name: dust_7
       rect:
         serializedVersion: 2
-        x: 1178
-        y: 85
-        width: 8
-        height: 10
+        x: 1120
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,33 +325,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: dust_8
-      rect:
-        serializedVersion: 2
-        x: 1183
-        y: 79
-        width: 38
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8cb663c57fb32fc90800000000000000
-      internalID: -7137576525838783544
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4286231c661c8294ca6d65d9a1379685
     internalID: 0
     vertices: []
     indices: 
@@ -369,7 +347,6 @@ TextureImporter:
       dust_5: -3246277489707905420
       dust_6: 5145894643363775658
       dust_7: -4390563669279041178
-      dust_8: -7137576525838783544
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

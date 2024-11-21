@@ -4,24 +4,24 @@ using FMODUnity;
 public class EnemyHitDetection : MonoBehaviour
 {
     [SerializeField]
-    private float _health = 50.0f;
+    protected float _health = 50.0f;
     [SerializeField]
-    EventReference Enemyhit;
+    protected EventReference Enemyhit;
 
     [SerializeField]
-    private float _pushBackOnPlayerHit;
+    protected float _pushBackOnPlayerHit;
 
-    private EnemyTracker _enemyTracker;
+    protected EnemyTracker _enemyTracker;
 
-    private EnemyMovement _enemyMovement;
+    protected EnemyMovement _enemyMovement;
 
-    private PlayerStats _playerStats;
+    protected PlayerStats _playerStats;
 
-    private CameraShake _cameraShake;
+    protected CameraShake _cameraShake;
 
-    private bool _isDead;
+    protected bool _isDead;
 
-    private void Start()
+    protected void Start()
     {
         _enemyTracker = FindAnyObjectByType<EnemyTracker>();
         _enemyTracker.RegisterEnemy();
@@ -30,7 +30,7 @@ public class EnemyHitDetection : MonoBehaviour
         _cameraShake = FindAnyObjectByType<CameraShake>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Light Weapon Hit Box"))
         {
@@ -59,7 +59,7 @@ public class EnemyHitDetection : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    protected void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
