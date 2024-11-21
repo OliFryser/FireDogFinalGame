@@ -346,7 +346,7 @@ MonoBehaviour:
   _animationScaling: 0.015
   _idleAnimationScaling: 0.01
   _totalDodgeDistance: 50
-  _dogdeSpeedScalar: 5
+  _dodgeSpeedScalar: 5
   _invincibilityTime: 0.3
   PreviousDirection: {x: 0, y: 0}
 --- !u!114 &3000249034656620173
