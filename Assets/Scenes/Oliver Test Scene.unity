@@ -318,14 +318,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 3606730900545331055, guid: f84828cfe4774ec41842912f201b0e93, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3738806769541595093, guid: f84828cfe4774ec41842912f201b0e93, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3782459576644997204, guid: f84828cfe4774ec41842912f201b0e93, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.29

@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: ee7cfce399d2ee242aed8de03d71df50
+guid: a5e2ba3c1345d614abc02520950a212f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7802546432297495719
-    second: PauseMenu170x180_0
+      213: -1869492064128092055
+    second: PauseMenu_0
   - first:
-      213: 3512188450260846229
-    second: PauseMenu170x180_1
+      213: 6370572803633710929
+    second: PauseMenu_1
   - first:
-      213: 5326710069367698108
-    second: PauseMenu170x180_2
+      213: 5750796289876646855
+    second: PauseMenu_2
   - first:
-      213: 7340782389016187462
-    second: PauseMenu170x180_3
+      213: -7802549915261431277
+    second: PauseMenu_3
   - first:
-      213: -7414289087640475880
-    second: PauseMenu170x180_4
+      213: -4910731951273865786
+    second: PauseMenu_4
   - first:
-      213: 8195600479647418326
-    second: PauseMenu170x180_5
+      213: -784045569811047150
+    second: PauseMenu_5
   - first:
-      213: -2585684284609636505
-    second: PauseMenu170x180_6
+      213: -882735017508374810
+    second: PauseMenu_6
   - first:
-      213: 1452670294978725331
-    second: PauseMenu170x180_7
+      213: -4202629264355597943
+    second: PauseMenu_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,7 +96,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,159 +117,194 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PauseMenu170x180_0
+      name: PauseMenu_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 170
-        height: 180
+        x: 26
+        y: 12
+        width: 136
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 43214ee8f817ca84388e239c0a56e818
-      internalID: 283872412
+      spriteID: 968bb376fda3e06e0800000000000000
+      internalID: -1869492064128092055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PauseMenu170x180_1
+      name: PauseMenu_1
       rect:
         serializedVersion: 2
-        x: 170
-        y: 0
-        width: 170
-        height: 180
+        x: 196
+        y: 12
+        width: 136
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 328ee32d948895b4c9b2a550f26e19a3
-      internalID: 1964375821
+      spriteID: 1570a505632d86850800000000000000
+      internalID: 6370572803633710929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PauseMenu170x180_2
+      name: PauseMenu_2
       rect:
         serializedVersion: 2
-        x: 340
-        y: 0
-        width: 170
-        height: 180
+        x: 366
+        y: 12
+        width: 136
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1920b61e4200b684d93074662ce64b7e
-      internalID: -280295782
+      spriteID: 7cb5bb1b1ceeecf40800000000000000
+      internalID: 5750796289876646855
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PauseMenu170x180_3
+      name: PauseMenu_3
       rect:
         serializedVersion: 2
-        x: 510
-        y: 0
-        width: 170
-        height: 180
+        x: 536
+        y: 12
+        width: 136
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9a2b98996affb0a4c85fc755e51d67e2
-      internalID: -1925889151
+      spriteID: 31296961136c7b390800000000000000
+      internalID: -7802549915261431277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PauseMenu170x180_4
+      name: PauseMenu_4
       rect:
         serializedVersion: 2
-        x: 680
-        y: 0
-        width: 170
-        height: 180
+        x: 706
+        y: 12
+        width: 136
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f7aaa1eda14d6124e9adeb1f669afd7c
-      internalID: 911599273
+      spriteID: 6cd0929fe4399dbb0800000000000000
+      internalID: -4910731951273865786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PauseMenu170x180_5
+      name: PauseMenu_5
       rect:
         serializedVersion: 2
-        x: 850
-        y: 0
-        width: 170
-        height: 180
+        x: 876
+        y: 12
+        width: 136
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d483f17aebe20c44092de39f2bb35be2
-      internalID: -1681328499
+      spriteID: 21d91b355b28e15f0800000000000000
+      internalID: -784045569811047150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PauseMenu170x180_6
+      name: PauseMenu_6
       rect:
         serializedVersion: 2
-        x: 1020
-        y: 0
-        width: 170
-        height: 180
+        x: 1037
+        y: 12
+        width: 136
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5a9c4c2dcba4f404c8322a499a6cd803
-      internalID: -1667879144
+      spriteID: 6e67d92bd25efb3f0800000000000000
+      internalID: -882735017508374810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseMenu_7
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 0
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9816c6753f24da5c0800000000000000
+      internalID: -4202629264355597943
       vertices: []
       indices: 
       edges: []
@@ -278,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0bd1c6c6749ec72499f584f660d287a8
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -288,13 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PauseMenu170x180_0: 283872412
-      PauseMenu170x180_1: 1964375821
-      PauseMenu170x180_2: -280295782
-      PauseMenu170x180_3: -1925889151
-      PauseMenu170x180_4: 911599273
-      PauseMenu170x180_5: -1681328499
-      PauseMenu170x180_6: -1667879144
+      PauseMenu_0: -1869492064128092055
+      PauseMenu_1: 6370572803633710929
+      PauseMenu_2: 5750796289876646855
+      PauseMenu_3: -7802549915261431277
+      PauseMenu_4: -4910731951273865786
+      PauseMenu_5: -784045569811047150
+      PauseMenu_6: -882735017508374810
+      PauseMenu_7: -4202629264355597943
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

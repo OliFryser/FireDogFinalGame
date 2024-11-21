@@ -37,12 +37,12 @@ public class LampAttack : MonoBehaviour
     private void Awake()
     {
         _animator = GetComponent<Animator>();
-        _playerTransform = FindAnyObjectByType<Movement>().transform;
     }
 
     private void Start()
     {
         _animator.SetFloat("Charge Up Speed", _chargeUpMultiplier);
+        _playerTransform = FindAnyObjectByType<Movement>().transform;
     }
 
     private void Update()

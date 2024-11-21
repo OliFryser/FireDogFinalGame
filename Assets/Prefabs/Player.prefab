@@ -249,6 +249,7 @@ GameObject:
   - component: {fileID: 8946267332930503242}
   - component: {fileID: 2164337826507384195}
   - component: {fileID: 6841724734116976723}
+  - component: {fileID: 9147524884182715942}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -342,10 +343,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9001b162b28caa644850479a748e210c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 1
   _animationScaling: 0.015
   _idleAnimationScaling: 0.01
   _totalDodgeDistance: 50
-  _dogdeSpeedScalar: 5
+  _dogdeSpeedScalar: 1
   _invincibilityTime: 0.3
   PreviousDirection: {x: 0, y: 0}
 --- !u!114 &3000249034656620173
@@ -474,7 +476,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: eaf10f4363dc3bc4fbb30d1edf884dfa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -673,7 +675,7 @@ CompositeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -869,3 +871,17 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 4757568798257597297}
+--- !u!114 &9147524884182715942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757568798257597297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6031c2d20e3994590ff669cbfbff4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flashColor: {r: 5.1152873, g: 5.1152873, b: 5.1152873, a: 1}
+  _flashTime: 0.25

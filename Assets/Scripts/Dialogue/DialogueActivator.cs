@@ -3,10 +3,10 @@ using UnityEngine.EventSystems;
 
 public class DialogueActivator : MonoBehaviour, ISubmitHandler, IPointerClickHandler
 {
-    private DialogueManager _dialogueManager;
+    private DialoguePlayer _dialogueManager;
     void Awake()
     {
-        _dialogueManager = FindAnyObjectByType<DialogueManager>();
+        _dialogueManager = FindAnyObjectByType<DialoguePlayer>();
     }
 
     public void OnPointerClick(PointerEventData eventData)

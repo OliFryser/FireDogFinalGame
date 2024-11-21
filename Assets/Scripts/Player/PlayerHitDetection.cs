@@ -13,6 +13,7 @@ public class PlayerHitDetection : MonoBehaviour
     private Animator _animator;
     private Light2D _flashlight;
     private bool _invincible;
+    private FlashEffect _flashEffect;
 
     public string hitSoundEventPath = "event:/Player/Damage";
 
@@ -23,6 +24,7 @@ public class PlayerHitDetection : MonoBehaviour
         _playerMovement = GetComponent<Movement>();
         _animator = GetComponent<Animator>();
         _flashlight = GetComponentInChildren<Light2D>(includeInactive: true);
+        _flashEffect = GetComponent<FlashEffect>();
 
     }
 
@@ -86,6 +88,7 @@ public class PlayerHitDetection : MonoBehaviour
 
             RuntimeManager.PlayOneShot(hitSoundEventPath);
             _animator.SetTrigger("TakeDamage");
+            _flashEffect.CallDamageFlash();
 
             _cameraShake.StartShake();
         }

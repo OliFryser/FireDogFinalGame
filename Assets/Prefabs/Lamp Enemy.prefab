@@ -84,7 +84,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!1 &3738806769541595093
+--- !u!1 &4380653432919210373
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,22 +92,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8172092887516908287}
-  - component: {fileID: 6588986757065466023}
+  - component: {fileID: 582622868150651180}
+  - component: {fileID: 226696738856697867}
   m_Layer: 2
-  m_Name: Lamp Damage Hit Box
+  m_Name: Lamp Attack Hit Box
   m_TagString: Lamp Attack Ring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &8172092887516908287
+--- !u!4 &582622868150651180
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3738806769541595093}
+  m_GameObject: {fileID: 4380653432919210373}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -116,13 +116,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3782459576644997204}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &6588986757065466023
+--- !u!58 &226696738856697867
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3738806769541595093}
+  m_GameObject: {fileID: 4380653432919210373}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -150,9 +150,9 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.3}
+  m_Offset: {x: 0, y: -0.31}
   m_Radius: 3
---- !u!1 &7750230875625192945
+--- !u!1 &7195720674534340126
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,39 +160,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8662434055887714200}
-  - component: {fileID: 5671911680368007501}
-  - component: {fileID: 603603017846135068}
+  - component: {fileID: 8712414248538394470}
+  - component: {fileID: 5034251163067294497}
+  - component: {fileID: 2402690540626754787}
   m_Layer: 2
-  m_Name: Lamp Attack Ring
+  m_Name: Lamp Ring Animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &8662434055887714200
+--- !u!4 &8712414248538394470
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750230875625192945}
+  m_GameObject: {fileID: 7195720674534340126}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3782459576644997204}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &5671911680368007501
+--- !u!95 &5034251163067294497
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750230875625192945}
+  m_GameObject: {fileID: 7195720674534340126}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 733cb8aa073b9da44804fdd50599a422, type: 2}
@@ -207,13 +207,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!212 &603603017846135068
+--- !u!212 &2402690540626754787
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750230875625192945}
+  m_GameObject: {fileID: 7195720674534340126}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -342,10 +342,6 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8722602593839996403, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 471079251320473491, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
     - {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
@@ -356,67 +352,29 @@ PrefabInstance:
       addedObject: {fileID: 4456224521906888226}
     - targetCorrespondingSourceObject: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8662434055887714200}
+      addedObject: {fileID: 8712414248538394470}
     - targetCorrespondingSourceObject: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8172092887516908287}
+      addedObject: {fileID: 582622868150651180}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 7262214115421186028}
-    - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 3697168625605313365}
     - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3924446319717029322}
+    - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4762145621119703803}
+    - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2858618353522945831}
+    - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5990094583735948141}
   m_SourcePrefab: {fileID: 100100000, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
 --- !u!1 &3606730900545331055 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
   m_PrefabInstance: {fileID: 3285020886613137742}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7262214115421186028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3606730900545331055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35728a30177138e45b3927fbb3a76f89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _movementSpeed: 3
-  _animationScaling: 0.4
-  _sightDistance: 7
-  _knockBackSpeed: 2
-  IsPushedBack: 0
-  _verticalEnemyCollision:
-    Offset: {x: 0, y: -0.6981597}
-    Size: {x: 0.5283775, y: 0.6813078}
-  _horizontalEnemyCollsion:
-    Offset: {x: 0, y: -0.6981597}
-    Size: {x: 0.5283775, y: 0.6813078}
---- !u!114 &3697168625605313365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3606730900545331055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16c6bb34ff24a1f4fbebf7fdddc78858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _attackRange: 3
-  _chargeUpMultiplier: 0.5
-  _hitTime: 0.3
-  _attackCooldown: 1.5
-  _attackRing: {fileID: 7750230875625192945}
-  _attackHitBox: {fileID: 3738806769541595093}
 --- !u!61 &3924446319717029322
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -451,7 +409,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.6981597}
+  m_Offset: {x: 0, y: -0.91422844}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -461,8 +419,63 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.52837753, y: 0.6813078}
+  m_Size: {x: 0.52837753, y: 0.2491703}
   m_EdgeRadius: 0
+--- !u!114 &4762145621119703803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606730900545331055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35728a30177138e45b3927fbb3a76f89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementSpeed: 3
+  _animationScaling: 0.4
+  _sightDistance: 7
+  _knockBackSpeed: 4
+  IsPushedBack: 0
+  _verticalEnemyCollision:
+    Offset: {x: 0, y: -0.9142284}
+    Size: {x: 0.5283775, y: 0.2491703}
+  _horizontalEnemyCollsion:
+    Offset: {x: 0, y: -0.9142284}
+    Size: {x: 0.5283775, y: 0.2491703}
+--- !u!114 &2858618353522945831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606730900545331055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c6bb34ff24a1f4fbebf7fdddc78858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackRange: 3
+  _chargeUpMultiplier: 0.5
+  _hitTime: 0.3
+  _attackCooldown: 1.5
+  _attackRing: {fileID: 7195720674534340126}
+  _attackHitBox: {fileID: 4380653432919210373}
+--- !u!114 &5990094583735948141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606730900545331055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6031c2d20e3994590ff669cbfbff4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flashColor: {r: 1, g: 0, b: 0, a: 1}
+  _flashTime: 0.25
 --- !u!4 &3782459576644997204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
