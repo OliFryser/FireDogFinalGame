@@ -129,7 +129,7 @@
 	<object class="MixerBusPanner" id="{42e0f56b-c329-4ed2-8d17-7df95ca2dad1}" />
 	<object class="EventSound" id="{74666d52-935a-4907-a269-f4647faca21b}">
 		<property name="start">
-			<value>44.803265306122448</value>
+			<value>50</value>
 		</property>
 		<property name="length">
 			<value>91.862063492063498</value>
@@ -142,6 +142,9 @@
 		</relationship>
 	</object>
 	<object class="EventSound" id="{d1174a51-51b3-428e-af48-66a061db5edc}">
+		<property name="start">
+			<value>2.2000000000000002</value>
+		</property>
 		<property name="length">
 			<value>44.803265306122448</value>
 		</property>
@@ -171,7 +174,7 @@
 	</object>
 	<object class="LoopRegion" id="{aff5c51e-5bda-4edf-8dc0-52233b386a67}">
 		<property name="position">
-			<value>44.803265306122448</value>
+			<value>50</value>
 		</property>
 		<property name="length">
 			<value>91.862063492063498</value>
@@ -185,7 +188,7 @@
 	</object>
 	<object class="LoopRegion" id="{669a69e2-2068-4547-a6b9-5de3230cf82c}">
 		<property name="position">
-			<value>0</value>
+			<value>2.2000000000000002</value>
 		</property>
 		<property name="length">
 			<value>44.803265306122448</value>
@@ -213,7 +216,7 @@
 	</object>
 	<object class="NamedMarker" id="{3ec31dfb-9e3b-49af-9bb1-a3d8f9e1cd6e}">
 		<property name="position">
-			<value>44.803265306122448</value>
+			<value>50</value>
 		</property>
 		<property name="name">
 			<value>Fight</value>
@@ -227,7 +230,7 @@
 	</object>
 	<object class="TransitionRegion" id="{79771cce-b7cc-4046-9b63-af96d9be8cdc}">
 		<property name="position">
-			<value>44.803265306122448</value>
+			<value>50</value>
 		</property>
 		<property name="length">
 			<value>91.862063492063498</value>
@@ -247,7 +250,7 @@
 	</object>
 	<object class="TransitionRegion" id="{95a02a08-20bd-4cf2-a58d-c3b8507a6835}">
 		<property name="position">
-			<value>0</value>
+			<value>2.2000000000000002</value>
 		</property>
 		<property name="length">
 			<value>44.803265306122448</value>
