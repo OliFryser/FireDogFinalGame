@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using FMODUnity;
@@ -23,7 +22,6 @@ public class RoomManager : MonoBehaviour
     private MusicController _musicController;
     private MerchantSpawner _merchantSpawner;
     private Door _door;
-    private Movement _playerMovement;
 
     private void Start()
     {
@@ -33,7 +31,6 @@ public class RoomManager : MonoBehaviour
         _merchantSpawner = FindAnyObjectByType<MerchantSpawner>();
         _door = FindAnyObjectByType<Door>();
         _musicController = GetComponentInChildren<MusicController>();
-        _playerMovement = FindAnyObjectByType<Movement>();
     }
 
     public void ClearRoom()
@@ -51,10 +48,7 @@ public class RoomManager : MonoBehaviour
                 playerMovement.canMove = false;
             }
             _screenFade.FadeToBlack();
-            if (!string.IsNullOrEmpty(_cleaningSoundEvent.Path))
-            {
-                FMODUnity.RuntimeManager.PlayOneShot(_cleaningSoundEvent);
-            }
+            RuntimeManager.PlayOneShot(_cleaningSoundEvent);
             yield return new WaitForSeconds(2f);
         }
 
