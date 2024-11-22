@@ -8,6 +8,7 @@ TagManager:
   - DustEnemy
   - Heavy Weapon Hit Box
   - Enemy
+  - Lamp Attack Ring
   - DirtyAsset
   layers:
   - Default

@@ -47,11 +47,11 @@ public class EnemyMovement : MonoBehaviour
 
     private BoxCollider2D _boxCollider;
 
-    private NavMeshAgent _navMeshAgent;
+    protected NavMeshAgent _navMeshAgent;
 
     private LayerMask _mask;
-
-    void Awake()
+    
+    protected virtual void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _navMeshAgent.updateRotation = false;
@@ -74,7 +74,7 @@ public class EnemyMovement : MonoBehaviour
         _mask = LayerMask.GetMask("Ignore Raycast", "Dust", "Enemy");
     }
 
-    void Update()
+    protected virtual void Update()
     {
         _directionToPlayer = (_playerTransform.position - transform.position).normalized;
 

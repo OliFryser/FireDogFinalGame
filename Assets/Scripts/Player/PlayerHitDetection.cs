@@ -77,6 +77,15 @@ public class PlayerHitDetection : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Lamp Attack Ring"))
+        {
+            TakeDamage(1);
+            Vector2 _enemyDirection = (transform.position - other.gameObject.GetComponentInParent<LampMovement>().transform.position).normalized;
+            _playerMovement.GetPushed(_enemyDirection);
+        }
+    }
 
     private void TakeDamage(int damage)
     {
