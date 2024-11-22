@@ -5,6 +5,10 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     private float _movementSpeed => _playerStats.MovementSpeed;
+
+    [SerializeField]
+    private float _knockBackSpeed = 5.0f;
+
     public bool canMove = true;
 
     [Header("Animation scaling")]
@@ -27,6 +31,7 @@ public class Movement : MonoBehaviour
     private float _currentDodgeDistance;
 
     private Vector2 _direction;
+    private Vector2 _pushDirection;
 
     public Vector2 PreviousDirection;
     private Rigidbody2D _rigidBody2D;
@@ -38,6 +43,7 @@ public class Movement : MonoBehaviour
     private bool _dodging;
     private PlayerHitDetection _hitDetection;
     private PlayerStats _playerStats;
+    private InvincibilityManager _invincibilityManager;
 
     public bool IsMoving => _direction.sqrMagnitude > 0.01f;
 
@@ -58,8 +64,8 @@ public class Movement : MonoBehaviour
         {
             if (_currentPushDistance < _totalPushDistance)
             {
-                _rigidBody2D.AddForce(_movementSpeed * 5 * _direction);
-                _currentPushDistance += _movementSpeed * 5 * Time.fixedDeltaTime;
+                _rigidBody2D.AddForce(_movementSpeed * _knockBackSpeed * _pushDirection);
+                _currentPushDistance += _movementSpeed * _knockBackSpeed * Time.fixedDeltaTime;
             }
             else
             {
@@ -130,8 +136,10 @@ public class Movement : MonoBehaviour
 
     public void GetPushed(Vector2 enemyDirection)
     {
+        if (_invincibilityManager != null && _invincibilityManager.IsInvincible) return;
+
         _isPushed = true;
-        _direction = (enemyDirection - _direction).normalized;
+        _pushDirection = (enemyDirection - _direction).normalized;
         _totalPushDistance = _playerStats.PlayerPushBack;
     }
 

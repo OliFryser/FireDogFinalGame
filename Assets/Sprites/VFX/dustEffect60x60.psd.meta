@@ -1,22 +1,13 @@
 fileFormatVersion: 2
-guid: 52cb06c4bf84e60438084e0453d7a717
+guid: a06a726d4c3a41c459d62ae163d427af
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2453311847884588891
-    second: enemyHitEffect60x60_0
+      213: -6413267289755540268
+    second: dustEffect60x60_0
   - first:
-      213: -5693348871878344349
-    second: enemyHitEffect60x60_1
-  - first:
-      213: -2908677728363211132
-    second: enemyHitEffect60x60_2
-  - first:
-      213: -8142403809398854598
-    second: enemyHitEffect60x60_3
-  - first:
-      213: -1123239443140072207
-    second: enemyHitEffect60x60_4
+      213: 6082477473442042890
+    second: dustEffect60x60_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,33 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Win64
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,30 +99,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemyHitEffect60x60_0
+      name: dustEffect60x60_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 80
-        width: 21
-        height: 20
+        x: 0
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b570b60a02aeb0220800000000000000
-      internalID: 2453311847884588891
+      spriteID: 4d42d70016f7ff6a0800000000000000
+      internalID: -6413267289755540268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemyHitEffect60x60_1
+      name: dustEffect60x60_1
       rect:
         serializedVersion: 2
-        x: 78
-        y: 79
-        width: 23
-        height: 21
+        x: 60
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,74 +140,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 361025d9d592df0b0800000000000000
-      internalID: -5693348871878344349
+      spriteID: a0414d6290d496450800000000000000
+      internalID: 6082477473442042890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemyHitEffect60x60_2
+      name: dustEffect60x60_2
       rect:
         serializedVersion: 2
         x: 120
-        y: 66
-        width: 159
-        height: 43
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 48612d2540d42a7d0800000000000000
-      internalID: -2908677728363211132
+      spriteID: 9a35a73b66d9dbf42abc5f62e34ce1b6
+      internalID: -1124530993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemyHitEffect60x60_3
+      name: dustEffect60x60_3
       rect:
         serializedVersion: 2
-        x: 135
-        y: 74
-        width: 11
-        height: 9
+        x: 180
+        y: 0
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a3c6efa20ee500f80800000000000000
-      internalID: -8142403809398854598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemyHitEffect60x60_4
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 60
-        width: 6
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1fcade97da37960f0800000000000000
-      internalID: -1123239443140072207
+      spriteID: 52c1169a6e875fa49b721b1451bd36d1
+      internalID: 1045003375
       vertices: []
       indices: 
       edges: []
@@ -264,7 +194,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 454183cff71b0484f9ac2f9727913264
     internalID: 0
     vertices: []
     indices: 
@@ -274,11 +204,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      enemyHitEffect60x60_0: 2453311847884588891
-      enemyHitEffect60x60_1: -5693348871878344349
-      enemyHitEffect60x60_2: -2908677728363211132
-      enemyHitEffect60x60_3: -8142403809398854598
-      enemyHitEffect60x60_4: -1123239443140072207
+      dustEffect60x60_0: -6413267289755540268
+      dustEffect60x60_1: 6082477473442042890
+      dustEffect60x60_2: -1124530993
+      dustEffect60x60_3: 1045003375
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

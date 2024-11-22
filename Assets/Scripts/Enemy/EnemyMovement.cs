@@ -10,7 +10,7 @@ public class EnemyMovement : MonoBehaviour
     private Transform _playerTransform;
 
     [SerializeField]
-    private float _movementSpeed = 50.0f;
+    protected float _movementSpeed = 50.0f;
 
     [SerializeField, Range(0.01f, 2f)]
     private float _animationScaling = .03f;
@@ -24,8 +24,6 @@ public class EnemyMovement : MonoBehaviour
     public bool IsPushedBack = false;
 
     private Animator _animator;
-
-    private PlayerStats _playerStats;
 
     private Vector2 _directionToPlayer;
 
@@ -47,11 +45,12 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private CollisionSettings _horizontalEnemyCollsion;
 
-    private Rigidbody2D _rigidbody;
     private BoxCollider2D _boxCollider;
 
     protected NavMeshAgent _navMeshAgent;
 
+    private LayerMask _mask;
+    
     protected virtual void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -59,15 +58,12 @@ public class EnemyMovement : MonoBehaviour
         _navMeshAgent.updateUpAxis = false;
     }
 
-    void Start()
+    protected virtual void Start()
     {
         _playerTransform = FindAnyObjectByType<Movement>().transform;
-        _rigidbody = GetComponent<Rigidbody2D>();
 
         _boxCollider = GetComponent<BoxCollider2D>();
         UpdateCollider(_verticalEnemyCollision);
-
-        _playerStats = FindAnyObjectByType<PlayerStats>();
 
         _direction = Vector2.down;
         _animator = GetComponent<Animator>();
@@ -75,11 +71,12 @@ public class EnemyMovement : MonoBehaviour
         _animator.SetFloat("Vertical", _direction.y);
 
         _navMeshAgent.speed = _movementSpeed;
+        _mask = LayerMask.GetMask("Ignore Raycast", "Dust", "Enemy");
     }
 
     protected virtual void Update()
     {
-        _directionToPlayer = _playerTransform.position - transform.position;
+        _directionToPlayer = (_playerTransform.position - transform.position).normalized;
 
         if (IsPushedBack)
         {
@@ -148,10 +145,9 @@ public class EnemyMovement : MonoBehaviour
 
     bool PlayerIsInLineOfSight()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, _directionToPlayer);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, _directionToPlayer, _sightDistance, layerMask: ~_mask);
         if (!hit)
             return false;
-
         return hit.collider.CompareTag("Player") && hit.distance < _sightDistance;
     }
 
@@ -207,6 +203,10 @@ public class EnemyMovement : MonoBehaviour
     {
         return _direction;
     }
+
+    public Vector2 GetDirectionToPlayer()
+        => (transform.position - _playerTransform.position).normalized;
+
 
     [Serializable]
     struct CollisionSettings

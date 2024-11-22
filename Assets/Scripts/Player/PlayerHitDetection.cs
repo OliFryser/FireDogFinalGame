@@ -14,6 +14,7 @@ public class PlayerHitDetection : MonoBehaviour
     private Light2D _flashlight;
     private bool _invincible;
     private FlashEffect _flashEffect;
+    private InvincibilityManager _invincibilityManager;
 
     public string hitSoundEventPath = "event:/Player/Damage";
 
@@ -25,6 +26,7 @@ public class PlayerHitDetection : MonoBehaviour
         _animator = GetComponent<Animator>();
         _flashlight = GetComponentInChildren<Light2D>(includeInactive: true);
         _flashEffect = GetComponent<FlashEffect>();
+        _invincibilityManager = GetComponent<InvincibilityManager>();
 
     }
 
@@ -64,9 +66,14 @@ public class PlayerHitDetection : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            TakeDamage(1);
-            Vector2 _enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
-            _playerMovement.GetPushed(_enemyDirection);
+            if (_invincibilityManager == null || !_invincibilityManager.IsInvincible)
+            {
+                TakeDamage(1);
+
+                // Apply pushback only if not invincible
+                Vector2 _enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
+                _playerMovement.GetPushed(_enemyDirection);
+            }
         }
     }
 
@@ -82,24 +89,28 @@ public class PlayerHitDetection : MonoBehaviour
 
     private void TakeDamage(int damage)
     {
-        if (!_invincible)
+        if (_invincibilityManager == null || !_invincibilityManager.IsInvincible)
         {
             _playerStats.ApplyDamage(damage);
 
             RuntimeManager.PlayOneShot(hitSoundEventPath);
             _animator.SetTrigger("TakeDamage");
             _flashEffect.CallDamageFlash();
-
             _cameraShake.StartShake();
+
+            // Trigger invincibility after being hit
+            StartCoroutine(_invincibilityManager.MakeInvincible());
         }
     }
 
     public IEnumerator MakeInvincible(float time)
     {
         _invincible = true;
-        Physics2D.IgnoreLayerCollision(0, 2, true);
+        Physics2D.IgnoreLayerCollision(0, 3, true);
+        Physics2D.IgnoreLayerCollision(0, 6, true);
         yield return new WaitForSeconds(time);
-        Physics2D.IgnoreLayerCollision(0, 2, false);
+        Physics2D.IgnoreLayerCollision(0, 3, false);
+        Physics2D.IgnoreLayerCollision(0, 6, false);
         _invincible = false;
     }
 }

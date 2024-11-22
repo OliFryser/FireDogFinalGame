@@ -4,26 +4,26 @@ using FMODUnity;
 public class EnemyHitDetection : MonoBehaviour
 {
     [SerializeField]
-    private float _health = 50.0f;
+    protected float _health = 50.0f;
     [SerializeField]
-    EventReference Enemyhit;
+    protected EventReference Enemyhit;
 
     [SerializeField]
-    private float _pushBackOnPlayerHit;
+    protected float _pushBackOnPlayerHit;
 
-    private EnemyTracker _enemyTracker;
+    protected EnemyTracker _enemyTracker;
 
-    private EnemyMovement _enemyMovement;
+    protected EnemyMovement _enemyMovement;
 
-    private PlayerStats _playerStats;
+    protected PlayerStats _playerStats;
 
-    private CameraShake _cameraShake;
+    protected CameraShake _cameraShake;
 
-    private bool _isDead;
+    protected bool _isDead;
 
     private FlashEffect _flashEffect;
 
-    private void Start()
+    protected void Start()
     {
         _enemyTracker = FindAnyObjectByType<EnemyTracker>();
         _enemyTracker.RegisterEnemy();
@@ -33,42 +33,58 @@ public class EnemyHitDetection : MonoBehaviour
         _flashEffect = GetComponent<FlashEffect>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Light Weapon Hit Box"))
         {
-            _enemyMovement.GetPushedBack(_playerStats.EnemyPushBack, _playerStats.EnemyStunDuration);
-            RuntimeManager.PlayOneShot(Enemyhit);
-            _cameraShake.StartShake();
-            _health -= _playerStats.Damage;
             _flashEffect.CallDamageFlash();
+            GetHitLightAttack();
         }
 
         else if (other.CompareTag("Heavy Weapon Hit Box"))
         {
-            _enemyMovement.GetPushedBack(_playerStats.EnemyPushBack*2, _playerStats.EnemyStunDuration*2);
-            _health -= _playerStats.Damage * 2;
-            RuntimeManager.PlayOneShot(Enemyhit);
-            _cameraShake.StartShake();
             _flashEffect.CallDamageFlash();
+            GetHitHeavyAttack();
         }
 
         if (_health <= 0)
         {
-            if (!_isDead)
-            {
-                _enemyTracker.UnregisterEnemy();
-                Destroy(gameObject);
-                _isDead = true;
-            }
+            Die();
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    protected void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             _enemyMovement.GetPushedBack(_pushBackOnPlayerHit, 0);
         }
     }
+
+    protected virtual void GetHitLightAttack()
+    {
+        _enemyMovement.GetPushedBack(_playerStats.EnemyPushBack, _playerStats.EnemyStunDuration);
+        RuntimeManager.PlayOneShot(Enemyhit);
+        _cameraShake.StartShake();
+        _health -= _playerStats.Damage;
+    }
+
+    protected virtual void GetHitHeavyAttack()
+    {
+        _enemyMovement.GetPushedBack(_playerStats.EnemyPushBack * 2, _playerStats.EnemyStunDuration * 2);
+        _health -= _playerStats.Damage * 2;
+        RuntimeManager.PlayOneShot(Enemyhit);
+        _cameraShake.StartShake();
+    }
+
+    protected virtual void Die()
+    {
+        if (!_isDead)
+        {
+            _enemyTracker.UnregisterEnemy();
+            Destroy(gameObject);
+            _isDead = true;
+        }
+    }
+
 }
