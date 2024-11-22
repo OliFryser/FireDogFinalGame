@@ -55,7 +55,6 @@ public class EnemyHitDetection : MonoBehaviour
 
     protected void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log($"Who hit: {gameObject.name}\nGameObject name: {other.gameObject.name}\nLayer: {LayerMask.LayerToName(other.gameObject.layer)}");
         if (other.gameObject.CompareTag("Player"))
         {
             _enemyMovement.GetPushedBack(_pushBackOnPlayerHit, 0);

@@ -539,4 +539,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 4907875650609213731}
   blinkInterval: 0.1
-  invincibilityDuration: 0.5
+  invincibilityDuration: 1
