@@ -1062,6 +1062,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1be910089565424479836ec30fc5b73b, type: 3}
+--- !u!114 &3940839301115307703 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4777048494904615238, guid: 1be910089565424479836ec30fc5b73b, type: 3}
+  m_PrefabInstance: {fileID: 3940839301115307702}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d196500b93032564d9c0f56045e01e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!156049354 &4138328037498692280
 Grid:
   m_ObjectHideFlags: 0
@@ -3776,6 +3787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 1517866127206143491, guid: 7603481a00269b04ca3678833d3ac216, type: 3}
+      propertyPath: _screenFade
+      value: 
+      objectReference: {fileID: 3940839301115307703}
     - target: {fileID: 3845071652910811438, guid: 7603481a00269b04ca3678833d3ac216, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.6887988
