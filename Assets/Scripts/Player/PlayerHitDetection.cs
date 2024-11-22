@@ -86,9 +86,11 @@ public class PlayerHitDetection : MonoBehaviour
     public IEnumerator MakeInvincible(float time)
     {
         _invincible = true;
-        Physics2D.IgnoreLayerCollision(0, 2, true);
+        Physics2D.IgnoreLayerCollision(0, 3, true);
+        Physics2D.IgnoreLayerCollision(0, 6, true);
         yield return new WaitForSeconds(time);
-        Physics2D.IgnoreLayerCollision(0, 2, false);
+        Physics2D.IgnoreLayerCollision(0, 3, false);
+        Physics2D.IgnoreLayerCollision(0, 6, false);
         _invincible = false;
     }
 }

@@ -34,28 +34,17 @@ public class EnemyHitDetection : MonoBehaviour
     {
         if (other.CompareTag("Light Weapon Hit Box"))
         {
-            _enemyMovement.GetPushedBack(_playerStats.EnemyPushBack, _playerStats.EnemyStunDuration);
-            RuntimeManager.PlayOneShot(Enemyhit);
-            _cameraShake.StartShake();
-            _health -= _playerStats.Damage;
+            GetHitLightAttack();
         }
 
         else if (other.CompareTag("Heavy Weapon Hit Box"))
         {
-            _enemyMovement.GetPushedBack(_playerStats.EnemyPushBack*2, _playerStats.EnemyStunDuration*2);
-            _health -= _playerStats.Damage * 2;
-            RuntimeManager.PlayOneShot(Enemyhit);
-            _cameraShake.StartShake();
+           GetHitHeavyAttack();
         }
 
         if (_health <= 0)
         {
-            if (!_isDead)
-            {
-                _enemyTracker.UnregisterEnemy();
-                Destroy(gameObject);
-                _isDead = true;
-            }
+            Die();
         }
     }
 
@@ -66,4 +55,28 @@ public class EnemyHitDetection : MonoBehaviour
             _enemyMovement.GetPushedBack(_pushBackOnPlayerHit, 0);
         }
     }
+
+    protected virtual void GetHitLightAttack(){
+        _enemyMovement.GetPushedBack(_playerStats.EnemyPushBack, _playerStats.EnemyStunDuration);
+        RuntimeManager.PlayOneShot(Enemyhit);
+        _cameraShake.StartShake();
+        _health -= _playerStats.Damage;
+    }
+
+    protected virtual void GetHitHeavyAttack(){
+        _enemyMovement.GetPushedBack(_playerStats.EnemyPushBack*2, _playerStats.EnemyStunDuration*2);
+        _health -= _playerStats.Damage * 2;
+        RuntimeManager.PlayOneShot(Enemyhit);
+        _cameraShake.StartShake();
+    }
+
+    protected virtual void Die () {
+        if (!_isDead)
+        {
+            _enemyTracker.UnregisterEnemy();
+            Destroy(gameObject);
+            _isDead = true;
+        }
+    }
+
 }

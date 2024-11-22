@@ -21,4 +21,8 @@ public class EnemyTracker : MonoBehaviour
             _onRoomCleared?.Invoke();
         }
     }
+
+    public int EnemiesLeft(){
+        return _enemyCount;
+    }
 }

@@ -9,6 +9,8 @@ public class EnemyMovement : MonoBehaviour
     const float AGENT_DRIFT = 0.0001f;
     private Transform _playerTransform;
 
+    private LayerMask DustMonster;
+
     [SerializeField]
     private float _movementSpeed = 50.0f;
 
@@ -52,6 +54,8 @@ public class EnemyMovement : MonoBehaviour
 
     private NavMeshAgent _navMeshAgent;
 
+    private LayerMask _mask;
+
     void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -75,6 +79,7 @@ public class EnemyMovement : MonoBehaviour
         _animator.SetFloat("Vertical", _direction.y);
 
         _navMeshAgent.speed = _movementSpeed;
+        _mask = LayerMask.GetMask("Ignore Raycast", "Dust", "Enemy");
     }
 
     void Update()
@@ -147,10 +152,9 @@ public class EnemyMovement : MonoBehaviour
 
     bool PlayerIsInLineOfSight()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, _directionToPlayer);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, _directionToPlayer, _sightDistance, layerMask: ~_mask);
         if (!hit)
-            return false;
-
+            return false;   
         return hit.collider.CompareTag("Player") && hit.distance < _sightDistance;
     }
 
