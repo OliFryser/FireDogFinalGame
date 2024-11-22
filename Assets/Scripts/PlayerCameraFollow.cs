@@ -17,7 +17,7 @@ public class PlayerCameraFollow : MonoBehaviour
 
     System.Collections.IEnumerator FindPlayer()
     {
-        yield return new WaitForSeconds(0.1f); // Small delay to ensure player is spawned
+        yield return new WaitForSeconds(0.01f); // Small delay to ensure player is spawned
 
         GameObject player = GameObject.FindGameObjectWithTag(playerTag);
         if (player != null)

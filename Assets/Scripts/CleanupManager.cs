@@ -28,7 +28,7 @@ public class CleanupManager : MonoBehaviour
         screenFade.FadeToBlack();
 
         // Wait for the fade-out to complete (adjust timing to match your fade animation)
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
 
         // Step 2: Play cleaning sound
         if (cleaningSound != null)
@@ -42,7 +42,7 @@ public class CleanupManager : MonoBehaviour
         }
 
         // Wait for cleaning sound duration (or another appropriate delay)
-        yield return new WaitForSeconds (1f);
+        yield return new WaitForSeconds (0.0f);
 
         // Step 4: Fade back in
         screenFade.FadeFromBlack();
