@@ -21,6 +21,8 @@ public class EnemyHitDetection : MonoBehaviour
 
     protected bool _isDead;
 
+    private FlashEffect _flashEffect;
+
     protected void Start()
     {
         _enemyTracker = FindAnyObjectByType<EnemyTracker>();
@@ -28,17 +30,20 @@ public class EnemyHitDetection : MonoBehaviour
         _enemyMovement = GetComponent<EnemyMovement>();
         _playerStats = FindAnyObjectByType<PlayerStats>();
         _cameraShake = FindAnyObjectByType<CameraShake>();
+        _flashEffect = GetComponent<FlashEffect>();
     }
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Light Weapon Hit Box"))
         {
+            _flashEffect.CallDamageFlash();
             GetHitLightAttack();
         }
 
         else if (other.CompareTag("Heavy Weapon Hit Box"))
         {
+            _flashEffect.CallDamageFlash();
             GetHitHeavyAttack();
         }
 

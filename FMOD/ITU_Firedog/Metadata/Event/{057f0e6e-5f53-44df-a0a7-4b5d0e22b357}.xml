@@ -89,6 +89,7 @@
 		<property name="length">
 			<value>44.803265306122448</value>
 		</property>
+		<property name="name" />
 		<relationship name="audioFile">
 			<destination>{6fdfbc01-c0da-40c8-841c-992b7169f76a}</destination>
 		</relationship>
@@ -117,6 +118,7 @@
 		<property name="length">
 			<value>44.803265306122448</value>
 		</property>
+		<property name="name" />
 		<relationship name="timeline">
 			<destination>{85f30196-31c7-43c5-a5ee-583eaa13298c}</destination>
 		</relationship>
