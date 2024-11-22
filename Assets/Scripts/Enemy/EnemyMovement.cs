@@ -9,10 +9,8 @@ public class EnemyMovement : MonoBehaviour
     const float AGENT_DRIFT = 0.0001f;
     private Transform _playerTransform;
 
-    private LayerMask DustMonster;
-
     [SerializeField]
-    private float _movementSpeed = 50.0f;
+    protected float _movementSpeed = 50.0f;
 
     [SerializeField, Range(0.01f, 2f)]
     private float _animationScaling = .03f;
@@ -26,8 +24,6 @@ public class EnemyMovement : MonoBehaviour
     public bool IsPushedBack = false;
 
     private Animator _animator;
-
-    private PlayerStats _playerStats;
 
     private Vector2 _directionToPlayer;
 
@@ -49,7 +45,6 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private CollisionSettings _horizontalEnemyCollsion;
 
-    private Rigidbody2D _rigidbody;
     private BoxCollider2D _boxCollider;
 
     private NavMeshAgent _navMeshAgent;
@@ -63,15 +58,12 @@ public class EnemyMovement : MonoBehaviour
         _navMeshAgent.updateUpAxis = false;
     }
 
-    void Start()
+    protected virtual void Start()
     {
         _playerTransform = FindAnyObjectByType<Movement>().transform;
-        _rigidbody = GetComponent<Rigidbody2D>();
 
         _boxCollider = GetComponent<BoxCollider2D>();
         UpdateCollider(_verticalEnemyCollision);
-
-        _playerStats = FindAnyObjectByType<PlayerStats>();
 
         _direction = Vector2.down;
         _animator = GetComponent<Animator>();

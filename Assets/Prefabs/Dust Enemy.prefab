@@ -170,12 +170,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7577002638160236904, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+    - {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       insertIndex: 2
       addedObject: {fileID: 991544576397119357}
+    - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 7527650631807188566}
     - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2517917438149689072}
@@ -207,6 +211,31 @@ MonoBehaviour:
     Path: event:/Enemy/Damaged
   _pushBackOnPlayerHit: 0.8
   _particleDeath: {fileID: 7889123245587106749, guid: aa8e6a5d17a7d9c45b7679b9d61c2f55, type: 3}
+--- !u!114 &7527650631807188566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523787928985351017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d376ee55a7625b54487f8dbb9ff32892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementSpeed: 3.5
+  _animationScaling: 2
+  _sightDistance: 7
+  _knockBackSpeed: 4
+  IsPushedBack: 0
+  _verticalEnemyCollision:
+    Offset: {x: 0, y: 0}
+    Size: {x: 0.5, y: 0.5}
+  _horizontalEnemyCollsion:
+    Offset: {x: 0, y: 0}
+    Size: {x: 0.5, y: 0.5}
+  _minSpeed: 3
+  _maxSpeed: 5
 --- !u!114 &2517917438149689072
 MonoBehaviour:
   m_ObjectHideFlags: 0
