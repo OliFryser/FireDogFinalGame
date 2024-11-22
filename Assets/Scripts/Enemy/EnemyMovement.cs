@@ -84,7 +84,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        _directionToPlayer = _playerTransform.position - transform.position;
+        _directionToPlayer = (_playerTransform.position - transform.position).normalized;
 
         if (IsPushedBack)
         {
@@ -96,13 +96,14 @@ public class EnemyMovement : MonoBehaviour
             }
             else
             {
-                
+
                 StopPush();
             }
         }
         else if (_isStunned)
         {
-            if (_currentStunTimer < _totalStunTimer){
+            if (_currentStunTimer < _totalStunTimer)
+            {
                 _currentStunTimer += Time.deltaTime;
                 _navMeshAgent.velocity = Vector2.zero;
             }
@@ -154,7 +155,7 @@ public class EnemyMovement : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, _directionToPlayer, _sightDistance, layerMask: ~_mask);
         if (!hit)
-            return false;   
+            return false;
         return hit.collider.CompareTag("Player") && hit.distance < _sightDistance;
     }
 
@@ -210,6 +211,10 @@ public class EnemyMovement : MonoBehaviour
     {
         return _direction;
     }
+
+    public Vector2 GetDirectionToPlayer()
+        => (transform.position - _playerTransform.position).normalized;
+
 
     [Serializable]
     struct CollisionSettings

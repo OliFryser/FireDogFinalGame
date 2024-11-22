@@ -17,6 +17,10 @@ PrefabInstance:
       value: 0.5059169
       objectReference: {fileID: 0}
     - target: {fileID: 471079251320473491, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 471079251320473491, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_Offset.x
       value: 0.007374376
       objectReference: {fileID: 0}
@@ -38,11 +42,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01
+      value: -2.8351007
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.47
+      value: 4.539823
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -97,6 +101,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: _movementSpeed
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: _sightDistance
       value: 7
       objectReference: {fileID: 0}
@@ -124,6 +132,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1595736872862477925, guid: 50132ca1fffcdb243bed96ec87f4690a, type: 3}
+    - target: {fileID: 7395499960486680252, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7395499960486680252, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7395499960486680252, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7577002638160236904, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: _health
       value: 1
@@ -144,8 +164,43 @@ PrefabInstance:
       propertyPath: m_ExcludeLayers.m_Bits
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8722602593839996403, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7577002638160236904, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 991544576397119357}
   m_SourcePrefab: {fileID: 100100000, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+--- !u!1 &7523787928985351017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+  m_PrefabInstance: {fileID: 8643198166234461512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &991544576397119357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523787928985351017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002960d5dd1900f47a40919ecad49841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 1
+  Enemyhit:
+    Guid:
+      Data1: 1495619684
+      Data2: 1273727337
+      Data3: -1731466579
+      Data4: 153182977
+    Path: event:/Enemy/Damaged
+  _pushBackOnPlayerHit: 0.8
+  _particleDeath: {fileID: 7889123245587106749, guid: aa8e6a5d17a7d9c45b7679b9d61c2f55, type: 3}

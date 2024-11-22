@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,13 +17,19 @@ public class EnemyTracker : MonoBehaviour
     public void UnregisterEnemy()
     {
         _enemyCount--;
+        StartCoroutine(SpawnBuffer());
+    }
+    // We add this buffer to handle if a couch dies before spawning it's dusts enemies
+    private IEnumerator SpawnBuffer()
+    {
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
         if (_enemyCount == 0)
-        {
             _onRoomCleared?.Invoke();
-        }
     }
 
-    public int EnemiesLeft(){
+    public int EnemiesLeft()
+    {
         return _enemyCount;
     }
 }

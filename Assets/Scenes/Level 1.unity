@@ -195,10 +195,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5006879077415444052, guid: 5330a4f22b8fda6448aab7ff85038e7e, type: 3}
-      propertyPath: _knockBackSpeed
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 7523787928985351017, guid: 5330a4f22b8fda6448aab7ff85038e7e, type: 3}
       propertyPath: m_Name
       value: Dust Enemy

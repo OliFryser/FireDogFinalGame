@@ -1,27 +1,36 @@
-using System;
-using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using FMODUnity;
 
-public class SpawnDustEnemy : EnemyHitDetection
+public class CouchHitDetection : EnemyHitDetection
 {
 
     [SerializeField]
     private GameObject _dustEnemy;
 
+    [SerializeField]
+    private float offset = 2f;
 
-    protected override void GetHitLightAttack(){
+
+    protected override void GetHitLightAttack()
+    {
         base.GetHitLightAttack();
-        Instantiate(_dustEnemy, transform.position, quaternion.identity);
-        Instantiate(_dustEnemy, transform.position, quaternion.identity);
-
+        SpawnDust();
     }
 
-    protected override void GetHitHeavyAttack(){
+    private void SpawnDust()
+    {
+        var directionToPlayer = GetComponent<EnemyMovement>().GetDirectionToPlayer();
+
+        var leftPosition = transform.position + Quaternion.Euler(0, 0, -45) * (directionToPlayer * offset);
+        var rightPosition = transform.position + Quaternion.Euler(0, 0, 45) * (directionToPlayer * offset);
+
+        Instantiate(_dustEnemy, leftPosition, quaternion.identity);
+        Instantiate(_dustEnemy, rightPosition, quaternion.identity);
+    }
+
+    protected override void GetHitHeavyAttack()
+    {
         base.GetHitHeavyAttack();
-        Instantiate(_dustEnemy, transform.position, quaternion.identity);
         Instantiate(_dustEnemy, transform.position, quaternion.identity);
     }
 
