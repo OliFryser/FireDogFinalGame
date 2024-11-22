@@ -176,6 +176,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       insertIndex: 2
       addedObject: {fileID: 991544576397119357}
+    - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2517917438149689072}
   m_SourcePrefab: {fileID: 100100000, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
 --- !u!1 &7523787928985351017 stripped
 GameObject:
@@ -204,3 +207,17 @@ MonoBehaviour:
     Path: event:/Enemy/Damaged
   _pushBackOnPlayerHit: 0.8
   _particleDeath: {fileID: 7889123245587106749, guid: aa8e6a5d17a7d9c45b7679b9d61c2f55, type: 3}
+--- !u!114 &2517917438149689072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523787928985351017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6031c2d20e3994590ff669cbfbff4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flashColor: {r: 1, g: 1, b: 1, a: 1}
+  _flashTime: 0.25
