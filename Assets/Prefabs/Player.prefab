@@ -472,7 +472,7 @@ MonoBehaviour:
   Damage: 10
   EnemyStunDuration: 0.5
   PlayerPushBack: 15
-  EnemyPushBack: 0.5
+  EnemyPushBack: 1
 --- !u!114 &9051645628794513165
 MonoBehaviour:
   m_ObjectHideFlags: 0
