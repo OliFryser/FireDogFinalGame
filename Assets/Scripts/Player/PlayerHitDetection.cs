@@ -12,7 +12,6 @@ public class PlayerHitDetection : MonoBehaviour
     private Movement _playerMovement;
     private Animator _animator;
     private Light2D _flashlight;
-    private bool _invincible;
     private FlashEffect _flashEffect;
     private InvincibilityManager _invincibilityManager;
 
@@ -96,12 +95,17 @@ public class PlayerHitDetection : MonoBehaviour
 
     public IEnumerator MakeInvincible(float time)
     {
-        _invincible = true;
+        if (_invincibilityManager == null) yield break;
+
+        // Start invincibility in the manager
+        StartCoroutine(_invincibilityManager.MakeInvincible(time));
+
+        // Handle collision ignoring while invincible
         Physics2D.IgnoreLayerCollision(0, 3, true);
         Physics2D.IgnoreLayerCollision(0, 6, true);
         yield return new WaitForSeconds(time);
         Physics2D.IgnoreLayerCollision(0, 3, false);
         Physics2D.IgnoreLayerCollision(0, 6, false);
-        _invincible = false;
     }
+
 }
