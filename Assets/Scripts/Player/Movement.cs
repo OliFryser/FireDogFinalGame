@@ -38,6 +38,7 @@ public class Movement : MonoBehaviour
     private bool _dodging;
     private PlayerHitDetection _hitDetection;
     private PlayerStats _playerStats;
+    private InvincibilityManager _invincibilityManager;
 
     public bool IsMoving => _direction.sqrMagnitude > 0.01f;
 
@@ -130,6 +131,8 @@ public class Movement : MonoBehaviour
 
     public void GetPushed(Vector2 enemyDirection)
     {
+        if (_invincibilityManager != null && _invincibilityManager.IsInvincible) return;
+
         _isPushed = true;
         _direction = (enemyDirection - _direction).normalized;
         _totalPushDistance = _playerStats.PlayerPushBack;

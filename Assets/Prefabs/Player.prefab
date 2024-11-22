@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 8946267332930503242}
   - component: {fileID: 2164337826507384195}
   - component: {fileID: 9147524884182715942}
+  - component: {fileID: 7907729189989441925}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -522,5 +523,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6031c2d20e3994590ff669cbfbff4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flashColor: {r: 5.1152873, g: 5.1152873, b: 5.1152873, a: 1}
-  _flashTime: 0.25
+  _flashColor: {r: 766.99603, g: 766.99603, b: 766.99603, a: 1}
+  _flashTime: 0.2
+--- !u!114 &7907729189989441925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757568798257597297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365246dbf92d037448eafdea7a7a212e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 4907875650609213731}
+  blinkInterval: 0.1
+  invincibilityDuration: 0.5
