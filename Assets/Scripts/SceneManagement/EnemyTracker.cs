@@ -25,7 +25,10 @@ public class EnemyTracker : MonoBehaviour
         yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
         if (_enemyCount == 0)
+        {
+            StopAllCoroutines();
             _onRoomCleared?.Invoke();
+        }
     }
 
     public int EnemiesLeft()

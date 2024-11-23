@@ -3,32 +3,16 @@ using UnityEngine.InputSystem;
 
 public class Merchant : Interactable
 {
-    [SerializeField]
-    private float _promptDistance = 1f;
-    private Transform _playerTransform;
     private ButtonPrompt _interactionPrompt;
     private PlayerInput _playerInput;
     private RoomManager _roomManager;
-    private bool _hasShopped;
 
-    void Start()
+    protected override void Start()
     {
-        _playerTransform = FindFirstObjectByType<Movement>().transform;
+        base.Start();
         _playerInput = _playerTransform.GetComponent<PlayerInput>();
         _interactionPrompt = GetComponentInChildren<ButtonPrompt>();
         _roomManager = FindFirstObjectByType<RoomManager>();
-    }
-
-    void Update()
-    {
-        if (_hasShopped)
-            return;
-
-        float distance = Vector3.Distance(_playerTransform.position, transform.position);
-        if (IsInteractable = distance <= _promptDistance)
-            _interactionPrompt.ShowPrompt(GetTypeFromCurrentControlScheme(_playerInput.currentControlScheme));
-        else
-            _interactionPrompt.HidePrompt();
     }
 
     private ButtonPromptTypes GetTypeFromCurrentControlScheme(string controlScheme)
@@ -41,9 +25,17 @@ public class Merchant : Interactable
 
     public override void Interact()
     {
+        base.Interact();
         _roomManager.OpenUpgradeMenu();
-        _hasShopped = true;
-        IsInteractable = false;
+    }
+
+    public override void Highlight()
+    {
+        _interactionPrompt.ShowPrompt(GetTypeFromCurrentControlScheme(_playerInput.currentControlScheme));
+    }
+
+    public override void UnHighlight()
+    {
         _interactionPrompt.HidePrompt();
     }
 }
