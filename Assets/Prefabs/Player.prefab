@@ -775,4 +775,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 4907875650609213731}
   blinkInterval: 0.1
+  blinkAlpha: 0.4
+  blinkToBlackAmount: 0.395
   invincibilityDuration: 1
