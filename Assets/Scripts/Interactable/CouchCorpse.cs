@@ -7,10 +7,18 @@ public class CouchCorpse : CleaningInteract
     [SerializeField]
     private GameObject _dustEnemy;
 
+    private EnemyTracker _enemyTracker;
+
     private float _spawnTimer;
 
     [SerializeField]
     private float _spawnRate;
+
+    void Start(){
+        base.Start();
+        _enemyTracker = FindAnyObjectByType<EnemyTracker>();
+        _enemyTracker.RegisterEnemy();
+    }
 
     // Update is called once per frame
     void Update()
@@ -32,6 +40,7 @@ public class CouchCorpse : CleaningInteract
     public override void Interact()
     {
         base.Interact();
+        _enemyTracker.UnregisterEnemy();
 
     }
 }

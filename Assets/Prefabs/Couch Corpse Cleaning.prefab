@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Couch Corpse Cleaning
       objectReference: {fileID: 0}
+    - target: {fileID: 8936609206731605910, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1204486778053860194, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
     m_RemovedGameObjects: []
