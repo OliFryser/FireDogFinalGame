@@ -10,11 +10,14 @@ public class Cleanable : Interactable
 
     private SpriteRenderer _spriteRenderer;
 
+    private PlayerStats _playerStats;
+
     public override void Interact()
     {
-        //TODO Cleaning Mechanic
+
         Debug.Log("Cleaned!");
         base.Interact();
+        _playerStats.AddCoins(_playerStats.CleaningReward);
     }
 
     protected override void Start()
@@ -23,6 +26,7 @@ public class Cleanable : Interactable
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _outlinedMaterial = _spriteRenderer.material;
         _spriteRenderer.material = _defaultMaterial;
+        _playerStats = FindAnyObjectByType<PlayerStats>();
     }
 
     public override void Highlight()
