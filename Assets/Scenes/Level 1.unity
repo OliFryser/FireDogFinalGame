@@ -335,7 +335,7 @@ Transform:
   m_GameObject: {fileID: 557659721}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.015197188, y: 0.63827205, z: 0}
+  m_LocalPosition: {x: -0.009379476, y: 0.63827205, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -431,6 +431,177 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!1001 &1056537457
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6205992244171443281, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_Name
+      value: Cleanable Couch
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.844069
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.73693
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+--- !u!1001 &1165569639
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6205992244171443281, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_Name
+      value: Cleanable Couch
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.5119114
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.72446
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+--- !u!1001 &1662498993
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6205992244171443281, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_Name
+      value: Cleanable Couch
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.075216
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.99524
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716842354341207552, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8434999df4e40c4998052f6e4ccce78, type: 3}
 --- !u!4 &89478363388255733
 Transform:
   m_ObjectHideFlags: 0
@@ -897,7 +1068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4144342188586324018, guid: 46569698c88f25d4a88468aeb3174b24, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.77160025
+      value: 0.777418
       objectReference: {fileID: 0}
     - target: {fileID: 6664561930401912369, guid: 46569698c88f25d4a88468aeb3174b24, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6297,7 +6468,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: b010bfcdce3c3f94da82c89cbc67dd3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6376,3 +6547,6 @@ SceneRoots:
   - {fileID: 5112042538420799259}
   - {fileID: 214277670}
   - {fileID: 557659724}
+  - {fileID: 1056537457}
+  - {fileID: 1165569639}
+  - {fileID: 1662498993}

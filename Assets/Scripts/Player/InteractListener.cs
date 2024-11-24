@@ -4,17 +4,28 @@ using UnityEngine.InputSystem;
 
 public class InteractListener : MonoBehaviour
 {
-    void OnInteract(InputValue _)
+    private Interactable _closestInteractable;
+
+    void Update()
     {
-        var closestInteractable =
+        var newClosestInteractable =
             FindObjectsByType<Interactable>(FindObjectsSortMode.None)
                 .Where(i => i.IsInteractable)
-                .OrderByDescending(i => Vector3.Distance(transform.position, i.transform.position))
+                .OrderBy(i => Vector3.Distance(transform.position, i.transform.position))
                 .FirstOrDefault();
 
-        if (closestInteractable is not null)
+        if (_closestInteractable != newClosestInteractable)
         {
-            closestInteractable.Interact();
+            _closestInteractable?.UnHighlight();
+            newClosestInteractable?.Highlight();
+            _closestInteractable = newClosestInteractable;
         }
+    }
+
+    void OnInteract(InputValue _)
+    {
+        _closestInteractable?.Interact();
+        _closestInteractable?.UnHighlight();
+        _closestInteractable = null;
     }
 }
