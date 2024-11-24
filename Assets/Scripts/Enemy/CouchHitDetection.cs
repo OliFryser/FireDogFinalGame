@@ -10,6 +10,9 @@ public class CouchHitDetection : EnemyHitDetection
     [SerializeField]
     private float offset = 2f;
 
+    [SerializeField]
+    private GameObject _couchCorpse;
+
 
     protected override void GetHitLightAttack()
     {
@@ -32,6 +35,11 @@ public class CouchHitDetection : EnemyHitDetection
     {
         base.GetHitHeavyAttack();
         Instantiate(_dustEnemy, transform.position, quaternion.identity);
+    }
+
+    protected override void Die(){
+        base.Die();
+        Instantiate(_couchCorpse, transform.position, quaternion.identity);
     }
 
 }

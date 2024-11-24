@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9001b162b28caa644850479a748e210c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _knockBackSpeed: 5
   canMove: 1
   _animationScaling: 0.015
   _idleAnimationScaling: 0.01

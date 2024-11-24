@@ -275,3 +275,4 @@ MonoBehaviour:
   _pushBackOnPlayerHit: 0.8
   _dustEnemy: {fileID: 7523787928985351017, guid: 5330a4f22b8fda6448aab7ff85038e7e, type: 3}
   offset: 0.15
+  _couchCorpse: {fileID: 1156346595925651714, guid: df5e2072e64538343a58344a5bde3648, type: 3}

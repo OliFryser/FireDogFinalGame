@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7784786019367810708
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3498509791058502783, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498509791058502783, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498509791058502783, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498509791058502783, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498509791058502783, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498509791058502783, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498509791058502783, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498509791058502783, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498509791058502783, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498509791058502783, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936609206731605910, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+      propertyPath: m_Name
+      value: Couch Corpse Cleaning
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1204486778053860194, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8936609206731605910, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5988939813235367064}
+  m_SourcePrefab: {fileID: 100100000, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+--- !u!1 &1156346595925651714 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8936609206731605910, guid: b2b4efc8bd9e7504dae335ab10d65fd7, type: 3}
+  m_PrefabInstance: {fileID: 7784786019367810708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-5988939813235367064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156346595925651714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ca5316a43c34149a4d19762c6b731a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsInteractable: 0
+  _promptDistance: 1
+  _cleanSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  _dustEnemy: {fileID: 7523787928985351017, guid: 5330a4f22b8fda6448aab7ff85038e7e, type: 3}
+  _spawnRate: 2
