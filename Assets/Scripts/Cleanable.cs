@@ -4,8 +4,11 @@ using UnityEngine;
 public class Cleanable : Interactable
 {
     [SerializeField]
-    private float _outlineThickness = 1.0f;
-    private Material _material;
+    private Material _defaultMaterial;
+
+    private Material _outlinedMaterial;
+
+    private SpriteRenderer _spriteRenderer;
 
     public override void Interact()
     {
@@ -17,16 +20,18 @@ public class Cleanable : Interactable
     protected override void Start()
     {
         base.Start();
-        _material = GetComponent<SpriteRenderer>().material;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _outlinedMaterial = _spriteRenderer.material;
+        _spriteRenderer.material = _defaultMaterial;
     }
 
     public override void Highlight()
     {
-        _material.SetFloat("_Thickness", _outlineThickness);
+        _spriteRenderer.material = _outlinedMaterial;
     }
 
     public override void UnHighlight()
     {
-        _material.SetFloat("_Thickness", 0);
+        _spriteRenderer.material = _defaultMaterial;
     }
 }

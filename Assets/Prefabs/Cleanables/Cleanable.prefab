@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactDistance: 2.5
   IsInteractable: 0
-  _outlineThickness: 1
+  _defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
 --- !u!61 &39745986970491309
 BoxCollider2D:
   m_ObjectHideFlags: 0
