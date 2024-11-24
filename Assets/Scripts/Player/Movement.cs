@@ -64,11 +64,13 @@ public class Movement : MonoBehaviour
     {
         if (!canMove) return;
 
+        Vector2 totalForce = Vector2.zero;
+
         if (_isPushed)
         {
             if (_currentPushDistance < _totalPushDistance)
             {
-                _rigidBody2D.AddForce(_movementSpeed * _knockBackSpeed * _pushDirection);
+                totalForce += _pushDirection * _movementSpeed * _knockBackSpeed;
                 _currentPushDistance += _movementSpeed * _knockBackSpeed * Time.fixedDeltaTime;
             }
             else
@@ -76,24 +78,24 @@ public class Movement : MonoBehaviour
                 StopPush();
             }
         }
-        else
+
+        if (!_playerWeapon.IsAttacking)
         {
-            if (!_playerWeapon.IsAttacking)
+            if (IsMoving)
+                PreviousDirection = _direction;
+            if (_dodging && !_dodgeOnCooldown)
             {
-                if (IsMoving)
-                    PreviousDirection = _direction;
-                if (_dodging && !_dodgeOnCooldown)
-                {
-                    DoDodgeRoll();
-                }
-                else
-                {
-                    _rigidBody2D.AddForce(_direction * _movementSpeed);
-                }
-                FlipSprite();
-                UpdateAnimator();
+                DoDodgeRoll();
             }
+            else
+            {
+                totalForce += _direction * _movementSpeed;
+            }
+            FlipSprite();
+            UpdateAnimator();
         }
+
+        _rigidBody2D.AddForce(totalForce);
     }
 
     private void UpdateAnimator()
@@ -122,7 +124,6 @@ public class Movement : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         else
             transform.localScale = new Vector3(1, 1, 1);
-
     }
 
     // Used by input system
@@ -151,15 +152,16 @@ public class Movement : MonoBehaviour
     public void StopPush()
     {
         _isPushed = false;
-        _direction = Vector2.zero;
+        // _direction = Vector2.zero; // Removed to maintain movement
         _totalPushDistance = 0;
         _currentPushDistance = 0;
     }
 
 
     void DoDodgeRoll()
-     {
-        if(_currentDodgeDistance == 0){
+    {
+        if (_currentDodgeDistance == 0)
+        {
             _animator.SetTrigger("Dodge");
             StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime));
         }
@@ -168,17 +170,20 @@ public class Movement : MonoBehaviour
             _rigidBody2D.AddForce(PreviousDirection * (_movementSpeed * _dogdeSpeedScalar));
             _currentDodgeDistance += _movementSpeed * _dogdeSpeedScalar * Time.fixedDeltaTime;
         }
-        else {
-        _currentDodgeDistance = 0;
-        _dodging = false;
-        StartCoroutine(DodgeOnCooldown(_dodgeCooldown));
+        else
+        {
+            _currentDodgeDistance = 0;
+            _dodging = false;
+            StartCoroutine(DodgeOnCooldown(_dodgeCooldown));
         }
     }
 
-    IEnumerator DodgeOnCooldown(float cooldown){
+    IEnumerator DodgeOnCooldown(float cooldown)
+    {
         _dodgeOnCooldown = true;
         yield return new WaitForSeconds(cooldown);
         _dodgeOnCooldown = false;
     }
 
 }
+
