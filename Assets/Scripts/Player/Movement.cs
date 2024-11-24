@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,11 +20,14 @@ public class Movement : MonoBehaviour
     private float _idleAnimationScaling = .015f;
 
     [Header("Dodging")]
-    [SerializeField]
-    private float _totalDodgeDistance;
+    private float _totalDodgeDistance => _playerStats.DodgeDistance;
 
     [SerializeField, Range(1, 15)]
     private float _dogdeSpeedScalar;
+
+    private float _dodgeCooldown => _playerStats.DodgeCooldown;
+
+    private bool _dodgeOnCooldown;
 
     [SerializeField]
     private float _invincibilityTime;
@@ -78,7 +82,7 @@ public class Movement : MonoBehaviour
             {
                 if (IsMoving)
                     PreviousDirection = _direction;
-                if (_dodging)
+                if (_dodging && !_dodgeOnCooldown)
                 {
                     DoDodgeRoll();
                 }
@@ -130,7 +134,8 @@ public class Movement : MonoBehaviour
 
     void OnDodgeRoll(InputValue _)
     {
-        _dodging = true;
+        if (!_dodgeOnCooldown)
+            _dodging = true;
     }
 
 
@@ -153,15 +158,27 @@ public class Movement : MonoBehaviour
 
 
     void DoDodgeRoll()
-    {
-        _animator.SetTrigger("Dodge");
-        StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime));
-        while (_currentDodgeDistance < _totalDodgeDistance)
+     {
+        if(_currentDodgeDistance == 0){
+            _animator.SetTrigger("Dodge");
+            StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime));
+        }
+        if (_currentDodgeDistance < _totalDodgeDistance)
         {
             _rigidBody2D.AddForce(PreviousDirection * (_movementSpeed * _dogdeSpeedScalar));
             _currentDodgeDistance += _movementSpeed * _dogdeSpeedScalar * Time.fixedDeltaTime;
         }
+        else {
         _currentDodgeDistance = 0;
         _dodging = false;
+        StartCoroutine(DodgeOnCooldown(_dodgeCooldown));
+        }
     }
+
+    IEnumerator DodgeOnCooldown(float cooldown){
+        _dodgeOnCooldown = true;
+        yield return new WaitForSeconds(cooldown);
+        _dodgeOnCooldown = false;
+    }
+
 }

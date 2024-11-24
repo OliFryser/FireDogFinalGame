@@ -14,6 +14,14 @@ public class PlayerStats : MonoBehaviour
     public float PlayerPushBack;
     public float EnemyPushBack;
 
+    public float DodgeCooldown;
+
+    public float DodgeDistance;
+
+    public int CoinAmount;
+
+    public int CleaningReward;
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -42,15 +50,23 @@ public class PlayerStats : MonoBehaviour
         _healthUIManager.UpdateHearts(_currentHealth);
     }
 
-    public void Heal(int amount)
+    public void IncreaseHealth(int amount)
     {
         _currentHealth += amount;
-        if (_currentHealth > MaxHealth)
-            _currentHealth = MaxHealth;
+        MaxHealth += amount;
         _healthUIManager.UpdateHearts(_currentHealth);
     }
 
     public int GetCurrentHealth() => _currentHealth;
+
+
+    public void AddCoins(int amount){
+        CoinAmount += amount;
+    }
+
+    public void RemoveCoins(int amount){
+        CoinAmount -= amount;
+    }
 
 
     public void Reset()
@@ -61,4 +77,5 @@ public class PlayerStats : MonoBehaviour
         _currentHealth = 6;
         EnemyStunDuration = 1.0f;
     }
+
 }
