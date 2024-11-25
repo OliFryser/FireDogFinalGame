@@ -129,5 +129,6 @@ MonoBehaviour:
   _interactDistance: 1.5
   IsInteractable: 0
   _defaultMaterial: {fileID: 0}
+  _coin: {fileID: 6682218987564803474, guid: fdc4eacaabdcd254aabceeb5c4428998, type: 3}
   _dustEnemy: {fileID: 7523787928985351017, guid: 5330a4f22b8fda6448aab7ff85038e7e, type: 3}
   _spawnRate: 3
