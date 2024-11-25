@@ -1,16 +1,28 @@
 fileFormatVersion: 2
-guid: ad2e0c468d10be34b918fddc36cd2e54
+guid: 558185729f483b64c96ae9d273ce8d35
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5239211598299797751
-    second: brokenCouch160x160_0
+      213: -8152770417259989710
+    second: Decoration_assets_0
   - first:
-      213: -2877241228509798518
-    second: brokenCouch160x160_1
+      213: -3328590800118834618
+    second: Decoration_assets_1
   - first:
-      213: -649193589423695704
-    second: brokenCouch160x160_2
+      213: 1226728599319111200
+    second: Decoration_assets_2
+  - first:
+      213: 1330641772752506332
+    second: Decoration_assets_3
+  - first:
+      213: 2272839268818749033
+    second: Decoration_assets_4
+  - first:
+      213: 8466013487363371117
+    second: Decoration_assets_5
+  - first:
+      213: -8287641998158882
+    second: Decoration_assets_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +93,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -132,13 +144,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: brokenCouch160x160_0
+      name: Decoration_assets_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 160
+        x: 8
+        y: 72
+        width: 48
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f814cba03b65b840800000000000000
-      internalID: 5239211598299797751
+      spriteID: 235b7ef208a8bde80800000000000000
+      internalID: -8152770417259989710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brokenCouch160x160_1
+      name: Decoration_assets_1
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 160
-        height: 160
+        x: 96
+        y: 80
+        width: 65
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8f9091d85cf118d0800000000000000
-      internalID: -2877241228509798518
+      spriteID: 64a984c8d487ec1d0800000000000000
+      internalID: -3328590800118834618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: brokenCouch160x160_2
+      name: Decoration_assets_2
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 160
-        height: 160
+        x: 193
+        y: 65
+        width: 62
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,8 +203,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a890f7bed99df6f0800000000000000
-      internalID: -649193589423695704
+      spriteID: 0266a3e5927360110800000000000000
+      internalID: 1226728599319111200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoration_assets_3
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 66
+        width: 20
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdd853c64a3677210800000000000000
+      internalID: 1330641772752506332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoration_assets_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 34
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9660081e54fba8f10800000000000000
+      internalID: 2272839268818749033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoration_assets_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 35
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d60b5f179625d7570800000000000000
+      internalID: 8466013487363371117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Decoration_assets_6
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 38
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed39caafe6e82eff0800000000000000
+      internalID: -8287641998158882
       vertices: []
       indices: 
       edges: []
@@ -201,7 +301,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 30bbadaef73275a4b9ae1dc7131990c9
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +310,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      brokenCouch160x160_0: 5239211598299797751
-      brokenCouch160x160_1: -2877241228509798518
-      brokenCouch160x160_2: -649193589423695704
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
