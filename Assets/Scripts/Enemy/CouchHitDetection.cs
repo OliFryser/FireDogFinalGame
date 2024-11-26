@@ -1,18 +1,22 @@
+using System;
+using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 
 public class CouchHitDetection : EnemyHitDetection
 {
-
     [SerializeField]
     private GameObject _dustEnemy;
 
     [SerializeField]
-    private GameObject _couchCorpse;
+    private GameObject _couchCorpseHorizontal;
+    [SerializeField]
+    private GameObject _couchCorpseUp;
+    [SerializeField]
+    private GameObject _couchCorpseDown;
 
     [SerializeField]
     private float offset = 2f;
-
 
     protected override void GetHitLightAttack()
     {
@@ -37,9 +41,22 @@ public class CouchHitDetection : EnemyHitDetection
         Instantiate(_dustEnemy, transform.position, quaternion.identity);
     }
 
-    protected override void Die(){
+    protected override void Die()
+    {
+        Vector3 direction = Utils.GetCardinalDirection(_enemyMovement.GetEnemyDirection());
+        GameObject prefab = GetCorpsePrefabFromDirection(direction);
+        Instantiate(prefab, transform.position, quaternion.identity);
         base.Die();
-        Instantiate(_couchCorpse, transform.position, quaternion.identity);
+    }
+
+    private GameObject GetCorpsePrefabFromDirection(Vector3 direction)
+    {
+        if (direction == Vector3.left || direction == Vector3.right)
+            return _couchCorpseHorizontal;
+        else if (direction == Vector3.up)
+            return _couchCorpseUp;
+        else
+            return _couchCorpseDown;
     }
 
 
