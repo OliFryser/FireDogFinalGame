@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System;
 
 public class ScreenFade : MonoBehaviour
 {
@@ -27,7 +29,7 @@ public class ScreenFade : MonoBehaviour
         fadeAnimator.SetTrigger("FadeIn");
 
         // Unlock input after the fade duration
-        Invoke(nameof(UnlockInputAfterFade), fadeDuration);
+        StartCoroutine(FadeTimer(fadeDuration));
     }
 
     private void UnlockInputAfterFade()
@@ -36,5 +38,10 @@ public class ScreenFade : MonoBehaviour
         {
             _inputLock.UnlockInput();
         }
+    }
+
+    IEnumerator FadeTimer(float timer){
+        yield return new WaitForSeconds(timer);
+        UnlockInputAfterFade();
     }
 }

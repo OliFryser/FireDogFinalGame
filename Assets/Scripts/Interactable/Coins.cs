@@ -12,7 +12,7 @@ public class Coins : MonoBehaviour
     void Start()
     {
         _playerStats = FindAnyObjectByType<PlayerStats>();
-        PickupTimer(1f);
+        StartCoroutine(PickupTimer(1.0f));
     }
 
 
@@ -20,7 +20,7 @@ public class Coins : MonoBehaviour
         yield return new WaitForSeconds(timer);
         _playerStats.AddCoins(1);
         //TO DO animation for showing coins added to player
-        //Destroy(GameObject);
+        Destroy(gameObject);
     }
 
 }

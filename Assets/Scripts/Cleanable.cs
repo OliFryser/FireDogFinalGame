@@ -15,7 +15,7 @@ public class Cleanable : Interactable
 
     private Animator _animator;
 
-    private Movement _playerMovement;
+    protected Movement _playerMovement;
 
     private PlayerStats _playerStats;
 
@@ -28,7 +28,7 @@ public class Cleanable : Interactable
         StartCoroutine(CleaningTimer(0.9f));
         base.Interact();
         for (int i = 0; i < _playerStats.CleaningReward; i++){
-            Instantiate(_coin, transform.position, quaternion.identity);
+            Instantiate(_coin, transform.position * (i*5), quaternion.identity);
         }
        
     }
