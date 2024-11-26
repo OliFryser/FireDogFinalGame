@@ -1,33 +1,28 @@
 using UnityEngine;
 using Unity.Cinemachine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+using System;
 
 public class PlayerCameraFollow : MonoBehaviour
 {
-    public string playerTag = "Player"; // The tag used for the player
-    private CinemachineCamera virtualCamera;
+    private const string CAMERA_BOUNDS_TAG = "CameraBounds";
+    private CinemachineConfiner2D _confiner;
 
-    void Start()
+    void Awake()
     {
-        // Get the Cinemachine Virtual Camera component
-        virtualCamera = GetComponent<CinemachineCamera>();
-
-        // Look for the player after a slight delay (to ensure it's spawned)
-        StartCoroutine(FindPlayer());
+        _confiner = GetComponent<CinemachineConfiner2D>();
     }
 
-    System.Collections.IEnumerator FindPlayer()
+    void OnEnable()
     {
-        yield return new WaitForSeconds(0.01f); // Small delay to ensure player is spawned
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
 
-        GameObject player = GameObject.FindGameObjectWithTag(playerTag);
-        if (player != null)
-        {
-            virtualCamera.Follow = player.transform; // Set the player as the Follow target
-        }
-        else
-        {
-            Debug.LogWarning("Player not found in the scene!");
-        }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        GameObject sceneBounds = GameObject.FindGameObjectWithTag(CAMERA_BOUNDS_TAG);
+        _confiner.BoundingShape2D = sceneBounds?.GetComponent<Collider2D>();
     }
 }
 

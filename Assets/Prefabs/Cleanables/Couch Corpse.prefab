@@ -38,15 +38,15 @@ PrefabInstance:
       objectReference: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
     - target: {fileID: 825714132807828970, guid: 6c23ad69bc82b864f96eeae4cedcb386, type: 3}
       propertyPath: m_Color.b
-      value: 0.048949808
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 825714132807828970, guid: 6c23ad69bc82b864f96eeae4cedcb386, type: 3}
       propertyPath: m_Color.g
-      value: 0.048949808
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 825714132807828970, guid: 6c23ad69bc82b864f96eeae4cedcb386, type: 3}
       propertyPath: m_Color.r
-      value: 0.9433962
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 825714132807828970, guid: 6c23ad69bc82b864f96eeae4cedcb386, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -126,9 +126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a041e5750dda11f4b8ae63c36512bbb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactDistance: 1.5
+  _interactDistance: 2.5
   IsInteractable: 0
-  _defaultMaterial: {fileID: 0}
   _coin: {fileID: 6682218987564803474, guid: fdc4eacaabdcd254aabceeb5c4428998, type: 3}
+  _defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   _dustEnemy: {fileID: 7523787928985351017, guid: 5330a4f22b8fda6448aab7ff85038e7e, type: 3}
   _spawnRate: 3

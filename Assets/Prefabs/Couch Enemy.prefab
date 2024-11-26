@@ -274,5 +274,7 @@ MonoBehaviour:
     Path: event:/Enemy/Damaged
   _pushBackOnPlayerHit: 0.8
   _dustEnemy: {fileID: 7523787928985351017, guid: 5330a4f22b8fda6448aab7ff85038e7e, type: 3}
-  _couchCorpse: {fileID: 8789509528160490, guid: 07e391907a0d6f7488e6f91ff5cb2781, type: 3}
+  _couchCorpseHorizontal: {fileID: 1039993866788519619, guid: 9e7734ee7b533be408e28c52f613e078, type: 3}
+  _couchCorpseUp: {fileID: 1039993866788519619, guid: 2954337dc67c6c04280d16973e4e3a52, type: 3}
+  _couchCorpseDown: {fileID: 1039993866788519619, guid: fbd8bfdf257ced546913d8c6342e8950, type: 3}
   offset: 0.15

@@ -16,22 +16,26 @@ public class CouchCorpse : Cleanable
     [SerializeField]
     private float _spawnRate;
 
-    void Start(){
+    protected override void Start()
+    {
         base.Start();
         _enemyTracker = FindAnyObjectByType<EnemyTracker>();
         _enemyTracker.RegisterEnemy();
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
         base.Update();
-        if (!_hasInteracted){
-            if (_spawnTimer >= _spawnRate){
+        if (!_hasInteracted)
+        {
+            if (_spawnTimer >= _spawnRate)
+            {
                 Instantiate(_dustEnemy, transform.position, quaternion.identity);
                 _spawnTimer = 0f;
             }
-            else {
+            else
+            {
                 _spawnTimer += Time.deltaTime;
             }
 

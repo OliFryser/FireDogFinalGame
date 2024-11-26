@@ -50,7 +50,7 @@ public class EnemyMovement : MonoBehaviour
     protected NavMeshAgent _navMeshAgent;
 
     private LayerMask _mask;
-    
+
     protected virtual void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();

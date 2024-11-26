@@ -1,10 +1,21 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class InteractListener : MonoBehaviour
 {
     private Interactable _closestInteractable;
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+    {
+        _closestInteractable = null;
+    }
 
     void Update()
     {
