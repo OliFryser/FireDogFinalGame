@@ -1,5 +1,7 @@
+using FMODUnity;
 using System;
 using UnityEngine;
+using FMODUnity;
 
 public class PauseManager : MonoBehaviour
 {
@@ -25,6 +27,7 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 0.0f;
         _pauseMenu.IsPaused = true;
         if (_musicController != null) _musicController.SetPauseVolume(true);
+        RuntimeManager.PlayOneShot("event:/UI/GUI/Back");
     }
 
     public void ResumeGame()
