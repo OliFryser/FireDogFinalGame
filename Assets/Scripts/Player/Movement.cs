@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -164,6 +165,7 @@ public class Movement : MonoBehaviour
         if(_currentDodgeDistance == 0){
             _animator.SetTrigger("Dodge");
             StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime));
+            RuntimeManager.PlayOneShot("event:/Player/Dodge");
         }
         if (_currentDodgeDistance < _totalDodgeDistance)
         {
