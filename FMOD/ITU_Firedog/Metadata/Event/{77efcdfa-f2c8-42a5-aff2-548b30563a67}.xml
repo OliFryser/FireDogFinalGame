@@ -61,7 +61,7 @@
 			<value>3</value>
 		</property>
 		<property name="maximumDistance">
-			<value>9</value>
+			<value>12</value>
 		</property>
 	</object>
 	<object class="MarkerTrack" id="{4fcb1456-347d-4868-92d1-e7a9b76214ba}" />
@@ -115,7 +115,7 @@
 			<value>3</value>
 		</property>
 		<property name="maximumDistance">
-			<value>9</value>
+			<value>12</value>
 		</property>
 		<property name="userStereoSeparation">
 			<value>0</value>

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using Unity.Mathematics;
+using FMODUnity;
 
 public class Cleanable : Interactable
 {
@@ -21,14 +22,19 @@ public class Cleanable : Interactable
     private GameObject _coin;
     private float _coinOffset = .15f;
 
+
     public override void Interact()
     {
         _animator.SetTrigger("Cleaning");
         StartCoroutine(CleaningTimer(0.9f));
         base.Interact();
+
+        RuntimeManager.PlayOneShot("event:/Player/Clean_level", transform.position);
+
+        // Instantiate coins as before
         for (int i = 0; i < _playerStats.CleaningReward; i++)
         {
-            Vector3 offset = new(_coinOffset * i, .5f, 0);
+            Vector3 offset = new Vector3(_coinOffset * i, .5f, 0);
             if (i % 2 == 0)
                 Instantiate(_coin, transform.position + offset, quaternion.identity);
             else
