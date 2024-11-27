@@ -217,7 +217,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _knockBackSpeed: 5
-  canMove: 1
   _animationScaling: 0.015
   _idleAnimationScaling: 0.01
   _dogdeSpeedScalar: 3
@@ -319,6 +318,7 @@ MonoBehaviour:
   _heavyHitBoxPrefabUp:
     Prefab: {fileID: 2854161767783743423, guid: 8f898a1ad5981fe44bd720cd6c6f9015, type: 3}
     Offset: 0.9
+  HeavyAttack: 0
   MeleeLightSwing:
     Guid:
       Data1: 2001040250

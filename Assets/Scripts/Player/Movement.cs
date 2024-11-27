@@ -11,8 +11,6 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private float _knockBackSpeed = 5.0f;
 
-    public bool canMove = true;
-
     [Header("Animation scaling")]
     [SerializeField]
     private float _animationScaling = .03f;
@@ -63,38 +61,37 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!canMove) return;
-
         if (_isPushed)
         {
             if (_currentPushDistance < _totalPushDistance)
             {
                 _rigidBody2D.AddForce(_movementSpeed * _knockBackSpeed * _pushDirection);
                 _currentPushDistance += _movementSpeed * _knockBackSpeed * Time.fixedDeltaTime;
+                return;
             }
             else
             {
                 StopPush();
+                return;
             }
+        }
+
+        if (_playerWeapon.IsAttacking && _playerWeapon.HeavyAttack)
+            return;
+
+        if (IsMoving)
+            PreviousDirection = _direction;
+            
+        if (_dodging && !_dodgeOnCooldown)
+        {
+            DoDodgeRoll();
         }
         else
         {
-            if (!_playerWeapon.IsAttacking)
-            {
-                if (IsMoving)
-                    PreviousDirection = _direction;
-                if (_dodging && !_dodgeOnCooldown)
-                {
-                    DoDodgeRoll();
-                }
-                else
-                {
-                    _rigidBody2D.AddForce(_direction * _movementSpeed);
-                }
-                FlipSprite();
-                UpdateAnimator();
-            }
+            _rigidBody2D.AddForce(_direction * _movementSpeed);
         }
+        FlipSprite();
+        UpdateAnimator();
     }
 
     private void UpdateAnimator()
@@ -125,23 +122,6 @@ public class Movement : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
 
     }
-
-    // Used by input system
-    void OnMove(InputValue input)
-    {
-        if (!canMove)
-        {
-            return;
-        }
-        _direction = input.Get<Vector2>();
-    }
-
-    void OnDodgeRoll(InputValue _)
-    {
-        if (!_dodgeOnCooldown)
-            _dodging = true;
-    }
-
 
     public void GetPushed(Vector2 enemyDirection)
     {
@@ -189,4 +169,16 @@ public class Movement : MonoBehaviour
         _dodgeOnCooldown = false;
     }
 
+    #region Input System
+    void OnMove(InputValue input)
+    {
+        _direction = input.Get<Vector2>();
+    }
+
+    void OnDodgeRoll(InputValue _)
+    {
+        if (!_dodgeOnCooldown)
+            _dodging = true;
+    }
+    #endregion
 }

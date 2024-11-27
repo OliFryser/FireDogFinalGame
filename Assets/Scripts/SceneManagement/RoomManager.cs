@@ -41,45 +41,26 @@ public class RoomManager : MonoBehaviour
 
     private IEnumerator CleanupSequence()
     {
-        if (_screenFade != null)
-        {
-            if (_screenFade.TryGetComponent(out Movement playerMovement))
-            {
-                playerMovement.canMove = false;
-            }
-            _screenFade.FadeToBlack();
-            RuntimeManager.PlayOneShot(_cleaningSoundEvent);
-            yield return new WaitForSeconds(2f);
-        }
+        _inputLock.LockInput();
+        _screenFade.FadeToBlack();
+        RuntimeManager.PlayOneShot(_cleaningSoundEvent);
+        yield return new WaitForSeconds(2f);
 
-        // Step 3: Disable dirty assets
         GameObject[] dirtyAssets = GameObject.FindGameObjectsWithTag("DirtyAsset");
         foreach (GameObject asset in dirtyAssets)
         {
             asset.SetActive(false);
         }
 
-        // Wait for a bit (adjust duration as needed)
         yield return new WaitForSeconds(0.5f);
 
-        // Step 4: Fix the room lighting
         FixLight();
-
-        // Step 5: Spawn merchant if applicable
         SpawnMerchant();
 
-        // Step 6: Fade back in
-        if (_screenFade != null)
-        {
-            _screenFade.FadeFromBlack();
-            yield return new WaitForSeconds(1f); // Wait for fade-in to finish
+        _screenFade.FadeFromBlack();
+        yield return new WaitForSeconds(1f);
+        _inputLock.UnlockInput();
 
-            // Re-enable player movement after the fade-in
-            if (_screenFade.TryGetComponent(out Movement playerMovement))
-            {
-                playerMovement.canMove = true;
-            }
-        }
     }
 
     private void SpawnMerchant()
