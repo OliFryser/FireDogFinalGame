@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7192784af65f94641bed2321bd2a0e4e, type: 3}
   m_Name: Letter Speaker
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 21300000, guid: 3c4fe841d3780eb45aed84dccaa88903, type: 3}
+  Sprite: {fileID: 21300000, guid: e697744cb189f3141878fc426f6d3c6a, type: 3}
   Name: Letter
