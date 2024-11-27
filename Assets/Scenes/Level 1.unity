@@ -447,23 +447,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c49f4f11d7c00024eaf8e7492a4edb82, type: 3}
---- !u!1 &1810681383 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 452031210442048806, guid: 1be910089565424479836ec30fc5b73b, type: 3}
-  m_PrefabInstance: {fileID: 3940839301115307702}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1810681391
-MonoBehaviour:
+--- !u!1001 &2116808081
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810681383}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ba9c305af1d11444bebdb5e28c99dec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3606730900545331055, guid: f84828cfe4774ec41842912f201b0e93, type: 3}
+      propertyPath: m_Name
+      value: Lamp Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782459576644997204, guid: f84828cfe4774ec41842912f201b0e93, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.8789887
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782459576644997204, guid: f84828cfe4774ec41842912f201b0e93, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.3729615
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782459576644997204, guid: f84828cfe4774ec41842912f201b0e93, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782459576644997204, guid: f84828cfe4774ec41842912f201b0e93, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782459576644997204, guid: f84828cfe4774ec41842912f201b0e93, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782459576644997204, guid: f84828cfe4774ec41842912f201b0e93, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782459576644997204, guid: f84828cfe4774ec41842912f201b0e93, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782459576644997204, guid: f84828cfe4774ec41842912f201b0e93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782459576644997204, guid: f84828cfe4774ec41842912f201b0e93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782459576644997204, guid: f84828cfe4774ec41842912f201b0e93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f84828cfe4774ec41842912f201b0e93, type: 3}
 --- !u!4 &89478363388255733
 Transform:
   m_ObjectHideFlags: 0
@@ -752,10 +792,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2377824884858718359, guid: 1be910089565424479836ec30fc5b73b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3742687470719710990, guid: 1be910089565424479836ec30fc5b73b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -827,10 +863,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 452031210442048806, guid: 1be910089565424479836ec30fc5b73b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1810681391}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1be910089565424479836ec30fc5b73b, type: 3}
 --- !u!156049354 &4138328037498692280
 Grid:
@@ -6348,7 +6381,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b010bfcdce3c3f94da82c89cbc67dd3a, type: 2}
+  - {fileID: 2100000, guid: 54d76041ac06ae44e8c0d1b6ed119ec4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6426,3 +6459,4 @@ SceneRoots:
   - {fileID: 5112042538420799259}
   - {fileID: 557659724}
   - {fileID: 1526892397}
+  - {fileID: 2116808081}

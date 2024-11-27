@@ -16,6 +16,7 @@ public class HealthUIManager : MonoBehaviour
 
     public void CreateHearts()
     {
+        _hearts.ForEach(h => Destroy(h.gameObject));
         _hearts.Clear();
 
         int numHearts = Mathf.CeilToInt(_playerStats.MaxHealth / 2f);
@@ -27,7 +28,7 @@ public class HealthUIManager : MonoBehaviour
             _hearts.Add(heart);
         }
 
-        UpdateHearts(_playerStats.GetCurrentHealth());
+        UpdateHearts(_playerStats.CurrentHealth);
     }
 
     public void UpdateHearts(int currentHealth)

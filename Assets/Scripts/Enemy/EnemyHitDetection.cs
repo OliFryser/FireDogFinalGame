@@ -82,8 +82,8 @@ public class EnemyHitDetection : MonoBehaviour
         if (!_isDead)
         {
             _enemyTracker.UnregisterEnemy();
-            Destroy(gameObject);
             _isDead = true;
+            Destroy(gameObject);
         }
     }
 

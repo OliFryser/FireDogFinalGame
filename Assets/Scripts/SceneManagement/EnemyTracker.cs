@@ -35,4 +35,9 @@ public class EnemyTracker : MonoBehaviour
     {
         return _enemyCount;
     }
+
+    private void Update()
+    {
+        Debug.Log($"Enemies Left: {EnemiesLeft()}");
+    }
 }

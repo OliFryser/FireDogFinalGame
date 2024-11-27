@@ -57,6 +57,7 @@ public class Movement : MonoBehaviour
         _animator = GetComponent<Animator>();
         _playerWeapon = GetComponent<Weapon>();
         _hitDetection = GetComponent<PlayerHitDetection>();
+        _invincibilityManager = GetComponent<InvincibilityManager>();
     }
 
     void FixedUpdate()
@@ -81,7 +82,7 @@ public class Movement : MonoBehaviour
 
         if (IsMoving)
             PreviousDirection = _direction;
-            
+
         if (_dodging && !_dodgeOnCooldown)
         {
             DoDodgeRoll();
