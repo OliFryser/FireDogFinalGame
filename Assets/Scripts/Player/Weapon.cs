@@ -178,6 +178,7 @@ public class Weapon : MonoBehaviour
         IsAttacking = true;
         StartCoroutine(SpawnHitBoxAfterDelay(_heavyAttackHitBoxDelay, _lightAttack));
         _animator.SetTrigger("HeavyAttack");
+        RuntimeManager.PlayOneShot("event:/Player/Attack_heavy");
     }
 
     IEnumerator SpawnHitBoxAfterDelay(float delay, bool isLight)
