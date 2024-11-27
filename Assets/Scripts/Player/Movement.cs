@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 public class Movement : MonoBehaviour
 {
@@ -162,6 +163,7 @@ public class Movement : MonoBehaviour
 
     void DoDodgeRoll()
      {
+        RuntimeManager.PlayOneShot("event:/Player/Dodge");
         if(_currentDodgeDistance == 0){
             _animator.SetTrigger("Dodge");
             StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime));
