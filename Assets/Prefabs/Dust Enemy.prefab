@@ -42,11 +42,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.8351007
+      value: 0.85906506
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.539823
+      value: 9.509785
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -144,6 +144,10 @@ PrefabInstance:
       propertyPath: m_SpriteSortPoint
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7395499960486680252, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: eaf10f4363dc3bc4fbb30d1edf884dfa, type: 2}
     - target: {fileID: 7577002638160236904, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: _health
       value: 1
@@ -248,5 +252,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6031c2d20e3994590ff669cbfbff4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flashColor: {r: 1, g: 1, b: 1, a: 1}
+  _flashColor: {r: 2, g: 2, b: 2, a: 1}
   _flashTime: 0.25
