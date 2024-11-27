@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 146668911}
   - component: {fileID: 146668910}
   m_Layer: 0
-  m_Name: Intro Manager
+  m_Name: Hub Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
