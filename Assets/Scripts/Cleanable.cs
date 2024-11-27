@@ -15,7 +15,7 @@ public class Cleanable : Interactable
 
     private Animator _animator;
 
-    protected Movement _playerMovement;
+    protected InputLock _inputLock;
 
     private PlayerStats _playerStats;
 
@@ -27,10 +27,11 @@ public class Cleanable : Interactable
         _animator.SetTrigger("Cleaning");
         StartCoroutine(CleaningTimer(0.9f));
         base.Interact();
-        for (int i = 0; i < _playerStats.CleaningReward; i++){
-            Instantiate(_coin, transform.position * (i*5), quaternion.identity);
+        for (int i = 0; i < _playerStats.CleaningReward; i++)
+        {
+            Instantiate(_coin, transform.position * (i * 5), quaternion.identity);
         }
-       
+
     }
 
     protected override void Start()
@@ -39,9 +40,9 @@ public class Cleanable : Interactable
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _outlinedMaterial = _spriteRenderer.material;
         _spriteRenderer.material = _defaultMaterial;
-        _animator = GameObject.FindWithTag("Player").GetComponent<Animator>();
-        _playerMovement = GameObject.FindWithTag("Player").GetComponent<Movement>();
         _playerStats = FindAnyObjectByType<PlayerStats>();
+        _animator = _playerStats.GetComponent<Animator>();
+        _inputLock = _playerStats.GetComponent<InputLock>();
     }
 
     public override void Highlight()
@@ -54,9 +55,10 @@ public class Cleanable : Interactable
         _spriteRenderer.material = _defaultMaterial;
     }
 
-    IEnumerator CleaningTimer(float timer){
-        _playerMovement.canMove = false;
+    IEnumerator CleaningTimer(float timer)
+    {
+        _inputLock.LockInput();
         yield return new WaitForSeconds(timer);
-        _playerMovement.canMove = true;
+        _inputLock.UnlockInput();
     }
 }

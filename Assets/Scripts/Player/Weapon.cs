@@ -58,7 +58,8 @@ public class Weapon : MonoBehaviour
 
     private bool _lightAttack;
 
-    private bool _heavyAttack;
+    [HideInInspector]
+    public bool HeavyAttack;
 
     private bool _onCooldownLight;
 
@@ -82,11 +83,10 @@ public class Weapon : MonoBehaviour
             if (_lightAttack && !_onCooldownLight)
             {
                 StartCoroutine(CooldownTimer(_lightCooldown, _lightAttack));
-                _inputLocker.LockInput();
                 DoLightAttack();
 
             }
-            if (_heavyAttack && !_onCooldownHeavy)
+            if (HeavyAttack && !_onCooldownHeavy)
             {
                 StartCoroutine(CooldownTimer(_heavyCooldown, _lightAttack));
                 _inputLocker.LockInput();
@@ -136,10 +136,8 @@ public class Weapon : MonoBehaviour
 
         }
 
-
         GameObject hitBox = Instantiate(attackHitBox.Prefab, transform);
         hitBox.transform.position = hitBox.transform.position + direction * attackHitBox.Offset;
-        //Instantiate(attackHitBox.Prefab, transform.position + direction * attackHitBox.Offset, quaternion.identity);
 
         if (isLight)
             StartCoroutine(DestroyAfterDelay(hitBox, _hitBoxDestroyDelayLight));
@@ -159,7 +157,7 @@ public class Weapon : MonoBehaviour
         else
         {
             _inputLocker.UnlockInput();
-            _heavyAttack = false;
+            HeavyAttack = false;
             IsAttacking = false;
         }
     }
@@ -193,7 +191,6 @@ public class Weapon : MonoBehaviour
         yield return new WaitForSeconds(_delayLightFinish);
         _lightAttack = false;
         IsAttacking = false;
-        _inputLocker.UnlockInput();
     }
 
 
@@ -225,7 +222,7 @@ public class Weapon : MonoBehaviour
     void OnHeavyAttack(InputValue input)
     {
         if (!_onCooldownHeavy)
-            _heavyAttack = true;
+            HeavyAttack = true;
     }
 
     #endregion
