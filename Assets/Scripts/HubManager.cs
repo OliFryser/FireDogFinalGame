@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class HubManager : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class HubManager : MonoBehaviour
     private void OnDialogSequenceCompleted()
     {
         StartCoroutine(EndHubLevel());
+        RuntimeManager.PlayOneShot("event:/Environment/HUB_Door_Open");
     }
 
     private IEnumerator EndHubLevel()
