@@ -3,7 +3,6 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using FMODUnity;
 
 public class Movement : MonoBehaviour
 {
@@ -130,9 +129,10 @@ public class Movement : MonoBehaviour
     // Used by input system
     void OnMove(InputValue input)
     {
-        if (!canMove) {
+        if (!canMove)
+        {
             return;
-        } 
+        }
         _direction = input.Get<Vector2>();
     }
 
@@ -162,9 +162,9 @@ public class Movement : MonoBehaviour
 
 
     void DoDodgeRoll()
-     {
-        RuntimeManager.PlayOneShot("event:/Player/Dodge");
-        if(_currentDodgeDistance == 0){
+    {
+        if (_currentDodgeDistance == 0)
+        {
             _animator.SetTrigger("Dodge");
             StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime));
             RuntimeManager.PlayOneShot("event:/Player/Dodge");
@@ -174,14 +174,16 @@ public class Movement : MonoBehaviour
             _rigidBody2D.AddForce(PreviousDirection * (_movementSpeed * _dogdeSpeedScalar));
             _currentDodgeDistance += _movementSpeed * _dogdeSpeedScalar * Time.fixedDeltaTime;
         }
-        else {
-        _currentDodgeDistance = 0;
-        _dodging = false;
-        StartCoroutine(DodgeOnCooldown(_dodgeCooldown));
+        else
+        {
+            _currentDodgeDistance = 0;
+            _dodging = false;
+            StartCoroutine(DodgeOnCooldown(_dodgeCooldown));
         }
     }
 
-    IEnumerator DodgeOnCooldown(float cooldown){
+    IEnumerator DodgeOnCooldown(float cooldown)
+    {
         _dodgeOnCooldown = true;
         yield return new WaitForSeconds(cooldown);
         _dodgeOnCooldown = false;
