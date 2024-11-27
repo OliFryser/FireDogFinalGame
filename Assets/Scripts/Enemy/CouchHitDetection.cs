@@ -21,7 +21,8 @@ public class CouchHitDetection : EnemyHitDetection
     protected override void GetHitLightAttack()
     {
         base.GetHitLightAttack();
-        SpawnDust();
+        if (_health < 40)
+            SpawnDust();
     }
 
     private void SpawnDust()
@@ -38,7 +39,8 @@ public class CouchHitDetection : EnemyHitDetection
     protected override void GetHitHeavyAttack()
     {
         base.GetHitHeavyAttack();
-        Instantiate(_dustEnemy, transform.position, quaternion.identity);
+        if (_health < 40)
+            SpawnDust();
     }
 
     protected override void Die()
