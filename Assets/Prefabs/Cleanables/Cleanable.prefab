@@ -104,6 +104,7 @@ MonoBehaviour:
   _interactDistance: 2.5
   IsInteractable: 0
   _defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  _coin: {fileID: 6682218987564803474, guid: fdc4eacaabdcd254aabceeb5c4428998, type: 3}
 --- !u!61 &39745986970491309
 BoxCollider2D:
   m_ObjectHideFlags: 0

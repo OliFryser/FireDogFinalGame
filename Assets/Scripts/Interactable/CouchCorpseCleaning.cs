@@ -1,5 +1,7 @@
 using UnityEngine;
 using Unity.Mathematics;
+using System;
+using System.Collections;
 
 public class CouchCorpse : Cleanable
 {
@@ -45,6 +47,11 @@ public class CouchCorpse : Cleanable
     {
         base.Interact();
         _enemyTracker.UnregisterEnemy();
+        StartCoroutine(DestroyCorpse(0.9f));
+    }
+
+    IEnumerator DestroyCorpse(float timer){
+        yield return new WaitForSeconds(timer);
         Destroy(gameObject);
     }
 }

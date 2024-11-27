@@ -28,4 +28,8 @@ public class InputLock : MonoBehaviour
         else if (_lockCount < 0)
             _lockCount = 0;
     }
+
+    public int GetLockCount(){
+        return _lockCount;
+    }
 }
