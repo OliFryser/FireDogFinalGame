@@ -128,7 +128,9 @@ public class Movement : MonoBehaviour
     // Used by input system
     void OnMove(InputValue input)
     {
-        if (!canMove) return;
+        if (!canMove) {
+            return;
+        } 
         _direction = input.Get<Vector2>();
     }
 
