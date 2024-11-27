@@ -45,9 +45,11 @@ public class CouchHitDetection : EnemyHitDetection
 
     protected override void Die()
     {
-        Vector3 direction = Utils.GetCardinalDirection(_enemyMovement.GetEnemyDirection());
+        Vector3 direction = -Utils.GetCardinalDirection(_enemyMovement.GetEnemyDirection());
         GameObject prefab = GetCorpsePrefabFromDirection(direction);
-        Instantiate(prefab, transform.position, quaternion.identity);
+        GameObject instantiatedCorpse = Instantiate(prefab, transform.position, quaternion.identity);
+        if (direction == Vector3.right)
+            instantiatedCorpse.transform.localScale = new Vector3(-1, 1, 1);
         base.Die();
     }
 

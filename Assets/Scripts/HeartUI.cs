@@ -3,25 +3,32 @@ using UnityEngine.UI;
 
 public class HeartUI : MonoBehaviour
 {
-    public Image fullHeart;
-    public Image halfHeart;
+    [SerializeField]
+    private Image _fullHeart;
+    [SerializeField]
+    private Image _halfHeart;
+    [SerializeField]
+    private Image _emptyHeart;
 
     public void SetFullHeart()
     {
-        fullHeart.enabled = true;
-        halfHeart.enabled = false;
+        _fullHeart.enabled = true;
+        _halfHeart.enabled = false;
+        _emptyHeart.enabled = false;
     }
 
     public void SetHalfHeart()
     {
-        fullHeart.enabled = false;
-        halfHeart.enabled = true;
+        _fullHeart.enabled = false;
+        _halfHeart.enabled = true;
+        _emptyHeart.enabled = false;
     }
 
     public void SetEmptyHeart()
     {
-        fullHeart.enabled = false;
-        halfHeart.enabled = false;
+        _fullHeart.enabled = false;
+        _halfHeart.enabled = false;
+        _emptyHeart.enabled = true;
     }
 }
 

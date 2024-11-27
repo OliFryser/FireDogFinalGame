@@ -277,4 +277,4 @@ MonoBehaviour:
   _couchCorpseHorizontal: {fileID: 1039993866788519619, guid: 9e7734ee7b533be408e28c52f613e078, type: 3}
   _couchCorpseUp: {fileID: 1039993866788519619, guid: 2954337dc67c6c04280d16973e4e3a52, type: 3}
   _couchCorpseDown: {fileID: 1039993866788519619, guid: fbd8bfdf257ced546913d8c6342e8950, type: 3}
-  offset: 0.15
+  offset: 0.25

@@ -54,17 +54,19 @@ public class PlayerStats : MonoBehaviour
     {
         _currentHealth += amount;
         MaxHealth += amount;
-        _healthUIManager.UpdateHearts(_currentHealth);
+        _healthUIManager.CreateHearts();
     }
 
     public int GetCurrentHealth() => _currentHealth;
 
 
-    public void AddCoins(int amount){
+    public void AddCoins(int amount)
+    {
         CoinAmount += amount;
     }
 
-    public void RemoveCoins(int amount){
+    public void RemoveCoins(int amount)
+    {
         CoinAmount -= amount;
     }
 
