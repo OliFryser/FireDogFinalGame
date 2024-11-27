@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 6841724734116976723}
   - component: {fileID: 9147524884182715942}
   - component: {fileID: 7907729189989441925}
+  - component: {fileID: 7597030171523038916}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -779,6 +780,20 @@ MonoBehaviour:
   blinkAlpha: 0.4
   blinkToBlackAmount: 0.395
   invincibilityDuration: 1.3
+--- !u!114 &7597030171523038916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757568798257597297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 4757568798257597297}
 --- !u!1 &6384323679404840275
 GameObject:
   m_ObjectHideFlags: 0

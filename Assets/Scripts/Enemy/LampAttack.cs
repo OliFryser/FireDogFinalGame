@@ -1,6 +1,7 @@
 using System.Collections;
 using System.ComponentModel;
 using UnityEngine;
+using FMODUnity;
 
 public class LampAttack : MonoBehaviour
 {
@@ -61,6 +62,7 @@ public class LampAttack : MonoBehaviour
         _isAttacking = true;
         _attackRing.SetActive(true);
         _animator.SetTrigger("Attack");
+        RuntimeManager.PlayOneShotAttached("event:/Enemy/Lamp_buildup", this.gameObject);
     }
 
     // Called from the animator when the charge up finishes
@@ -68,6 +70,7 @@ public class LampAttack : MonoBehaviour
     {
         _attackRing.SetActive(false);
         StartCoroutine(FinishAttack());
+        RuntimeManager.PlayOneShotAttached("event:/Enemy/Lamp_blast", this.gameObject);
     }
 
     private IEnumerator FinishAttack()
