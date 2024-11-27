@@ -1,0 +1,451 @@
+fileFormatVersion: 2
+guid: 49e955e817e9f58409b564d0115ad75b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8094224486947298595
+    second: lampattackZap_0
+  - first:
+      213: 3110252830420318705
+    second: lampattackZap_1
+  - first:
+      213: -1018383260734184747
+    second: lampattackZap_2
+  - first:
+      213: 4932333652133860513
+    second: lampattackZap_3
+  - first:
+      213: -3635404670990816051
+    second: lampattackZap_4
+  - first:
+      213: 453816212280354834
+    second: lampattackZap_5
+  - first:
+      213: -8662592246484624870
+    second: lampattackZap_6
+  - first:
+      213: -6625651654395746375
+    second: lampattackZap_7
+  - first:
+      213: -8317991104601061042
+    second: lampattackZap_8
+  - first:
+      213: 1331968517122379447
+    second: lampattackZap_9
+  - first:
+      213: -8714871304317910354
+    second: lampattackZap_10
+  - first:
+      213: -3114322160334753617
+    second: lampattackZap_11
+  - first:
+      213: -6125951251844697836
+    second: lampattackZap_12
+  - first:
+      213: -5790871877504471159
+    second: lampattackZap_13
+  - first:
+      213: 876828465514644867
+    second: lampattackZap_14
+  - first:
+      213: -5996307224841807867
+    second: lampattackZap_15
+  - first:
+      213: -6673781699220083452
+    second: lampattackZap_16
+  - first:
+      213: -2154126622974344926
+    second: lampattackZap_17
+  - first:
+      213: 3793309830905837314
+    second: lampattackZap_18
+  - first:
+      213: 2951102475017444613
+    second: lampattackZap_19
+  - first:
+      213: -1882943155444237677
+    second: lampattackZap_20
+  - first:
+      213: 4969525914254680621
+    second: lampattackZap_21
+  - first:
+      213: 4013508557539511411
+    second: lampattackZap_22
+  - first:
+      213: -74090084796154856
+    second: lampattackZap_23
+  - first:
+      213: -2379055060303957079
+    second: lampattackZap_24
+  - first:
+      213: -5943098576755804818
+    second: lampattackZap_25
+  - first:
+      213: 9031042158652629330
+    second: lampattackZap_26
+  - first:
+      213: 8479384243097475153
+    second: lampattackZap_27
+  - first:
+      213: -4721090774366405159
+    second: lampattackZap_28
+  - first:
+      213: -8358616238834299194
+    second: lampattackZap_29
+  - first:
+      213: 4853710883506752079
+    second: lampattackZap_30
+  - first:
+      213: -5171678006132086420
+    second: lampattackZap_31
+  - first:
+      213: 7799992881217139078
+    second: lampattackZap_32
+  - first:
+      213: -1902261732013732885
+    second: lampattackZap_33
+  - first:
+      213: -5433119080638733282
+    second: lampattackZap_34
+  - first:
+      213: -4787936726472885272
+    second: lampattackZap_35
+  - first:
+      213: 3241939910382196977
+    second: lampattackZap_36
+  - first:
+      213: -9094796165124716669
+    second: lampattackZap_37
+  - first:
+      213: -7834737291331905128
+    second: lampattackZap_38
+  - first:
+      213: 5761329714720385497
+    second: lampattackZap_39
+  - first:
+      213: 7688455348205492675
+    second: lampattackZap_40
+  - first:
+      213: 8812138107217228110
+    second: lampattackZap_41
+  - first:
+      213: 9066412349288941274
+    second: lampattackZap_42
+  - first:
+      213: 5053454289475616747
+    second: lampattackZap_43
+  - first:
+      213: -5534482489418489857
+    second: lampattackZap_44
+  - first:
+      213: 7532705663310063331
+    second: lampattackZap_45
+  - first:
+      213: -6880543037870564054
+    second: lampattackZap_46
+  - first:
+      213: 5296973146497762006
+    second: lampattackZap_47
+  - first:
+      213: 5421339698676778681
+    second: lampattackZap_48
+  - first:
+      213: -1140957744509532698
+    second: lampattackZap_49
+  - first:
+      213: 5507497791120898703
+    second: lampattackZap_50
+  - first:
+      213: 7002931912249232904
+    second: lampattackZap_51
+  - first:
+      213: -5426637131583806126
+    second: lampattackZap_52
+  - first:
+      213: -3008069173663015325
+    second: lampattackZap_53
+  - first:
+      213: -3964115351580896928
+    second: lampattackZap_54
+  - first:
+      213: 427982702353390040
+    second: lampattackZap_55
+  - first:
+      213: -7525347154730416437
+    second: lampattackZap_56
+  - first:
+      213: -6032448932136406135
+    second: lampattackZap_57
+  - first:
+      213: 6393229837021993455
+    second: lampattackZap_58
+  - first:
+      213: 6164930257646859248
+    second: lampattackZap_59
+  - first:
+      213: 1066431863178305686
+    second: lampattackZap_60
+  - first:
+      213: 5755127424185941975
+    second: lampattackZap_61
+  - first:
+      213: 8857425822681420783
+    second: lampattackZap_62
+  - first:
+      213: -1466400361896290941
+    second: lampattackZap_63
+  - first:
+      213: -6934499825565702033
+    second: lampattackZap_64
+  - first:
+      213: 5696144169070702896
+    second: lampattackZap_65
+  - first:
+      213: 3882101701363911143
+    second: lampattackZap_66
+  - first:
+      213: -1802183385250401408
+    second: lampattackZap_67
+  - first:
+      213: -8594654052753316627
+    second: lampattackZap_68
+  - first:
+      213: -1511065267344711353
+    second: lampattackZap_69
+  - first:
+      213: -6567479953321610718
+    second: lampattackZap_70
+  - first:
+      213: -8194423389899694126
+    second: lampattackZap_71
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lampattackZap_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd2ec33d6b98baf80800000000000000
+      internalID: -8094224486947298595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lampattackZap_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f93bde6876d92b20800000000000000
+      internalID: 3110252830420318705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lampattackZap_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d22cbae1d9fdd1f0800000000000000
+      internalID: -1018383260734184747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lampattackZap_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a4d421f25b237440800000000000000
+      internalID: 4932333652133860513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 497f37c6b63eda347909ad683f579f94
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      lampattackZap_0: -8094224486947298595
+      lampattackZap_1: 3110252830420318705
+      lampattackZap_2: -1018383260734184747
+      lampattackZap_3: 4932333652133860513
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
