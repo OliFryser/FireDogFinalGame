@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 
 public class HubDoor : MonoBehaviour
@@ -10,6 +11,7 @@ public class HubDoor : MonoBehaviour
 
     public void OpenDoor()
     {
+        RuntimeManager.PlayOneShot("event:/Environment/HUB_Door_Open");
         _animator.SetTrigger("Open Door");
     }
 }

@@ -448,11 +448,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.11
+      value: -5.8789887
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.97
+      value: 7.3729615
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -525,6 +525,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 471079251320473491, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
     - {fileID: 3643076807879076636, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+    - {fileID: 7577002638160236904, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
@@ -540,6 +541,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4675123035937338857}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 949860497236652930}
     - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3924446319717029322}
@@ -558,6 +562,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
   m_PrefabInstance: {fileID: 3285020886613137742}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &949860497236652930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606730900545331055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06848e3bb1ddf74596f0e0f8a952f49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 60
+  Enemyhit:
+    Guid:
+      Data1: 1495619684
+      Data2: 1273727337
+      Data3: -1731466579
+      Data4: 153182977
+    Path: event:/Enemy/Damaged
+  _pushBackOnPlayerHit: 0.8
+  _lampCorpsePrefab: {fileID: 3818390079501999012, guid: 1337c489ad662d64cbf462e7bdc5c9ba, type: 3}
 --- !u!61 &3924446319717029322
 BoxCollider2D:
   m_ObjectHideFlags: 0

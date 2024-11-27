@@ -1,7 +1,5 @@
 using FMODUnity;
-using System;
 using UnityEngine;
-using FMODUnity;
 
 public class PauseManager : MonoBehaviour
 {

@@ -6,8 +6,6 @@ public class Coins : MonoBehaviour
 
 {
     private PlayerStats _playerStats;
-    
-
 
     void Start()
     {
@@ -16,7 +14,8 @@ public class Coins : MonoBehaviour
     }
 
 
-    IEnumerator PickupTimer(float timer){
+    IEnumerator PickupTimer(float timer)
+    {
         yield return new WaitForSeconds(timer);
         _playerStats.AddCoins(1);
         //TO DO animation for showing coins added to player

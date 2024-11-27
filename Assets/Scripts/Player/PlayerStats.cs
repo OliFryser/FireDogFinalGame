@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
+    private PersistentPlayerStats _peristentPlayerStats;
     public float MovementSpeed = 50.0f;
     public int MaxHealth = 6;
     public float Damage = 10.0f;
@@ -17,8 +18,6 @@ public class PlayerStats : MonoBehaviour
     public float DodgeCooldown;
 
     public float DodgeDistance;
-
-    public int CoinAmount;
 
     public int CleaningReward;
 
@@ -41,6 +40,7 @@ public class PlayerStats : MonoBehaviour
     {
         _currentHealth = MaxHealth;
         _healthUIManager.UpdateHearts(_currentHealth);
+        _peristentPlayerStats = FindAnyObjectByType<PersistentPlayerStats>();
     }
 
     public void ApplyDamage(int damage)
@@ -57,19 +57,20 @@ public class PlayerStats : MonoBehaviour
         _healthUIManager.CreateHearts();
     }
 
-    public int GetCurrentHealth() => _currentHealth;
+    public int CurrentHealth => _currentHealth;
 
 
     public void AddCoins(int amount)
     {
-        CoinAmount += amount;
+        _peristentPlayerStats.AddCoins(amount);
     }
 
     public void RemoveCoins(int amount)
     {
-        CoinAmount -= amount;
+        _peristentPlayerStats.SpendCoins(amount);
     }
 
+    public int Coins => _peristentPlayerStats.Coins;
 
     public void Reset()
     {
