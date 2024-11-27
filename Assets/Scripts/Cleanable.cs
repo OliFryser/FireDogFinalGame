@@ -21,6 +21,7 @@ public class Cleanable : Interactable
 
     [SerializeField]
     private GameObject _coin;
+    private float _coinOffset = .15f;
 
     public override void Interact()
     {
@@ -29,7 +30,11 @@ public class Cleanable : Interactable
         base.Interact();
         for (int i = 0; i < _playerStats.CleaningReward; i++)
         {
-            Instantiate(_coin, transform.position * (i * 5), quaternion.identity);
+            Vector3 offset = new(_coinOffset * i, .5f, 0);
+            if (i % 2 == 0)
+                Instantiate(_coin, transform.position + offset, quaternion.identity);
+            else
+                Instantiate(_coin, transform.position - offset, quaternion.identity);
         }
 
     }
