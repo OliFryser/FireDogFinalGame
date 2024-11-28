@@ -1,18 +1,16 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Merchant : Interactable
+public abstract class MerchantBase : Interactable
 {
     private ButtonPrompt _interactionPrompt;
     private PlayerInput _playerInput;
-    private RoomManager _roomManager;
 
     protected override void Start()
     {
         base.Start();
         _playerInput = _playerTransform.GetComponent<PlayerInput>();
         _interactionPrompt = GetComponentInChildren<ButtonPrompt>();
-        _roomManager = FindFirstObjectByType<RoomManager>();
     }
 
     private ButtonPromptTypes GetTypeFromCurrentControlScheme(string controlScheme)
@@ -22,12 +20,6 @@ public class Merchant : Interactable
         "Gamepad" => ButtonPromptTypes.Playstation,
         _ => throw new System.NotImplementedException("Unsupported Control Device")
     };
-
-    public override void Interact()
-    {
-        base.Interact();
-        _roomManager.OpenUpgradeMenu();
-    }
 
     public override void Highlight()
     {
