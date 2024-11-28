@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class LampMovement : EnemyMovement
 {
     private LampAttack _lampAttack;

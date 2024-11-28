@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using System;
 
 public class ScreenFade : MonoBehaviour
 {
@@ -40,7 +39,8 @@ public class ScreenFade : MonoBehaviour
         }
     }
 
-    IEnumerator FadeTimer(float timer){
+    IEnumerator FadeTimer(float timer)
+    {
         yield return new WaitForSeconds(timer);
         UnlockInputAfterFade();
     }

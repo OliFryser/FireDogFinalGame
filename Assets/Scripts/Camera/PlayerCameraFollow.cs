@@ -1,8 +1,6 @@
 using UnityEngine;
 using Unity.Cinemachine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Events;
-using System;
 
 public class PlayerCameraFollow : MonoBehaviour
 {

@@ -173,7 +173,9 @@ public class Movement : MonoBehaviour
     #region Input System
     void OnMove(InputValue input)
     {
-        _direction = input.Get<Vector2>();
+        Vector2 rawInput = input.Get<Vector2>();
+        if (rawInput.magnitude < 0.7)
+            _direction = rawInput.normalized;
     }
 
     void OnDodgeRoll(InputValue _)
