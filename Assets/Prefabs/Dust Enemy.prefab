@@ -42,11 +42,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.85906506
+      value: -17.276768
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.509785
+      value: 13.229137
       objectReference: {fileID: 0}
     - target: {fileID: 1867661128304396570, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movementSpeed: 3.5
   _animationScaling: 2
-  _sightDistance: 7
+  _sightDistance: 5
   _knockBackSpeed: 4
   IsPushedBack: 0
   _verticalEnemyCollision:
