@@ -1,7 +1,8 @@
 using UnityEngine;
 using System.Collections;
-using Unity.Mathematics;
 using FMODUnity;
+using System;
+using Unity.Mathematics;
 
 public class Cleanable : Interactable
 {
@@ -31,8 +32,9 @@ public class Cleanable : Interactable
 
         RuntimeManager.PlayOneShot("event:/Player/Clean_level", transform.position);
 
-        // Instantiate coins as before
-        for (int i = 0; i < _playerStats.CleaningReward; i++)
+        var coinsFromCleaning = UnityEngine.Random.Range(_playerStats.MinimumCleaningReward, _playerStats.MaximumCleaningReward);
+
+        for (int i = 0; i < coinsFromCleaning; i++)
         {
             Vector3 offset = new Vector3(_coinOffset * i, .5f, 0);
             if (i % 2 == 0)

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
@@ -19,7 +20,9 @@ public class PlayerStats : MonoBehaviour
 
     public float DodgeDistance;
 
-    public int CleaningReward;
+    public int MinimumCleaningReward = 2;
+    public int MaximumCleaningReward = 2;
+    public int CriticalAttackChance = 0;
 
     private void OnEnable()
     {
@@ -41,6 +44,7 @@ public class PlayerStats : MonoBehaviour
         _currentHealth = MaxHealth;
         _healthUIManager.UpdateHearts(_currentHealth);
         _peristentPlayerStats = FindAnyObjectByType<PersistentPlayerStats>();
+        _peristentPlayerStats.RegisterNewPlayerStats(this);
     }
 
     public void ApplyDamage(int damage)
@@ -55,6 +59,12 @@ public class PlayerStats : MonoBehaviour
         _currentHealth += amount;
         MaxHealth += amount;
         _healthUIManager.CreateHearts();
+    }
+
+    public void Heal(int amount)
+    {
+        _currentHealth += amount;
+        _healthUIManager.UpdateHearts(_currentHealth);
     }
 
     public int CurrentHealth => _currentHealth;
@@ -72,6 +82,8 @@ public class PlayerStats : MonoBehaviour
 
     public int Coins => _peristentPlayerStats.Coins;
 
+    public bool PassiveHealing { get; internal set; }
+
     public void Reset()
     {
         MovementSpeed = 100.0f;
@@ -81,4 +93,22 @@ public class PlayerStats : MonoBehaviour
         EnemyStunDuration = 1.0f;
     }
 
+    internal void IncreaseFlashLightRadius()
+    {
+        GetComponentInChildren<Light2D>().pointLightOuterRadius += .5f;
+    }
+
+    internal void IncreaseCriticalAttack()
+    {
+        CriticalAttackChance++;
+    }
+
+    internal void IncreaseCleaningReward()
+    {
+        MaximumCleaningReward++;
+        MinimumCleaningReward = (MaximumCleaningReward / MinimumCleaningReward) + 1;
+    }
+
+    internal bool IsCritical()
+        => UnityEngine.Random.Range(0f, 1f) * 100f < CriticalAttackChance;
 }

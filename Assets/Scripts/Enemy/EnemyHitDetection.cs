@@ -66,13 +66,25 @@ public class EnemyHitDetection : MonoBehaviour
         _enemyMovement.GetPushedBack(_playerStats.EnemyPushBack, _playerStats.EnemyStunDuration);
         RuntimeManager.PlayOneShot(Enemyhit);
         _cameraShake.StartShake();
-        _health -= _playerStats.Damage;
+        float damage = _playerStats.Damage;
+        if (_playerStats.IsCritical())
+        {
+            Debug.Log("Critical Hit");
+            damage *= 2;
+        }
+        _health -= damage;
     }
 
     protected virtual void GetHitHeavyAttack()
     {
         _enemyMovement.GetPushedBack(_playerStats.EnemyPushBack * 2, _playerStats.EnemyStunDuration * 2);
-        _health -= _playerStats.Damage * 2;
+        float damage = _playerStats.Damage * 2;
+        if (_playerStats.IsCritical())
+        {
+            Debug.Log("Critical Hit");
+            damage *= 2;
+        }
+        _health -= damage;
         RuntimeManager.PlayOneShot(Enemyhit);
         _cameraShake.StartShake();
     }

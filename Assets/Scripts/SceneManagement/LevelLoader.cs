@@ -3,6 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
+    private PlayerStats _playerStats;
+
+    private void Start()
+    {
+        _playerStats = FindAnyObjectByType<PlayerStats>();
+    }
+
     public void LoadNextScene()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
@@ -11,6 +18,11 @@ public class LevelLoader : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        LoadNextScene();
+        if (other.CompareTag("Player"))
+        {
+            LoadNextScene();
+            if (_playerStats.PassiveHealing)
+                _playerStats.Heal(1);
+        }
     }
 }
