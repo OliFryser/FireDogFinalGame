@@ -479,7 +479,6 @@ MonoBehaviour:
   EnemyPushBack: 1
   DodgeCooldown: 2
   DodgeDistance: 60
-  CoinAmount: 0
   CleaningReward: 2
 --- !u!114 &9051645628794513165
 MonoBehaviour:

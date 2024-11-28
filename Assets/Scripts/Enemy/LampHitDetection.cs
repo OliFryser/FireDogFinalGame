@@ -1,5 +1,6 @@
 using Unity.Mathematics;
 using UnityEngine;
+using FMODUnity;
 
 public class LampHitDetection : EnemyHitDetection
 {
@@ -10,5 +11,6 @@ public class LampHitDetection : EnemyHitDetection
         if (!_isDead)
             Instantiate(_lampCorpsePrefab, transform.position, quaternion.identity);
         base.Die();
+        RuntimeManager.PlayOneShotAttached("event:/Enemy/Lamp_death", this.gameObject);
     }
 }
