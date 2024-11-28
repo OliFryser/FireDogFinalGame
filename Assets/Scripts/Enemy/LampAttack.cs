@@ -34,6 +34,9 @@ public class LampAttack : MonoBehaviour
 
     private Transform _playerTransform;
 
+    private LayerMask _mask;
+
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -43,6 +46,7 @@ public class LampAttack : MonoBehaviour
     {
         _animator.SetFloat("Charge Up Speed", _chargeUpMultiplier);
         _playerTransform = FindAnyObjectByType<Movement>().transform;
+        _mask = LayerMask.GetMask("Ignore Raycast", "Dust", "Enemy");
     }
 
     private void Update()
@@ -86,7 +90,12 @@ public class LampAttack : MonoBehaviour
 
     private bool PlayerIsWithinAttackRange()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, _playerTransform.position - transform.position, _attackRange);
+        RaycastHit2D hit =
+            Physics2D.Raycast(
+                transform.position,
+                _playerTransform.position - transform.position,
+                _attackRange,
+                ~_mask);
         if (!hit) return false;
         if (hit.collider.CompareTag("Player")) return true;
         return false;
