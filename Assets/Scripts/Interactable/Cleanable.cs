@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 using FMODUnity;
-using System;
 using Unity.Mathematics;
 
 public class Cleanable : Interactable
