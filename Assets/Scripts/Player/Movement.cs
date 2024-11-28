@@ -174,8 +174,10 @@ public class Movement : MonoBehaviour
     void OnMove(InputValue input)
     {
         Vector2 rawInput = input.Get<Vector2>();
-        if (rawInput.magnitude < 0.7)
+        if (rawInput.magnitude > 0.6)
             _direction = rawInput.normalized;
+        else
+            _direction = Vector2.zero;
     }
 
     void OnDodgeRoll(InputValue _)
