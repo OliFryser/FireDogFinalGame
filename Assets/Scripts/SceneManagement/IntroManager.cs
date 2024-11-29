@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class IntroManager : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class IntroManager : MonoBehaviour
     private IEnumerator EndHubLevel()
     {
         _hubDoor.OpenDoor();
+        RuntimeManager.PlayOneShot("event:/Environment/HUB_Door_Open");
         yield return new WaitForSeconds(_endDelay);
         SceneManager.LoadScene(2);
     }

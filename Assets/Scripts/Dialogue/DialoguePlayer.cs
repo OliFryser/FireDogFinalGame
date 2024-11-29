@@ -13,10 +13,13 @@ public class DialoguePlayer : MonoBehaviour
 
     private Action _onCompleted;
 
+    private bool _isDialogueActive = false;
+
     public void StartDialog(DialogueSequence dialogueSequence, Action onDialogSequenceCompleted)
     {
         _onCompleted = onDialogSequenceCompleted;
-        _dialogueSequenceQueue = new(dialogueSequence.Lines);
+        _dialogueSequenceQueue = new Queue<DialogueLine>(dialogueSequence.Lines);
+        _isDialogueActive = true;
         ShowNextLine();
     }
 
@@ -27,10 +30,11 @@ public class DialoguePlayer : MonoBehaviour
 
     private void OnDialogLineCompleted()
     {
-        if (!_dialogueSequenceQueue.Any())
+        if (_dialogueSequenceQueue.Count == 0)
         {
             _dialogueLineAdapter.HideDisplay();
-            _onCompleted();
+            _isDialogueActive = false;
+            _onCompleted?.Invoke();
             return;
         }
         ShowNextLine();
@@ -38,6 +42,9 @@ public class DialoguePlayer : MonoBehaviour
 
     public void OnDialogClick()
     {
-        _dialogueLineAdapter.OnDialogClick();
+        if (_isDialogueActive)
+        {
+            _dialogueLineAdapter.OnDialogClick();
+        }
     }
 }
