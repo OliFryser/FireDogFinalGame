@@ -44,7 +44,7 @@ public class RoomManager : MonoBehaviour
         _inputLock.LockInput();
         _screenFade.FadeToBlack();
         RuntimeManager.PlayOneShot(_cleaningSoundEvent);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.7f);
 
         GameObject[] dirtyAssets = GameObject.FindGameObjectsWithTag("DirtyAsset");
         foreach (GameObject asset in dirtyAssets)
@@ -58,7 +58,7 @@ public class RoomManager : MonoBehaviour
         SpawnMerchant();
 
         _screenFade.FadeFromBlack();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         _inputLock.UnlockInput();
 
     }
