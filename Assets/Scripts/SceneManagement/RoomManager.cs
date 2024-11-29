@@ -41,10 +41,11 @@ public class RoomManager : MonoBehaviour
 
     private IEnumerator CleanupSequence()
     {
+        yield return new WaitForSeconds(0.5f);
         _inputLock.LockInput();
         _screenFade.FadeToBlack();
         RuntimeManager.PlayOneShot(_cleaningSoundEvent);
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(1.1f);
 
         GameObject[] dirtyAssets = GameObject.FindGameObjectsWithTag("DirtyAsset");
         foreach (GameObject asset in dirtyAssets)
@@ -52,7 +53,7 @@ public class RoomManager : MonoBehaviour
             asset.SetActive(false);
         }
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.0f);
 
         FixLight();
         SpawnMerchant();
