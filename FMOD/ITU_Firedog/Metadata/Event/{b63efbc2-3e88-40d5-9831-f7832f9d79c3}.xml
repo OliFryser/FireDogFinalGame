@@ -148,6 +148,7 @@
 		<property name="length">
 			<value>44.803265306122448</value>
 		</property>
+		<property name="name" />
 		<relationship name="modulators">
 			<destination>{1a19a5aa-43ca-4b9a-8803-0b604a343285}</destination>
 		</relationship>

@@ -786,6 +786,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 804527003906809214, guid: 624a59aee9c288c43a564b8252609071, type: 3}
+      propertyPath: _sliderName
+      value: Master
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009334467247761299, guid: 624a59aee9c288c43a564b8252609071, type: 3}
+      propertyPath: _sliderName
+      value: SFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426556187395950528, guid: 624a59aee9c288c43a564b8252609071, type: 3}
+      propertyPath: _sliderName
+      value: Music
+      objectReference: {fileID: 0}
     - target: {fileID: 4881804822308062388, guid: 624a59aee9c288c43a564b8252609071, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -2602,6 +2602,7 @@ GameObject:
   - component: {fileID: 1462999994612386777}
   - component: {fileID: 3047368281685144231}
   - component: {fileID: 4620394845230194585}
+  - component: {fileID: 4620394845230194586}
   m_Layer: 5
   m_Name: MainPanel
   m_TagString: Untagged
@@ -3086,6 +3087,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4620394845230194586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791320798068286661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 690d86fdfae5e86418a1035703079865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dripSound:
+    Guid:
+      Data1: 1775085814
+      Data2: 1270447577
+      Data3: -401554798
+      Data4: -343310838
+    Path: event:/Environment/Drip
 --- !u!224 &4625457248965701097
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4852,6 +4872,8 @@ MonoBehaviour:
       Data4: 0
     Path: 
   _vcaName: Music
+  _sliderName: Music
+  _defaultValue: 1
 --- !u!114 &7044905361496311177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5914,6 +5936,8 @@ MonoBehaviour:
       Data4: 0
     Path: 
   _vcaName: Master
+  _sliderName: Master
+  _defaultValue: 1
 --- !u!222 &8775889991461346483
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6006,6 +6030,8 @@ MonoBehaviour:
       Data4: 0
     Path: 
   _vcaName: SFX
+  _sliderName: SFX
+  _defaultValue: 1
 --- !u!114 &9019645762891774443
 MonoBehaviour:
   m_ObjectHideFlags: 0
