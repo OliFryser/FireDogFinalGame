@@ -479,7 +479,9 @@ MonoBehaviour:
   EnemyPushBack: 1
   DodgeCooldown: 2
   DodgeDistance: 60
-  CleaningReward: 2
+  MinimumCleaningReward: 2
+  MaximumCleaningReward: 2
+  CriticalAttackChance: 0
 --- !u!114 &9051645628794513165
 MonoBehaviour:
   m_ObjectHideFlags: 0
