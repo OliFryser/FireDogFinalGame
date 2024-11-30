@@ -420,17 +420,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 510448478020774938}
     m_Modifications:
-    - target: {fileID: 696141205231318721, guid: bacaff592f29cb145baca07b03f38745, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3350241166169669583, guid: bacaff592f29cb145baca07b03f38745, type: 3}
       propertyPath: m_Name
       value: Lamp_OFF
-      objectReference: {fileID: 0}
-    - target: {fileID: 3350241166169669583, guid: bacaff592f29cb145baca07b03f38745, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5024969866379926130, guid: bacaff592f29cb145baca07b03f38745, type: 3}
       propertyPath: m_LocalPosition.x
@@ -542,10 +534,6 @@ PrefabInstance:
     - target: {fileID: 4356050790004610606, guid: dc719f45f7c33f64dbce309a1e5b6a43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375801089911049020, guid: dc719f45f7c33f64dbce309a1e5b6a43, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
