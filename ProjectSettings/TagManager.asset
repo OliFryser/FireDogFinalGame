@@ -11,6 +11,7 @@ TagManager:
   - Lamp Attack Ring
   - DirtyAsset
   - CameraBounds
+  - Front Wall
   layers:
   - Default
   - TransparentFX
