@@ -10,7 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a80dd7641bb9f84b9de8e7f4d75fdd0, type: 3}
-  m_Name: Upgrade Faster Movement
+  m_Name: BowlingChampion
   m_EditorClassIdentifier: 
-  Title: Faster Movement
-  UpgradeType: 2
+  Title: Bowling Champion
+  Description: Your Light and Heavy Attack are disabled. Your Dodge Roll has significantly
+    reduced cooldown and damages enemies when colliding with them. It also rolls
+    longer.
+  UpgradeType: 10

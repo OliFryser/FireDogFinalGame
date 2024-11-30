@@ -24,9 +24,13 @@ public class Movement : MonoBehaviour
     [SerializeField, Range(1, 15)]
     private float _dogdeSpeedScalar;
 
+    [SerializeField]
+    private GameObject _dodgeHitBox;
+
     private float _dodgeCooldown => _playerStats.DodgeCooldown;
 
     private bool _dodgeOnCooldown;
+
 
     [SerializeField]
     private float _invincibilityTime;
@@ -144,11 +148,21 @@ public class Movement : MonoBehaviour
 
     void DoDodgeRoll()
     {
+        
         if (_currentDodgeDistance == 0)
-        {
+        {   
             _animator.SetTrigger("Dodge");
-            StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime));
             RuntimeManager.PlayOneShot("event:/Player/Dodge");
+            if(_playerStats.BowlingChampion){
+                Debug.Log("rolling op?");
+                GameObject hitBox = Instantiate(_dodgeHitBox, transform);
+                StartCoroutine(DestroyDodgeHitBoxafterDelay(hitBox, (_invincibilityTime+0.1f)));
+                StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime+0.1f));
+            }
+            else {
+                StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime));
+            }
+            
         }
         if (_currentDodgeDistance < _totalDodgeDistance)
         {
@@ -168,6 +182,12 @@ public class Movement : MonoBehaviour
         _dodgeOnCooldown = true;
         yield return new WaitForSeconds(cooldown);
         _dodgeOnCooldown = false;
+    }
+
+    IEnumerator DestroyDodgeHitBoxafterDelay(GameObject hitBox, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(hitBox);
     }
 
     #region Input System

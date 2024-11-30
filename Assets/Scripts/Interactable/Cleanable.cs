@@ -18,6 +18,8 @@ public class Cleanable : Interactable
 
     private PlayerStats _playerStats;
 
+    protected EnemyTracker _enemyTracker;
+
     [SerializeField]
     private GameObject _coin;
     private float _coinOffset = .15f;
@@ -41,6 +43,12 @@ public class Cleanable : Interactable
             else
                 Instantiate(_coin, transform.position - offset, quaternion.identity);
         }
+        if (_playerStats.CleaningSpreeMoney){
+            CleaningSpreeBonus();
+        }
+        if(_playerStats.CleaningSpreeDamage &&_enemyTracker.EnemiesLeft() > 0){
+            _playerStats.CleaningSpreeDamageActive = true;
+        }
 
     }
 
@@ -53,6 +61,7 @@ public class Cleanable : Interactable
         _playerStats = FindAnyObjectByType<PlayerStats>();
         _animator = _playerStats.GetComponent<Animator>();
         _inputLock = _playerStats.GetComponent<InputLock>();
+        _enemyTracker = FindAnyObjectByType<EnemyTracker>();
     }
 
     public override void Highlight()
@@ -70,5 +79,12 @@ public class Cleanable : Interactable
         _inputLock.LockInput();
         yield return new WaitForSeconds(timer);
         _inputLock.UnlockInput();
+    }
+
+    protected void CleaningSpreeBonus(){
+        if (_enemyTracker.EnemiesLeft() > 0){
+            Vector3 offset = new Vector3(_coinOffset, .5f, 0);
+            Instantiate(_coin, transform.position + offset, quaternion.identity);
+        }
     }
 }

@@ -14,6 +14,8 @@ public class Weapon : MonoBehaviour
 
     private InputLock _inputLocker;
 
+    private PlayerStats _playerStats;
+
     [Header("Light Attack")]
     [SerializeField]
     private float _hitBoxDestroyDelayLight = 0.55f;
@@ -73,6 +75,7 @@ public class Weapon : MonoBehaviour
         _playerMovement = GetComponent<Movement>();
         _animator = GetComponent<Animator>();
         _inputLocker = GetComponent<InputLock>();
+        _playerStats = GetComponent<PlayerStats>();
     }
 
     private void Update()
@@ -213,14 +216,14 @@ public class Weapon : MonoBehaviour
     #region Input System
     void OnLightAttack(InputValue input)
     {
-        if (!_onCooldownLight)
+        if (!_onCooldownLight && !_playerStats.HeavyMetal && !_playerStats.BowlingChampion)
             _lightAttack = true;
     }
 
 
     void OnHeavyAttack(InputValue input)
     {
-        if (!_onCooldownHeavy)
+        if (!_onCooldownHeavy && !_playerStats.BaseballConnoisseur && !_playerStats.BowlingChampion)
             HeavyAttack = true;
     }
 

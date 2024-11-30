@@ -221,6 +221,7 @@ MonoBehaviour:
   _animationScaling: 0.015
   _idleAnimationScaling: 0.01
   _dogdeSpeedScalar: 3
+  _dodgeHitBox: {fileID: 8749505882203051888, guid: 25412b2455c8e914aaa3493f41312d91, type: 3}
   _invincibilityTime: 0.3
   PreviousDirection: {x: 0, y: 0}
 --- !u!114 &3000249034656620173
@@ -473,13 +474,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSpeed: 100
   MaxHealth: 6
-  Damage: 10
+  DamageLight: 10
+  DamageHeavy: 20
   EnemyStunDuration: 0.5
   PlayerPushBack: 15
   EnemyPushBack: 1
   DodgeCooldown: 2
   DodgeDistance: 60
-  CleaningReward: 2
+  DamageBoostUpgrade: 0
+  CleaningSpreeDamage: 0
+  CleaningSpreeDamageActive: 0
+  CleaningSpreeMoney: 0
+  DamageBoostCounter: 1
+  MinimumCleaningReward: 2
+  MaximumCleaningReward: 2
+  CriticalAttackChance: 0
+  HeavyMetal: 0
+  BowlingChampion: 0
+  BaseballConnoisseur: 0
+  EnemyPushBackSpeed: 10
 --- !u!114 &9051645628794513165
 MonoBehaviour:
   m_ObjectHideFlags: 0

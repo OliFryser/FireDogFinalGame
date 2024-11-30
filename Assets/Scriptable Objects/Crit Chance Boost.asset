@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a80dd7641bb9f84b9de8e7f4d75fdd0, type: 3}
-  m_Name: Upgrade More Health
+  m_Name: Crit Chance Boost
   m_EditorClassIdentifier: 
-  Title: Max Health Increase
-  UpgradeType: 0
+  Title: Crit Boost
+  Description: Increases crit chance by 5%.
+  UpgradeType: 5

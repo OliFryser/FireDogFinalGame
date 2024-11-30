@@ -17,8 +17,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private float _sightDistance = 5.0f;
 
-    [SerializeField]
-    private float _knockBackSpeed;
+    private float _knockBackSpeed => _playerStats.EnemyPushBackSpeed;
 
     public bool IsPushedBack = false;
 
@@ -38,6 +37,8 @@ public class EnemyMovement : MonoBehaviour
 
     private float _currentStunTimer;
 
+    private PlayerStats _playerStats;
+
     [SerializeField]
     private CollisionSettings _verticalEnemyCollision;
 
@@ -50,6 +51,8 @@ public class EnemyMovement : MonoBehaviour
 
     private LayerMask _mask;
 
+    private EnemyHitDetection _hitDetection;
+
     protected virtual void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -60,6 +63,7 @@ public class EnemyMovement : MonoBehaviour
     protected virtual void Start()
     {
         _playerTransform = FindAnyObjectByType<Movement>().transform;
+        _playerStats = FindAnyObjectByType<PlayerStats>();
 
         _boxCollider = GetComponent<BoxCollider2D>();
         UpdateCollider(_verticalEnemyCollision);
@@ -68,6 +72,7 @@ public class EnemyMovement : MonoBehaviour
         _animator = GetComponent<Animator>();
         _animator.SetFloat("Horizontal", _direction.x);
         _animator.SetFloat("Vertical", _direction.y);
+        _hitDetection = GetComponent<EnemyHitDetection>();
 
         _navMeshAgent.speed = _movementSpeed;
         _mask = LayerMask.GetMask("Ignore Raycast", "Dust", "Enemy");
@@ -206,6 +211,18 @@ public class EnemyMovement : MonoBehaviour
     public Vector2 GetDirectionToPlayer()
         => (transform.position - _playerTransform.position).normalized;
 
+
+// Doesn't work properly yet.
+    private void OnCollisionEnter2D(Collision2D other){
+        if (IsPushedBack && _playerStats.BaseballConnoisseur){
+            IsPushedBack = false;
+            _totalPushDistance = 0;
+            if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Untagged")){
+                _hitDetection._health -= 20;
+            }
+        }
+        
+    }
 
     [Serializable]
     struct CollisionSettings

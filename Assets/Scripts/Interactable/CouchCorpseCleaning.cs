@@ -8,7 +8,6 @@ public class CouchCorpse : Cleanable
     [SerializeField]
     private GameObject _dustEnemy;
 
-    private EnemyTracker _enemyTracker;
 
     private float _spawnTimer;
 
@@ -18,15 +17,13 @@ public class CouchCorpse : Cleanable
     protected override void Start()
     {
         base.Start();
-        _enemyTracker = FindAnyObjectByType<EnemyTracker>();
-        _enemyTracker.RegisterEnemy();
     }
 
     // Update is called once per frame
     protected override void Update()
     {
         base.Update();
-        if (!_hasInteracted)
+        /*if (!_hasInteracted)
         {
             if (_spawnTimer >= _spawnRate)
             {
@@ -38,14 +35,13 @@ public class CouchCorpse : Cleanable
                 _spawnTimer += Time.deltaTime;
             }
 
-        }
+        }*/
     }
 
 
     public override void Interact()
     {
         base.Interact();
-        _enemyTracker.UnregisterEnemy();
         StartCoroutine(DestroyCorpse(0.9f));
     }
 

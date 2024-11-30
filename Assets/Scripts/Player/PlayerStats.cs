@@ -7,7 +7,8 @@ public class PlayerStats : MonoBehaviour
     private PersistentPlayerStats _peristentPlayerStats;
     public float MovementSpeed = 50.0f;
     public int MaxHealth = 6;
-    public float Damage = 10.0f;
+    public float DamageLight = 10.0f;
+    public float DamageHeavy = 20.0f;
     public bool IsDead => _currentHealth <= 0;
     private int _currentHealth = 6;
     private HealthUIManager _healthUIManager;
@@ -19,9 +20,27 @@ public class PlayerStats : MonoBehaviour
 
     public float DodgeDistance;
 
+    public bool DamageBoostUpgrade;
+
+    public bool CleaningSpreeDamage;
+
+    public bool CleaningSpreeDamageActive;
+
+    public bool CleaningSpreeMoney;
+
+    public float DamageBoostCounter;
+
     public int MinimumCleaningReward = 2;
     public int MaximumCleaningReward = 2;
     public int CriticalAttackChance = 0;
+
+    public bool HeavyMetal;
+
+    public bool BowlingChampion;
+
+    public bool BaseballConnoisseur;
+
+    public float EnemyPushBackSpeed;
 
     private void OnEnable()
     {
@@ -87,7 +106,8 @@ public class PlayerStats : MonoBehaviour
     {
         MovementSpeed = 100.0f;
         MaxHealth = 6;
-        Damage = 10.0f;
+        DamageLight = 10.0f;
+        DamageHeavy = 20.0f;
         _currentHealth = 6;
         EnemyStunDuration = 1.0f;
     }
