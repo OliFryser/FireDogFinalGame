@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.AI;
+using FMODUnity;
 
 [RequireComponent(typeof(NavMeshAgent), typeof(Animator))]
 public class EnemyMovement : MonoBehaviour
@@ -212,17 +213,6 @@ public class EnemyMovement : MonoBehaviour
         => (transform.position - _playerTransform.position).normalized;
 
 
-// Doesn't work properly yet.
-    private void OnCollisionEnter2D(Collision2D other){
-        if (IsPushedBack && _playerStats.BaseballConnoisseur){
-            IsPushedBack = false;
-            _totalPushDistance = 0;
-            if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Untagged")){
-                _hitDetection._health -= 20;
-            }
-        }
-        
-    }
 
     [Serializable]
     struct CollisionSettings

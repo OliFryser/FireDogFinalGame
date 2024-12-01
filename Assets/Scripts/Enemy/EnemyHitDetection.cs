@@ -36,14 +36,13 @@ public class EnemyHitDetection : MonoBehaviour
         _flashEffect = GetComponent<FlashEffect>();
     }
 
-    protected void Update(){
+    protected virtual void Update(){
         if (_damageboostTimer > 0){
             _damageboostTimer -= Time.deltaTime;
         }
         else {
             _playerStats.DamageBoostCounter = 1f;
         }
-        Debug.Log("_playerStats.DamageBoostCounter: " + _playerStats.DamageBoostCounter.ToString());
     }
 
     protected void OnTriggerEnter2D(Collider2D other)
@@ -77,6 +76,10 @@ public class EnemyHitDetection : MonoBehaviour
         {
             _enemyMovement.GetPushedBack(_pushBackOnPlayerHit, 0);
         }
+        else if (_enemyMovement.IsPushedBack && _playerStats.BaseballConnoisseur){
+            _enemyMovement.StopPush();
+            GetHitCollision();
+        }
     }
 
     protected virtual void GetHitLightAttack()
@@ -90,7 +93,7 @@ public class EnemyHitDetection : MonoBehaviour
             Debug.Log("Critical Hit");
             damage *= 2;
         }
-        if (_playerStats.CleaningSpreeDamageActive && _enemyTracker.EnemiesLeft()>1){
+        if (_playerStats.CleaningSpreeDamageActive){
             damage *= 1.25f;
         }
         _health -= damage;
@@ -109,7 +112,7 @@ public class EnemyHitDetection : MonoBehaviour
             Debug.Log("Critical Hit");
             damage *= 2;
         }
-        if (_playerStats.CleaningSpreeDamageActive && _enemyTracker.EnemiesLeft()>1){
+        if (_playerStats.CleaningSpreeDamageActive){
             damage *= 1.25f;
         }
         _health -= damage;
@@ -128,12 +131,32 @@ public class EnemyHitDetection : MonoBehaviour
             Debug.Log("Critical Hit");
             damage *= 2;
         }
-        if (_playerStats.CleaningSpreeDamageActive && _enemyTracker.EnemiesLeft()>1){
+        if (_playerStats.CleaningSpreeDamageActive){
             damage *= 1.25f;
         }
         _health -= damage;
         RuntimeManager.PlayOneShot(Enemyhit);
         _cameraShake.StartShake();
+        if (_playerStats.DamageBoostUpgrade && _playerStats.DamageBoostCounter < 1.3f){
+            _playerStats.DamageBoostCounter+=0.06f;
+            _damageboostTimer = 3f;
+        }
+    }
+
+
+    protected virtual void GetHitCollision(){
+        RuntimeManager.PlayOneShot(Enemyhit);
+        _cameraShake.StartShake();
+        float damage = _playerStats.DamageLight*_playerStats.DamageBoostCounter;
+        if (_playerStats.IsCritical())
+        {
+            Debug.Log("Critical Hit");
+            damage *= 2;
+        }
+        if (_playerStats.CleaningSpreeDamageActive){
+            damage *= 1.25f;
+        }
+        _health -= damage;
         if (_playerStats.DamageBoostUpgrade && _playerStats.DamageBoostCounter < 1.3f){
             _playerStats.DamageBoostCounter+=0.06f;
             _damageboostTimer = 3f;

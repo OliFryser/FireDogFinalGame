@@ -62,6 +62,7 @@ public class UpgradeHandler : MonoBehaviour
                 _playerStats.BowlingChampion = false;
                 _playerStats.EnemyPushBack *= 8;
                 _playerStats.EnemyPushBackSpeed *=2;
+                _playerStats.EnemyStunDuration *=2;
                 break;
             default:
                 Debug.LogWarning("Undefined Upgrade in UpgradeHandler");
