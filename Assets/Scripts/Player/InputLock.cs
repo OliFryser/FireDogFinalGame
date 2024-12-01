@@ -4,32 +4,28 @@ using UnityEngine.InputSystem;
 public class InputLock : MonoBehaviour
 {
     private PlayerInput _playerInput;
-    private int _lockCount;
+    private int LockCount { get; set; }
 
-    void Start()
+    private void Start()
     {
         _playerInput = GetComponent<PlayerInput>();
     }
 
     public void LockInput()
     {
-        _lockCount++;
+        LockCount++;
 
-        if (_lockCount == 1 && _playerInput != null)
+        if (LockCount == 1 && _playerInput)
             _playerInput.actions.FindActionMap("Player", true).Disable();
     }
 
     public void UnlockInput()
     {
-        _lockCount--;
+        LockCount--;
 
-        if (_lockCount == 0 && _playerInput != null)
+        if (LockCount == 0 && _playerInput)
             _playerInput.actions.FindActionMap("Player", true).Enable();
-        else if (_lockCount < 0)
-            _lockCount = 0;
-    }
-
-    public int GetLockCount(){
-        return _lockCount;
+        else if (LockCount < 0)
+            LockCount = 0;
     }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using FMODUnity;
+using SceneManagement;
 
 public class EnemyHitDetection : MonoBehaviour
 {

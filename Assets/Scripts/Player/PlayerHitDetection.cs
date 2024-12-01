@@ -6,6 +6,7 @@ using System.Collections;
 
 public class PlayerHitDetection : MonoBehaviour
 {
+    private static readonly int Damage = Animator.StringToHash("TakeDamage");
 
     private PlayerStats _playerStats;
     private CameraShake _cameraShake;
@@ -57,6 +58,7 @@ public class PlayerHitDetection : MonoBehaviour
     private void KillPlayer()
     {
         //Return player to hub.
+        _playerStats.AddPlayerDeath();
         Destroy(gameObject);
         SceneManager.LoadScene(2);
     }
@@ -70,8 +72,8 @@ public class PlayerHitDetection : MonoBehaviour
                 TakeDamage(1);
 
                 // Apply pushback only if not invincible
-                Vector2 _enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
-                _playerMovement.GetPushed(_enemyDirection);
+                Vector2 enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
+                _playerMovement.GetPushed(enemyDirection);
             }
         }
     }
@@ -81,8 +83,8 @@ public class PlayerHitDetection : MonoBehaviour
         if (other.gameObject.CompareTag("Lamp Attack Ring"))
         {
             TakeDamage(1);
-            Vector2 _enemyDirection = (transform.position - other.gameObject.GetComponentInParent<LampMovement>().transform.position).normalized;
-            _playerMovement.GetPushed(_enemyDirection);
+            Vector2 enemyDirection = (transform.position - other.gameObject.GetComponentInParent<LampMovement>().transform.position).normalized;
+            _playerMovement.GetPushed(enemyDirection);
         }
     }
 
@@ -93,7 +95,7 @@ public class PlayerHitDetection : MonoBehaviour
             _playerStats.ApplyDamage(damage);
 
             RuntimeManager.PlayOneShot(hitSoundEventPath);
-            _animator.SetTrigger("TakeDamage");
+            _animator.SetTrigger(Damage);
             _flashEffect.CallDamageFlash();
             _cameraShake.StartShake();
 

@@ -13,8 +13,8 @@ public class PersistentPlayerStats : MonoBehaviour
 
     public List<HubUpgrade> HubUpgrades => _hubUpgrades;
 
-    private int _coins = 50;
-    public int Coins => _coins;
+    public int Coins { get; private set; }
+    public int Deaths { get; private set; }
 
     private void Awake()
     {
@@ -27,16 +27,26 @@ public class PersistentPlayerStats : MonoBehaviour
 
     public void AddCoins(int amount)
     {
-        _coins += amount;
+        Coins += amount;
     }
 
     public void SpendCoins(int amount)
     {
-        _coins -= amount;
+        Coins -= amount;
     }
 
     internal void RegisterNewPlayerStats(PlayerStats playerStats)
     {
         _hubUpgradeHandler.SetPlayerStats(playerStats);
+    }
+
+    public void AddPlayerDeath()
+    {
+        Deaths++;
+    }
+
+    public void ResetPlayerProgress()
+    {
+        Destroy(gameObject);
     }
 }
