@@ -23,6 +23,7 @@ public class LevelLoader : MonoBehaviour
             LoadNextScene();
             if (_playerStats.PassiveHealing)
                 _playerStats.Heal(1);
+            _playerStats.CleaningSpreeDamageActive = false;
         }
     }
 }

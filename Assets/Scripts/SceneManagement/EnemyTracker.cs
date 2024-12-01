@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class EnemyTracker : MonoBehaviour
 {
     private int _enemyCount;
+    public int EnemyCount => _enemyCount;
 
     [SerializeField]
     private UnityEvent _onRoomCleared;

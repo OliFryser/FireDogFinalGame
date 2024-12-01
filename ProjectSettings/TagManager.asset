@@ -11,6 +11,7 @@ TagManager:
   - Lamp Attack Ring
   - DirtyAsset
   - CameraBounds
+  - Dodge Roll Hit Box
   - Front Wall
   layers:
   - Default

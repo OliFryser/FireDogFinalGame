@@ -577,8 +577,16 @@ MonoBehaviour:
   - {fileID: 1441922624027237103}
   _upgrades:
   - {fileID: 11400000, guid: 6e3a8273246cc4044bf44dd517cd2079, type: 2}
-  - {fileID: 11400000, guid: 88cf23e874705be4ca245c4eef65501f, type: 2}
+  - {fileID: 11400000, guid: 81246926772553041b985c630cac12b7, type: 2}
   - {fileID: 11400000, guid: fa4bc502fd437fc469f121c6f9f89f26, type: 2}
+  - {fileID: 11400000, guid: e56a678efffed3e46980cdeb62bec6c7, type: 2}
+  - {fileID: 11400000, guid: aee5047473e4fb8478cb6ad409645308, type: 2}
+  - {fileID: 11400000, guid: 88cf23e874705be4ca245c4eef65501f, type: 2}
+  - {fileID: 11400000, guid: d7c4def30427d6e45b474f0ed7470057, type: 2}
+  - {fileID: 11400000, guid: 894287e8cf628aa49b5a89d8ee72f26a, type: 2}
+  - {fileID: 11400000, guid: ba67a4a149464e44ea226485ed624352, type: 2}
+  - {fileID: 11400000, guid: 9358ad61be933d140b3b87c7187b35b8, type: 2}
+  - {fileID: 11400000, guid: 7963626202c77974590b6511291cadbe, type: 2}
 --- !u!1 &534911904741087773
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,12 +14,16 @@ public class UpgradeDisplay : MonoBehaviour
     [SerializeField]
     private TMP_Text _title;
 
+    [SerializeField]
+    private TMP_Text _description;
+
     private UpgradeHandler _upgradeHandler;
 
     private void Start()
     {
         _upgradeHandler = FindAnyObjectByType<UpgradeHandler>();
         _title.text = Upgrade.Title;
+        _description.text = Upgrade.Description;
         _button.onClick.AddListener(OnUpgradeButtonClick);
     }
 

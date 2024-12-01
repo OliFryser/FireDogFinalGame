@@ -558,14 +558,14 @@ PrefabInstance:
       insertIndex: 2
       addedObject: {fileID: 949860497236652930}
     - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3924446319717029322}
-    - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
-      insertIndex: -1
+      insertIndex: 3
       addedObject: {fileID: 4762145621119703803}
     - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
-      insertIndex: -1
+      insertIndex: 4
       addedObject: {fileID: 2858618353522945831}
+    - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3924446319717029322}
     - targetCorrespondingSourceObject: {fileID: 2277435693892191777, guid: bcfd0cbfa0aae484b95729310301c5b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5990094583735948141}
@@ -597,6 +597,46 @@ MonoBehaviour:
     Path: event:/Enemy/Damaged
   _pushBackOnPlayerHit: 0.8
   _lampCorpsePrefab: {fileID: 3818390079501999012, guid: 1337c489ad662d64cbf462e7bdc5c9ba, type: 3}
+--- !u!114 &4762145621119703803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606730900545331055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35728a30177138e45b3927fbb3a76f89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementSpeed: 3
+  _animationScaling: 0.4
+  _sightDistance: 7
+  IsPushedBack: 0
+  _verticalEnemyCollision:
+    Offset: {x: -0.0009499788, y: 0.451242}
+    Size: {x: 0.1802449, y: 2.232926}
+  _horizontalEnemyCollsion:
+    Offset: {x: -0.0009499788, y: 0.451242}
+    Size: {x: 0.1802449, y: 2.232926}
+--- !u!114 &2858618353522945831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606730900545331055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c6bb34ff24a1f4fbebf7fdddc78858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackRange: 3
+  _chargeUpMultiplier: 0.75
+  _hitTime: 0.3
+  _attackCooldown: 1.5
+  _attackRing: {fileID: 7195720674534340126}
+  _attackHitBox: {fileID: 4380653432919210373}
 --- !u!61 &3924446319717029322
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -643,47 +683,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.18024492, y: 2.2329264}
   m_EdgeRadius: 0
---- !u!114 &4762145621119703803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3606730900545331055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35728a30177138e45b3927fbb3a76f89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _movementSpeed: 3
-  _animationScaling: 0.4
-  _sightDistance: 7
-  _knockBackSpeed: 4
-  IsPushedBack: 0
-  _verticalEnemyCollision:
-    Offset: {x: -0.0009499788, y: 0.451242}
-    Size: {x: 0.1802449, y: 2.232926}
-  _horizontalEnemyCollsion:
-    Offset: {x: -0.0009499788, y: 0.451242}
-    Size: {x: 0.1802449, y: 2.232926}
---- !u!114 &2858618353522945831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3606730900545331055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16c6bb34ff24a1f4fbebf7fdddc78858, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _attackRange: 3
-  _chargeUpMultiplier: 0.75
-  _hitTime: 0.3
-  _attackCooldown: 1.5
-  _attackRing: {fileID: 7195720674534340126}
-  _attackHitBox: {fileID: 4380653432919210373}
 --- !u!114 &5990094583735948141
 MonoBehaviour:
   m_ObjectHideFlags: 0
