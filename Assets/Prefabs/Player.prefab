@@ -493,9 +493,6 @@ MonoBehaviour:
   BowlingChampion: 0
   BaseballConnoisseur: 0
   EnemyPushBackSpeed: 10
-  MinimumCleaningReward: 2
-  MaximumCleaningReward: 2
-  CriticalAttackChance: 0
 --- !u!114 &9051645628794513165
 MonoBehaviour:
   m_ObjectHideFlags: 0
