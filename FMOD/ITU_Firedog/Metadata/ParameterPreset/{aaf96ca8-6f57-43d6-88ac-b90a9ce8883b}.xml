@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{aaf96ca8-6f57-43d6-88ac-b90a9ce8883b}">
+		<property name="name">
+			<value>BattleState</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5a42f993-ea77-4a42-a7c4-a9fc869c496b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{5c6a892b-9f9b-412c-8d59-b0ac59696511}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{5c6a892b-9f9b-412c-8d59-b0ac59696511}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

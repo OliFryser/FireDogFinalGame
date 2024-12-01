@@ -4,15 +4,23 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - Light Weapon Hit Box
   - DustEnemy
+  - Heavy Weapon Hit Box
+  - Enemy
+  - Lamp Attack Ring
+  - DirtyAsset
+  - CameraBounds
+  - Dodge Roll Hit Box
+  - Front Wall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
-  - 
+  - Dust
   - 
   - 
   - 
@@ -39,6 +47,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3530545485
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

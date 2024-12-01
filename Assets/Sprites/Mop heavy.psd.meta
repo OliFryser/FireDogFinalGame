@@ -1,0 +1,1511 @@
+fileFormatVersion: 2
+guid: d61858d99e4e6a5499aadc87d3d154c5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4791104458423478179
+    second: Mop heavy_0
+  - first:
+      213: 8097707042814156794
+    second: Mop heavy_1
+  - first:
+      213: -2608799412584894574
+    second: Mop heavy_2
+  - first:
+      213: -5019165883217895439
+    second: Mop heavy_3
+  - first:
+      213: 7826309075006337645
+    second: Mop heavy_4
+  - first:
+      213: 1563120661025406805
+    second: Mop heavy_5
+  - first:
+      213: -648418415873809220
+    second: Mop heavy_6
+  - first:
+      213: 71015156660261593
+    second: Mop heavy_7
+  - first:
+      213: -3206447746854907144
+    second: Mop heavy_8
+  - first:
+      213: 5968921014596898616
+    second: Mop heavy_9
+  - first:
+      213: 5030768066900819936
+    second: Mop heavy_10
+  - first:
+      213: 1428629484980538386
+    second: Mop heavy_11
+  - first:
+      213: -3281693127267573496
+    second: Mop heavy_12
+  - first:
+      213: -3316423001219050448
+    second: Mop heavy_13
+  - first:
+      213: 6273508073251492485
+    second: Mop heavy_14
+  - first:
+      213: -7364671056240999644
+    second: Mop heavy_15
+  - first:
+      213: -2029586177866631126
+    second: Mop heavy_16
+  - first:
+      213: -5752346531250911411
+    second: Mop heavy_17
+  - first:
+      213: 1281333380323195714
+    second: Mop heavy_18
+  - first:
+      213: -5434388548590531979
+    second: Mop heavy_19
+  - first:
+      213: 4219380989630001042
+    second: Mop heavy_20
+  - first:
+      213: 53036790528092004
+    second: Mop heavy_21
+  - first:
+      213: 4541404402190479711
+    second: Mop heavy_22
+  - first:
+      213: -5639873428191525776
+    second: Mop heavy_23
+  - first:
+      213: -4626810302901730626
+    second: Mop heavy_24
+  - first:
+      213: 7491016451229533629
+    second: Mop heavy_25
+  - first:
+      213: 2223931005149651691
+    second: Mop heavy_26
+  - first:
+      213: 6214226518344605367
+    second: Mop heavy_27
+  - first:
+      213: 973844240707132147
+    second: Mop heavy_28
+  - first:
+      213: -2992165843162775105
+    second: Mop heavy_29
+  - first:
+      213: 8997765060948487586
+    second: Mop heavy_30
+  - first:
+      213: -1045292576601977342
+    second: Mop heavy_31
+  - first:
+      213: -5605246682553557017
+    second: Mop heavy_32
+  - first:
+      213: -7641815939222231449
+    second: Mop heavy_33
+  - first:
+      213: -8937775269866357538
+    second: Mop heavy_34
+  - first:
+      213: 5239841557876528371
+    second: Mop heavy_35
+  - first:
+      213: -5382641774053898970
+    second: Mop heavy_36
+  - first:
+      213: 3353464470017256622
+    second: Mop heavy_37
+  - first:
+      213: -442454018926241953
+    second: Mop heavy_38
+  - first:
+      213: 3647725839289511142
+    second: Mop heavy_39
+  - first:
+      213: -6387078811862868926
+    second: Mop heavy_40
+  - first:
+      213: 7911463541476658550
+    second: Mop heavy_41
+  - first:
+      213: 8113814569547345270
+    second: Mop heavy_42
+  - first:
+      213: -332314318906653428
+    second: Mop heavy_43
+  - first:
+      213: -3053886306112976753
+    second: Mop heavy_44
+  - first:
+      213: -1286755848946552575
+    second: Mop heavy_45
+  - first:
+      213: -2029026239168838697
+    second: Mop heavy_46
+  - first:
+      213: -5325591641094560339
+    second: Mop heavy_47
+  - first:
+      213: -7464207504584946755
+    second: Mop heavy_48
+  - first:
+      213: -986120226079230824
+    second: Mop heavy_49
+  - first:
+      213: -6847668892663863968
+    second: Mop heavy_50
+  - first:
+      213: 6902678627194366957
+    second: Mop heavy_51
+  - first:
+      213: 2122090097004396655
+    second: Mop heavy_52
+  - first:
+      213: 2214225036416532801
+    second: Mop heavy_53
+  - first:
+      213: -7708599487409580454
+    second: Mop heavy_54
+  - first:
+      213: -1267035643563858084
+    second: Mop heavy_55
+  - first:
+      213: -9143212158117857859
+    second: Mop heavy_56
+  - first:
+      213: 7222140530201366715
+    second: Mop heavy_57
+  - first:
+      213: -8259498222307107408
+    second: Mop heavy_58
+  - first:
+      213: 2240008603457300863
+    second: Mop heavy_59
+  - first:
+      213: 2112259110752013830
+    second: Mop heavy_60
+  - first:
+      213: -2905504279104948703
+    second: Mop heavy_61
+  - first:
+      213: -86928850141613868
+    second: Mop heavy_62
+  - first:
+      213: -7540131567710236177
+    second: Mop heavy_63
+  - first:
+      213: -4168562491255502839
+    second: Mop heavy_64
+  - first:
+      213: -5579909626252284233
+    second: Mop heavy_65
+  - first:
+      213: -8470502107944692367
+    second: Mop heavy_66
+  - first:
+      213: 2192104071322852518
+    second: Mop heavy_67
+  - first:
+      213: -5128736255695138001
+    second: Mop heavy_68
+  - first:
+      213: 8121110359068078075
+    second: Mop heavy_69
+  - first:
+      213: 4979745149778361203
+    second: Mop heavy_70
+  - first:
+      213: -8196607343258524249
+    second: Mop heavy_71
+  - first:
+      213: -996474244100613590
+    second: Mop heavy_72
+  - first:
+      213: -4878628155862390708
+    second: Mop heavy_73
+  - first:
+      213: -1919444623545386563
+    second: Mop heavy_74
+  - first:
+      213: 1757814767305114061
+    second: Mop heavy_75
+  - first:
+      213: 5536907052274748940
+    second: Mop heavy_76
+  - first:
+      213: 5054740573296744418
+    second: Mop heavy_77
+  - first:
+      213: 1873820131751892277
+    second: Mop heavy_78
+  - first:
+      213: 2464783350055539721
+    second: Mop heavy_79
+  - first:
+      213: -5017313602795556519
+    second: Mop heavy_80
+  - first:
+      213: -1472898811349226771
+    second: Mop heavy_81
+  - first:
+      213: 1286543459543019457
+    second: Mop heavy_82
+  - first:
+      213: -2597134684505237800
+    second: Mop heavy_83
+  - first:
+      213: 3610870561957714715
+    second: Mop heavy_84
+  - first:
+      213: 1969271030043872821
+    second: Mop heavy_85
+  - first:
+      213: -350086567255174412
+    second: Mop heavy_86
+  - first:
+      213: -6492369084368978270
+    second: Mop heavy_87
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mop heavy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a72f1ede1c6d7240800000000000000
+      internalID: 4791104458423478179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: affdd16e6a5d06070800000000000000
+      internalID: 8097707042814156794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29f21aa91ceabcbd0800000000000000
+      internalID: -2608799412584894574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ff990ec837585ab0800000000000000
+      internalID: -5019165883217895439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d623b2e53a2ac9c60800000000000000
+      internalID: 7826309075006337645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_5
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55f3e7d95f151b510800000000000000
+      internalID: 1563120661025406805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb42500e2ea5007f0800000000000000
+      internalID: -648418415873809220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_7
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d25762a8eb4cf000800000000000000
+      internalID: 71015156660261593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_8
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f29cd143c86083d0800000000000000
+      internalID: -3206447746854907144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_9
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f896fb90ed5d250800000000000000
+      internalID: 5968921014596898616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_10
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ef700717e0e0d540800000000000000
+      internalID: 5030768066900819936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_11
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c0ae782f283d310800000000000000
+      internalID: 1428629484980538386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_12
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8012067ec751572d0800000000000000
+      internalID: -3281693127267573496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_13
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 034576ff9d2b9f1d0800000000000000
+      internalID: -3316423001219050448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_14
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58253b9aa5aff0750800000000000000
+      internalID: 6273508073251492485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_15
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 320
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423872da1be6bc990800000000000000
+      internalID: -7364671056240999644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a28773bdf1675d3e0800000000000000
+      internalID: -2029586177866631126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d47c6db9e4f8b20b0800000000000000
+      internalID: -5752346531250911411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_18
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24bb30dabe538c110800000000000000
+      internalID: 1281333380323195714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_19
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57a8fcd586c2594b0800000000000000
+      internalID: -5434388548590531979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29faee2a7a04e8a30800000000000000
+      internalID: 4219380989630001042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_21
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46724731eac6cb000800000000000000
+      internalID: 53036790528092004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_22
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5175fd0e3f460f30800000000000000
+      internalID: 4541404402190479711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_23
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 074ca769ff42bb1b0800000000000000
+      internalID: -5639873428191525776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_24
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb2cc6c1b844acfb0800000000000000
+      internalID: -4626810302901730626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_25
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5c426f5cf65f760800000000000000
+      internalID: 7491016451229533629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_26
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be22cee577dfcde10800000000000000
+      internalID: 2223931005149651691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_27
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7be1eb3181e5d3650800000000000000
+      internalID: 6214226518344605367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_28
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa98e16d2ac38d00800000000000000
+      internalID: 973844240707132147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_29
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1c931d401b976d0800000000000000
+      internalID: -2992165843162775105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_30
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ad614696ab7edc70800000000000000
+      internalID: 8997765060948487586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_31
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 160
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20e494590ff5e71f0800000000000000
+      internalID: -1045292576601977342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef55ff07d92632b0800000000000000
+      internalID: -5605246682553557017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_33
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 766adbf24e0d2f590800000000000000
+      internalID: -7641815939222231449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_34
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc38551fb4a6f380800000000000000
+      internalID: -8937775269866357538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_35
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f45f809228a7b840800000000000000
+      internalID: 5239841557876528371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_36
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 625c65033d30d45b0800000000000000
+      internalID: -5382641774053898970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_37
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaca5460b26e98e20800000000000000
+      internalID: 3353464470017256622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_38
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f57157cf9661cd9f0800000000000000
+      internalID: -442454018926241953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_39
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ec6dd803535f9230800000000000000
+      internalID: 3647725839289511142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_40
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24c5d7a29a98c57a0800000000000000
+      internalID: -6387078811862868926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_41
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d8b2b9c2a2bcd60800000000000000
+      internalID: 7911463541476658550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_42
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d2247bc5f0a9070800000000000000
+      internalID: 8113814569547345270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_43
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c050bcb33e1636bf0800000000000000
+      internalID: -332314318906653428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_44
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f88c4b3b59a6e95d0800000000000000
+      internalID: -3053886306112976753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_45
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10172e67f56842ee0800000000000000
+      internalID: -1286755848946552575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_46
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d3056eb26377d3e0800000000000000
+      internalID: -2029026239168838697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mop heavy_47
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 160
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.62}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da5e4cd5e92b716b0800000000000000
+      internalID: -5325591641094560339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d607a3c4a86320d4da9a7c454a40e2fc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Mop heavy_0: 4791104458423478179
+      Mop heavy_1: 8097707042814156794
+      Mop heavy_10: 5030768066900819936
+      Mop heavy_11: 1428629484980538386
+      Mop heavy_12: -3281693127267573496
+      Mop heavy_13: -3316423001219050448
+      Mop heavy_14: 6273508073251492485
+      Mop heavy_15: -7364671056240999644
+      Mop heavy_16: -2029586177866631126
+      Mop heavy_17: -5752346531250911411
+      Mop heavy_18: 1281333380323195714
+      Mop heavy_19: -5434388548590531979
+      Mop heavy_2: -2608799412584894574
+      Mop heavy_20: 4219380989630001042
+      Mop heavy_21: 53036790528092004
+      Mop heavy_22: 4541404402190479711
+      Mop heavy_23: -5639873428191525776
+      Mop heavy_24: -4626810302901730626
+      Mop heavy_25: 7491016451229533629
+      Mop heavy_26: 2223931005149651691
+      Mop heavy_27: 6214226518344605367
+      Mop heavy_28: 973844240707132147
+      Mop heavy_29: -2992165843162775105
+      Mop heavy_3: -5019165883217895439
+      Mop heavy_30: 8997765060948487586
+      Mop heavy_31: -1045292576601977342
+      Mop heavy_32: -5605246682553557017
+      Mop heavy_33: -7641815939222231449
+      Mop heavy_34: -8937775269866357538
+      Mop heavy_35: 5239841557876528371
+      Mop heavy_36: -5382641774053898970
+      Mop heavy_37: 3353464470017256622
+      Mop heavy_38: -442454018926241953
+      Mop heavy_39: 3647725839289511142
+      Mop heavy_4: 7826309075006337645
+      Mop heavy_40: -6387078811862868926
+      Mop heavy_41: 7911463541476658550
+      Mop heavy_42: 8113814569547345270
+      Mop heavy_43: -332314318906653428
+      Mop heavy_44: -3053886306112976753
+      Mop heavy_45: -1286755848946552575
+      Mop heavy_46: -2029026239168838697
+      Mop heavy_47: -5325591641094560339
+      Mop heavy_5: 1563120661025406805
+      Mop heavy_6: -648418415873809220
+      Mop heavy_7: 71015156660261593
+      Mop heavy_8: -3206447746854907144
+      Mop heavy_9: 5968921014596898616
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
