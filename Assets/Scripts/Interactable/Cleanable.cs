@@ -43,10 +43,12 @@ public class Cleanable : Interactable
             else
                 Instantiate(_coin, transform.position - offset, quaternion.identity);
         }
-        if (_playerStats.CleaningSpreeMoney){
+        if (_playerStats.CleaningSpreeMoney)
+        {
             CleaningSpreeBonus();
         }
-        if(_playerStats.CleaningSpreeDamage &&_enemyTracker.EnemiesLeft() > 0){
+        if (_playerStats.CleaningSpreeDamage && _enemyTracker.EnemyCount > 0)
+        {
             _playerStats.CleaningSpreeDamageActive = true;
         }
 
@@ -81,8 +83,10 @@ public class Cleanable : Interactable
         _inputLock.UnlockInput();
     }
 
-    protected void CleaningSpreeBonus(){
-        if (_enemyTracker.EnemiesLeft() > 0){
+    protected void CleaningSpreeBonus()
+    {
+        if (_enemyTracker.EnemyCount > 0)
+        {
             Vector3 offset = new Vector3(_coinOffset, .5f, 0);
             Instantiate(_coin, transform.position + offset, quaternion.identity);
         }
