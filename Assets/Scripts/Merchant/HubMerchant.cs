@@ -11,7 +11,7 @@ namespace Merchant
         protected override void Start()
         {
             base.Start();
-            _hubManager = FindAnyObjectByType<HubManager>();
+            //_hubManager = FindAnyObjectByType<HubManager>();
             _hubUpgradeManager = FindAnyObjectByType<HubUpgradeManager>();
             _persistentPlayerStats = FindAnyObjectByType<PersistentPlayerStats>();
 
