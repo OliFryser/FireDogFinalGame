@@ -33,7 +33,7 @@ namespace Dialogue
 
         public void PlayHubDialogue(int index, Action onDialogCompleted)
         {
-            if (index <= _hubDialogues.Count)
+            if (index < _hubDialogues.Count)
                 _dialoguePlayer.StartDialog(_hubDialogues[index], onDialogCompleted);
             else
             {
