@@ -2236,20 +2236,6 @@ MonoBehaviour:
     Path: event:/Music/Music_Menu
   initialBattleState: 0.5
   clearRoomState: 0
-  mainStateSnapshot:
-    Guid:
-      Data1: -1512091561
-      Data2: 1095135827
-      Data3: -1669553489
-      Data4: 864102025
-    Path: snapshot:/Main State
-  level6Snapshot:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!1001 &1109281450822643931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2359,6 +2345,54 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialog Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 6957555338689539771, guid: 110815a04da95a448a483af78151f8f6, type: 3}
+      propertyPath: _hubDialogues.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6957555338689539771, guid: 110815a04da95a448a483af78151f8f6, type: 3}
+      propertyPath: '_hubDialogues.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f3202093eaa3b4306823cb2f9370f3bb, type: 2}
+    - target: {fileID: 6957555338689539771, guid: 110815a04da95a448a483af78151f8f6, type: 3}
+      propertyPath: '_hubDialogues.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1cec0905e8d0f45dc86383594d073b86, type: 2}
+    - target: {fileID: 6957555338689539771, guid: 110815a04da95a448a483af78151f8f6, type: 3}
+      propertyPath: '_hubDialogues.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 27045ad60c2b44ae6a5c0e6160d1be95, type: 2}
+    - target: {fileID: 6957555338689539771, guid: 110815a04da95a448a483af78151f8f6, type: 3}
+      propertyPath: '_hubDialogues.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 13fe24e8b6c664ea2a6d363908689ab6, type: 2}
+    - target: {fileID: 6957555338689539771, guid: 110815a04da95a448a483af78151f8f6, type: 3}
+      propertyPath: '_hubDialogues.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0768e19707e594c6e91120d8d4ee3ab4, type: 2}
+    - target: {fileID: 6957555338689539771, guid: 110815a04da95a448a483af78151f8f6, type: 3}
+      propertyPath: '_hubDialogues.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 076752bc6162b42c3aa1acb49ea00bdd, type: 2}
+    - target: {fileID: 6957555338689539771, guid: 110815a04da95a448a483af78151f8f6, type: 3}
+      propertyPath: '_hubDialogues.Array.data[7]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7753e94dcbf27418eb8b4afc86ccda57, type: 2}
+    - target: {fileID: 6957555338689539771, guid: 110815a04da95a448a483af78151f8f6, type: 3}
+      propertyPath: '_hubDialogues.Array.data[8]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8bab147525be741c3a8abbd3fbd334f6, type: 2}
+    - target: {fileID: 6957555338689539771, guid: 110815a04da95a448a483af78151f8f6, type: 3}
+      propertyPath: '_hubDialogues.Array.data[9]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 35f1e5afa84a04fb79cb15e500429609, type: 2}
+    - target: {fileID: 6957555338689539771, guid: 110815a04da95a448a483af78151f8f6, type: 3}
+      propertyPath: '_hubDialogues.Array.data[10]'
+      value: 
+      objectReference: {fileID: 11400000, guid: cefaafecfcf124060894e8e8a5c24711, type: 2}
+    - target: {fileID: 6957555338689539771, guid: 110815a04da95a448a483af78151f8f6, type: 3}
+      propertyPath: '_hubDialogues.Array.data[11]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 31c22cf395d624eb7a908ef388e48d50, type: 2}
     - target: {fileID: 7835894249824894189, guid: 110815a04da95a448a483af78151f8f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

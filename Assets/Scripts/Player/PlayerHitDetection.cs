@@ -48,15 +48,6 @@ public class PlayerHitDetection : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (_playerStats.IsDead)
-        {
-            KillPlayer();
-        }
-    }
-
     private void KillPlayer()
     {
         //Return player to hub.
@@ -74,7 +65,6 @@ public class PlayerHitDetection : MonoBehaviour
             if (_invincibilityManager == null || !_invincibilityManager.IsInvincible)
             {
                 TakeDamage(1);
-
                 // Apply pushback only if not invincible
                 Vector2 enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
                 _playerMovement.GetPushed(enemyDirection);
@@ -97,7 +87,7 @@ public class PlayerHitDetection : MonoBehaviour
         if (_invincibilityManager == null || !_invincibilityManager.IsInvincible)
         {
             _playerStats.ApplyDamage(damage);
-
+            if(_playerStats.IsDead) KillPlayer();
             RuntimeManager.PlayOneShot(hitSoundEventPath);
             _animator.SetTrigger(Damage);
             _flashEffect.CallDamageFlash();
@@ -135,7 +125,7 @@ public class PlayerHitDetection : MonoBehaviour
     }
 
 
-    public IEnumerator PlayDeathAnimation(float time){
+    private IEnumerator PlayDeathAnimation(float time){
         yield return new WaitForSeconds(time);
         _inputLocker.UnlockInput();
         Destroy(gameObject);

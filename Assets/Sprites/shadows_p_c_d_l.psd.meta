@@ -222,6 +222,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: shadows_p_c_d_l_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccd7b465b55ee44b8de7293cec1ab8a
+      internalID: 1776465051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -240,6 +262,7 @@ TextureImporter:
       shadows_p_c_d_l_1: -197933931883484312
       shadows_p_c_d_l_2: -901113874591645440
       shadows_p_c_d_l_3: -573285362134051734
+      shadows_p_c_d_l_4: 1776465051
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
