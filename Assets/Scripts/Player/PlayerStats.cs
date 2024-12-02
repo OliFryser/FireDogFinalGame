@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
-    private PersistentPlayerStats _peristentPlayerStats;
+    private PersistentPlayerStats _persistentPlayerStats;
     public float MovementSpeed = 50.0f;
     public int MaxHealth = 6;
     public float DamageLight = 10.0f;
@@ -41,6 +41,8 @@ public class PlayerStats : MonoBehaviour
     public bool BaseballConnoisseur;
 
     public float EnemyPushBackSpeed;
+    public int RoomNumber { get; private set; }
+    public int Deaths => _persistentPlayerStats.Deaths;
 
     private void OnEnable()
     {
@@ -61,8 +63,8 @@ public class PlayerStats : MonoBehaviour
     {
         _currentHealth = MaxHealth;
         _healthUIManager.UpdateHearts(_currentHealth);
-        _peristentPlayerStats = FindAnyObjectByType<PersistentPlayerStats>();
-        _peristentPlayerStats.RegisterNewPlayerStats(this);
+        _persistentPlayerStats = FindAnyObjectByType<PersistentPlayerStats>();
+        _persistentPlayerStats.RegisterNewPlayerStats(this);
     }
 
     public void ApplyDamage(int damage)
@@ -90,15 +92,15 @@ public class PlayerStats : MonoBehaviour
 
     public void AddCoins(int amount)
     {
-        _peristentPlayerStats.AddCoins(amount);
+        _persistentPlayerStats.AddCoins(amount);
     }
 
     public void RemoveCoins(int amount)
     {
-        _peristentPlayerStats.SpendCoins(amount);
+        _persistentPlayerStats.SpendCoins(amount);
     }
 
-    public int Coins => _peristentPlayerStats.Coins;
+    public int Coins => _persistentPlayerStats.Coins;
 
     public bool PassiveHealing { get; internal set; }
 
@@ -130,4 +132,14 @@ public class PlayerStats : MonoBehaviour
 
     internal bool IsCritical()
         => UnityEngine.Random.Range(0f, 1f) * 100f < CriticalAttackChance;
+
+    internal void AddPlayerDeath()
+    {
+        _persistentPlayerStats.AddPlayerDeath();
+    }
+
+    internal void AddToRoomCounter()
+    {
+        RoomNumber++;
+    }
 }

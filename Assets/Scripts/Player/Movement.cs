@@ -72,13 +72,13 @@ public class Movement : MonoBehaviour
             {
                 _rigidBody2D.AddForce(_movementSpeed * _knockBackSpeed * _pushDirection);
                 _currentPushDistance += _movementSpeed * _knockBackSpeed * Time.fixedDeltaTime;
-                return;
             }
             else
             {
                 StopPush();
-                return;
             }
+
+            return;
         }
 
         if (_playerWeapon.IsAttacking && _playerWeapon.HeavyAttack)

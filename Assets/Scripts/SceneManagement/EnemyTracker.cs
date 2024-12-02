@@ -1,60 +1,70 @@
 using System.Collections;
-using System.Threading;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EnemyTracker : MonoBehaviour
+namespace SceneManagement
 {
-    private int _enemyCount;
-    public int EnemyCount => _enemyCount;
-
-    [SerializeField]
-    private UnityEvent _onRoomCleared;
-
-    private bool _roomCleared;
-
-    private void Start()
+    public class EnemyTracker : MonoBehaviour
     {
-        StartCoroutine(SlowEnemyCounter());
-    }
+        public int EnemyCount { get; private set; }
 
-    public void RegisterEnemy()
-    {
-        _enemyCount++;
-    }
+        [SerializeField]
+        private UnityEvent _onRoomCleared;
 
-    public void UnregisterEnemy()
-    {
-        _enemyCount--;
-        StartCoroutine(SpawnBuffer(_enemyCount));
-    }
+        private bool _roomCleared;
 
-    // We add this buffer to handle if a couch dies before spawning it's dusts enemies
-    private IEnumerator SpawnBuffer(int enemyCount)
-    {
-        if (_roomCleared)
-            yield return null;
-        yield return new WaitForEndOfFrame();
-        yield return new WaitForEndOfFrame();
-        if (enemyCount == 0)
+        private void Start()
         {
-            StopAllCoroutines();
-            _onRoomCleared?.Invoke();
-            _roomCleared = true;
+            StartCoroutine(SlowEnemyCounter());
         }
-    }
 
-    // Safe guard if counter gets out of sync
-    // Happens very rarely, and is hard to reproduce, so this is a hotfix
-    // TODO Figure out actual problem and fix it
-    private IEnumerator SlowEnemyCounter()
-    {
-        for (; ; )
+        public void RegisterEnemy()
         {
-            yield return new WaitForSeconds(5f);
-            int enemyCount = FindObjectsByType<EnemyMovement>(FindObjectsSortMode.None).Length;
-            StartCoroutine(SpawnBuffer(enemyCount));
+            EnemyCount++;
+        }
+
+        public void UnregisterEnemy()
+        {
+            EnemyCount--;
+            StartCoroutine(SpawnBuffer());
+        }
+
+        // We add this buffer to handle if a couch dies before spawning it's dusts enemies
+        private IEnumerator SpawnBuffer()
+        {
+            yield return new WaitForEndOfFrame();
+            yield return new WaitForEndOfFrame();
+            if (_roomCleared)
+                yield return null;
+            if (EnemyCount != 0) yield break;
+            StopAllCoroutines();
+            _roomCleared = true;
+            _onRoomCleared?.Invoke();
+        }
+
+        // Safeguard if counter gets out of sync
+        // Happens very rarely, and is hard to reproduce, so this is a hotfix
+        // TODO Figure out actual problem and fix it
+        private IEnumerator SlowEnemyCounter()
+        {
+            for (; ; )
+            {
+                yield return new WaitForSeconds(5f);
+                var enemyCount = FindObjectsByType<EnemyMovement>(FindObjectsSortMode.None).Length;
+                StartCoroutine(SpawnBuffer(enemyCount));
+            }
+            // ReSharper disable once IteratorNeverReturns
+        }
+        
+        private IEnumerator SpawnBuffer(int enemyCount)
+        {
+            yield return new WaitForEndOfFrame();
+            yield return new WaitForEndOfFrame();
+            StopAllCoroutines();
+            if (_roomCleared) yield break;
+            if (enemyCount != 0) yield break;
+            _roomCleared = true;
+            _onRoomCleared?.Invoke();
         }
     }
 }
