@@ -1,6 +1,7 @@
 using UnityEngine;
 using FMODUnity;
 using SceneManagement;
+using System.Collections;
 
 public class EnemyHitDetection : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class EnemyHitDetection : MonoBehaviour
 
     private float _damageboostTimer;
 
+    protected bool _isInvincible;
+
     protected void Start()
     {
         _enemyTracker = FindAnyObjectByType<EnemyTracker>();
@@ -50,19 +53,25 @@ public class EnemyHitDetection : MonoBehaviour
     {
         if (other.CompareTag("Light Weapon Hit Box"))
         {
+            if (!_isInvincible) {
             _flashEffect.CallDamageFlash();
             GetHitLightAttack();
+            }
         }
 
         else if (other.CompareTag("Heavy Weapon Hit Box"))
-        {
+        {   
+            if (!_isInvincible) {
             _flashEffect.CallDamageFlash();
             GetHitHeavyAttack();
+            }
         }
 
         else if (other.CompareTag("Dodge Roll Hit Box")){
+            if (!_isInvincible) {
             _flashEffect.CallDamageFlash();
             GetHitDodgeRoll();
+            }
         }
 
         if (_health <= 0)
@@ -84,7 +93,7 @@ public class EnemyHitDetection : MonoBehaviour
     }
 
     protected virtual void GetHitLightAttack()
-    {
+    {   
         _enemyMovement.GetPushedBack(_playerStats.EnemyPushBack, _playerStats.EnemyStunDuration);
         RuntimeManager.PlayOneShot(Enemyhit);
         _cameraShake.StartShake();
@@ -102,6 +111,7 @@ public class EnemyHitDetection : MonoBehaviour
             _playerStats.DamageBoostCounter+=0.06f;
             _damageboostTimer = 3f;
         }
+        StartCoroutine(InvincibilityFrames(0.15f));
     }
 
     protected virtual void GetHitHeavyAttack()
@@ -123,6 +133,7 @@ public class EnemyHitDetection : MonoBehaviour
             _playerStats.DamageBoostCounter+=0.06f;
             _damageboostTimer = 3f;
         }
+        StartCoroutine(InvincibilityFrames(0.15f));
     }
 
     protected virtual void GetHitDodgeRoll(){
@@ -142,6 +153,7 @@ public class EnemyHitDetection : MonoBehaviour
             _playerStats.DamageBoostCounter+=0.06f;
             _damageboostTimer = 3f;
         }
+        StartCoroutine(InvincibilityFrames(0.15f));
     }
 
 
@@ -172,6 +184,12 @@ public class EnemyHitDetection : MonoBehaviour
             _isDead = true;
             Destroy(gameObject);
         }
+    }
+
+    protected IEnumerator InvincibilityFrames(float time){
+        _isInvincible = true;
+        yield return new WaitForSeconds(time);
+        _isInvincible = false;
     }
 
 }
