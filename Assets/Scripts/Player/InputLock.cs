@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,7 +17,9 @@ public class InputLock : MonoBehaviour
         LockCount++;
 
         if (LockCount == 1 && _playerInput)
+        {
             _playerInput.actions.FindActionMap("Player", true).Disable();
+        }
     }
 
     public void UnlockInput()
