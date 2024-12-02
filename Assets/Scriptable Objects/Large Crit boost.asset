@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a80dd7641bb9f84b9de8e7f4d75fdd0, type: 3}
   m_Name: Large Crit boost
   m_EditorClassIdentifier: 
-  Title: Crit Enjoyer
+  Title: Precision gloves
   Description: Grants 20% crit chance. Reduces damage of the Light and Heavy Attack
     by 2,5 and 5 respectively.
   UpgradeType: 6
