@@ -432,8 +432,8 @@ MonoBehaviour:
     Prefab: {fileID: 104633210319889299, guid: 0ab844b31bfa40645bec1c0883b6d73e, type: 3}
     Offset: 0.6
   _heavyAttackHitBoxDelay: 0.3
-  _hitBoxDestroyDelayHeavy: 0.7
-  _heavyCooldown: 1
+  _hitBoxDestroyDelayHeavy: 0.75
+  _heavyCooldown: 1.05
   _heavyHitBoxPrefabDown:
     Prefab: {fileID: 4584349179100242260, guid: c3009d071118c734ba603555d5fca12b, type: 3}
     Offset: 1.3
@@ -616,7 +616,7 @@ MonoBehaviour:
   EnemyStunDuration: 0.5
   PlayerPushBack: 15
   EnemyPushBack: 1
-  DodgeCooldown: 0.4
+  DodgeCooldown: 0.3
   DodgeDistance: 60
   DamageBoostUpgrade: 0
   CleaningSpreeDamage: 0

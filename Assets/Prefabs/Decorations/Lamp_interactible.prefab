@@ -54,6 +54,7 @@ MonoBehaviour:
   IsInteractable: 0
   offLamp: {fileID: 3955211130216593468}
   onLamp: {fileID: 175755986823288188}
+  startOn: 0
 --- !u!61 &7242376975442570232
 BoxCollider2D:
   m_ObjectHideFlags: 0
