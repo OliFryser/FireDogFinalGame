@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: More Health
   m_EditorClassIdentifier: 
   Title: Reinforced Glasses
-  Description: Increases Max and Current health by 1.
+  Description: Increases Max and Current health by 2.
   UpgradeType: 0
