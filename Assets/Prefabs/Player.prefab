@@ -549,18 +549,18 @@ MonoBehaviour:
     Path: event:/Player/Footsteps
   footstepStartEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 196878091
+      Data2: 1117052625
+      Data3: 2074070427
+      Data4: 499616631
+    Path: event:/Player/Footstep_Start
   footstepStopEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1556295663
+      Data2: 1330921900
+      Data3: 601495209
+      Data4: -424437280
+    Path: event:/Player/Footstep_Stop
 --- !u!58 &3094542141851771796
 CircleCollider2D:
   m_ObjectHideFlags: 0
