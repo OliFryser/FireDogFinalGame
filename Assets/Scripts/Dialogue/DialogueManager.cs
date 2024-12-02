@@ -36,7 +36,10 @@ namespace Dialogue
             if (index <= _hubDialogues.Count)
                 _dialoguePlayer.StartDialog(_hubDialogues[index], onDialogCompleted);
             else
+            {
                 Debug.LogWarning("No hub dialog with index: " + index);
+                onDialogCompleted();
+            }
         }
     
         public void PlayRoomDialogue(int death, int room, Action onDialogCompleted)
@@ -44,7 +47,10 @@ namespace Dialogue
             if (death < _roomDialogues.Count && room < _roomDialogues[death].Dialogues.Count)
                 _dialoguePlayer.StartDialog(_roomDialogues[death].Dialogues[room], onDialogCompleted);
             else
+            {
                 Debug.LogWarning("No room dialog with for death: " + death + " and room: " + room);
+                onDialogCompleted();
+            }
         }
 
         [System.Serializable]
