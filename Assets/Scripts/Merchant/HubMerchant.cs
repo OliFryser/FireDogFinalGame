@@ -11,7 +11,7 @@ namespace Merchant
         protected override void Start()
         {
             base.Start();
-            //_hubManager = FindAnyObjectByType<HubManager>();
+            _hubManager = FindAnyObjectByType<HubManager>();
             _hubUpgradeManager = FindAnyObjectByType<HubUpgradeManager>();
             _persistentPlayerStats = FindAnyObjectByType<PersistentPlayerStats>();
 
@@ -21,7 +21,14 @@ namespace Merchant
 
         public override void Interact()
         {
-            _hubUpgradeManager.ShowUpgradeMenu(_persistentPlayerStats.HubUpgrades);
+            if (_hasInteracted)
+            {
+                _hasInteracted = true;
+                _hubManager
+                    .PlayMerchantDialogue(() => _hubUpgradeManager.ShowUpgradeMenu(_persistentPlayerStats.HubUpgrades));
+            }
+            else
+                _hubUpgradeManager.ShowUpgradeMenu(_persistentPlayerStats.HubUpgrades);
         }
     }
 }
