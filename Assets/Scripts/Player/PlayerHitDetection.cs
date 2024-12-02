@@ -15,6 +15,7 @@ public class PlayerHitDetection : MonoBehaviour
     private Light2D _flashlight;
     private FlashEffect _flashEffect;
     private InvincibilityManager _invincibilityManager;
+    private InputLock _inputLocker;
 
     public string hitSoundEventPath = "event:/Player/Damage";
 
@@ -27,6 +28,7 @@ public class PlayerHitDetection : MonoBehaviour
         _flashlight = GetComponentInChildren<Light2D>(includeInactive: true);
         _flashEffect = GetComponent<FlashEffect>();
         _invincibilityManager = GetComponent<InvincibilityManager>();
+        _inputLocker = GetComponent<InputLock>();
 
     }
 
@@ -59,6 +61,7 @@ public class PlayerHitDetection : MonoBehaviour
     {
         //Return player to hub.
         _playerStats.AddPlayerDeath();
+        _inputLocker.LockInput();
         _animator.SetTrigger("Death");
         StartCoroutine(IgnoreCollision(3.2f));
         StartCoroutine(PlayDeathAnimation(3.2f));
@@ -134,6 +137,7 @@ public class PlayerHitDetection : MonoBehaviour
 
     public IEnumerator PlayDeathAnimation(float time){
         yield return new WaitForSeconds(time);
+        _inputLocker.UnlockInput();
         Destroy(gameObject);
         SceneManager.LoadScene(1);
     }

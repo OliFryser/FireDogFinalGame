@@ -335,7 +335,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wizard50x70_0: 5502922256856590283
+      Wizard50x70_1: -7464850496315332398
+      Wizard50x70_2: 2173286428901060807
+      Wizard50x70_3: 8307655971077423828
+      Wizard50x70_4: 8234433235404343120
+      Wizard50x70_5: 8974150924025359517
+      Wizard50x70_6: -3075245596867577398
+      Wizard50x70_7: -4953913914749563880
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
