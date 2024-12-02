@@ -126,6 +126,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -384,7 +397,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cobwebs+Water_0: -2649054289259941229
+      cobwebs+Water_1: 7294774924598658083
+      cobwebs+Water_10: 8313314019244337076
+      cobwebs+Water_2: 4711229600065181929
+      cobwebs+Water_3: -7249893134042915288
+      cobwebs+Water_4: -2355544833472515010
+      cobwebs+Water_5: -6961215367094625135
+      cobwebs+Water_6: -405650442554484451
+      cobwebs+Water_7: 6884715590483420073
+      cobwebs+Water_8: 3491991132008129677
+      cobwebs+Water_9: 4567238577725428521
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

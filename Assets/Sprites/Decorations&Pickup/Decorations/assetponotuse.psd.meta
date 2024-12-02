@@ -306,6 +306,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1884,7 +1897,78 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      assetponotuse_0: -1557094308098449121
+      assetponotuse_1: -333615658403289468
+      assetponotuse_10: -6310207365150689786
+      assetponotuse_11: 1547961714901076145
+      assetponotuse_12: -2915614852411372072
+      assetponotuse_13: 4320730337280880004
+      assetponotuse_14: -7974109091075212218
+      assetponotuse_15: -1133218942310063208
+      assetponotuse_16: 7987131942954936918
+      assetponotuse_17: 183471462179131998
+      assetponotuse_18: 5914014369251545694
+      assetponotuse_19: 1152498700926981789
+      assetponotuse_2: 8797025121451715291
+      assetponotuse_20: 911579692920845499
+      assetponotuse_21: 5000182098082258496
+      assetponotuse_22: -3673755064058986982
+      assetponotuse_23: -5776364361272285009
+      assetponotuse_24: 8424268289932040406
+      assetponotuse_25: 8261775980527793597
+      assetponotuse_26: -4234641123010639806
+      assetponotuse_27: -7776450905841953970
+      assetponotuse_28: 1333444367638005073
+      assetponotuse_29: 4502016894774836093
+      assetponotuse_3: 1208744516787416563
+      assetponotuse_30: 8021231337664639370
+      assetponotuse_31: 8073109635834190554
+      assetponotuse_32: 9180401659839653639
+      assetponotuse_33: 327118016397106696
+      assetponotuse_34: 4190303100222135945
+      assetponotuse_35: 3965285370306153281
+      assetponotuse_36: 6043293688132451067
+      assetponotuse_37: 1423758781237976835
+      assetponotuse_38: 8803968889419104039
+      assetponotuse_39: 8642565866432195741
+      assetponotuse_4: -811923454221391835
+      assetponotuse_40: -3683792431433985489
+      assetponotuse_41: 1533306802635400342
+      assetponotuse_42: 4453226370244004777
+      assetponotuse_43: -1207525635423381563
+      assetponotuse_44: -1653373093051304490
+      assetponotuse_45: -2141133407428405941
+      assetponotuse_46: -886448116506932705
+      assetponotuse_47: 7320613630425446049
+      assetponotuse_48: -2235029521659921224
+      assetponotuse_49: 8238522988542671892
+      assetponotuse_5: 6728421427499474303
+      assetponotuse_50: 4221392880583830412
+      assetponotuse_51: -8698409199370930576
+      assetponotuse_52: 7770613855088440987
+      assetponotuse_53: -4563526761290983742
+      assetponotuse_54: 1775816294481488861
+      assetponotuse_55: 3554867754142281234
+      assetponotuse_56: 6629848920493913791
+      assetponotuse_57: 3452341564148160977
+      assetponotuse_58: -6596059439422808737
+      assetponotuse_59: 7253366943022908626
+      assetponotuse_6: 9068051296662724947
+      assetponotuse_60: -3904429361390071852
+      assetponotuse_61: 2176552615043977531
+      assetponotuse_62: -8719200962832619403
+      assetponotuse_63: -4573716869819992459
+      assetponotuse_64: -5313971971525480836
+      assetponotuse_65: -2610281100979926318
+      assetponotuse_66: 7996064563313264861
+      assetponotuse_67: 2943061828353717232
+      assetponotuse_68: 513026421717283154
+      assetponotuse_69: 7562423681228076489
+      assetponotuse_7: -4481201948968500556
+      assetponotuse_70: 4060512842670905373
+      assetponotuse_8: 3983771864023445825
+      assetponotuse_9: 212077366312278407
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,3 +1,4 @@
+using Lib;
 using UnityEngine;
 
 public class ButtonPrompt : MonoBehaviour
