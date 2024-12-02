@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0f22b432dc4564c9633f42aec7254a, type: 3}
+  m_Name: Ending Sequence
+  m_EditorClassIdentifier: 
+  Lines:
+  - DialogContent: Woah! What is this place? That smell?
+    Speaker: {fileID: 11400000, guid: 5e07a4ebe4e753f4e91e343812c4f2f2, type: 2}
+  - DialogContent: You have been scrubbing down an entire mansion, yet only now does
+      your nose take offense?
+    Speaker: {fileID: 11400000, guid: 0d0d5b1227bb2144aa494262bca395f2, type: 2}
+  - DialogContent: I can deal with rut and mold, even LIVE furniture apparently.
+      But this? A new level of nasty.
+    Speaker: {fileID: 11400000, guid: 5e07a4ebe4e753f4e91e343812c4f2f2, type: 2}
+  - DialogContent: "Would you kindly refrain from criticizing my work in progress?
+      My current\u2026 condition and these hands make following a potion brewing
+      guide divided on two sticky pages challenging."
+    Speaker: {fileID: 11400000, guid: 0d0d5b1227bb2144aa494262bca395f2, type: 2}
+  - DialogContent: A potion? Like witchy cauldron vibes?
+    Speaker: {fileID: 11400000, guid: 5e07a4ebe4e753f4e91e343812c4f2f2, type: 2}
+  - DialogContent: No! Or yes. The potion is meant to restore myself and my home
+      to our former glory.
+    Speaker: {fileID: 11400000, guid: 0d0d5b1227bb2144aa494262bca395f2, type: 2}
+  - DialogContent: Hold on a sec. But you said you were a realtor! You own the house?!
+    Speaker: {fileID: 11400000, guid: 5e07a4ebe4e753f4e91e343812c4f2f2, type: 2}
+  - DialogContent: Hopefully not for long! I hope to convince people to buy the mansion
+      by enhancing its appeal with a touch of magic.
+    Speaker: {fileID: 11400000, guid: 0d0d5b1227bb2144aa494262bca395f2, type: 2}
+  - DialogContent: You turned the furniture into that? And yourself into that thing.
+      Why?
+    Speaker: {fileID: 11400000, guid: 5e07a4ebe4e753f4e91e343812c4f2f2, type: 2}
+  - DialogContent: I didn't mean to. Not myself anyways. Come on now. Help me undo
+      it by turning the page in this book so I can complete the potion and you can
+      leave with a bag full of your well-earned payment. But be careful! The pages
+      are delicate.
+    Speaker: {fileID: 11400000, guid: 0d0d5b1227bb2144aa494262bca395f2, type: 2}
+  - DialogContent: But you meant to do it to the furniture?
+    Speaker: {fileID: 11400000, guid: 5e07a4ebe4e753f4e91e343812c4f2f2, type: 2}
+  - DialogContent: Just stop blabbering and help me, would you?
+    Speaker: {fileID: 11400000, guid: 0d0d5b1227bb2144aa494262bca395f2, type: 2}
