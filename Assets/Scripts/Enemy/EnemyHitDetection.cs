@@ -116,7 +116,7 @@ public class EnemyHitDetection : MonoBehaviour
 
     protected virtual void GetHitHeavyAttack()
     {
-        _enemyMovement.GetPushedBack(_playerStats.EnemyPushBack * 2, _playerStats.EnemyStunDuration * 2);
+        _enemyMovement.GetPushedBack(_playerStats.EnemyPushBack * 2, _playerStats.EnemyStunDuration * 1.5f);
         float damage = _playerStats.DamageHeavy*_playerStats.DamageBoostCounter;
         if (_playerStats.IsCritical())
         {
