@@ -1,17 +1,20 @@
-public class Merchant : MerchantBase
+namespace Merchant
 {
-    private RoomManager _roomManager;
-
-    protected override void Start()
+    public class Merchant : MerchantBase
     {
-        base.Start();
-        _roomManager = FindFirstObjectByType<RoomManager>();
-    }
+        private RoomManager _roomManager;
+
+        protected override void Start()
+        {
+            base.Start();
+            _roomManager = FindFirstObjectByType<RoomManager>();
+        }
 
 
-    public override void Interact()
-    {
-        base.Interact();
-        _roomManager.OpenUpgradeMenu();
+        public override void Interact()
+        {
+            base.Interact();
+            _roomManager.OpenUpgradeMenu();
+        }
     }
 }

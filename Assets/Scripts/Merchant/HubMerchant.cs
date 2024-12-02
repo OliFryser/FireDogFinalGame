@@ -1,18 +1,21 @@
-public class HubMerchant : MerchantBase
+namespace Merchant
 {
-    private HubUpgradeManager _hubUpgradeManager;
-    private PersistentPlayerStats _persistentPlayerStats;
-
-    protected override void Start()
+    public class HubMerchant : MerchantBase
     {
-        base.Start();
-        _hubUpgradeManager = FindAnyObjectByType<HubUpgradeManager>();
-        _persistentPlayerStats = FindAnyObjectByType<PersistentPlayerStats>();
-    }
+        private HubUpgradeManager _hubUpgradeManager;
+        private PersistentPlayerStats _persistentPlayerStats;
+
+        protected override void Start()
+        {
+            base.Start();
+            _hubUpgradeManager = FindAnyObjectByType<HubUpgradeManager>();
+            _persistentPlayerStats = FindAnyObjectByType<PersistentPlayerStats>();
+        }
 
 
-    public override void Interact()
-    {
-        _hubUpgradeManager.ShowUpgradeMenu(_persistentPlayerStats.HubUpgrades);
+        public override void Interact()
+        {
+            _hubUpgradeManager.ShowUpgradeMenu(_persistentPlayerStats.HubUpgrades);
+        }
     }
 }
