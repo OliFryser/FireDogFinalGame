@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a80dd7641bb9f84b9de8e7f4d75fdd0, type: 3}
   m_Name: Heavy Attack
   m_EditorClassIdentifier: 
-  Title: Heavy Attack Power
+  Title: Nail Mob
   Description: Increases the damage of the Heavy Attack by 5.
   UpgradeType: 2
