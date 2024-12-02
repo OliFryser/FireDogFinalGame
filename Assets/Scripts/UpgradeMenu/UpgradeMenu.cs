@@ -9,7 +9,7 @@ public class UpgradeMenu : MonoBehaviour
     private RoomManager _roomManager;
 
     [SerializeField]
-    private UpgradeDisplay[] _displays = new UpgradeDisplay[3];
+    private UpgradeDisplay[] _displays = new UpgradeDisplay[2];
 
     [SerializeField]
     private Upgrade[] _upgrades = new Upgrade[11];
@@ -20,14 +20,15 @@ public class UpgradeMenu : MonoBehaviour
     {
         _roomManager = FindAnyObjectByType<RoomManager>();
         _selectedUpgrades = new List<Upgrade>();
+        Debug.Log("Count:" + _displays.Length.ToString());
         
         for (int i = 0; i < _displays.Length; i++)
         {  
             
             while (_displays[i].Upgrade == null) {
             System.Random random = new System.Random();
-            int val = random.Next(0,10);
-            if (val <= 5){
+            int val = random.Next(0,20);
+            if (val <= 12){
                 System.Random rnd = new System.Random();
                 int innerVal = rnd.Next(0,5);
                 if (!_selectedUpgrades.Contains(_upgrades[innerVal])){
@@ -36,7 +37,7 @@ public class UpgradeMenu : MonoBehaviour
                     _selectedUpgrades.Add(_upgrades[innerVal]);
                 } 
             }
-            else if (val > 5 && val < 9 ){
+            else if (val > 12 && val < 18 ){
                 System.Random rnd = new System.Random();
                 int innerVal = rnd.Next(5,9);
                 if (!_selectedUpgrades.Contains(_upgrades[innerVal])){

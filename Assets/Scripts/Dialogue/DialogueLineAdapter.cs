@@ -1,61 +1,65 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Lib;
 using UnityEngine;
 
-public class DialogueLineAdapter : MonoBehaviour
+namespace Dialogue
 {
-  private DialogueLine _dialogueLine;
-
-  [SerializeField]
-  private DialogueDisplay _dialogueDisplay;
-
-  private Queue<string> _lineQueue;
-
-  private Action _onCompleted;
-
-  public void PlayDialogueLines(DialogueLine dialogueLine, Action onCompleted)
+  public class DialogueLineAdapter : MonoBehaviour
   {
-    _onCompleted = onCompleted;
+    private DialogueLine _dialogueLine;
 
-    _dialogueLine = dialogueLine;
-    _dialogueDisplay.gameObject.SetActive(true);
-    _dialogueDisplay.SetDialogueSpeaker(_dialogueLine.Speaker);
+    [SerializeField]
+    private DialogueDisplay _dialogueDisplay;
 
-    var lines =
-      TextSplitter
-        .SplitTextToFit(
-          _dialogueLine.DialogContent,
-          _dialogueDisplay.DialogueTextDisplay,
-          _dialogueDisplay.DialogueTextDisplayTransform);
+    private Queue<string> _lineQueue;
 
-    _lineQueue = new Queue<string>(lines);
-    PlayNextLineInDisplay();
-  }
+    private Action _onCompleted;
 
-  private void PlayNextLineInDisplay()
-  {
-    _dialogueDisplay.PlayLine(_lineQueue.Dequeue(), OnDialogLinePlayed);
-  }
-
-  private void OnDialogLinePlayed()
-  {
-    if (!_lineQueue.Any())
+    public void PlayDialogueLines(DialogueLine dialogueLine, Action onCompleted)
     {
-      _onCompleted();
-      return;
+      _onCompleted = onCompleted;
+
+      _dialogueLine = dialogueLine;
+      _dialogueDisplay.gameObject.SetActive(true);
+      _dialogueDisplay.SetDialogueSpeaker(_dialogueLine.Speaker);
+
+      var lines =
+        TextSplitter
+          .SplitTextToFit(
+            _dialogueLine.DialogContent,
+            _dialogueDisplay.DialogueTextDisplay,
+            _dialogueDisplay.DialogueTextDisplayTransform);
+
+      _lineQueue = new Queue<string>(lines);
+      PlayNextLineInDisplay();
     }
-    PlayNextLineInDisplay();
-  }
 
-  public void HideDisplay()
-  {
-    _dialogueDisplay.gameObject.SetActive(false);
-  }
+    private void PlayNextLineInDisplay()
+    {
+      _dialogueDisplay.PlayLine(_lineQueue.Dequeue(), OnDialogLinePlayed);
+    }
 
-  public void OnDialogClick()
-  {
-    _dialogueDisplay.OnDialogClick();
-  }
+    private void OnDialogLinePlayed()
+    {
+      if (!_lineQueue.Any())
+      {
+        _onCompleted();
+        return;
+      }
+      PlayNextLineInDisplay();
+    }
 
+    public void HideDisplay()
+    {
+      _dialogueDisplay.gameObject.SetActive(false);
+    }
+
+    public void OnDialogClick()
+    {
+      _dialogueDisplay.OnDialogClick();
+    }
+
+  }
 }

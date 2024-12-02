@@ -1,0 +1,1976 @@
+fileFormatVersion: 2
+guid: dc30ad7482e6d7342ae0121d9ed3c2ca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1557094308098449121
+    second: assetponotuse_0
+  - first:
+      213: -333615658403289468
+    second: assetponotuse_1
+  - first:
+      213: 8797025121451715291
+    second: assetponotuse_2
+  - first:
+      213: 1208744516787416563
+    second: assetponotuse_3
+  - first:
+      213: -811923454221391835
+    second: assetponotuse_4
+  - first:
+      213: 6728421427499474303
+    second: assetponotuse_5
+  - first:
+      213: 9068051296662724947
+    second: assetponotuse_6
+  - first:
+      213: -4481201948968500556
+    second: assetponotuse_7
+  - first:
+      213: 3983771864023445825
+    second: assetponotuse_8
+  - first:
+      213: 212077366312278407
+    second: assetponotuse_9
+  - first:
+      213: -6310207365150689786
+    second: assetponotuse_10
+  - first:
+      213: 1547961714901076145
+    second: assetponotuse_11
+  - first:
+      213: -2915614852411372072
+    second: assetponotuse_12
+  - first:
+      213: 4320730337280880004
+    second: assetponotuse_13
+  - first:
+      213: -7974109091075212218
+    second: assetponotuse_14
+  - first:
+      213: -1133218942310063208
+    second: assetponotuse_15
+  - first:
+      213: 7987131942954936918
+    second: assetponotuse_16
+  - first:
+      213: 183471462179131998
+    second: assetponotuse_17
+  - first:
+      213: 5914014369251545694
+    second: assetponotuse_18
+  - first:
+      213: 1152498700926981789
+    second: assetponotuse_19
+  - first:
+      213: 911579692920845499
+    second: assetponotuse_20
+  - first:
+      213: 5000182098082258496
+    second: assetponotuse_21
+  - first:
+      213: -3673755064058986982
+    second: assetponotuse_22
+  - first:
+      213: -5776364361272285009
+    second: assetponotuse_23
+  - first:
+      213: 8424268289932040406
+    second: assetponotuse_24
+  - first:
+      213: 8261775980527793597
+    second: assetponotuse_25
+  - first:
+      213: -4234641123010639806
+    second: assetponotuse_26
+  - first:
+      213: -7776450905841953970
+    second: assetponotuse_27
+  - first:
+      213: 1333444367638005073
+    second: assetponotuse_28
+  - first:
+      213: 4502016894774836093
+    second: assetponotuse_29
+  - first:
+      213: 8021231337664639370
+    second: assetponotuse_30
+  - first:
+      213: 8073109635834190554
+    second: assetponotuse_31
+  - first:
+      213: 9180401659839653639
+    second: assetponotuse_32
+  - first:
+      213: 327118016397106696
+    second: assetponotuse_33
+  - first:
+      213: 4190303100222135945
+    second: assetponotuse_34
+  - first:
+      213: 3965285370306153281
+    second: assetponotuse_35
+  - first:
+      213: 6043293688132451067
+    second: assetponotuse_36
+  - first:
+      213: 1423758781237976835
+    second: assetponotuse_37
+  - first:
+      213: 8803968889419104039
+    second: assetponotuse_38
+  - first:
+      213: 8642565866432195741
+    second: assetponotuse_39
+  - first:
+      213: -3683792431433985489
+    second: assetponotuse_40
+  - first:
+      213: 1533306802635400342
+    second: assetponotuse_41
+  - first:
+      213: 4453226370244004777
+    second: assetponotuse_42
+  - first:
+      213: -1207525635423381563
+    second: assetponotuse_43
+  - first:
+      213: -1653373093051304490
+    second: assetponotuse_44
+  - first:
+      213: -2141133407428405941
+    second: assetponotuse_45
+  - first:
+      213: -886448116506932705
+    second: assetponotuse_46
+  - first:
+      213: 7320613630425446049
+    second: assetponotuse_47
+  - first:
+      213: -2235029521659921224
+    second: assetponotuse_48
+  - first:
+      213: 8238522988542671892
+    second: assetponotuse_49
+  - first:
+      213: 4221392880583830412
+    second: assetponotuse_50
+  - first:
+      213: -8698409199370930576
+    second: assetponotuse_51
+  - first:
+      213: 7770613855088440987
+    second: assetponotuse_52
+  - first:
+      213: -4563526761290983742
+    second: assetponotuse_53
+  - first:
+      213: 1775816294481488861
+    second: assetponotuse_54
+  - first:
+      213: 3554867754142281234
+    second: assetponotuse_55
+  - first:
+      213: 6629848920493913791
+    second: assetponotuse_56
+  - first:
+      213: 3452341564148160977
+    second: assetponotuse_57
+  - first:
+      213: -6596059439422808737
+    second: assetponotuse_58
+  - first:
+      213: 7253366943022908626
+    second: assetponotuse_59
+  - first:
+      213: -3904429361390071852
+    second: assetponotuse_60
+  - first:
+      213: 2176552615043977531
+    second: assetponotuse_61
+  - first:
+      213: -8719200962832619403
+    second: assetponotuse_62
+  - first:
+      213: -4573716869819992459
+    second: assetponotuse_63
+  - first:
+      213: -5313971971525480836
+    second: assetponotuse_64
+  - first:
+      213: -2610281100979926318
+    second: assetponotuse_65
+  - first:
+      213: 7996064563313264861
+    second: assetponotuse_66
+  - first:
+      213: 2943061828353717232
+    second: assetponotuse_67
+  - first:
+      213: 513026421717283154
+    second: assetponotuse_68
+  - first:
+      213: 7562423681228076489
+    second: assetponotuse_69
+  - first:
+      213: 4060512842670905373
+    second: assetponotuse_70
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: assetponotuse_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 290
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1162040af6146ae0800000000000000
+      internalID: -1557094308098449121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 289
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4862d558352ce5bf0800000000000000
+      internalID: -333615658403289468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 262
+        width: 48
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda21544dbf451a70800000000000000
+      internalID: 8797025121451715291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 271
+        width: 65
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fda05bdbb256c010800000000000000
+      internalID: 1208744516787416563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_4
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 255
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 528635e8be77bb4f0800000000000000
+      internalID: -811923454221391835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_5
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 256
+        width: 20
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7d9b3db3a7206d50800000000000000
+      internalID: 6728421427499474303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_6
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 295
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3512a961c9038dd70800000000000000
+      internalID: 9068051296662724947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_7
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 263
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2c1f0e1929fc1c0800000000000000
+      internalID: -4481201948968500556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_8
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 294
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14130554763394730800000000000000
+      internalID: 3983771864023445825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_9
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 260
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78991f3bd3371f200800000000000000
+      internalID: 212077366312278407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_10
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 259
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 606b32595d3ad68a0800000000000000
+      internalID: -6310207365150689786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_11
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 265
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8459e6af67b7510800000000000000
+      internalID: 1547961714901076145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_12
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 280
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ddca244db7a987d0800000000000000
+      internalID: -2915614852411372072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_13
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 266
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d61eb795156fb30800000000000000
+      internalID: 4320730337280880004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_14
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 225
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64cbf32c706465190800000000000000
+      internalID: -7974109091075212218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_15
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 232
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8936dd2406ff540f0800000000000000
+      internalID: -1133218942310063208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_16
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 236
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a210a3f2ef7de60800000000000000
+      internalID: 7987131942954936918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_17
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 239
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e52db91a252db8200800000000000000
+      internalID: 183471462179131998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_18
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 232
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e525bcb2cbcc21250800000000000000
+      internalID: 5914014369251545694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_19
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 225
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d961ad8567f7eff00800000000000000
+      internalID: 1152498700926981789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_20
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 228
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb4b105a6e496ac00800000000000000
+      internalID: 911579692920845499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_21
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 227
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04ed5784027346540800000000000000
+      internalID: 5000182098082258496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_22
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 198
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1eb8fecb33340dc0800000000000000
+      internalID: -3673755064058986982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_23
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 224
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa8a329c73b36dfa0800000000000000
+      internalID: -5776364361272285009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_24
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 226
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d89cf1406309e470800000000000000
+      internalID: 8424268289932040406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_25
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 228
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5b6354b79b7a270800000000000000
+      internalID: 8261775980527793597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_26
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 223
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24880bfa5588b35c0800000000000000
+      internalID: -4234641123010639806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_27
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 225
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4396004a1f741490800000000000000
+      internalID: -7776450905841953970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_28
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 192
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1550fc46698518210800000000000000
+      internalID: 1333444367638005073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_29
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 193
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b7cd953806a7e30800000000000000
+      internalID: 4502016894774836093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_30
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 196
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a817bbe3763215f60800000000000000
+      internalID: 8021231337664639370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_31
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 199
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ada1eacc072790070800000000000000
+      internalID: 8073109635834190554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_32
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 197
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70726267ba6576f70800000000000000
+      internalID: 9180401659839653639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_33
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 198
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80edafe4a182a8400800000000000000
+      internalID: 327118016397106696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_34
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 198
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98e55fde772f62a30800000000000000
+      internalID: 4190303100222135945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_35
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 209
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14bc62a0906870730800000000000000
+      internalID: 3965285370306153281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_36
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 191
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfabe7237971ed350800000000000000
+      internalID: 6043293688132451067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_37
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f5881711532c310800000000000000
+      internalID: 1423758781237976835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_38
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 161
+        width: 62
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f7a6b3f0bfd2a70800000000000000
+      internalID: 8803968889419104039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_39
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 160
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9c6b908ddf80f770800000000000000
+      internalID: 8642565866432195741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_40
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 161
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f22da1a1d4a80ecc0800000000000000
+      internalID: -3683792431433985489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_41
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 160
+        width: 59
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 694e5c6c966674510800000000000000
+      internalID: 1533306802635400342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_42
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 161
+        width: 58
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9abcbce1ac90dcd30800000000000000
+      internalID: 4453226370244004777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_43
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 162
+        width: 57
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c7596315d10e3fe0800000000000000
+      internalID: -1207525635423381563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_44
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 128
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d5fc7b8ee90e09e0800000000000000
+      internalID: -1653373093051304490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_45
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 68
+        width: 127
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b451289928a2942e0800000000000000
+      internalID: -2141133407428405941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_46
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 68
+        width: 62
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1a4ac77224b2b3f0800000000000000
+      internalID: -886448116506932705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_47
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 68
+        width: 35
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a634638f4b089560800000000000000
+      internalID: 7320613630425446049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_48
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bcf2f2ed749bf0e0800000000000000
+      internalID: -2235029521659921224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_49
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 131
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41cb9fd220d155270800000000000000
+      internalID: 8238522988542671892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8bef808576659a30800000000000000
+      internalID: 4221392880583830412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_51
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 33
+        width: 28
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07671885bea094780800000000000000
+      internalID: -8698409199370930576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_52
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 95
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9676477124c6db60800000000000000
+      internalID: 7770613855088440987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c61346d6981ba0c0800000000000000
+      internalID: -4563526761290983742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_54
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 33
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddb6bead287f4a810800000000000000
+      internalID: 1775816294481488861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_55
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1
+        width: 28
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21e242d436d655130800000000000000
+      internalID: 3554867754142281234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 33
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb6fb8c7774f10c50800000000000000
+      internalID: 6629848920493913791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_57
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 33
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d91e5e7c5e29ef20800000000000000
+      internalID: 3452341564148160977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_58
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 33
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5d57d323e61674a0800000000000000
+      internalID: -6596059439422808737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_59
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 33
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d401700ec229a460800000000000000
+      internalID: 7253366943022908626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_60
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df4dbfae2ea0d9c0800000000000000
+      internalID: -3904429361390071852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_61
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 32
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b31d4ae421ba43e10800000000000000
+      internalID: 2176552615043977531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_62
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 1
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5782e1dabec2ff680800000000000000
+      internalID: -8719200962832619403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_63
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 576fa2f4db4e680c0800000000000000
+      internalID: -4573716869819992459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_64
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e67d285aaf046b0800000000000000
+      internalID: -5313971971525480836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_65
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2da0d242b2b66cbd0800000000000000
+      internalID: -2610281100979926318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_66
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd84069fa5ab7fe60800000000000000
+      internalID: 7996064563313264861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_67
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f3f80fc32bd7d820800000000000000
+      internalID: 2943061828353717232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_68
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25139daffc2ae1700800000000000000
+      internalID: 513026421717283154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_69
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 3
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c5f998454023f860800000000000000
+      internalID: 7562423681228076489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assetponotuse_70
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 1
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d189f49bae6d95830800000000000000
+      internalID: 4060512842670905373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      assetponotuse_0: -1557094308098449121
+      assetponotuse_1: -333615658403289468
+      assetponotuse_10: -6310207365150689786
+      assetponotuse_11: 1547961714901076145
+      assetponotuse_12: -2915614852411372072
+      assetponotuse_13: 4320730337280880004
+      assetponotuse_14: -7974109091075212218
+      assetponotuse_15: -1133218942310063208
+      assetponotuse_16: 7987131942954936918
+      assetponotuse_17: 183471462179131998
+      assetponotuse_18: 5914014369251545694
+      assetponotuse_19: 1152498700926981789
+      assetponotuse_2: 8797025121451715291
+      assetponotuse_20: 911579692920845499
+      assetponotuse_21: 5000182098082258496
+      assetponotuse_22: -3673755064058986982
+      assetponotuse_23: -5776364361272285009
+      assetponotuse_24: 8424268289932040406
+      assetponotuse_25: 8261775980527793597
+      assetponotuse_26: -4234641123010639806
+      assetponotuse_27: -7776450905841953970
+      assetponotuse_28: 1333444367638005073
+      assetponotuse_29: 4502016894774836093
+      assetponotuse_3: 1208744516787416563
+      assetponotuse_30: 8021231337664639370
+      assetponotuse_31: 8073109635834190554
+      assetponotuse_32: 9180401659839653639
+      assetponotuse_33: 327118016397106696
+      assetponotuse_34: 4190303100222135945
+      assetponotuse_35: 3965285370306153281
+      assetponotuse_36: 6043293688132451067
+      assetponotuse_37: 1423758781237976835
+      assetponotuse_38: 8803968889419104039
+      assetponotuse_39: 8642565866432195741
+      assetponotuse_4: -811923454221391835
+      assetponotuse_40: -3683792431433985489
+      assetponotuse_41: 1533306802635400342
+      assetponotuse_42: 4453226370244004777
+      assetponotuse_43: -1207525635423381563
+      assetponotuse_44: -1653373093051304490
+      assetponotuse_45: -2141133407428405941
+      assetponotuse_46: -886448116506932705
+      assetponotuse_47: 7320613630425446049
+      assetponotuse_48: -2235029521659921224
+      assetponotuse_49: 8238522988542671892
+      assetponotuse_5: 6728421427499474303
+      assetponotuse_50: 4221392880583830412
+      assetponotuse_51: -8698409199370930576
+      assetponotuse_52: 7770613855088440987
+      assetponotuse_53: -4563526761290983742
+      assetponotuse_54: 1775816294481488861
+      assetponotuse_55: 3554867754142281234
+      assetponotuse_56: 6629848920493913791
+      assetponotuse_57: 3452341564148160977
+      assetponotuse_58: -6596059439422808737
+      assetponotuse_59: 7253366943022908626
+      assetponotuse_6: 9068051296662724947
+      assetponotuse_60: -3904429361390071852
+      assetponotuse_61: 2176552615043977531
+      assetponotuse_62: -8719200962832619403
+      assetponotuse_63: -4573716869819992459
+      assetponotuse_64: -5313971971525480836
+      assetponotuse_65: -2610281100979926318
+      assetponotuse_66: 7996064563313264861
+      assetponotuse_67: 2943061828353717232
+      assetponotuse_68: 513026421717283154
+      assetponotuse_69: 7562423681228076489
+      assetponotuse_7: -4481201948968500556
+      assetponotuse_70: 4060512842670905373
+      assetponotuse_8: 3983771864023445825
+      assetponotuse_9: 212077366312278407
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

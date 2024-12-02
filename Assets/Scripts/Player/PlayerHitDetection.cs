@@ -6,6 +6,7 @@ using System.Collections;
 
 public class PlayerHitDetection : MonoBehaviour
 {
+    private static readonly int Damage = Animator.StringToHash("TakeDamage");
 
     private PlayerStats _playerStats;
     private CameraShake _cameraShake;
@@ -57,8 +58,10 @@ public class PlayerHitDetection : MonoBehaviour
     private void KillPlayer()
     {
         //Return player to hub.
-        Destroy(gameObject);
-        SceneManager.LoadScene(2);
+        _playerStats.AddPlayerDeath();
+        _animator.SetTrigger("Death");
+        StartCoroutine(IgnoreCollision(3.2f));
+        StartCoroutine(PlayDeathAnimation(3.2f));
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -70,8 +73,8 @@ public class PlayerHitDetection : MonoBehaviour
                 TakeDamage(1);
 
                 // Apply pushback only if not invincible
-                Vector2 _enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
-                _playerMovement.GetPushed(_enemyDirection);
+                Vector2 enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
+                _playerMovement.GetPushed(enemyDirection);
             }
         }
     }
@@ -81,8 +84,8 @@ public class PlayerHitDetection : MonoBehaviour
         if (other.gameObject.CompareTag("Lamp Attack Ring"))
         {
             TakeDamage(1);
-            Vector2 _enemyDirection = (transform.position - other.gameObject.GetComponentInParent<LampMovement>().transform.position).normalized;
-            _playerMovement.GetPushed(_enemyDirection);
+            Vector2 enemyDirection = (transform.position - other.gameObject.GetComponentInParent<LampMovement>().transform.position).normalized;
+            _playerMovement.GetPushed(enemyDirection);
         }
     }
 
@@ -93,7 +96,7 @@ public class PlayerHitDetection : MonoBehaviour
             _playerStats.ApplyDamage(damage);
 
             RuntimeManager.PlayOneShot(hitSoundEventPath);
-            _animator.SetTrigger("TakeDamage");
+            _animator.SetTrigger(Damage);
             _flashEffect.CallDamageFlash();
             _cameraShake.StartShake();
 
@@ -115,6 +118,24 @@ public class PlayerHitDetection : MonoBehaviour
         yield return new WaitForSeconds(time);
         Physics2D.IgnoreLayerCollision(0, 3, false);
         Physics2D.IgnoreLayerCollision(0, 6, false);
+    }
+
+
+    public IEnumerator IgnoreCollision(float time)
+    {
+        // Handle collision ignoring while invincible
+        Physics2D.IgnoreLayerCollision(0, 3, true);
+        Physics2D.IgnoreLayerCollision(0, 6, true);
+        yield return new WaitForSeconds(time);
+        Physics2D.IgnoreLayerCollision(0, 3, false);
+        Physics2D.IgnoreLayerCollision(0, 6, false);
+    }
+
+
+    public IEnumerator PlayDeathAnimation(float time){
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
+        SceneManager.LoadScene(1);
     }
 
 }

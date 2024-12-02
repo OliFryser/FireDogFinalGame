@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.AI;
 using FMODUnity;
+using Lib;
 
 [RequireComponent(typeof(NavMeshAgent), typeof(Animator))]
 public class EnemyMovement : MonoBehaviour

@@ -1,12 +1,19 @@
+using Dialogue;
+using UnityEngine
+
 namespace Merchant
 {
     public class Merchant : MerchantBase
     {
         private RoomManager _roomManager;
+        private DialogueManager _dialogueManager;
+        private PlayerStats _playerStats;
 
         protected override void Start()
         {
             base.Start();
+            _playerStats = FindAnyObjectByType<PlayerStats>();
+            _dialogueManager = FindAnyObjectByType<DialogueManager>();
             _roomManager = FindFirstObjectByType<RoomManager>();
         }
 
@@ -14,7 +21,11 @@ namespace Merchant
         public override void Interact()
         {
             base.Interact();
-            _roomManager.OpenUpgradeMenu();
+            _dialogueManager
+                .PlayRoomDialogue(
+                    _playerStats.Deaths,
+                    _playerStats.RoomNumber,
+                    _roomManager.OpenUpgradeMenu);
         }
     }
 }

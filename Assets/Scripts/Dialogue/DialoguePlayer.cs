@@ -1,43 +1,72 @@
-using UnityEngine;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
-public class DialoguePlayer : MonoBehaviour
+namespace Dialogue
 {
-
-    [SerializeField]
-    private DialogueLineAdapter _dialogueLineAdapter;
-
-    private Queue<DialogueLine> _dialogueSequenceQueue;
-
-    private Action _onCompleted;
-
-    public void StartDialog(DialogueSequence dialogueSequence, Action onDialogSequenceCompleted)
+    public class DialoguePlayer : MonoBehaviour
     {
-        _onCompleted = onDialogSequenceCompleted;
-        _dialogueSequenceQueue = new(dialogueSequence.Lines);
-        ShowNextLine();
-    }
 
-    private void ShowNextLine()
-    {
-        _dialogueLineAdapter.PlayDialogueLines(_dialogueSequenceQueue.Dequeue(), OnDialogLineCompleted);
-    }
+        [SerializeField]
+        private DialogueLineAdapter _dialogueLineAdapter;
 
-    private void OnDialogLineCompleted()
-    {
-        if (!_dialogueSequenceQueue.Any())
+        [SerializeField]
+        private DialogueActivator _dialogActivator;
+        
+        private Queue<DialogueLine> _dialogueSequenceQueue;
+        
+        private InputLock _inputLock;
+
+        private PlayerCameraFollow _cameraFollow;
+
+        private Action _onCompleted;
+
+        private void Start()
         {
-            _dialogueLineAdapter.HideDisplay();
-            _onCompleted();
-            return;
+            _inputLock = FindAnyObjectByType<InputLock>();
+            _cameraFollow = FindAnyObjectByType<PlayerCameraFollow>();
         }
-        ShowNextLine();
-    }
 
-    public void OnDialogClick()
-    {
-        _dialogueLineAdapter.OnDialogClick();
+        public void StartDialog(DialogueSequence dialogueSequence, Action onDialogSequenceCompleted)
+        {
+            _onCompleted = onDialogSequenceCompleted;
+            _dialogueSequenceQueue = new(dialogueSequence.Lines);
+            _dialogActivator.gameObject.SetActive(true);
+            if (_inputLock != null)
+            {
+                _inputLock.LockInput();
+            }
+            if (_cameraFollow != null)
+                _cameraFollow.MoveCameraForDialog();
+            
+            ShowNextLine();
+        }
+
+        private void ShowNextLine()
+        {
+            _dialogueLineAdapter.PlayDialogueLines(_dialogueSequenceQueue.Dequeue(), OnDialogLineCompleted);
+        }
+
+        private void OnDialogLineCompleted()
+        {
+            if (!_dialogueSequenceQueue.Any())
+            {
+                _dialogueLineAdapter.HideDisplay();
+                _dialogActivator.gameObject.SetActive(false);
+                if(_inputLock)
+                    _inputLock.UnlockInput();
+                if (_cameraFollow != null)
+                    _cameraFollow.MoveCameraBackAfterDialogue();
+                _onCompleted();
+                return;
+            }
+            ShowNextLine();
+        }
+
+        public void OnDialogClick()
+        {
+            _dialogueLineAdapter.OnDialogClick();
+        }
     }
 }
