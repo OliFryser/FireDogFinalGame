@@ -4515,29 +4515,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698250d20249a2548aa9072ee060d226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicController: {fileID: 1424808618206030733}
-  roomManager: {fileID: 8703408097907270624}
-  cleanupManager: {fileID: 946620558}
-  doorToNextLevel: {fileID: 1980914072}
-  lampOffSprites:
-  - {fileID: 694336207}
-  - {fileID: 30327704}
-  - {fileID: 66383277}
-  - {fileID: 562002167}
-  - {fileID: 1605855737}
-  - {fileID: 209588943}
-  - {fileID: 314447313}
-  lampEnemies:
-  - {fileID: 800568696}
-  - {fileID: 1026306410}
-  - {fileID: 1077930036}
-  - {fileID: 1805874568}
-  - {fileID: 34113606}
-  - {fileID: 1242657779}
-  - {fileID: 959288591}
-  decoyEnemy: {fileID: 1360204886}
-  interactionDistance: 2
-  interactionKey: 101
+  _musicController: {fileID: 1424808618206030733}
+  _roomManager: {fileID: 8703408097907270624}
+  _cleanupManager: {fileID: 946620558}
+  _doorToNextLevel: {fileID: 1980914072}
 --- !u!1 &305213754
 GameObject:
   m_ObjectHideFlags: 0
@@ -7940,7 +7921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screenFade: {fileID: 0}
   cleaningSound: {fileID: 0}
-  cleanupDisable: {fileID: 946620559}
+  cleanupDisable: {fileID: 0}
 --- !u!114 &946620559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10491,7 +10472,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13cbb5ed60ffb8f42aef22d9b7c53ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLevelName: Level 6
 --- !u!58 &1700731674 stripped
 CircleCollider2D:
   m_CorrespondingSourceObject: {fileID: 3094542141851771796, guid: cec5ff131d980e44d8ee1296d635e653, type: 3}
@@ -12985,7 +12965,7 @@ MonoBehaviour:
       Data4: -1015440081
     Path: event:/Music/Music
   initialBattleState: 0.5
-  clearRoomState: 0.5
+  clearRoomState: 0
 --- !u!61 &1857091602827144334
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13101,20 +13081,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &3209550539166657749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6016256326137571479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cc89488d7059c448b31420bdd4781d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interactDistance: 1.5
-  IsInteractable: 1
 --- !u!95 &3799715066960828745
 Animator:
   serializedVersion: 7
@@ -13405,8 +13371,8 @@ GameObject:
   - component: {fileID: 1370944349191155579}
   - component: {fileID: 1857091602827144334}
   - component: {fileID: 3799715066960828745}
-  - component: {fileID: 3209550539166657749}
   - component: {fileID: 287031223}
+  - component: {fileID: 6016256326137571480}
   m_Layer: 0
   m_Name: Hub Merchant_02
   m_TagString: DirtyAsset
@@ -13414,6 +13380,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6016256326137571480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6016256326137571479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5cc819e61e482382ba6c45d26a7503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactDistance: 1.5
+  IsInteractable: 0
+  musicController: {fileID: 1424808618206030733}
+  roomManager: {fileID: 8703408097907270624}
+  _lampOffSprites:
+  - {fileID: 694336207}
+  - {fileID: 30327704}
+  - {fileID: 66383277}
+  - {fileID: 562002167}
+  - {fileID: 1605855737}
+  - {fileID: 209588943}
+  - {fileID: 314447313}
+  _lampEnemies:
+  - {fileID: 800568696}
+  - {fileID: 1026306410}
+  - {fileID: 1077930036}
+  - {fileID: 1805874568}
+  - {fileID: 34113606}
+  - {fileID: 1242657779}
+  - {fileID: 959288591}
+  _decoyEnemy: {fileID: 1360204886}
 --- !u!95 &6079110326088006888
 Animator:
   serializedVersion: 7
