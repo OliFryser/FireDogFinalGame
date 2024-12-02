@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a80dd7641bb9f84b9de8e7f4d75fdd0, type: 3}
   m_Name: More Health
   m_EditorClassIdentifier: 
-  Title: Health Boost
+  Title: Reinforced Glasses
   Description: Increases Max and Current health by 1.
   UpgradeType: 0
