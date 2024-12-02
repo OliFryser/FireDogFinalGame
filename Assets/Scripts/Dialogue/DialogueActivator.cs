@@ -1,21 +1,35 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class DialogueActivator : MonoBehaviour, ISubmitHandler, IPointerClickHandler
+namespace Dialogue
 {
-    private DialoguePlayer _dialogueManager;
-    void Awake()
+    public class DialogueActivator : MonoBehaviour, ISubmitHandler, IPointerClickHandler
     {
-        _dialogueManager = FindAnyObjectByType<DialoguePlayer>();
-    }
+        private DialoguePlayer _dialogueManager;
+        private Button _dialogueButton;
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        _dialogueManager.OnDialogClick();
-    }
+        private void Awake()
+        {
+            _dialogueManager = FindAnyObjectByType<DialoguePlayer>();
+            gameObject.SetActive(false);
+            _dialogueButton = GetComponent<Button>();
+        }
 
-    public void OnSubmit(BaseEventData eventData)
-    {
-        _dialogueManager.OnDialogClick();
+        private void Update()
+        {
+            if (EventSystem.current.currentSelectedGameObject == null)
+                _dialogueButton.Select();
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            _dialogueManager.OnDialogClick();
+        }
+
+        public void OnSubmit(BaseEventData eventData)
+        {
+            _dialogueManager.OnDialogClick();
+        }
     }
 }

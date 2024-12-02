@@ -10,9 +10,9 @@ public class LevelLoader : MonoBehaviour
         _playerStats = FindAnyObjectByType<PlayerStats>();
     }
 
-    public void LoadNextScene()
+    private static void LoadNextScene()
     {
-        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        var currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene + 1);
     }
 
@@ -20,10 +20,11 @@ public class LevelLoader : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            LoadNextScene();
             if (_playerStats.PassiveHealing)
                 _playerStats.Heal(1);
             _playerStats.CleaningSpreeDamageActive = false;
+            _playerStats.AddToRoomCounter();
+            LoadNextScene();
         }
     }
 }

@@ -1,16 +1,38 @@
+using System;
+using Dialogue;
 using UnityEngine;
 
-public class HubManager : MonoBehaviour
+namespace SceneManagement
 {
-    private HubDoor _door;
-
-    private void Awake()
+    public class HubManager : MonoBehaviour
     {
-        _door = FindAnyObjectByType<HubDoor>();
-    }
+        private HubDoor _door;
+        private DialogueManager _dialogueManager;
+        private PersistentPlayerStats _persistentPlayerStats;
 
-    private void Start()
-    {
-        _door.OpenDoor();
+        private void Awake()
+        {
+            _door = FindAnyObjectByType<HubDoor>();
+            _dialogueManager = FindAnyObjectByType<DialogueManager>();
+            _persistentPlayerStats = FindAnyObjectByType<PersistentPlayerStats>();
+        }
+
+        private void Start()
+        {
+            if (_persistentPlayerStats.Deaths == 0)
+            {
+                _dialogueManager.PlayHubDialogue(0, () =>
+                {
+                    _door.OpenDoor();
+                });
+            }
+            else 
+                _door.OpenDoor();
+        }
+
+        public void PlayMerchantDialogue(Action action)
+        {
+            _dialogueManager.PlayHubDialogue(_persistentPlayerStats.Deaths, action);
+        }
     }
 }

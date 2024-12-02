@@ -230,7 +230,6 @@ MonoBehaviour:
   _movementSpeed: 3.5
   _animationScaling: 2
   _sightDistance: 5
-  _knockBackSpeed: 4
   IsPushedBack: 0
   _verticalEnemyCollision:
     Offset: {x: 0, y: 0}
