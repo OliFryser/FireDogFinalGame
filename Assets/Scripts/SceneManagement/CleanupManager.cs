@@ -5,14 +5,16 @@ public class CleanupManager : MonoBehaviour
 {
     public ScreenFade screenFade; // Reference to your ScreenFade script
     public AudioSource cleaningSound; // Drag your cleaning sound here
+    public CleanupDisable cleanupDisable; // Reference to CleanupDisable script
 
     private void Start()
     {
-        // Optionally, find the ScreenFade script automatically if not assigned
+        // Optionally, find scripts automatically if not assigned
         if (screenFade == null)
             screenFade = FindAnyObjectByType<ScreenFade>();
+        if (cleanupDisable == null)
+            cleanupDisable = FindFirstObjectByType<CleanupDisable>();
 
-        // Add cleaning sound setup if needed
         if (cleaningSound == null)
             Debug.LogError("Cleaning sound not assigned!");
     }
@@ -25,26 +27,30 @@ public class CleanupManager : MonoBehaviour
     private IEnumerator CleanupSequence()
     {
         // Step 1: Fade to black
-        screenFade.FadeToBlack();
-
-        // Wait for the fade-out to complete (adjust timing to match your fade animation)
-        yield return new WaitForSeconds(0f);
+        if (screenFade != null)
+        {
+            screenFade.FadeToBlack();
+            yield return new WaitForSeconds(1.0f); // Adjust fade duration
+        }
 
         // Step 2: Play cleaning sound
         if (cleaningSound != null)
-            cleaningSound.Play();
-
-        // Step 3: Disable dirty assets
-        GameObject[] dirtyAssets = GameObject.FindGameObjectsWithTag("DirtyAsset");
-        foreach (GameObject asset in dirtyAssets)
         {
-            asset.SetActive(false);
+            cleaningSound.Play();
+            yield return new WaitForSeconds(cleaningSound.clip.length);
         }
 
-        // Wait for cleaning sound duration (or another appropriate delay)
-        yield return new WaitForSeconds (0.0f);
+        // Step 3: Use CleanupDisable to disable dirty assets
+        if (cleanupDisable != null)
+        {
+            cleanupDisable.DisableObjectsWithTag("DirtyAsset");
+        }
 
         // Step 4: Fade back in
-        screenFade.FadeFromBlack();
+        if (screenFade != null)
+        {
+            screenFade.FadeFromBlack();
+            yield return new WaitForSeconds(1.0f); // Adjust fade duration
+        }
     }
 }

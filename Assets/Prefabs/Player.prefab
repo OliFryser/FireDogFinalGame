@@ -222,7 +222,7 @@ MonoBehaviour:
   _idleAnimationScaling: 0.01
   _dogdeSpeedScalar: 3
   _dodgeHitBox: {fileID: 8749505882203051888, guid: 25412b2455c8e914aaa3493f41312d91, type: 3}
-  _invincibilityTime: 0.3
+  sfxFootsteps: {fileID: 0}
   PreviousDirection: {x: 0, y: 0}
 --- !u!114 &3000249034656620173
 MonoBehaviour:
@@ -424,6 +424,20 @@ MonoBehaviour:
       Data3: 1227649468
       Data4: -516844252
     Path: event:/Player/Footsteps
+  footstepStartEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  footstepStopEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!58 &3094542141851771796
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -2234,6 +2234,22 @@ MonoBehaviour:
       Data3: -1587178066
       Data4: 377712095
     Path: event:/Music/Music_Menu
+  initialBattleState: 0.5
+  clearRoomState: 0
+  mainStateSnapshot:
+    Guid:
+      Data1: -1512091561
+      Data2: 1095135827
+      Data3: -1669553489
+      Data4: 864102025
+    Path: snapshot:/Main State
+  level6Snapshot:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!4 &7705391484254462322
 Transform:
   m_ObjectHideFlags: 0

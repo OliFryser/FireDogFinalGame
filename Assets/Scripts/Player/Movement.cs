@@ -33,6 +33,10 @@ public class Movement : MonoBehaviour
 
 
     [SerializeField]
+    private SFX_Footsteps sfxFootsteps;
+
+    private bool wasMoving = false;
+
     private float _invincibilityTime;
 
     private float _currentDodgeDistance;
@@ -62,6 +66,15 @@ public class Movement : MonoBehaviour
         _playerWeapon = GetComponent<Weapon>();
         _hitDetection = GetComponent<PlayerHitDetection>();
         _invincibilityManager = GetComponent<InvincibilityManager>();
+
+        if (sfxFootsteps == null)
+        {
+            sfxFootsteps = GetComponent<SFX_Footsteps>();
+            if (sfxFootsteps == null)
+            {
+                Debug.LogError("SFX_Footsteps component not found on the GameObject.");
+            }
+        }
     }
 
     void FixedUpdate()
@@ -97,6 +110,7 @@ public class Movement : MonoBehaviour
         }
         FlipSprite();
         UpdateAnimator();
+        DetectMovementStateChange();
     }
 
     private void UpdateAnimator()
@@ -117,6 +131,23 @@ public class Movement : MonoBehaviour
             _animator.SetFloat("Vertical", _direction.y);
         }
     }
+
+    private void DetectMovementStateChange()
+    {
+        bool currentlyMoving = IsMoving && !_isPushed && !_playerWeapon.IsAttacking;
+
+        if (currentlyMoving && !wasMoving)
+        {
+            sfxFootsteps.PlayFootstepStart();
+        }
+        else if (!currentlyMoving && wasMoving)
+        {
+            sfxFootsteps.PlayFootstepStop();
+        }
+
+        wasMoving = currentlyMoving;
+    }
+
 
     private void FlipSprite()
     {

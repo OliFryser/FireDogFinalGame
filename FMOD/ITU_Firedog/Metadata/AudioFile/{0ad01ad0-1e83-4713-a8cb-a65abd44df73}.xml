@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{0ad01ad0-1e83-4713-a8cb-a65abd44df73}">
 		<property name="assetPath">
-			<value>OBJHsehld_Broom Sweep Fast Sequence 01_B00M_ONE-1MOD.wav</value>
+			<value>Player/OBJHsehld_Broom Sweep Fast Sequence 01_B00M_ONE-1MOD.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

@@ -6666,6 +6666,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9087652022217924206, guid: 7603481a00269b04ca3678833d3ac216, type: 3}
+      propertyPath: clearRoomState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9087652022217924206, guid: 7603481a00269b04ca3678833d3ac216, type: 3}
+      propertyPath: initialBattleState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9087652022217924206, guid: 7603481a00269b04ca3678833d3ac216, type: 3}
+      propertyPath: mainStateSnapshot.Path
+      value: snapshot:/Main State
+      objectReference: {fileID: 0}
+    - target: {fileID: 9087652022217924206, guid: 7603481a00269b04ca3678833d3ac216, type: 3}
+      propertyPath: mainStateSnapshot.Guid.Data1
+      value: -1512091561
+      objectReference: {fileID: 0}
+    - target: {fileID: 9087652022217924206, guid: 7603481a00269b04ca3678833d3ac216, type: 3}
+      propertyPath: mainStateSnapshot.Guid.Data2
+      value: 1095135827
+      objectReference: {fileID: 0}
+    - target: {fileID: 9087652022217924206, guid: 7603481a00269b04ca3678833d3ac216, type: 3}
+      propertyPath: mainStateSnapshot.Guid.Data3
+      value: -1669553489
+      objectReference: {fileID: 0}
+    - target: {fileID: 9087652022217924206, guid: 7603481a00269b04ca3678833d3ac216, type: 3}
+      propertyPath: mainStateSnapshot.Guid.Data4
+      value: 864102025
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
