@@ -1,3 +1,4 @@
+using Lib;
 using UnityEngine.InputSystem;
 
 public abstract class MerchantBase : Interactable

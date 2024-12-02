@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 6af970f9f08cf2d418986b80a838d8d7
+guid: b50690fbd276dad4798cbc4f5f0c0acf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6152254747453008620
-    second: shadows_p_c_d_l_0
+      213: 5502922256856590283
+    second: Wizard50x70_0
   - first:
-      213: -197933931883484312
-    second: shadows_p_c_d_l_1
+      213: -7464850496315332398
+    second: Wizard50x70_1
   - first:
-      213: -901113874591645440
-    second: shadows_p_c_d_l_2
+      213: 2173286428901060807
+    second: Wizard50x70_2
   - first:
-      213: -573285362134051734
-    second: shadows_p_c_d_l_3
+      213: 8307655971077423828
+    second: Wizard50x70_3
+  - first:
+      213: 8234433235404343120
+    second: Wizard50x70_4
+  - first:
+      213: 8974150924025359517
+    second: Wizard50x70_5
+  - first:
+      213: -3075245596867577398
+    second: Wizard50x70_6
+  - first:
+      213: -4953913914749563880
+    second: Wizard50x70_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +96,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -135,13 +147,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shadows_p_c_d_l_0
+      name: Wizard50x70_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 160
-        height: 160
+        width: 46
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4155a5a37ecce9aa0800000000000000
-      internalID: -6152254747453008620
+      spriteID: bc7278a03ae4e5c40800000000000000
+      internalID: 5502922256856590283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shadows_p_c_d_l_1
+      name: Wizard50x70_1
       rect:
         serializedVersion: 2
-        x: 160
+        x: 52
         y: 0
-        width: 160
-        height: 160
+        width: 46
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 86ba61d332cc04df0800000000000000
-      internalID: -197933931883484312
+      spriteID: 2d8e9b92606876890800000000000000
+      internalID: -7464850496315332398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shadows_p_c_d_l_2
+      name: Wizard50x70_2
       rect:
         serializedVersion: 2
-        x: 320
+        x: 102
         y: 0
-        width: 160
-        height: 160
+        width: 46
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0010ac294b99e73f0800000000000000
-      internalID: -901113874591645440
+      spriteID: 7c033d51e70192e10800000000000000
+      internalID: 2173286428901060807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shadows_p_c_d_l_3
+      name: Wizard50x70_3
       rect:
         serializedVersion: 2
-        x: 480
+        x: 152
         y: 0
-        width: 160
-        height: 160
+        width: 46
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +228,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a64911320084b08f0800000000000000
-      internalID: -573285362134051734
+      spriteID: 4d209300719ba4370800000000000000
+      internalID: 8307655971077423828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard50x70_4
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 0
+        width: 46
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05742f25665964270800000000000000
+      internalID: 8234433235404343120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard50x70_5
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 46
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9c6643e7b69a8c70800000000000000
+      internalID: 8974150924025359517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard50x70_6
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 0
+        width: 46
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac9bf994c688255d0800000000000000
+      internalID: -3075245596867577398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard50x70_7
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 46
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ccc7f9a89204bb0800000000000000
+      internalID: -4953913914749563880
       vertices: []
       indices: 
       edges: []
@@ -226,7 +326,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fa160f420255a4e428f57459f3845f82
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +335,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      shadows_p_c_d_l_0: -6152254747453008620
-      shadows_p_c_d_l_1: -197933931883484312
-      shadows_p_c_d_l_2: -901113874591645440
-      shadows_p_c_d_l_3: -573285362134051734
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
