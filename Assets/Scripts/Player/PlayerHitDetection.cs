@@ -59,8 +59,9 @@ public class PlayerHitDetection : MonoBehaviour
     {
         //Return player to hub.
         _playerStats.AddPlayerDeath();
-        Destroy(gameObject);
-        SceneManager.LoadScene(2);
+        _animator.SetTrigger("Death");
+        StartCoroutine(IgnoreCollision(3.2f));
+        StartCoroutine(PlayDeathAnimation(3.2f));
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -117,6 +118,24 @@ public class PlayerHitDetection : MonoBehaviour
         yield return new WaitForSeconds(time);
         Physics2D.IgnoreLayerCollision(0, 3, false);
         Physics2D.IgnoreLayerCollision(0, 6, false);
+    }
+
+
+    public IEnumerator IgnoreCollision(float time)
+    {
+        // Handle collision ignoring while invincible
+        Physics2D.IgnoreLayerCollision(0, 3, true);
+        Physics2D.IgnoreLayerCollision(0, 6, true);
+        yield return new WaitForSeconds(time);
+        Physics2D.IgnoreLayerCollision(0, 3, false);
+        Physics2D.IgnoreLayerCollision(0, 6, false);
+    }
+
+
+    public IEnumerator PlayDeathAnimation(float time){
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
+        SceneManager.LoadScene(1);
     }
 
 }
