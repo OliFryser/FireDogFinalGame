@@ -95,4 +95,4 @@ crashlytics-build.properties
 /[Aa]rtifacts/
 /[Cc]odeCoverage/
 
-.idea/.idea.FireDogFinalGame/.idea/workspace.xml
+/.idea/**/workspace.xml
