@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{db1803bc-425f-4763-ac98-d9aa7ab8ad1d}">
 		<property name="assetPath">
-			<value>enemy_lamp_attack_blast_01.wav</value>
+			<value>Enemy/enemy_lamp_attack_blast_01.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

@@ -34,6 +34,10 @@ public class Movement : MonoBehaviour
 
 
     [SerializeField]
+    private SFX_Footsteps sfxFootsteps;
+
+    private bool wasMoving = false;
+
     private float _invincibilityTime;
 
     private float _currentDodgeDistance;
@@ -54,7 +58,7 @@ public class Movement : MonoBehaviour
     private InvincibilityManager _invincibilityManager;
 
     private bool _isHorizontal;
-    
+
     [SerializeField]
     private GameObject _verticalShadow;
     [SerializeField]
@@ -70,6 +74,15 @@ public class Movement : MonoBehaviour
         _playerWeapon = GetComponent<Weapon>();
         _hitDetection = GetComponent<PlayerHitDetection>();
         _invincibilityManager = GetComponent<InvincibilityManager>();
+
+        if (sfxFootsteps == null)
+        {
+            sfxFootsteps = GetComponent<SFX_Footsteps>();
+            if (sfxFootsteps == null)
+            {
+                Debug.LogError("SFX_Footsteps component not found on the GameObject.");
+            }
+        }
     }
 
     void FixedUpdate()
@@ -105,6 +118,7 @@ public class Movement : MonoBehaviour
         }
         FlipSprite();
         UpdateAnimator();
+        DetectMovementStateChange();
         UpdateShadow();
     }
 
@@ -144,6 +158,23 @@ public class Movement : MonoBehaviour
         }
     }
 
+    private void DetectMovementStateChange()
+    {
+        bool currentlyMoving = IsMoving && !_isPushed && !_playerWeapon.IsAttacking;
+
+        if (currentlyMoving && !wasMoving)
+        {
+            sfxFootsteps.PlayFootstepStart();
+        }
+        else if (!currentlyMoving && wasMoving)
+        {
+            sfxFootsteps.PlayFootstepStop();
+        }
+
+        wasMoving = currentlyMoving;
+    }
+
+
     private void FlipSprite()
     {
         if (Math.Abs(_direction.x) < 0.01f) return;
@@ -174,20 +205,22 @@ public class Movement : MonoBehaviour
 
     void DoDodgeRoll()
     {
-        
+
         if (_currentDodgeDistance == 0)
-        {   
+        {
             _animator.SetTrigger("Dodge");
             RuntimeManager.PlayOneShot("event:/Player/Dodge");
-            if(_playerStats.BowlingChampion){
+            if (_playerStats.BowlingChampion)
+            {
                 GameObject hitBox = Instantiate(_dodgeHitBox, transform);
-                StartCoroutine(DestroyDodgeHitBoxafterDelay(hitBox, (_invincibilityTime+0.1f)));
-                StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime+0.1f));
+                StartCoroutine(DestroyDodgeHitBoxafterDelay(hitBox, (_invincibilityTime + 0.1f)));
+                StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime + 0.1f));
             }
-            else {
+            else
+            {
                 StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime));
             }
-            
+
         }
         if (_currentDodgeDistance < _totalDodgeDistance)
         {

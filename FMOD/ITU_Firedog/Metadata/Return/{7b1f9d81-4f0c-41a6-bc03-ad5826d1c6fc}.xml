@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="MixerReturn" id="{7b1f9d81-4f0c-41a6-bc03-ad5826d1c6fc}">
+		<property name="volume">
+			<value>-80</value>
+		</property>
 		<property name="overridingInputFormat">
 			<value>2</value>
 		</property>
@@ -19,18 +22,22 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{3cf39d7e-3701-48c1-a567-fff412759b9a}">
 		<relationship name="effects">
-			<destination>{558f9926-569a-4484-ae07-9b056fc8220b}</destination>
 			<destination>{a78cacec-94a6-4e19-a86c-a6af15cb8b39}</destination>
+			<destination>{37f00a05-081f-47cd-99ce-7999dfcbe45d}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{829ce4a4-e3b0-4c79-9135-1881c8b5452b}" />
-	<object class="SFXReverbEffect" id="{558f9926-569a-4484-ae07-9b056fc8220b}">
-		<property name="wetLevel">
+	<object class="MixerBusPanner" id="{829ce4a4-e3b0-4c79-9135-1881c8b5452b}">
+		<property name="surroundPanExtent">
 			<value>0</value>
-		</property>
-		<property name="dryLevel">
-			<value>-80</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{a78cacec-94a6-4e19-a86c-a6af15cb8b39}" />
+	<object class="ConvolutionReverbEffect" id="{37f00a05-081f-47cd-99ce-7999dfcbe45d}">
+		<property name="endFrame">
+			<value>105972</value>
+		</property>
+		<relationship name="referenceableData">
+			<destination>{8ad367a3-2174-45a5-a6f6-f3b9a5a79077}</destination>
+		</relationship>
+	</object>
 </objects>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{a5869913-9c6a-4bfa-9a04-1e4cdd6f4471}">
 		<property name="assetPath">
-			<value>UIMvmt_Magic Whoosh Single 03_B00M_ONE.wav</value>
+			<value>Player/UIMvmt_Magic Whoosh Single 03_B00M_ONE.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

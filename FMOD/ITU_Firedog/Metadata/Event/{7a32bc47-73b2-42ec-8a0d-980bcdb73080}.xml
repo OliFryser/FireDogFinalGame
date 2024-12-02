@@ -56,10 +56,17 @@
 			<destination>{728258f8-881b-44cf-9a91-46c8892fd59c}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{e6461821-c287-4412-9810-3c44dd424bb7}</destination>
+			<destination>{8169e156-da0e-4eff-92a4-70c23520902f}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{636effd9-d4e9-4c10-9c91-a190f7d50bf8}" />
+	<object class="EventAutomatableProperties" id="{636effd9-d4e9-4c10-9c91-a190f7d50bf8}">
+		<property name="minimumDistance">
+			<value>6</value>
+		</property>
+		<property name="maximumDistance">
+			<value>80</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{e813a8cd-2cf3-49f5-892c-0c1e53d8e6da}" />
 	<object class="Timeline" id="{4667781a-8f76-4fb0-8ebc-7cd983ead44a}">
 		<property name="isProxyEnabled">
@@ -109,10 +116,10 @@
 	<object class="MixerBusFader" id="{88c65b11-df04-45d2-988f-3ecbeff9808c}" />
 	<object class="SpatialiserEffect" id="{edb9aa64-d4ce-4567-a821-3aaeb75ad6d9}">
 		<property name="minimumDistance">
-			<value>0</value>
+			<value>6</value>
 		</property>
 		<property name="maximumDistance">
-			<value>200</value>
+			<value>80</value>
 		</property>
 		<property name="overrideRange">
 			<value>true</value>
@@ -123,8 +130,11 @@
 		<property name="soundSize">
 			<value>1.20000005</value>
 		</property>
+		<property name="panBlend">
+			<value>0.5</value>
+		</property>
 		<property name="userStereoSeparation">
-			<value>0</value>
+			<value>-17.0615311</value>
 		</property>
 	</object>
 </objects>
