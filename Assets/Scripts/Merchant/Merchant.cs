@@ -1,5 +1,5 @@
 using Dialogue;
-using UnityEngine
+using UnityEngine;
 
 namespace Merchant
 {

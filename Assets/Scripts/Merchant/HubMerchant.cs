@@ -1,7 +1,10 @@
+using SceneManagement;
+
 namespace Merchant
 {
     public class HubMerchant : MerchantBase
     {
+        private HubManager _hubManager;
         private HubUpgradeManager _hubUpgradeManager;
         private PersistentPlayerStats _persistentPlayerStats;
 
