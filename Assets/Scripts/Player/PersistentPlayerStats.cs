@@ -15,8 +15,8 @@ namespace Player
 
         public List<HubUpgrade> HubUpgrades => _hubUpgrades;
 
-        public int Coins { get; private set; }
-        public int Deaths { get; private set; }
+        public int Coins { get; private set; } = 50;
+        public int Deaths { get; private set; } = 1;
 
         public float FlashlightRadius { get; private set; } = 4.0f;
         public float CriticalAttackChance { get; private set; }

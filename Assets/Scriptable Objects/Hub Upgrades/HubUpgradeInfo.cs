@@ -11,6 +11,7 @@ public enum HubUpgradeType
 [CreateAssetMenu(fileName = "HubUpgradeInfo", menuName = "Scriptable Objects/HubUpgradeInfo")]
 public class HubUpgradeInfo : ScriptableObject
 {
+    public Sprite Icon;
     public string Title;
     public string Description;
     public int BaseCost;

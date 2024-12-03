@@ -17,6 +17,9 @@ public class HubUpgradeDisplay : MonoBehaviour
     [SerializeField]
     private TMP_Text _costTextField;
 
+    [SerializeField] 
+    private Image _iconImage;
+    
     [SerializeField]
     private Button _buyButton;
 
@@ -32,7 +35,8 @@ public class HubUpgradeDisplay : MonoBehaviour
         _titleTextField.text = _hubUpgrade.HubUpgradeInfo.Title;
         _descriptionTextField.text = _hubUpgrade.HubUpgradeInfo.Description;
         _costTextField.text = _hubUpgrade.Cost.ToString();
-        _tierTextField.text = $"Tier {_hubUpgrade.Tier} / {_hubUpgrade.HubUpgradeInfo.MaxTier}";
+        _tierTextField.text = $"Tier:\n {_hubUpgrade.Tier} / {_hubUpgrade.HubUpgradeInfo.MaxTier}";
+        _iconImage.sprite = _hubUpgrade.HubUpgradeInfo.Icon;
         SetupButton();
 
     }
@@ -57,7 +61,7 @@ public class HubUpgradeDisplay : MonoBehaviour
     public void Refresh()
     {
         _costTextField.text = _hubUpgrade.Cost.ToString();
-        _tierTextField.text = $"Tier {_hubUpgrade.Tier} / {_hubUpgrade.HubUpgradeInfo.MaxTier}";
+        _tierTextField.text = $"Tier:\n{_hubUpgrade.Tier} / {_hubUpgrade.HubUpgradeInfo.MaxTier}";
 
         SetupButton();
     }
