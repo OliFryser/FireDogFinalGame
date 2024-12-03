@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Critical Attack Upgrade
   m_EditorClassIdentifier: 
   Icon: {fileID: -924193465, guid: 5713945bdf1ee8c429bf26d57602d80c, type: 3}
-  Title: Sharpen your Sweeper
+  Title: Sharpen Your Sweeper
   Description: Increase your critical attack change with by 1%
   BaseCost: 20
   IncrementPerTier: 10

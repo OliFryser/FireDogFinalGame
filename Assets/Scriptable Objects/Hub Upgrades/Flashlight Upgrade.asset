@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Flashlight Upgrade
   m_EditorClassIdentifier: 
   Icon: {fileID: 1439892519567985313, guid: 5713945bdf1ee8c429bf26d57602d80c, type: 3}
-  Title: Increase Flashlight Radius
-  Description: Increase the radius of your flashlight, so the dark is not so scary
-    anymore
+  Title: No fear
+  Description: Buy a better flashlight, so dark is not so scary anymore
   BaseCost: 2
   IncrementPerTier: 3
   MaxTier: 5
