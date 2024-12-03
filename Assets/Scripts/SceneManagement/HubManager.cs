@@ -11,28 +11,23 @@ namespace SceneManagement
         private DialogueManager _dialogueManager;
         private InputLock _inputLock;
         private PersistentPlayerStats _persistentPlayerStats;
-
-        private void Awake()
+        
+        private void Start()
         {
             _door = FindAnyObjectByType<HubDoor>();
             _dialogueManager = FindAnyObjectByType<DialogueManager>();
             _persistentPlayerStats = FindAnyObjectByType<PersistentPlayerStats>();
             _inputLock = FindAnyObjectByType<InputLock>();
-        }
-
-        private void Start()
-        {
+            
             if (_persistentPlayerStats.Deaths == 0)
             {
-                _dialogueManager.PlayHubDialogue(0, () =>
-                {
-                    _door.OpenDoor();
-                });
+                _dialogueManager.PlayHubDialogue(0, _door.OpenDoor);
                 StartCoroutine(LockInputDelayed());
             }
             else 
                 _door.OpenDoor();
         }
+        
         // Necessary when calling inputLock in start method, since it seems to get enabled later
         private IEnumerator LockInputDelayed()
         {

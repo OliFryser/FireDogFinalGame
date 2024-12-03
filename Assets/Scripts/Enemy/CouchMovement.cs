@@ -16,7 +16,7 @@ namespace Enemy
         protected override void Update()
         {
             base.Update();
-            var isHorizontal = Utils.IsHorizontal(GetEnemyDirection());
+            var isHorizontal = Utils.IsHorizontal(_lastMovedDirection);
             if (isHorizontal == _isHorizontal) return;
             _isHorizontal = isHorizontal;
             if (_isHorizontal)

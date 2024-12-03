@@ -22,10 +22,12 @@ namespace Dialogue
 
         private Action _onCompleted;
 
-        private void Start()
+        private void OnEnable()
         {
             _inputLock = FindAnyObjectByType<InputLock>();
             _cameraFollow = FindAnyObjectByType<PlayerCameraFollow>();
+            Debug.LogWarning($"Found InputLock: {_inputLock != null}");
+            Debug.LogWarning($"Found PlayerCameraFollow: {_cameraFollow != null}");
         }
 
         public void StartDialog(DialogueSequence dialogueSequence, Action onDialogSequenceCompleted)
@@ -33,13 +35,8 @@ namespace Dialogue
             _onCompleted = onDialogSequenceCompleted;
             _dialogueSequenceQueue = new(dialogueSequence.Lines);
             _dialogActivator.gameObject.SetActive(true);
-            if (_inputLock != null)
-            {
-                _inputLock.LockInput();
-            }
-            if (_cameraFollow != null)
-                _cameraFollow.MoveCameraForDialog();
-            
+            _inputLock.LockInput();
+            _cameraFollow.MoveCameraForDialog();
             ShowNextLine();
         }
 

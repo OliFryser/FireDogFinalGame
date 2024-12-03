@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Death 3
   m_EditorClassIdentifier: 
   Lines:
-  - DialogContent: Third time is not the charm. Are you alarmed?
+  - DialogContent: "Third time is not the charm. \nAre you alarmed?"
     Speaker: {fileID: 11400000, guid: 0d0d5b1227bb2144aa494262bca395f2, type: 2}
   - DialogContent: Alarmed after dying 3 times? Oh no no no. Not at all.
     Speaker: {fileID: 11400000, guid: 5e07a4ebe4e753f4e91e343812c4f2f2, type: 2}

@@ -24,6 +24,11 @@ public class PlayerCameraFollow : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         var sceneBounds = GameObject.FindGameObjectWithTag(CAMERA_BOUNDS_TAG);
