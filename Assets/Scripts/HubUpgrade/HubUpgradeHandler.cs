@@ -1,14 +1,13 @@
+using Player;
 using UnityEngine;
 
 public class HubUpgradeHandler
 {
-    private PersistentPlayerStats _persistentPlayerStats;
-    private PlayerStats _playerStats;
+    private readonly PersistentPlayerStats _persistentPlayerStats;
 
-    public HubUpgradeHandler(PersistentPlayerStats persistentPlayerStats, PlayerStats playerStats)
+    public HubUpgradeHandler(PersistentPlayerStats persistentPlayerStats)
     {
         _persistentPlayerStats = persistentPlayerStats;
-        _playerStats = playerStats;
     }
 
     internal void HandleUpgrade(HubUpgradeInfo hubUpgradeInfo, int tier)
@@ -18,26 +17,21 @@ public class HubUpgradeHandler
         switch (hubUpgradeInfo.HubUpgradeType)
         {
             case HubUpgradeType.HealthGain:
-                _playerStats.PassiveHealing = true;
+                _persistentPlayerStats.PassiveHealing = true;
                 break;
             case HubUpgradeType.FlashLightRadius:
-                _playerStats.IncreaseFlashLightRadius();
+                _persistentPlayerStats.IncreaseFlashLightRadius();
                 break;
             case HubUpgradeType.CriticalAttack:
-                _playerStats.IncreaseCriticalAttack();
+                _persistentPlayerStats.IncreaseCriticalAttack();
                 break;
             case HubUpgradeType.BetterCleaningLoot:
-                _playerStats.IncreaseCleaningReward();
+                _persistentPlayerStats.IncreaseCleaningReward();
                 break;
             default:
                 Debug.LogWarning("Undefined Upgrade in UpgradeHandler");
                 break;
         }
-    }
-
-    internal void SetPlayerStats(PlayerStats playerStats)
-    {
-        _playerStats = playerStats;
     }
 
     internal bool PlayerCanAffordUpgrade(int cost)

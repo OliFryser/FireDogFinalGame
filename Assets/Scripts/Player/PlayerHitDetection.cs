@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using Player;
 using Unity.Mathematics;
 
 public class PlayerHitDetection : MonoBehaviour

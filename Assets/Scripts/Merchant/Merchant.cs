@@ -1,4 +1,5 @@
 using Dialogue;
+using Player;
 
 namespace Merchant
 {

@@ -2,9 +2,9 @@ using System;
 using UnityEngine;
 using System.Collections;
 using FMODUnity;
+using Player;
 using SceneManagement;
 using Unity.Mathematics;
-using Random = System.Random;
 
 public class Cleanable : Interactable
 {
