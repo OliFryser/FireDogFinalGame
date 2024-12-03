@@ -54,11 +54,11 @@ public class PlayerHitDetection : MonoBehaviour
     private void KillPlayer()
     {
         //Return player to hub.
-        StartCoroutine(IgnoreCollision(3.2f));
+        StartCoroutine(IgnoreCollision(3.8f));
         _playerStats.AddPlayerDeath();
         _inputLocker.LockInput();
         _playerDeath.GetComponent<Animator>().SetTrigger("Death");
-        StartCoroutine(PlayDeathAnimation(3.2f));
+        StartCoroutine(PlayDeathAnimation(3.8f));
     }
 
     private void OnCollisionEnter2D(Collision2D other)
