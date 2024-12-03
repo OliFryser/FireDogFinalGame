@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ac3a4370a05654297f60b07056d9fa, type: 3}
   m_Name: Better Loot Upgrade
   m_EditorClassIdentifier: 
+  Icon: {fileID: -888091396, guid: 5713945bdf1ee8c429bf26d57602d80c, type: 3}
   Title: Wipe Your Glasses
   Description: Find better loot when cleaning.
   BaseCost: 10
   IncrementPerTier: 5
   MaxTier: 5
-  Tier: 1
   HubUpgradeType: 3
