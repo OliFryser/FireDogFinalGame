@@ -17,6 +17,9 @@ public class PlayerHitDetection : MonoBehaviour
     private InvincibilityManager _invincibilityManager;
     private InputLock _inputLocker;
 
+    [SerializeField]
+    private GameObject _playerDeath;
+
     public string hitSoundEventPath = "event:/Player/Damage";
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -51,10 +54,10 @@ public class PlayerHitDetection : MonoBehaviour
     private void KillPlayer()
     {
         //Return player to hub.
+        StartCoroutine(IgnoreCollision(3.2f));
         _playerStats.AddPlayerDeath();
         _inputLocker.LockInput();
-        _animator.SetTrigger("Death");
-        StartCoroutine(IgnoreCollision(3.2f));
+        _playerDeath.GetComponent<Animator>().SetTrigger("Death");
         StartCoroutine(PlayDeathAnimation(3.2f));
     }
 
