@@ -21,7 +21,7 @@ namespace Merchant
 
         public override void Interact()
         {
-            if (_hasInteracted)
+            if (!_hasInteracted)
             {
                 _hasInteracted = true;
                 _hubManager
