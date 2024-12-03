@@ -66,7 +66,7 @@ public class Movement : MonoBehaviour
 
     public bool IsMoving => _direction.sqrMagnitude > 0.01f;
 
-    void Start()
+    void Awake()
     {
         _playerStats = GetComponent<PlayerStats>();
         _rigidBody2D = GetComponent<Rigidbody2D>();

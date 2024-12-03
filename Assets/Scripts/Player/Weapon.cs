@@ -70,7 +70,7 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     EventReference MeleeLightSwing;
 
-    void Start()
+    private void Awake()
     {
         _playerMovement = GetComponent<Movement>();
         _animator = GetComponent<Animator>();
