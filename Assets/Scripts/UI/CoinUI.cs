@@ -4,8 +4,6 @@ using TMPro;
 
 public class CoinUI : MonoBehaviour
 {
-
-
     private PlayerStats _playerStats;
 
     private TMP_Text _coinCount;

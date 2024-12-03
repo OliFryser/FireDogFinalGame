@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 using System.Collections;
 using FMODUnity;
 using SceneManagement;
 using Unity.Mathematics;
+using Random = System.Random;
 
 public class Cleanable : Interactable
 {
@@ -15,17 +17,24 @@ public class Cleanable : Interactable
 
     private Animator _animator;
 
-    protected InputLock _inputLock;
+    private InputLock _inputLock;
 
     private PlayerStats _playerStats;
 
-    protected EnemyTracker _enemyTracker;
+    private EnemyTracker _enemyTracker;
+
+    [SerializeField] 
+    private Bounds _bounds;
 
     [SerializeField]
     private GameObject _coin;
-    private float _coinOffset = .15f;
+    
+    [SerializeField]
+    private GameObject _fullHeart;
 
-
+    [SerializeField]
+    private GameObject _halfHeart;
+    
     public override void Interact()
     {
         _animator.SetTrigger("Cleaning");
@@ -34,19 +43,23 @@ public class Cleanable : Interactable
 
         RuntimeManager.PlayOneShot("event:/Player/Clean_level", transform.position);
 
-        var coinsFromCleaning = UnityEngine.Random.Range(_playerStats.MinimumCleaningReward, _playerStats.MaximumCleaningReward);
-
+        var heartsFromCleaning = 0;
+        if (UnityEngine.Random.Range(0, 10) >= 8)
+            heartsFromCleaning = Math.Clamp(UnityEngine.Random.Range(1, _playerStats.CleaningReward / 2), 1, 4);
+        var coinsFromCleaning = _playerStats.CleaningReward - heartsFromCleaning;
+        
         for (int i = 0; i < coinsFromCleaning; i++)
-        {
-            Vector3 offset = new Vector3(_coinOffset * i, .5f, 0);
-            if (i % 2 == 0)
-                Instantiate(_coin, transform.position + offset, quaternion.identity);
-            else
-                Instantiate(_coin, transform.position - offset, quaternion.identity);
-        }
+            Instantiate(_coin, GetRandomPositionWithinBounds(), Quaternion.identity);
+
+        for (int i = 0; i < heartsFromCleaning / 2; i++)
+            Instantiate(_fullHeart, GetRandomPositionWithinBounds(), Quaternion.identity);
+        
+        if(heartsFromCleaning % 2 != 0)
+            Instantiate(_halfHeart, GetRandomPositionWithinBounds(), Quaternion.identity);
+        
         if (_playerStats.CleaningSpreeMoney)
         {
-            CleaningSpreeBonus();
+            Instantiate(_coin, GetRandomPositionWithinBounds(), quaternion.identity);
         }
         if (_playerStats.CleaningSpreeDamage && _enemyTracker.EnemyCount > 0)
         {
@@ -77,19 +90,24 @@ public class Cleanable : Interactable
         _spriteRenderer.material = _defaultMaterial;
     }
 
-    IEnumerator CleaningTimer(float timer)
+    private IEnumerator CleaningTimer(float timer)
     {
         _inputLock.LockInput();
         yield return new WaitForSeconds(timer);
         _inputLock.UnlockInput();
     }
 
-    protected void CleaningSpreeBonus()
+    private Vector3 GetRandomPositionWithinBounds()
     {
-        if (_enemyTracker.EnemyCount > 0)
-        {
-            Vector3 offset = new Vector3(_coinOffset, .5f, 0);
-            Instantiate(_coin, transform.position + offset, quaternion.identity);
-        }
+        float x = UnityEngine.Random.Range(_bounds.XMin, _bounds.XMax);
+        float y = UnityEngine.Random.Range(_bounds.YMin, _bounds.YMax);
+        Debug.Log($"Spawned at X: {x}, Y: {y}");
+        return new(transform.position.x + x, transform.position.y + y, transform.position.z);
+    }
+    
+    [Serializable]
+    public struct Bounds
+    {
+        public float XMin, XMax, YMin, YMax; 
     }
 }

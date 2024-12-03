@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerStats : MonoBehaviour
     public bool IsDead => _currentHealth <= 0;
     private int _currentHealth = 6;
     private HealthUIManager _healthUIManager;
+    private Light2D _flashlight;
     public float EnemyStunDuration;
     public float PlayerPushBack;
     public float EnemyPushBack;
@@ -30,8 +32,7 @@ public class PlayerStats : MonoBehaviour
 
     public float DamageBoostCounter;
 
-    public int MinimumCleaningReward = 2;
-    public int MaximumCleaningReward = 2;
+    [FormerlySerializedAs("MinimumCleaningReward")] public int CleaningReward = 2;
     public int CriticalAttackChance = 0;
 
     public bool HeavyMetal;
@@ -61,6 +62,7 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
+        _flashlight = GetComponentInChildren<Light2D>();
         _currentHealth = MaxHealth;
         _healthUIManager.UpdateHearts(_currentHealth);
         _persistentPlayerStats = FindAnyObjectByType<PersistentPlayerStats>();
@@ -103,6 +105,7 @@ public class PlayerStats : MonoBehaviour
     public int Coins => _persistentPlayerStats.Coins;
 
     public bool PassiveHealing { get; internal set; }
+    public bool FullHealth => _currentHealth == MaxHealth;
 
     public void Reset()
     {
@@ -116,7 +119,7 @@ public class PlayerStats : MonoBehaviour
 
     internal void IncreaseFlashLightRadius()
     {
-        GetComponentInChildren<Light2D>().pointLightOuterRadius += .5f;
+        _flashlight.pointLightOuterRadius += .5f;
     }
 
     internal void IncreaseCriticalAttack()
@@ -126,8 +129,7 @@ public class PlayerStats : MonoBehaviour
 
     internal void IncreaseCleaningReward()
     {
-        MaximumCleaningReward++;
-        MinimumCleaningReward = (MaximumCleaningReward / MinimumCleaningReward) + 1;
+        CleaningReward++;
     }
 
     internal bool IsCritical()

@@ -7,6 +7,7 @@ public class PlayerSpawner : MonoBehaviour
 
     [SerializeField]
     private GameObject _persistentPlayerStatsPrefab;
+    
     private void Awake()
     {
         var player = FindAnyObjectByType<PlayerHitDetection>();
