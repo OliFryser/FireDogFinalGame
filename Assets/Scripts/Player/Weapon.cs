@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using FMODUnity;
+using Player;
 
 public class Weapon : MonoBehaviour
 {

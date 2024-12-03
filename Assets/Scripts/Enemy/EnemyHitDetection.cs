@@ -2,6 +2,7 @@ using UnityEngine;
 using FMODUnity;
 using SceneManagement;
 using System.Collections;
+using Player;
 
 public class EnemyHitDetection : MonoBehaviour
 {

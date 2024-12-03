@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Dialogue;
+using Player;
 using UnityEngine;
 
 namespace SceneManagement

@@ -2,6 +2,7 @@ using FMODUnity;
 using System;
 using System.Collections;
 using Lib;
+using Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
