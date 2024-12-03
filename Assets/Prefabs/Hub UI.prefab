@@ -601,7 +601,8 @@ PrefabInstance:
       value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 498499386683831629, guid: 1be910089565424479836ec30fc5b73b, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 284476168913533583, guid: 1be910089565424479836ec30fc5b73b, type: 3}
       insertIndex: -1
@@ -609,13 +610,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7346830782297018968, guid: 1be910089565424479836ec30fc5b73b, type: 3}
       insertIndex: 2
       addedObject: {fileID: 1611688714282845444}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2316205181162081690, guid: 1be910089565424479836ec30fc5b73b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7861912135113048408}
-    - targetCorrespondingSourceObject: {fileID: 4405769524726417296, guid: 1be910089565424479836ec30fc5b73b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8382740983300559056}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1be910089565424479836ec30fc5b73b, type: 3}
 --- !u!224 &2717959366076116067 stripped
 RectTransform:
@@ -627,65 +622,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 284476168913533583, guid: 1be910089565424479836ec30fc5b73b, type: 3}
   m_PrefabInstance: {fileID: 4633375051290361403}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6947328371097629601 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2316205181162081690, guid: 1be910089565424479836ec30fc5b73b, type: 3}
-  m_PrefabInstance: {fileID: 4633375051290361403}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7861912135113048408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6947328371097629601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52daa2b8e316225479c13c9862c790d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonClickSound:
-    Guid:
-      Data1: 1013398485
-      Data2: 1132442460
-      Data3: -37428311
-      Data4: -40505777
-    Path: event:/UI/GUI/Click
-  buttonHoverSound:
-    Guid:
-      Data1: -1086361265
-      Data2: 1110082598
-      Data3: 695660195
-      Data4: -1675220979
-    Path: event:/UI/GUI/Hover
---- !u!1 &9036892688323901867 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4405769524726417296, guid: 1be910089565424479836ec30fc5b73b, type: 3}
-  m_PrefabInstance: {fileID: 4633375051290361403}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8382740983300559056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9036892688323901867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52daa2b8e316225479c13c9862c790d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonClickSound:
-    Guid:
-      Data1: 1013398485
-      Data2: 1132442460
-      Data3: -37428311
-      Data4: -40505777
-    Path: event:/UI/GUI/Click
-  buttonHoverSound:
-    Guid:
-      Data1: -1086361265
-      Data2: 1110082598
-      Data3: 695660195
-      Data4: -1675220979
-    Path: event:/UI/GUI/Hover
