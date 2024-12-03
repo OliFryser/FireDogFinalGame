@@ -656,6 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerDeath: {fileID: 6534012852188967975}
+  _deathScreen: {fileID: 8166986021101702807, guid: 378a1a92bc51aea4697748c892753f6e, type: 3}
   hitSoundEventPath: event:/Player/Damage
 --- !u!114 &2164337826507384195
 MonoBehaviour:

@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using Unity.Mathematics;
 
 public class PlayerHitDetection : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class PlayerHitDetection : MonoBehaviour
 
     [SerializeField]
     private GameObject _playerDeath;
+
+    [SerializeField]
+    private GameObject _deathScreen;
 
     public string hitSoundEventPath = "event:/Player/Damage";
 
@@ -57,6 +61,7 @@ public class PlayerHitDetection : MonoBehaviour
         StartCoroutine(IgnoreCollision(3.8f));
         _playerStats.AddPlayerDeath();
         _inputLocker.LockInput();
+        Instantiate(_deathScreen, transform.position, quaternion.identity);
         _playerDeath.GetComponent<Animator>().SetTrigger("Death");
         StartCoroutine(PlayDeathAnimation(3.8f));
     }
