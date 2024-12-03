@@ -26,8 +26,6 @@ namespace Dialogue
         {
             _inputLock = FindAnyObjectByType<InputLock>();
             _cameraFollow = FindAnyObjectByType<PlayerCameraFollow>();
-            Debug.LogWarning($"Found InputLock: {_inputLock != null}");
-            Debug.LogWarning($"Found PlayerCameraFollow: {_cameraFollow != null}");
         }
 
         public void StartDialog(DialogueSequence dialogueSequence, Action onDialogSequenceCompleted)
