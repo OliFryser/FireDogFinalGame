@@ -7,7 +7,7 @@ public class InputLock : MonoBehaviour
     private PlayerInput _playerInput;
     private int LockCount { get; set; }
 
-    private void Start()
+    private void Awake()
     {
         _playerInput = GetComponent<PlayerInput>();
     }

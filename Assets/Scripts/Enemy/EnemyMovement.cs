@@ -29,6 +29,8 @@ public class EnemyMovement : MonoBehaviour
 
     private Vector2 _direction;
 
+    protected Vector2 _lastMovedDirection;
+    
     private float _totalPushDistance;
 
     private float _currentPushDistance;
@@ -53,8 +55,6 @@ public class EnemyMovement : MonoBehaviour
 
     private LayerMask _mask;
 
-    private EnemyHitDetection _hitDetection;
-
     protected virtual void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -71,10 +71,10 @@ public class EnemyMovement : MonoBehaviour
         UpdateCollider(_verticalEnemyCollision);
 
         _direction = Vector2.down;
+        _lastMovedDirection = _direction;
         _animator = GetComponent<Animator>();
         _animator.SetFloat("Horizontal", _direction.x);
         _animator.SetFloat("Vertical", _direction.y);
-        _hitDetection = GetComponent<EnemyHitDetection>();
 
         _navMeshAgent.speed = _movementSpeed;
         _mask = LayerMask.GetMask("Ignore Raycast", "Dust", "Enemy");
@@ -94,7 +94,6 @@ public class EnemyMovement : MonoBehaviour
             }
             else
             {
-
                 StopPush();
             }
         }
@@ -120,7 +119,7 @@ public class EnemyMovement : MonoBehaviour
 
             SetDestination(_playerTransform);
             _direction = _navMeshAgent.velocity.normalized;
-
+            _lastMovedDirection = _direction;
 
             if (Utils.IsHorizontal(_direction))
                 UpdateCollider(_horizontalEnemyCollsion);
@@ -176,10 +175,7 @@ public class EnemyMovement : MonoBehaviour
     private void FlipSprite()
     {
         if (Math.Abs(_directionToPlayer.x) < 0.01f) return;
-        if (_directionToPlayer.x > 0)
-            transform.localScale = new Vector3(-1, 1, 1);
-        else
-            transform.localScale = new Vector3(1, 1, 1);
+        transform.localScale = _directionToPlayer.x > 0 ? new(-1, 1, 1) : new(1, 1, 1);
     }
 
 
