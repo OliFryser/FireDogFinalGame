@@ -22,7 +22,7 @@ namespace Dialogue
 
         private Action _onCompleted;
 
-        private void OnEnable()
+        private void Start()
         {
             _inputLock = FindAnyObjectByType<InputLock>();
             _cameraFollow = FindAnyObjectByType<PlayerCameraFollow>();
