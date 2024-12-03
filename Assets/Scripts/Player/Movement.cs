@@ -38,6 +38,7 @@ public class Movement : MonoBehaviour
 
     private bool wasMoving = false;
 
+    [SerializeField]
     private float _invincibilityTime;
 
     private float _currentDodgeDistance;

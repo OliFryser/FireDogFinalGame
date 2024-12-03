@@ -345,6 +345,7 @@ MonoBehaviour:
   _dogdeSpeedScalar: 3
   _dodgeHitBox: {fileID: 8749505882203051888, guid: 25412b2455c8e914aaa3493f41312d91, type: 3}
   sfxFootsteps: {fileID: 0}
+  _invincibilityTime: 0.4
   PreviousDirection: {x: 0, y: 0}
   _verticalShadow: {fileID: 345862630119469278}
   _horizontalShadow: {fileID: 4962597601900002782}
@@ -624,8 +625,7 @@ MonoBehaviour:
   CleaningSpreeDamageActive: 0
   CleaningSpreeMoney: 0
   DamageBoostCounter: 1
-  MinimumCleaningReward: 2
-  MaximumCleaningReward: 2
+  CleaningReward: 2
   CriticalAttackChance: 0
   HeavyMetal: 0
   BowlingChampion: 0
