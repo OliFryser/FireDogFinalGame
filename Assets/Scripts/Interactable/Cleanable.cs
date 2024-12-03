@@ -101,7 +101,6 @@ public class Cleanable : Interactable
     {
         float x = UnityEngine.Random.Range(_bounds.XMin, _bounds.XMax);
         float y = UnityEngine.Random.Range(_bounds.YMin, _bounds.YMax);
-        Debug.Log($"Spawned at X: {x}, Y: {y}");
         return new(transform.position.x + x, transform.position.y + y, transform.position.z);
     }
     
