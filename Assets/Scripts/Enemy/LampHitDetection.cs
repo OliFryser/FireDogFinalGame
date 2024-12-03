@@ -15,10 +15,4 @@ public class LampHitDetection : EnemyHitDetection
         RuntimeManager.PlayOneShotAttached("event:/Enemy/Lamp_death", this.gameObject);
     }
 
-    public void WallCollisionDetected(Collision2D collision){
-        if (_enemyMovement.IsPushedBack && _playerStats.BaseballConnoisseur){
-                GetHitCollision();
-        }
-    }
-
 }
