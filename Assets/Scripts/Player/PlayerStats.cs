@@ -104,7 +104,8 @@ namespace Player
 
         public bool PassiveHealing => _persistentPlayerStats.PassiveHealing;
         public bool FullHealth => _currentHealth == MaxHealth;
-
+        public bool HasStartedLevel6 => _persistentPlayerStats.HasStartedLevel6;
+        
         public void Reset()
         {
             MovementSpeed = 100.0f;
@@ -126,6 +127,11 @@ namespace Player
         internal void AddToRoomCounter()
         {
             RoomNumber++;
+        }
+
+        public void StartLevel6()
+        {
+            _persistentPlayerStats.HasStartedLevel6 = true;
         }
     }
 }

@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 1289210969199835491}
   - component: {fileID: 6887280395858381303}
   - component: {fileID: 8682564871936671554}
+  - component: {fileID: 9019356577232575086}
   m_Layer: 0
   m_Name: AttackHitBox
   m_TagString: Enemy
@@ -193,6 +194,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &9019356577232575086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8338755633620492177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d589caf68a85d04983d821b3102e96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pushBackOnPlayerHit: 0.8
 --- !u!1001 &8643198166234461512
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using Dialogue;
+using Player;
+using SceneManagement;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -9,10 +12,6 @@ namespace Merchant
         [Header("Music Controller")]
         [SerializeField]
         private MusicController musicController;
-
-        [Header("Room Manager")]
-        [SerializeField]
-        private RoomManager roomManager;
         
         [FormerlySerializedAs("lampOffSprites")]
         [Header("Lamp Sprites and Enemies")]
@@ -22,15 +21,32 @@ namespace Merchant
         [FormerlySerializedAs("lampEnemies")] [SerializeField]
         private List<GameObject> _lampEnemies;
 
-        [FormerlySerializedAs("decoyEnemy")]
-        [Header("Decoy Enemy")]
+        [SerializeField] private GameObject _decoyEnemy;
+        
+        private EnemyTracker _enemyTracker;
+        private DialoguePlayer _dialogPlayer;
+        private PlayerStats _playerStats;
+        
         [SerializeField]
-        private GameObject _decoyEnemy;
+        private DialogueSequence _firstSequence;
+        [SerializeField]
+        private DialogueSequence _shorterSequence;
+
+        protected override void Start()
+        {
+            base.Start();
+            _dialogPlayer = FindAnyObjectByType<DialoguePlayer>();
+            _enemyTracker = FindAnyObjectByType<EnemyTracker>();
+            _playerStats = FindAnyObjectByType<PlayerStats>();
+        }
         
         public override void Interact()
         {
             base.Interact();
-            ActivateLamps();
+            DialogueSequence sequence = 
+                _playerStats.HasStartedLevel6 ? _shorterSequence: _firstSequence;
+            _playerStats.StartLevel6();
+            _dialogPlayer.StartDialog(sequence, ActivateLamps);
         }
         
         private void ActivateLamps()
@@ -47,16 +63,16 @@ namespace Merchant
                     _lampEnemies[i].SetActive(true);
                 }
             }
-
-            if (_decoyEnemy != null)
-            {
-                _decoyEnemy.SetActive(false);
-            }
+            
+            Destroy(_decoyEnemy);
+            _enemyTracker.UnregisterEnemy();
 
             if (musicController != null)
             {
                 musicController.SetBattleState(0.0f);
             }
+            
+            Destroy(gameObject);
         }
     }
 }

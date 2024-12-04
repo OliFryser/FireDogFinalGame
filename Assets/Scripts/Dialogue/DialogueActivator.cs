@@ -31,5 +31,10 @@ namespace Dialogue
         {
             _dialogueManager.OnDialogClick();
         }
+
+        public void Select()
+        {
+            _dialogueButton.Select();
+        }
     }
 }

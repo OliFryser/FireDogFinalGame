@@ -22,6 +22,7 @@ namespace Player
         public float CriticalAttackChance { get; private set; }
         public int CleaningReward { get; private set; } = 2;
         public bool PassiveHealing { get; set; }
+        public bool HasStartedLevel6 { get; set; }
 
         private void Awake()
         {

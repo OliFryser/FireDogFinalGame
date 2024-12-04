@@ -11,7 +11,7 @@ namespace Pickup
         protected override void HandlePickup()
         {
             RuntimeManager.PlayOneShot("event:/UI/In-GameUI/Pickup_Health");
-            if (_playerStats.FullHealth)
+            if (!_playerStats.FullHealth)
                 _playerStats.Heal(_healingAmount);
         }
     }

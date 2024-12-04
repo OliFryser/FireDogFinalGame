@@ -28,6 +28,7 @@ namespace Merchant
                     _playerStats.Deaths,
                     _playerStats.RoomNumber,
                     _roomManager.OpenUpgradeMenu);
+            RuntimeManager.PlayOneShot("event:/Merchant_Interact");
         }
     }
 }

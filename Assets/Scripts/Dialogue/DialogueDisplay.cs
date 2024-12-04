@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Collections;
 using TMPro;
@@ -58,6 +59,7 @@ namespace Dialogue
             StopAllCoroutines();
             DialogueTextDisplay.text = _line;
             IsTyping = false;
+            RuntimeManager.PlayOneShot("event:/UI/GUI/Toggle");
         }
 
         private void PlayCharacterSound()
@@ -74,6 +76,7 @@ namespace Dialogue
                 SkipToEnd();
             else
                 _onCompleted();
+            RuntimeManager.PlayOneShot("event:/UI/GUI/Toggle");
 
         }
     }

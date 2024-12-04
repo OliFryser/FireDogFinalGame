@@ -284,6 +284,8 @@ GameObject:
   - component: {fileID: 7702485603693861011}
   - component: {fileID: 2766407854224824135}
   - component: {fileID: 2791365375840927414}
+  - component: {fileID: 7629203763551021251}
+  - component: {fileID: 1105244705513162712}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -341,7 +343,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f3d4737ab4a6d5540990b22578c57cef, type: 3}
+  m_Sprite: {fileID: -2077056082939466603, guid: f3d4737ab4a6d5540990b22578c57cef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -370,7 +372,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
@@ -380,10 +382,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -552862448, guid: f3d4737ab4a6d5540990b22578c57cef, type: 3}
+    m_PressedSprite: {fileID: -2077056082939466603, guid: f3d4737ab4a6d5540990b22578c57cef, type: 3}
+    m_SelectedSprite: {fileID: -552862448, guid: f3d4737ab4a6d5540990b22578c57cef, type: 3}
+    m_DisabledSprite: {fileID: -2077056082939466603, guid: f3d4737ab4a6d5540990b22578c57cef, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -395,6 +397,58 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7629203763551021251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4984253804619299217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52daa2b8e316225479c13c9862c790d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonClickSound:
+    Guid:
+      Data1: 1057291155
+      Data2: 1088987478
+      Data3: 651803014
+      Data4: 708790449
+    Path: event:/UI/GUI/Upgrade
+  buttonHoverSound:
+    Guid:
+      Data1: -1086361265
+      Data2: 1110082598
+      Data3: 695660195
+      Data4: -1675220979
+    Path: event:/UI/GUI/Hover
+--- !u!114 &1105244705513162712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4984253804619299217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52daa2b8e316225479c13c9862c790d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonClickSound:
+    Guid:
+      Data1: 1057291155
+      Data2: 1088987478
+      Data3: 651803014
+      Data4: 708790449
+    Path: event:/UI/GUI/Upgrade
+  buttonHoverSound:
+    Guid:
+      Data1: -1086361265
+      Data2: 1110082598
+      Data3: 695660195
+      Data4: -1675220979
+    Path: event:/UI/GUI/Hover
 --- !u!1 &5761168671161531036
 GameObject:
   m_ObjectHideFlags: 0
