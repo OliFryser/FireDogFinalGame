@@ -1,5 +1,6 @@
 using Dialogue;
 using Player;
+using FMODUnity;
 
 namespace Merchant
 {
@@ -26,6 +27,7 @@ namespace Merchant
                     _playerStats.Deaths,
                     _playerStats.RoomNumber,
                     _roomManager.OpenUpgradeMenu);
+            RuntimeManager.PlayOneShot("event:/Merchant_Interact");
         }
     }
 }
