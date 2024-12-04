@@ -217,11 +217,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6334103844585917575, guid: befdfe8ce3672f84f9ba0b9af7a14642, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.107
+      value: 9.119
       objectReference: {fileID: 0}
     - target: {fileID: 6334103844585917575, guid: befdfe8ce3672f84f9ba0b9af7a14642, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.093
+      value: -0.087
       objectReference: {fileID: 0}
     - target: {fileID: 6334103844585917575, guid: befdfe8ce3672f84f9ba0b9af7a14642, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6815,11 +6815,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5892617368198646111, guid: 7603481a00269b04ca3678833d3ac216, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8018985254042270459, guid: 7603481a00269b04ca3678833d3ac216, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9087652022217924206, guid: 7603481a00269b04ca3678833d3ac216, type: 3}
       propertyPath: clearRoomState
