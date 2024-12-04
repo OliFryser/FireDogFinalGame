@@ -75,8 +75,15 @@ public class PlayerHitDetection : MonoBehaviour
             {
                 TakeDamage(1);
                 // Apply pushback only if not invincible
-                Vector2 enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
-                _playerMovement.GetPushed(enemyDirection);
+                if (other.gameObject.GetComponent<EnemyMovement>() != null){
+                    Vector2 enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
+                    _playerMovement.GetPushed(enemyDirection);
+                }
+                else {
+                    Vector2 enemyDirection = other.gameObject.transform.parent.GetComponent<EnemyMovement>().GetEnemyDirection();
+                    _playerMovement.GetPushed(enemyDirection);
+                }
+                
             }
         }
     }
