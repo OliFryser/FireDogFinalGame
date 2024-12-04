@@ -33,8 +33,9 @@ namespace Dialogue
             _onCompleted = onDialogSequenceCompleted;
             _dialogueSequenceQueue = new(dialogueSequence.Lines);
             _dialogActivator.gameObject.SetActive(true);
-            _inputLock.LockInput();
-            _cameraFollow.MoveCameraForDialog();
+            _dialogActivator.Select();
+            _inputLock?.LockInput();
+            _cameraFollow?.MoveCameraForDialog();
             ShowNextLine();
         }
 
