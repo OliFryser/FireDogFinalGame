@@ -8,6 +8,7 @@ namespace Pickup
         {
             RuntimeManager.PlayOneShot("event:/UI/In-GameUI/Pickup_money");
             _playerStats.AddCoins(1);
+            base.HandlePickup();
         }
     }
 }

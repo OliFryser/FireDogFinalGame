@@ -16,10 +16,12 @@ namespace Pickup
             if (other.CompareTag("Player"))
             {
                 HandlePickup();
-                Destroy(gameObject);
             }
         }
-        
-        protected abstract void HandlePickup();
+
+        protected virtual void HandlePickup()
+        {
+            Destroy(gameObject);
+        }
     }
 }
