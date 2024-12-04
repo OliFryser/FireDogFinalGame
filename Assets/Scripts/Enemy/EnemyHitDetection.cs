@@ -87,10 +87,6 @@ public class EnemyHitDetection : MonoBehaviour
         {
             _enemyMovement.GetPushedBack(_pushBackOnPlayerHit, 0);
         }
-        else if (_enemyMovement.IsPushedBack && _playerStats.BaseballConnoisseur){
-            _enemyMovement.StopPush();
-            GetHitCollision();
-        }
     }
 
     protected virtual void GetHitLightAttack()
