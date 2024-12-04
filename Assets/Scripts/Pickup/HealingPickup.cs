@@ -9,7 +9,7 @@ namespace Pickup
         
         protected override void HandlePickup()
         {
-            if (_playerStats.FullHealth)
+            if (!_playerStats.FullHealth)
                 _playerStats.Heal(_healingAmount);
         }
     }
