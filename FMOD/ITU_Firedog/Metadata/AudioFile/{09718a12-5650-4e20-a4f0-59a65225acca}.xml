@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{09718a12-5650-4e20-a4f0-59a65225acca}">
+		<property name="assetPath">
+			<value>retro_collect_pickup_coin_03.M.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.20266666666666666</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e2fd4aac-b52c-4156-8e60-b30314b51092}</destination>
+		</relationship>
+	</object>
+</objects>

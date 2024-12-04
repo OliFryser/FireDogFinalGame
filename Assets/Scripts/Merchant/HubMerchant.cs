@@ -1,5 +1,6 @@
 using Player;
 using SceneManagement;
+using FMODUnity;
 
 namespace Merchant
 {
@@ -22,6 +23,7 @@ namespace Merchant
 
         public override void Interact()
         {
+            RuntimeManager.PlayOneShot("event:/Merchant");
             if (!_hasInteracted)
             {
                 _hasInteracted = true;

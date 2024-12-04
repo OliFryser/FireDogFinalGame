@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using FMODUnity;
 
 namespace Dialogue
 {
@@ -61,6 +62,7 @@ namespace Dialogue
 
         public void OnDialogClick()
         {
+            RuntimeManager.PlayOneShot("event:/UI/GUI/Toggle");
             _dialogueLineAdapter.OnDialogClick();
         }
     }

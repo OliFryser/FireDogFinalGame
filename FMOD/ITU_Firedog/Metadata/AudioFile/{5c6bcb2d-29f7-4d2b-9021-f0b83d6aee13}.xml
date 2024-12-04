@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5c6bcb2d-29f7-4d2b-9021-f0b83d6aee13}">
+		<property name="assetPath">
+			<value>Merchant_laugh_04.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.7878911564625852</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e2fd4aac-b52c-4156-8e60-b30314b51092}</destination>
+		</relationship>
+	</object>
+</objects>

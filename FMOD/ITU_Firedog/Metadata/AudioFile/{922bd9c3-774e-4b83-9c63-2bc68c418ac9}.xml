@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{922bd9c3-774e-4b83-9c63-2bc68c418ac9}">
+		<property name="assetPath">
+			<value>ESM_Game_Thief_Item_3_Touch_Hit_Positive_Arcade_Classic.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.27733333333333332</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e2fd4aac-b52c-4156-8e60-b30314b51092}</destination>
+		</relationship>
+	</object>
+</objects>

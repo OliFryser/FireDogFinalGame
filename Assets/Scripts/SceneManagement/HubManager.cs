@@ -3,6 +3,7 @@ using System.Collections;
 using Dialogue;
 using Player;
 using UnityEngine;
+using FMOD.Studio;
 
 namespace SceneManagement
 {
@@ -13,13 +14,14 @@ namespace SceneManagement
         private InputLock _inputLock;
         private PersistentPlayerStats _persistentPlayerStats;
         private bool _initialized;
-        
+
         private void Start()
         {
             _door = FindAnyObjectByType<HubDoor>();
             _dialogueManager = FindAnyObjectByType<DialogueManager>();
             _persistentPlayerStats = FindAnyObjectByType<PersistentPlayerStats>();
             _inputLock = FindAnyObjectByType<InputLock>();
+            StopDeathSnapshot();
         }
 
         // Only does something on first frame
@@ -35,7 +37,7 @@ namespace SceneManagement
             else 
                 _door.OpenDoor();
         }
-        
+
         // Necessary when calling inputLock in start method, since it seems to get enabled later
         private IEnumerator LockInputDelayed()
         {
@@ -48,5 +50,15 @@ namespace SceneManagement
         {
             _dialogueManager.PlayHubDialogue(_persistentPlayerStats.Deaths, action);
         }
+
+        private void StopDeathSnapshot()
+        {
+            if (PlayerHitDetection.DeathSnapshotInstance.isValid())
+            {
+                PlayerHitDetection.DeathSnapshotInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                PlayerHitDetection.DeathSnapshotInstance.release();
+            }
+        }
     }
+
 }
