@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using Dialogue;
+using Player;
 using SceneManagement;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -22,17 +24,29 @@ namespace Merchant
         [SerializeField] private GameObject _decoyEnemy;
         
         private EnemyTracker _enemyTracker;
+        private DialoguePlayer _dialogPlayer;
+        private PlayerStats _playerStats;
+        
+        [SerializeField]
+        private DialogueSequence _firstSequence;
+        [SerializeField]
+        private DialogueSequence _shorterSequence;
 
         protected override void Start()
         {
             base.Start();
+            _dialogPlayer = FindAnyObjectByType<DialoguePlayer>();
             _enemyTracker = FindAnyObjectByType<EnemyTracker>();
+            _playerStats = FindAnyObjectByType<PlayerStats>();
         }
         
         public override void Interact()
         {
             base.Interact();
-            ActivateLamps();
+            DialogueSequence sequence = 
+                _playerStats.HasStartedLevel6 ? _shorterSequence: _firstSequence;
+            _playerStats.StartLevel6();
+            _dialogPlayer.StartDialog(sequence, ActivateLamps);
         }
         
         private void ActivateLamps()
@@ -57,6 +71,8 @@ namespace Merchant
             {
                 musicController.SetBattleState(0.0f);
             }
+            
+            Destroy(gameObject);
         }
     }
 }

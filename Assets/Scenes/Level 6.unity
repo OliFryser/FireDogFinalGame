@@ -12342,6 +12342,8 @@ MonoBehaviour:
   - {fileID: 1242657779}
   - {fileID: 959288591}
   _decoyEnemy: {fileID: 357701750}
+  _firstSequence: {fileID: 11400000, guid: 92cecf65f80764d25bfc294591256b6c, type: 2}
+  _shorterSequence: {fileID: 11400000, guid: 4a022448a882d488eac572ee6a4f7a8b, type: 2}
 --- !u!4 &6371078757969197482
 Transform:
   m_ObjectHideFlags: 0
