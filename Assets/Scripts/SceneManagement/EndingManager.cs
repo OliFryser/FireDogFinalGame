@@ -1,5 +1,6 @@
 using System.Collections;
 using Dialogue;
+using Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,7 @@ public class EndingManager : MonoBehaviour
 
     private void Start()
     {
+        Destroy(FindAnyObjectByType<PlayerStats>().gameObject);
         _dialoguePlayer = FindAnyObjectByType<DialoguePlayer>();
         _dialoguePlayer.StartDialog(_startingDialogue, OnStartingDialogCompleted);
     }
