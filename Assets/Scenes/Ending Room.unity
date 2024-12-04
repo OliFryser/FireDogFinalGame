@@ -149,7 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6812284733797518212, guid: 1129548039347164b9017321b58a29d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.49
+      value: -0.425
       objectReference: {fileID: 0}
     - target: {fileID: 6812284733797518212, guid: 1129548039347164b9017321b58a29d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -191,6 +191,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6961215367094625135, guid: f3b0fd0204388e9469f475400102ba8d, type: 3}
+    - target: {fileID: 7619316468960582246, guid: 1129548039347164b9017321b58a29d4, type: 3}
+      propertyPath: m_Color.a
+      value: 0.2784314
+      objectReference: {fileID: 0}
     - target: {fileID: 7619316468960582246, guid: 1129548039347164b9017321b58a29d4, type: 3}
       propertyPath: m_SortingOrder
       value: 5
@@ -408,7 +412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7496358098476310999, guid: da30c9a2b44dd354795df3014a9997c8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.82
+      value: -0.898
       objectReference: {fileID: 0}
     - target: {fileID: 7496358098476310999, guid: da30c9a2b44dd354795df3014a9997c8, type: 3}
       propertyPath: m_LocalPosition.z
