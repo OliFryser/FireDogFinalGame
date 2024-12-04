@@ -4,10 +4,6 @@ using FMODUnity;
 
 public class Level7 : MonoBehaviour
 {
-    [Header("Flashlight Settings")]
-    [SerializeField]
-    private Flashlight flashlight;
-
     [Header("FMOD Snapshot Settings")]
     [SerializeField]
     private EventReference mainStateSnapshot;
@@ -28,23 +24,7 @@ public class Level7 : MonoBehaviour
     /// </summary>
     private void ActivateFlashlight()
     {
-        if (flashlight != null)
-        {
-            // Ensure the Flashlight GameObject is active
-            if (!flashlight.gameObject.activeSelf)
-            {
-                flashlight.gameObject.SetActive(true);
-                Debug.Log("Flashlight GameObject activated in Level 7.");
-            }
-
-            // Turn on the flashlight's light component
-            flashlight.TurnOnFlashlight();
-            Debug.Log("Flashlight turned on in Level 7.");
-        }
-        else
-        {
-            Debug.LogWarning("Flashlight reference is missing in Level7 script.");
-        }
+        FindAnyObjectByType<Flashlight>().TurnOnFlashlight();
     }
 
     /// <summary>

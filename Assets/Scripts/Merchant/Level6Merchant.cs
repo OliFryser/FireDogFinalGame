@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using SceneManagement;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -9,10 +10,6 @@ namespace Merchant
         [Header("Music Controller")]
         [SerializeField]
         private MusicController musicController;
-
-        [Header("Room Manager")]
-        [SerializeField]
-        private RoomManager roomManager;
         
         [FormerlySerializedAs("lampOffSprites")]
         [Header("Lamp Sprites and Enemies")]
@@ -22,10 +19,15 @@ namespace Merchant
         [FormerlySerializedAs("lampEnemies")] [SerializeField]
         private List<GameObject> _lampEnemies;
 
-        [FormerlySerializedAs("decoyEnemy")]
-        [Header("Decoy Enemy")]
-        [SerializeField]
-        private GameObject _decoyEnemy;
+        [SerializeField] private GameObject _decoyEnemy;
+        
+        private EnemyTracker _enemyTracker;
+
+        protected override void Start()
+        {
+            base.Start();
+            _enemyTracker = FindAnyObjectByType<EnemyTracker>();
+        }
         
         public override void Interact()
         {
@@ -47,11 +49,9 @@ namespace Merchant
                     _lampEnemies[i].SetActive(true);
                 }
             }
-
-            if (_decoyEnemy != null)
-            {
-                _decoyEnemy.SetActive(false);
-            }
+            
+            Destroy(_decoyEnemy);
+            _enemyTracker.UnregisterEnemy();
 
             if (musicController != null)
             {

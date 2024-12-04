@@ -135,11 +135,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonClickSound:
     Guid:
-      Data1: 1585625449
-      Data2: 1127287128
-      Data3: -1926961222
-      Data4: 393103436
-    Path: event:/UI/GUI/Buy
+      Data1: 1969493569
+      Data2: 1272682622
+      Data3: 256574116
+      Data4: 166856703
+    Path: event:/UI/GUI/Click
   buttonHoverSound:
     Guid:
       Data1: -1086361265

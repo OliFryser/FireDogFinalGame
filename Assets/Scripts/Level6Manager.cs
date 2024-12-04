@@ -1,5 +1,5 @@
+using Player;
 using UnityEngine;
-using System.Collections.Generic;
 using UnityEngine.Serialization;
 
 public class Level6 : MonoBehaviour
@@ -13,11 +13,6 @@ public class Level6 : MonoBehaviour
     [Header("Room Manager")]
     [SerializeField]
     private RoomManager _roomManager;
-
-    [FormerlySerializedAs("cleanupManager")]
-    [Header("Cleanup Manager")]
-    [SerializeField]
-    private CleanupManager _cleanupManager;
 
     [FormerlySerializedAs("doorToNextLevel")]
     [Header("Door to Next Level")]
@@ -33,6 +28,11 @@ public class Level6 : MonoBehaviour
             _musicController.SetBattleState(0.5f);
         }
     }
+
+    private void Start()
+    {
+        FindAnyObjectByType<Flashlight>().TurnOffFlashlight();
+    }
     
     public void OnPlayerDeath()
     {
@@ -42,23 +42,8 @@ public class Level6 : MonoBehaviour
         }
     }
 
-    private void HandleLampDeath()
+    public void ClearRoom()
     {
-        remainingEnemies--;
-
-        if (remainingEnemies <= 0)
-        {
-            OpenDoorToNextLevel();
-        }
-    }
-
-    private void OpenDoorToNextLevel()
-    {
-        if (_doorToNextLevel != null)
-        {
-            _doorToNextLevel.OpenDoor();
-        }
-
         if (_musicController != null)
         {
             _musicController.ClearRoom();
