@@ -13,6 +13,7 @@ TagManager:
   - CameraBounds
   - Dodge Roll Hit Box
   - Front Wall
+  - Lamp Enemy
   layers:
   - Default
   - TransparentFX
