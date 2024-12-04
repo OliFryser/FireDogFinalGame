@@ -1189,10 +1189,10 @@ MonoBehaviour:
   flashlight: {fileID: 0}
   mainStateSnapshot:
     Guid:
-      Data1: -1512091561
-      Data2: 1095135827
-      Data3: -1669553489
-      Data4: 864102025
+      Data1: 1734232675
+      Data2: 1324442496
+      Data3: 117212596
+      Data4: 1158011233
     Path: snapshot:/Main State
 --- !u!1001 &552345536
 PrefabInstance:
