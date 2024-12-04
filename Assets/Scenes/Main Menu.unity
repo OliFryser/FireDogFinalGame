@@ -1533,11 +1533,11 @@ MonoBehaviour:
     Path: event:/UI/GUI/Slider
   buttonHoverSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1086361265
+      Data2: 1110082598
+      Data3: 695660195
+      Data4: -1675220979
+    Path: event:/UI/GUI/Hover
 --- !u!222 &833706382613457588
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2274,11 +2274,11 @@ MonoBehaviour:
     Path: event:/UI/GUI/Slider
   buttonHoverSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1086361265
+      Data2: 1110082598
+      Data3: 695660195
+      Data4: -1675220979
+    Path: event:/UI/GUI/Hover
 --- !u!222 &3242306400863423367
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3175,11 +3175,11 @@ MonoBehaviour:
     Path: event:/UI/GUI/Slider
   buttonHoverSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1086361265
+      Data2: 1110082598
+      Data3: 695660195
+      Data4: -1675220979
+    Path: event:/UI/GUI/Hover
 --- !u!224 &4808624570850626894
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3806,11 +3806,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonClickSound:
     Guid:
-      Data1: 1013398485
-      Data2: 1132442460
-      Data3: -37428311
-      Data4: -40505777
-    Path: event:/UI/GUI/Click
+      Data1: -1940799802
+      Data2: 1293799067
+      Data3: -518028409
+      Data4: 1717460957
+    Path: event:/UI/GUI/Back
   buttonHoverSound:
     Guid:
       Data1: -1086361265
@@ -4179,10 +4179,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonClickSound:
     Guid:
-      Data1: 1013398485
-      Data2: 1132442460
-      Data3: -37428311
-      Data4: -40505777
+      Data1: 1969493569
+      Data2: 1272682622
+      Data3: 256574116
+      Data4: 166856703
     Path: event:/UI/GUI/Click
   buttonHoverSound:
     Guid:
@@ -4509,10 +4509,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonClickSound:
     Guid:
-      Data1: 1013398485
-      Data2: 1132442460
-      Data3: -37428311
-      Data4: -40505777
+      Data1: 1969493569
+      Data2: 1272682622
+      Data3: 256574116
+      Data4: 166856703
     Path: event:/UI/GUI/Click
   buttonHoverSound:
     Guid:
@@ -4846,11 +4846,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sliderAdjustSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 401762641
+      Data2: 1112851259
+      Data3: 1363970226
+      Data4: -1632590789
+    Path: event:/UI/GUI/Slider
   _vcaName: Music
 --- !u!114 &7044905361496311177
 MonoBehaviour:
@@ -5233,10 +5233,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonClickSound:
     Guid:
-      Data1: 1013398485
-      Data2: 1132442460
-      Data3: -37428311
-      Data4: -40505777
+      Data1: 1969493569
+      Data2: 1272682622
+      Data3: 256574116
+      Data4: 166856703
     Path: event:/UI/GUI/Click
   buttonHoverSound:
     Guid:
@@ -5908,11 +5908,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sliderAdjustSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 401762641
+      Data2: 1112851259
+      Data3: 1363970226
+      Data4: -1632590789
+    Path: event:/UI/GUI/Slider
   _vcaName: Master
 --- !u!222 &8775889991461346483
 CanvasRenderer:
@@ -6000,11 +6000,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sliderAdjustSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 401762641
+      Data2: 1112851259
+      Data3: 1363970226
+      Data4: -1632590789
+    Path: event:/UI/GUI/Slider
   _vcaName: SFX
 --- !u!114 &9019645762891774443
 MonoBehaviour:
