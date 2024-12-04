@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using FMODUnity;
+using Unity.Mathematics;
 
 public class LampAttack : MonoBehaviour
 {
