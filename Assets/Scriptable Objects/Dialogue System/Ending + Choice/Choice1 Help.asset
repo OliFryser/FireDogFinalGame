@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lines:
   - DialogContent: Excellent! I almost feel like rhyming again!
-    Speaker: {fileID: 11400000, guid: 0d0d5b1227bb2144aa494262bca395f2, type: 2}
+    Speaker: {fileID: 11400000, guid: a09224e78e4271c40b03efaf93e4516b, type: 2}
   - DialogContent: 'I thank you for your service,
 
       No need to get nervous.
@@ -24,4 +24,4 @@ MonoBehaviour:
 
       While I have the power to make my furniture a world
       threat.'
-    Speaker: {fileID: 11400000, guid: 0d0d5b1227bb2144aa494262bca395f2, type: 2}
+    Speaker: {fileID: 11400000, guid: a09224e78e4271c40b03efaf93e4516b, type: 2}
