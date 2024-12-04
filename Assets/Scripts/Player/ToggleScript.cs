@@ -22,4 +22,5 @@ public class ToogleScript : MonoBehaviour
             _spriteRenderer.enabled = true;
         }
     }
+
 }
