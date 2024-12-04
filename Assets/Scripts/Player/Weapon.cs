@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using FMODUnity;
+using Player;
 
 public class Weapon : MonoBehaviour
 {
@@ -70,7 +71,7 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     EventReference MeleeLightSwing;
 
-    void Start()
+    private void Awake()
     {
         _playerMovement = GetComponent<Movement>();
         _animator = GetComponent<Animator>();

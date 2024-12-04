@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a80dd7641bb9f84b9de8e7f4d75fdd0, type: 3}
   m_Name: Cleaning Spree Damage
   m_EditorClassIdentifier: 
+  Icon: {fileID: 0}
   Title: Cleaning Frenzy
   Description: Cleaning while enemies are left makes you do 25% increased damage,
-    resets every level.
+    but it resets every room.
   UpgradeType: 8

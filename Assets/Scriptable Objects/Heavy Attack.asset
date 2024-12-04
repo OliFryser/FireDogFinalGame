@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a80dd7641bb9f84b9de8e7f4d75fdd0, type: 3}
   m_Name: Heavy Attack
   m_EditorClassIdentifier: 
-  Title: Nail Mob
+  Icon: {fileID: -460915662, guid: 57db454a5463b8b49bdbb3be8c77095c, type: 3}
+  Title: Nail Mop
   Description: Increases the damage of the Heavy Attack by 5.
   UpgradeType: 2

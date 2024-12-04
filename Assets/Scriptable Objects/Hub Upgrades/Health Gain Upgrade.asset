@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ac3a4370a05654297f60b07056d9fa, type: 3}
   m_Name: Health Gain Upgrade
   m_EditorClassIdentifier: 
-  Title: Bust the dust
+  Icon: {fileID: -615151924, guid: 5713945bdf1ee8c429bf26d57602d80c, type: 3}
+  Title: Disinfectant glasses
   Description: Gain some health everytime you exit a level.
   BaseCost: 20
   IncrementPerTier: 10

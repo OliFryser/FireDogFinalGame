@@ -815,4 +815,4 @@ MonoBehaviour:
   DialogueTextDisplay: {fileID: 6673435932284843074}
   DialogueTextDisplayTransform: {fileID: 1475314021374780666}
   IsTyping: 0
-  _typingSpeed: 0.04
+  _typingSpeed: 0.02

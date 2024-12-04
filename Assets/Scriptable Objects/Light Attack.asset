@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a80dd7641bb9f84b9de8e7f4d75fdd0, type: 3}
   m_Name: Light Attack
   m_EditorClassIdentifier: 
-  Title: Acidic water
-  Description: Increases the damage of the Light Attack by 2.5
+  Icon: {fileID: 343180577, guid: 57db454a5463b8b49bdbb3be8c77095c, type: 3}
+  Title: Acidic Water
+  Description: Increases the damage of the Light Attack by 2,5
   UpgradeType: 1

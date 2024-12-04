@@ -5,7 +5,7 @@ public class Flashlight : MonoBehaviour
 {
     private Light2D _light;
 
-    private void Start()
+    private void Awake()
     {
         _light = GetComponent<Light2D>();
     }

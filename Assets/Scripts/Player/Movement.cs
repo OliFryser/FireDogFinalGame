@@ -1,6 +1,8 @@
 using FMODUnity;
 using System;
 using System.Collections;
+using Lib;
+using Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -33,6 +35,11 @@ public class Movement : MonoBehaviour
 
 
     [SerializeField]
+    private SFX_Footsteps sfxFootsteps;
+
+    private bool wasMoving = false;
+
+    [SerializeField]
     private float _invincibilityTime;
 
     private float _currentDodgeDistance;
@@ -52,9 +59,16 @@ public class Movement : MonoBehaviour
     private PlayerStats _playerStats;
     private InvincibilityManager _invincibilityManager;
 
+    private bool _isHorizontal;
+
+    [SerializeField]
+    private GameObject _verticalShadow;
+    [SerializeField]
+    private GameObject _horizontalShadow;
+
     public bool IsMoving => _direction.sqrMagnitude > 0.01f;
 
-    void Start()
+    void Awake()
     {
         _playerStats = GetComponent<PlayerStats>();
         _rigidBody2D = GetComponent<Rigidbody2D>();
@@ -62,6 +76,15 @@ public class Movement : MonoBehaviour
         _playerWeapon = GetComponent<Weapon>();
         _hitDetection = GetComponent<PlayerHitDetection>();
         _invincibilityManager = GetComponent<InvincibilityManager>();
+
+        if (sfxFootsteps == null)
+        {
+            sfxFootsteps = GetComponent<SFX_Footsteps>();
+            if (sfxFootsteps == null)
+            {
+                Debug.LogError("SFX_Footsteps component not found on the GameObject.");
+            }
+        }
     }
 
     void FixedUpdate()
@@ -97,6 +120,25 @@ public class Movement : MonoBehaviour
         }
         FlipSprite();
         UpdateAnimator();
+        DetectMovementStateChange();
+        UpdateShadow();
+    }
+
+    private void UpdateShadow()
+    {
+        var isHorizontal = Utils.IsHorizontal(PreviousDirection);
+        if (isHorizontal == _isHorizontal) return;
+        _isHorizontal = isHorizontal;
+        if (_isHorizontal)
+        {
+            _horizontalShadow.SetActive(true);
+            _verticalShadow.SetActive(false);
+        }
+        else
+        {
+            _horizontalShadow.SetActive(false);
+            _verticalShadow.SetActive(true);
+        }
     }
 
     private void UpdateAnimator()
@@ -117,6 +159,23 @@ public class Movement : MonoBehaviour
             _animator.SetFloat("Vertical", _direction.y);
         }
     }
+
+    private void DetectMovementStateChange()
+    {
+        bool currentlyMoving = IsMoving && !_isPushed && !_playerWeapon.IsAttacking;
+
+        if (currentlyMoving && !wasMoving)
+        {
+            sfxFootsteps.PlayFootstepStart();
+        }
+        else if (!currentlyMoving && wasMoving)
+        {
+            sfxFootsteps.PlayFootstepStop();
+        }
+
+        wasMoving = currentlyMoving;
+    }
+
 
     private void FlipSprite()
     {
@@ -148,21 +207,22 @@ public class Movement : MonoBehaviour
 
     void DoDodgeRoll()
     {
-        
+
         if (_currentDodgeDistance == 0)
-        {   
+        {
             _animator.SetTrigger("Dodge");
             RuntimeManager.PlayOneShot("event:/Player/Dodge");
-            if(_playerStats.BowlingChampion){
-                Debug.Log("rolling op?");
+            if (_playerStats.BowlingChampion)
+            {
                 GameObject hitBox = Instantiate(_dodgeHitBox, transform);
-                StartCoroutine(DestroyDodgeHitBoxafterDelay(hitBox, (_invincibilityTime+0.1f)));
-                StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime+0.1f));
+                StartCoroutine(DestroyDodgeHitBoxafterDelay(hitBox, (_invincibilityTime + 0.1f)));
+                StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime + 0.1f));
             }
-            else {
+            else
+            {
                 StartCoroutine(_hitDetection.MakeInvincible(_invincibilityTime));
             }
-            
+
         }
         if (_currentDodgeDistance < _totalDodgeDistance)
         {

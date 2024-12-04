@@ -12,12 +12,17 @@ public class InteractListener : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {
         _closestInteractable = null;
     }
 
-    void Update()
+    private void Update()
     {
         var newClosestInteractable =
             FindObjectsByType<Interactable>(FindObjectsSortMode.None)
@@ -25,15 +30,13 @@ public class InteractListener : MonoBehaviour
                 .OrderBy(i => Vector3.Distance(transform.position, i.transform.position))
                 .FirstOrDefault();
 
-        if (_closestInteractable != newClosestInteractable)
-        {
-            _closestInteractable?.UnHighlight();
-            newClosestInteractable?.Highlight();
-            _closestInteractable = newClosestInteractable;
-        }
+        if (_closestInteractable == newClosestInteractable) return;
+        _closestInteractable?.UnHighlight();
+        newClosestInteractable?.Highlight();
+        _closestInteractable = newClosestInteractable;
     }
 
-    void OnInteract(InputValue _)
+    private void OnInteract(InputValue _)
     {
         _closestInteractable?.Interact();
         _closestInteractable?.UnHighlight();

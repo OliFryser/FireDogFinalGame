@@ -3,18 +3,36 @@ using FMODUnity;
 
 public class SFX_Footsteps : MonoBehaviour
 {
+    [Header("Footstep Sounds")]
     public EventReference footstepEvent;
 
-    public void footstep()
+    [Header("Footstep Start/Stop Sounds")]
+    public EventReference footstepStartEvent;
+    public EventReference footstepStopEvent;
+
+    /// <summary>
+    /// Plays a single footstep sound. Intended to be called via animation events.
+    /// </summary>
+    public void footstep() // Ensure this method name matches the animation event
     {
-        // Create an instance of the footstep event
         FMOD.Studio.EventInstance footstepInstance = RuntimeManager.CreateInstance(footstepEvent);
-
-
-        // Start the event
         footstepInstance.start();
-
-        // Release the instance after it's done to free up resources
         footstepInstance.release();
+    }
+
+    /// <summary>
+    /// Plays the footstep start sound.
+    /// </summary>
+    public void PlayFootstepStart()
+    {
+        RuntimeManager.PlayOneShot(footstepStartEvent, transform.position);
+    }
+
+    /// <summary>
+    /// Plays the footstep stop sound.
+    /// </summary>
+    public void PlayFootstepStop()
+    {
+        RuntimeManager.PlayOneShot(footstepStopEvent, transform.position);
     }
 }

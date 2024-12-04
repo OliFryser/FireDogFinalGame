@@ -10,13 +10,24 @@ public class LampController : Interactable
     [Tooltip("Assign the GameObject representing the lamp in the 'on' state.")]
     public GameObject onLamp;
 
-    private bool isOn = false;
+    [Header("Initial State")]
+    [Tooltip("Set to true if the lamp should start in the 'on' state.")]
+    public bool startOn = false;
+
+    private bool isOn;
 
     protected override void Start()
     {
         base.Start();
-        offLamp.SetActive(true);
-        onLamp.SetActive(false);
+
+        // Initialize the lamp's state based on the 'startOn' value
+        isOn = startOn;
+
+        if (offLamp != null && onLamp != null)
+        {
+            offLamp.SetActive(!isOn);
+            onLamp.SetActive(isOn);
+        }
     }
 
     public void ToggleLamp()
@@ -38,7 +49,7 @@ public class LampController : Interactable
 
     public override void Highlight()
     {
-        // Do nothing here, since lamp is an easteregg
+        // Do nothing here, since lamp is an easter egg
     }
 
     public override void UnHighlight()

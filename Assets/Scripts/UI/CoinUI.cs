@@ -1,11 +1,10 @@
+using Player;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
 public class CoinUI : MonoBehaviour
 {
-
-
     private PlayerStats _playerStats;
 
     private TMP_Text _coinCount;

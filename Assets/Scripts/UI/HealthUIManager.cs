@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Player;
 
 public class HealthUIManager : MonoBehaviour
 {

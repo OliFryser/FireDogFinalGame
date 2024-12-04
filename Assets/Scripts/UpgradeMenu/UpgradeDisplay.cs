@@ -13,6 +13,9 @@ public class UpgradeDisplay : MonoBehaviour
 
     [SerializeField]
     private TMP_Text _title;
+    
+    [SerializeField]
+    private Image _image;
 
     [SerializeField]
     private TMP_Text _description;
@@ -24,6 +27,7 @@ public class UpgradeDisplay : MonoBehaviour
         _upgradeHandler = FindAnyObjectByType<UpgradeHandler>();
         _title.text = Upgrade.Title;
         _description.text = Upgrade.Description;
+        _image.sprite = Upgrade.Icon;
         _button.onClick.AddListener(OnUpgradeButtonClick);
     }
 

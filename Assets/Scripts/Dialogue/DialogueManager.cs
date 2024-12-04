@@ -33,7 +33,7 @@ namespace Dialogue
 
         public void PlayHubDialogue(int index, Action onDialogCompleted)
         {
-            if (index <= _hubDialogues.Count)
+            if (index < _hubDialogues.Count)
                 _dialoguePlayer.StartDialog(_hubDialogues[index], onDialogCompleted);
             else
             {
@@ -45,7 +45,15 @@ namespace Dialogue
         public void PlayRoomDialogue(int death, int room, Action onDialogCompleted)
         {
             if (death < _roomDialogues.Count && room < _roomDialogues[death].Dialogues.Count)
+            {
+                var dialogue = _roomDialogues[death].Dialogues[room];
+                if (dialogue == null)
+                {
+                    onDialogCompleted();
+                    return;
+                }
                 _dialoguePlayer.StartDialog(_roomDialogues[death].Dialogues[room], onDialogCompleted);
+            }
             else
             {
                 Debug.LogWarning("No room dialog with for death: " + death + " and room: " + room);

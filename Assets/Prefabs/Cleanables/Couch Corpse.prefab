@@ -129,4 +129,11 @@ MonoBehaviour:
   _interactDistance: 2
   IsInteractable: 0
   _defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  _bounds:
+    XMin: -0.5
+    XMax: 0.5
+    YMin: -0.5
+    YMax: 0.5
   _coin: {fileID: 6682218987564803474, guid: fdc4eacaabdcd254aabceeb5c4428998, type: 3}
+  _fullHeart: {fileID: 4668347351186338503, guid: 9d71bff5684bc38448d43b0f24646250, type: 3}
+  _halfHeart: {fileID: 8253625067512350027, guid: c76f32872f9406e4ab437a5b63267eb3, type: 3}

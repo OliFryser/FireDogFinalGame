@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a80dd7641bb9f84b9de8e7f4d75fdd0, type: 3}
   m_Name: BowlingChampion
   m_EditorClassIdentifier: 
+  Icon: {fileID: -1026031549, guid: 57db454a5463b8b49bdbb3be8c77095c, type: 3}
   Title: Bowling Champion
-  Description: Your Light and Heavy Attack are disabled. Your Dodge Roll has significantly
-    reduced cooldown and damages enemies when colliding with them. It also rolls
-    longer.
+  Description: Your Light and Heavy Attack are disabled. Your dodgeroll damages enemies.
+    You also roll farther.
   UpgradeType: 10

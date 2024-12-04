@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using Player;
+using Unity.Mathematics;
 
 public class PlayerHitDetection : MonoBehaviour
 {
@@ -15,6 +17,13 @@ public class PlayerHitDetection : MonoBehaviour
     private Light2D _flashlight;
     private FlashEffect _flashEffect;
     private InvincibilityManager _invincibilityManager;
+    private InputLock _inputLocker;
+
+    [SerializeField]
+    private GameObject _playerDeath;
+
+    [SerializeField]
+    private GameObject _deathScreen;
 
     public string hitSoundEventPath = "event:/Player/Damage";
 
@@ -27,6 +36,7 @@ public class PlayerHitDetection : MonoBehaviour
         _flashlight = GetComponentInChildren<Light2D>(includeInactive: true);
         _flashEffect = GetComponent<FlashEffect>();
         _invincibilityManager = GetComponent<InvincibilityManager>();
+        _inputLocker = GetComponent<InputLock>();
 
     }
 
@@ -46,22 +56,15 @@ public class PlayerHitDetection : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (_playerStats.IsDead)
-        {
-            KillPlayer();
-        }
-    }
-
     private void KillPlayer()
     {
         //Return player to hub.
+        StartCoroutine(IgnoreCollision(3.8f));
         _playerStats.AddPlayerDeath();
-        _animator.SetTrigger("Death");
-        StartCoroutine(IgnoreCollision(3.2f));
-        StartCoroutine(PlayDeathAnimation(3.2f));
+        _inputLocker.LockInput();
+        Instantiate(_deathScreen, transform.position, quaternion.identity);
+        _playerDeath.GetComponent<Animator>().SetTrigger("Death");
+        StartCoroutine(PlayDeathAnimation(2.6f));
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -71,7 +74,6 @@ public class PlayerHitDetection : MonoBehaviour
             if (_invincibilityManager == null || !_invincibilityManager.IsInvincible)
             {
                 TakeDamage(1);
-
                 // Apply pushback only if not invincible
                 Vector2 enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
                 _playerMovement.GetPushed(enemyDirection);
@@ -94,7 +96,7 @@ public class PlayerHitDetection : MonoBehaviour
         if (_invincibilityManager == null || !_invincibilityManager.IsInvincible)
         {
             _playerStats.ApplyDamage(damage);
-
+            if(_playerStats.IsDead) KillPlayer();
             RuntimeManager.PlayOneShot(hitSoundEventPath);
             _animator.SetTrigger(Damage);
             _flashEffect.CallDamageFlash();
@@ -132,8 +134,10 @@ public class PlayerHitDetection : MonoBehaviour
     }
 
 
-    public IEnumerator PlayDeathAnimation(float time){
+    private IEnumerator PlayDeathAnimation(float time){
         yield return new WaitForSeconds(time);
+        _playerDeath.GetComponent<SpriteRenderer>().enabled = false;
+        _inputLocker.UnlockInput();
         Destroy(gameObject);
         SceneManager.LoadScene(1);
     }

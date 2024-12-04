@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a80dd7641bb9f84b9de8e7f4d75fdd0, type: 3}
   m_Name: Heavy Metal
   m_EditorClassIdentifier: 
-  Title: Heavy Metal
+  Icon: {fileID: -1137057343, guid: 57db454a5463b8b49bdbb3be8c77095c, type: 3}
+  Title: Metal Head
   Description: Disables Light Attack. Heavy Attack now does triple damage, cause
     3 times as long as a stun and twice the knockback.
   UpgradeType: 9
