@@ -67,7 +67,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -81,7 +81,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,7 +105,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -146,10 +146,10 @@ TextureImporter:
       name: cobwebs+Water_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 123
-        width: 34
-        height: 34
+        x: 0
+        y: 140
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: cobwebs+Water_1
       rect:
         serializedVersion: 2
-        x: 63
-        y: 123
-        width: 34
-        height: 34
+        x: 40
+        y: 140
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,10 +190,10 @@ TextureImporter:
       name: cobwebs+Water_2
       rect:
         serializedVersion: 2
-        x: 103
-        y: 123
-        width: 34
-        height: 34
+        x: 80
+        y: 140
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,10 +212,10 @@ TextureImporter:
       name: cobwebs+Water_3
       rect:
         serializedVersion: 2
-        x: 143
-        y: 123
-        width: 34
-        height: 34
+        x: 120
+        y: 140
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,10 +234,10 @@ TextureImporter:
       name: cobwebs+Water_4
       rect:
         serializedVersion: 2
-        x: 48
-        y: 71
-        width: 26
-        height: 22
+        x: 160
+        y: 140
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,10 +256,10 @@ TextureImporter:
       name: cobwebs+Water_5
       rect:
         serializedVersion: 2
-        x: 87
-        y: 68
-        width: 20
-        height: 25
+        x: 0
+        y: 100
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +278,10 @@ TextureImporter:
       name: cobwebs+Water_6
       rect:
         serializedVersion: 2
-        x: 100
-        y: 74
-        width: 13
-        height: 13
+        x: 40
+        y: 100
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,10 +300,10 @@ TextureImporter:
       name: cobwebs+Water_7
       rect:
         serializedVersion: 2
-        x: 125
-        y: 73
-        width: 28
-        height: 18
+        x: 80
+        y: 100
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,10 +322,10 @@ TextureImporter:
       name: cobwebs+Water_8
       rect:
         serializedVersion: 2
-        x: 143
-        y: 84
-        width: 7
-        height: 8
+        x: 120
+        y: 100
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,10 +344,10 @@ TextureImporter:
       name: cobwebs+Water_9
       rect:
         serializedVersion: 2
-        x: 60
-        y: 65
-        width: 14
-        height: 9
+        x: 160
+        y: 100
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,10 +366,10 @@ TextureImporter:
       name: cobwebs+Water_10
       rect:
         serializedVersion: 2
-        x: 134
-        y: 69
-        width: 6
-        height: 6
+        x: 40
+        y: 60
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,11 +384,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: cobwebs+Water_11
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 60
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80496f27c3e22e14981f36d41a8d416c
+      internalID: -1725425080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cobwebs+Water_12
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 60
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3996e293337dd246a5adfde1d285d2e
+      internalID: -1614597917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 01f4ea27ec212e1478cfed54c6f1055b
     internalID: 0
     vertices: []
     indices: 
@@ -401,6 +445,8 @@ TextureImporter:
       cobwebs+Water_0: -2649054289259941229
       cobwebs+Water_1: 7294774924598658083
       cobwebs+Water_10: 8313314019244337076
+      cobwebs+Water_11: -1725425080
+      cobwebs+Water_12: -1614597917
       cobwebs+Water_2: 4711229600065181929
       cobwebs+Water_3: -7249893134042915288
       cobwebs+Water_4: -2355544833472515010
