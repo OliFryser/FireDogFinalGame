@@ -596,9 +596,41 @@ PrefabInstance:
       propertyPath: m_BlocksRaycasts
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5159540987011737591, guid: 1be910089565424479836ec30fc5b73b, type: 3}
+      propertyPath: buttonClickSound.Guid.Data1
+      value: 1969493569
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159540987011737591, guid: 1be910089565424479836ec30fc5b73b, type: 3}
+      propertyPath: buttonClickSound.Guid.Data2
+      value: 1272682622
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159540987011737591, guid: 1be910089565424479836ec30fc5b73b, type: 3}
+      propertyPath: buttonClickSound.Guid.Data3
+      value: 256574116
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159540987011737591, guid: 1be910089565424479836ec30fc5b73b, type: 3}
+      propertyPath: buttonClickSound.Guid.Data4
+      value: 166856703
+      objectReference: {fileID: 0}
     - target: {fileID: 6328851272168641031, guid: 1be910089565424479836ec30fc5b73b, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107128010655903918, guid: 1be910089565424479836ec30fc5b73b, type: 3}
+      propertyPath: buttonClickSound.Guid.Data1
+      value: 1969493569
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107128010655903918, guid: 1be910089565424479836ec30fc5b73b, type: 3}
+      propertyPath: buttonClickSound.Guid.Data2
+      value: 1272682622
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107128010655903918, guid: 1be910089565424479836ec30fc5b73b, type: 3}
+      propertyPath: buttonClickSound.Guid.Data3
+      value: 256574116
+      objectReference: {fileID: 0}
+    - target: {fileID: 9107128010655903918, guid: 1be910089565424479836ec30fc5b73b, type: 3}
+      propertyPath: buttonClickSound.Guid.Data4
+      value: 166856703
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

@@ -8,6 +8,8 @@ public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject _audioPanel;
 
+    [SerializeField] private GameObject _buttonsPanel;
+    
     [SerializeField]
     private Selectable _playButton;
 
@@ -49,6 +51,7 @@ public class MainMenuManager : MonoBehaviour
         if (_audioPanel != null)
         {
             _audioPanel.SetActive(!_audioPanel.activeSelf);
+            _buttonsPanel.SetActive(!_buttonsPanel.activeSelf);
             SelectFirstSelectable();
         }
         else
