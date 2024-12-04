@@ -625,7 +625,6 @@ MonoBehaviour:
   CleaningSpreeDamageActive: 0
   CleaningSpreeMoney: 0
   DamageBoostCounter: 1
-  CleaningReward: 2
   CriticalAttackChance: 0
   HeavyMetal: 0
   BowlingChampion: 0
