@@ -21,6 +21,7 @@ namespace Merchant
 
         public override void Interact()
         {
+            RuntimeManager.PlayOneShot("event:/Merchant");
             base.Interact();
             _dialogueManager
                 .PlayRoomDialogue(

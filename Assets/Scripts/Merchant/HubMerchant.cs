@@ -23,7 +23,7 @@ namespace Merchant
 
         public override void Interact()
         {
-            RuntimeManager.PlayOneShot("event:/Merchant_Interact");
+            RuntimeManager.PlayOneShot("event:/Merchant");
             if (!_hasInteracted)
             {
                 _hasInteracted = true;
