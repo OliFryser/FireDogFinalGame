@@ -64,7 +64,7 @@ public class PlayerHitDetection : MonoBehaviour
         _inputLocker.LockInput();
         Instantiate(_deathScreen, transform.position, quaternion.identity);
         _playerDeath.GetComponent<Animator>().SetTrigger("Death");
-        StartCoroutine(PlayDeathAnimation(3.8f));
+        StartCoroutine(PlayDeathAnimation(2.6f));
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -136,6 +136,7 @@ public class PlayerHitDetection : MonoBehaviour
 
     private IEnumerator PlayDeathAnimation(float time){
         yield return new WaitForSeconds(time);
+        _playerDeath.GetComponent<SpriteRenderer>().enabled = false;
         _inputLocker.UnlockInput();
         Destroy(gameObject);
         SceneManager.LoadScene(1);
