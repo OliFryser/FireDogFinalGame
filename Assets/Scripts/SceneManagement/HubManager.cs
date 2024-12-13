@@ -53,11 +53,7 @@ namespace SceneManagement
 
         private void StopDeathSnapshot()
         {
-            if (PlayerHitDetection.DeathSnapshotInstance.isValid())
-            {
-                PlayerHitDetection.DeathSnapshotInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                PlayerHitDetection.DeathSnapshotInstance.release();
-            }
+            _persistentPlayerStats.StopDeathSnapshot();
         }
     }
 
