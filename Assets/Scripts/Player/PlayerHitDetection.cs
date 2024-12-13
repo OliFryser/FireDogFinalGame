@@ -26,8 +26,6 @@ public class PlayerHitDetection : MonoBehaviour
     [SerializeField]
     private GameObject _deathScreen;
 
-    public static EventInstance DeathSnapshotInstance { get; private set; }
-
     public string hitSoundEventPath = "event:/Player/Damage";
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -62,11 +60,11 @@ public class PlayerHitDetection : MonoBehaviour
 
     private void KillPlayer()
     {
-        DeathSnapshotInstance = RuntimeManager.CreateInstance("snapshot:/Death");
-        DeathSnapshotInstance.start();
+       
         //Return player to hub.
         StartCoroutine(IgnoreCollision(3.8f));
         _playerStats.AddPlayerDeath();
+        _playerStats.StartPlayerDeathSnapshot();
         _inputLocker.LockInput();
         Instantiate(_deathScreen, transform.position, quaternion.identity);
         _playerDeath.GetComponent<Animator>().SetTrigger("Death");
