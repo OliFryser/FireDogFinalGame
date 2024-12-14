@@ -1,31 +1,31 @@
 using FMOD.Studio;
 using FMODUnity;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SnapshotManager : MonoBehaviour
 {
-    public static SnapshotManager Instance { get; private set; }
-
+    private static SnapshotManager _instance;
+    public static SnapshotManager Instance => !_instance ? Initialize() : _instance;
+    
     private EventInstance _deathSnapshotInstance;
 
-    public static void Initialize()
+    public static SnapshotManager Initialize()
     {
-        if (Instance == null)
-        {
-            GameObject snapshotManager = new GameObject("SnapshotManager");
-            snapshotManager.AddComponent<SnapshotManager>();
-        }
+        GameObject snapshotManager = new GameObject("SnapshotManager");
+        snapshotManager.AddComponent<SnapshotManager>();
+        return snapshotManager.GetComponent<SnapshotManager>();
     }
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
             return;
         }
 
-        Instance = this;
+        _instance = this;
         DontDestroyOnLoad(this.gameObject);
     }
 

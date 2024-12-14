@@ -133,10 +133,5 @@ namespace Player
         {
             _persistentPlayerStats.HasStartedLevel6 = true;
         }
-
-        public void StartPlayerDeathSnapshot()
-        {
-            _persistentPlayerStats.StartPlayerDeathSnapshot();
-        }
     }
 }

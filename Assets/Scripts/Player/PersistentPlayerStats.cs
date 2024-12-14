@@ -71,20 +71,5 @@ namespace Player
         {
             Destroy(gameObject);
         }
-
-        public void StartPlayerDeathSnapshot()
-        {
-            DeathSnapshotInstance = RuntimeManager.CreateInstance("snapshot:/Death");
-            DeathSnapshotInstance.start();
-        }
-
-        public void StopDeathSnapshot()
-        {
-            if (DeathSnapshotInstance.isValid())
-            {
-                DeathSnapshotInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                DeathSnapshotInstance.release();
-            }
-        }
     }
 }
