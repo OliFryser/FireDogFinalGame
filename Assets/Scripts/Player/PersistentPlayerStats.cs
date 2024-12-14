@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 
 namespace Player
@@ -18,6 +20,8 @@ namespace Player
         public int Coins { get; private set; }
         public int Deaths { get; private set; }
 
+        private static EventInstance DeathSnapshotInstance { get; set; }
+        
         public float FlashlightRadius { get; private set; } = 4.0f;
         public float CriticalAttackChance { get; private set; }
         public int CleaningReward { get; private set; } = 2;
@@ -66,6 +70,21 @@ namespace Player
         public void ResetPlayerProgress()
         {
             Destroy(gameObject);
+        }
+
+        public void StartPlayerDeathSnapshot()
+        {
+            DeathSnapshotInstance = RuntimeManager.CreateInstance("snapshot:/Death");
+            DeathSnapshotInstance.start();
+        }
+
+        public void StopDeathSnapshot()
+        {
+            if (DeathSnapshotInstance.isValid())
+            {
+                DeathSnapshotInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                DeathSnapshotInstance.release();
+            }
         }
     }
 }

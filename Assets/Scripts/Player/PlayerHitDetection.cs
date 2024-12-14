@@ -69,6 +69,7 @@ public class PlayerHitDetection : MonoBehaviour
         // Return player to hub.
         StartCoroutine(IgnoreCollision(3.8f));
         _playerStats.AddPlayerDeath();
+        _playerStats.StartPlayerDeathSnapshot();
         _inputLocker.LockInput();
         Instantiate(_deathScreen, transform.position, quaternion.identity);
         _playerDeath.GetComponent<Animator>().SetTrigger("Death");
