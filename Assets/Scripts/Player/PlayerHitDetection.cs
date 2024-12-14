@@ -27,7 +27,7 @@ public class PlayerHitDetection : MonoBehaviour
     private GameObject _deathScreen;
 
     public string hitSoundEventPath = "event:/Player/Damage";
-
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -38,9 +38,7 @@ public class PlayerHitDetection : MonoBehaviour
         _flashEffect = GetComponent<FlashEffect>();
         _invincibilityManager = GetComponent<InvincibilityManager>();
         _inputLocker = GetComponent<InputLock>();
-
     }
-
 
     private void OnEnable()
     {
@@ -60,8 +58,15 @@ public class PlayerHitDetection : MonoBehaviour
 
     private void KillPlayer()
     {
-       
-        //Return player to hub.
+        // Ensure SnapshotManager is initialized before using it
+        if (SnapshotManager.Instance == null)
+        {
+            SnapshotManager.Initialize();
+        }
+
+        SnapshotManager.Instance.ActivateDeathSnapshot();
+
+        // Return player to hub.
         StartCoroutine(IgnoreCollision(3.8f));
         _playerStats.AddPlayerDeath();
         _playerStats.StartPlayerDeathSnapshot();
@@ -80,15 +85,19 @@ public class PlayerHitDetection : MonoBehaviour
             {
                 TakeDamage(1);
                 // Apply pushback only if not invincible
-                if (other.gameObject.GetComponent<EnemyMovement>() != null){
+                if (other.gameObject.GetComponent<EnemyMovement>() != null)
+                {
+
                     Vector2 enemyDirection = other.gameObject.GetComponent<EnemyMovement>().GetEnemyDirection();
+
                     _playerMovement.GetPushed(enemyDirection);
                 }
                 else {
+
                     Vector2 enemyDirection = other.gameObject.transform.parent.GetComponent<EnemyMovement>().GetEnemyDirection();
-                    _playerMovement.GetPushed(enemyDirection);
+                    _playerMovement.GetPushed(enemyDirection);              
                 }
-                
+
             }
         }
     }
@@ -151,7 +160,7 @@ public class PlayerHitDetection : MonoBehaviour
         _playerDeath.GetComponent<SpriteRenderer>().enabled = false;
         _inputLocker.UnlockInput();
         Destroy(gameObject);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
 }
