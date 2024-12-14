@@ -48,6 +48,6 @@ public class EndingManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         // TODO load credits
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
